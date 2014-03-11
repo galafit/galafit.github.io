@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Cardo);
 /* normalize.css v1.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -557,37 +558,23 @@ table {
 }
 
 /************************************************************************************
-  FONTS
+ RESET
 *************************************************************************************/
-/* ------------- *
- * Google Fonts *
- * ------------- */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.googleapis.com/css?family=Open+Sans:400&subset=cyrillic,latin);
-}
-
-@font-face {
-  font-family: 'Della Respira';
-  font-style: normal;
-  font-weight: 400;
-  src: url(http://fonts.googleapis.com/css?family=Della+Respira&text=%43%52%4f%53%54%45);
+/* line 10, ../sass/base/_reset.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, del, dfn, em, img, q, small, strike, strong, sub, sup, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header,
+hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 
 /************************************************************************************
     VARIABLES
 *************************************************************************************/
-/**
- * breakpoints for big and small screens used in media queries
- */
-/**
- * Brand Staff
- */
-/**
- *  Font Families
- */
+/** google fonts */
 /**
  * Improved Helvetica.
  * This allows to use Helvetica on Mac and Arial on PC
@@ -595,66 +582,64 @@ table {
  * Sourse: http://css-tricks.com/sans-serif/
  * Sourse: http://css-tricks.com/snippets/css/better-helvetica/
  */
-/**
- * Base Topography
- */
-/**
- *  Headings y Component sizing
- */
-/**
- *  Title
- */
-/**
- *  Jumbo, Jumbotron
- */
-/**
- *  Navigation
- */
-/**
- *   Component sizing...
- */
-/**
- * Margins, Padding
- */
-/**
- * Images
- */
-/**
- * PullQuotes
- */
-/**
- * Blockquotes
- */
-/**
- *   Containers...
- */
-/**
- * length of  text line that is most comfortable for reading
- */
-/**
- * Borders
- */
-/**
- * Buttons
- */
-/**
- * theme switch button
- */
-/**
- * Zebra
- */
-/**
- * Panels
- */
-/**
- * Thumbnails
- */
-/**
- * Forms
- */
+/* Page sizes */
+/* Box sizes */
+/* length of  text line that is most comfortable for reading */
 /* ==========================================================================
-   Helper mixins
+   Helper mixins and placeholders
    ========================================================================== */
+/**
+ *   Clearfix
+ *   For clearing floats like a boss h5bp.com/q
+ */
+/* line 10, ../sass/base/_mixins.scss */
+.clearfix, .row, .media {
+  *zoom: 1;
+  overflow: hidden;
+}
+/* line 14, ../sass/base/_mixins.scss */
+.clearfix:before, .row:before, .media:before, .clearfix:after, .row:after, .media:after {
+  display: table;
+  content: " ";
+  line-height: 0;
+}
+/* line 21, ../sass/base/_mixins.scss */
+.clearfix:after, .row:after, .media:after {
+  clear: both;
+}
+
+/* Legacy support for inline-block in IE7 (maybe IE6)   */
+/* line 27, ../sass/base/_mixins.scss */
+.nav, .nav > li, .navbar, .box-text, .box-base, .box-small, .box-mini, .button, #toTop, .vCard {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+/** Box Sizing model  **/
+/* line 37, ../sass/base/_mixins.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  /* Для Firefox */
+  -webkit-box-sizing: border-box;
+  /* Для Safari и Chrome */
+  box-sizing: border-box;
+  /* Для IE и Opera */
+}
+
+/**
+ *   Blocks Align
+ */
+/* line 53, ../sass/base/_mixins.scss */
+img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:before, .pullquote:after, .row, .central-wide, .central-text, .cover, .post {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /**
  * Mixin handling breakpoints for media queries
  * Source: http://css-tricks.com/media-queries-sass-3-2-and-codekit/
@@ -662,186 +647,20 @@ table {
  * Modifying idea of "Progressive enhancement" or "mobile firs" I create all stiles for "medium screens" and
  * then adapt them for small and big screens
  */
-/**
- * helper mixin to set Button color
- */
-/**
- *   Clearfix
- *   For clearing floats like a boss h5bp.com/q
- */
+/*   linear gradient from top to bottom    */
 /**
  * Mixin to set font size. At the moment in %. By itself it has not much sense but it will be useful if in the future
  * I wish to set font sizes in em or "rem". See @mixin font-size-rem below
+
+@mixin font-size($val) {
+    font-size: $val * 100%;
+}
  */
-/*   linear gradient from top to bottom    */
-/*    Legacy support for inline-block in IE7 (maybe IE6)   */
 /**
  * Mixins to set elements sizes. At the moment in em. By itself they have not much sense but they will be useful if in the future
   * I wish to set sizes in "rem". See  max-width-rem and so on below
  */
 /* Mixins to set sizes in rem */
-/* general - margin, padding... */
-/*
-p {
-   @include rem-fallback(margin, 10, 20, 30, 40);
-}
-
-gives:
-
-p {
-  margin: 160px 320px 480px 640px;
-  margin: 10rem 20rem 30rem 40rem;
-}
-*/
-/**
- *   Blocks Align mixins
- */
-/* ==========================================================================
-   Utilities. Helper classes
-   ========================================================================== */
-/*
- * Clearfix: contain floats
- */
-/* line 12, ../sass/base/_utilities.scss */
-.clearfix {
-  *zoom: 1;
-}
-/* line 73, ../sass/base/_mixins.scss */
-.clearfix:before, .clearfix:after {
-  display: table;
-  content: " ";
-  line-height: 0;
-}
-/* line 80, ../sass/base/_mixins.scss */
-.clearfix:after {
-  clear: both;
-}
-
-/*
- * Blocks Align
- */
-/* line 21, ../sass/base/_utilities.scss */
-.float-left {
-  float: left;
-}
-
-/* line 25, ../sass/base/_utilities.scss */
-.float-right {
-  float: right;
-}
-
-/* line 29, ../sass/base/_utilities.scss */
-.pull-left {
-  float: left;
-  margin: 1em;
-  margin-left: 0;
-}
-
-/* line 33, ../sass/base/_utilities.scss */
-.pull-right {
-  float: right;
-  margin: 1em;
-  margin-right: 0;
-}
-
-/* line 38, ../sass/base/_utilities.scss */
-.pull-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*
- * Text Align
- */
-/* line 47, ../sass/base/_utilities.scss */
-.text-left {
-  text-align: left;
-}
-
-/* line 52, ../sass/base/_utilities.scss */
-.text-right {
-  text-align: right;
-}
-
-/* line 56, ../sass/base/_utilities.scss */
-.text-center {
-  text-align: center;
-}
-
-/*
- * Image replacement
- */
-/* line 66, ../sass/base/_utilities.scss */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px;
-}
-
-/* line 74, ../sass/base/_utilities.scss */
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-/* line 85, ../sass/base/_utilities.scss */
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-/* line 94, ../sass/base/_utilities.scss */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-/* line 111, ../sass/base/_utilities.scss */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-/* line 124, ../sass/base/_utilities.scss */
-.invisible {
-  visibility: hidden;
-}
-
-/* line 129, ../sass/base/_utilities.scss */
-.disabled {
-  pointer-events: none;
-  opacity: 0.5;
-}
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
@@ -925,33 +744,209 @@ p {
   }
 }
 /************************************************************************************
+ UTILITIES. Helper classes
+*************************************************************************************/
+/* line 9, ../sass/modules/_utilities.scss */
+.pull-right, .pull-right-adapt {
+  float: right;
+  margin-right: 0;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* line 13, ../sass/modules/_utilities.scss */
+.pull-left, .pull-left-adapt {
+  float: left;
+  margin-left: 0;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 44em) {
+  /* line 17, ../sass/modules/_utilities.scss */
+  .pull-left-adapt, .pull-right-adapt {
+    float: none;
+  }
+}
+
+/* line 28, ../sass/modules/_utilities.scss */
+.icon {
+  max-width: 15%;
+}
+
+/* line 33, ../sass/modules/_utilities.scss */
+.small {
+  max-width: 35%;
+}
+
+/* line 37, ../sass/modules/_utilities.scss */
+.half {
+  max-width: 50%;
+}
+@media only screen and (max-width: 44em) {
+  /* line 37, ../sass/modules/_utilities.scss */
+  .half {
+    max-width: 100%;
+  }
+}
+
+/* line 44, ../sass/modules/_utilities.scss */
+.big {
+  max-width: 65%;
+}
+
+/*
+ * Text Align
+ */
+/* line 54, ../sass/modules/_utilities.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 59, ../sass/modules/_utilities.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 63, ../sass/modules/_utilities.scss */
+.text-center {
+  text-align: center;
+}
+
+/*
+ * Text Decoration
+ */
+/* line 72, ../sass/modules/_utilities.scss */
+.text-crossed {
+  text-decoration: line-through;
+}
+
+/* line 76, ../sass/modules/_utilities.scss */
+.text-light {
+  color: #888888;
+}
+
+/* line 80, ../sass/modules/_utilities.scss */
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/*
+ * Adaptation
+ */
+/* line 89, ../sass/modules/_utilities.scss */
+.mobile-only {
+  display: none;
+}
+@media only screen and (max-width: 44em) {
+  /* line 89, ../sass/modules/_utilities.scss */
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 44em) {
+  /* line 96, ../sass/modules/_utilities.scss */
+  .mobile-hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 44em) {
+  /* line 102, ../sass/modules/_utilities.scss */
+  .mobile-full {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+/*
+ * Clearfix: contain floats
+ */
+/*
+ * Image replacement
+ */
+/* line 122, ../sass/modules/_utilities.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 130, ../sass/modules/_utilities.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 141, ../sass/modules/_utilities.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 150, ../sass/modules/_utilities.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 167, ../sass/modules/_utilities.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 180, ../sass/modules/_utilities.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 184, ../sass/modules/_utilities.scss */
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/************************************************************************************
  GENERAL STYLING. Standard Html tags
 *************************************************************************************/
 /** apply  Box Sizing model to all elements **/
-/* line 7, ../sass/general/_!main.scss */
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 17, ../sass/general/_!main.scss */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
-abbr, acronym, address, del, dfn, em, img, q, small, strike, strong, sub, sup, b, u, i,
-center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
-thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header,
-hgroup, menu, nav, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
-
-/* line 23, ../sass/general/_!main.scss */
+/* line 12, ../sass/modules/_!main.scss */
 html, body {
   min-height: 100%;
 }
 
-/* line 27, ../sass/general/_!main.scss */
+/* line 16, ../sass/modules/_!main.scss */
 html {
   overflow-y: scroll;
   /* Stops Mobile Safari from auto-adjusting font-sizes */
@@ -959,62 +954,54 @@ html {
   -ms-text-size-adjust: 100%;
   /* improves the text rendering in more recent browsers */
   text-rendering: optimizeLegibility;
-}
-
-/* line 37, ../sass/general/_!main.scss */
-body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  font-size: 125%;
-  font-weight: 300;
-  font-style: normal;
-  font-variant: normal;
-  line-height: 1.667;
-  background: white;
-  color: #333333;
+  font-size: 1.25em;
 }
 @media only screen and (min-width: 74em) {
-  /* line 37, ../sass/general/_!main.scss */
-  body {
-    font-size: 130%;
+  /* line 16, ../sass/modules/_!main.scss */
+  html {
+    font-size: 1.3em;
   }
 }
 @media only screen and (max-width: 44em) {
-  /* line 37, ../sass/general/_!main.scss */
-  body {
-    font-size: 112.5%;
+  /* line 16, ../sass/modules/_!main.scss */
+  html {
+    font-size: 1.125em;
   }
+}
+
+/* line 35, ../sass/modules/_!main.scss */
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1.667;
+  background: #e5e0e0;
+  color: #424242;
 }
 
 /**
 *  Give Clickable Elements a Pointer Cursor
 *  Source: http://css-tricks.com/snippets/css/give-clickable-elements-a-pointer-cursor/
 **/
-/* line 62, ../sass/general/_!main.scss */
+/* line 49, ../sass/modules/_!main.scss */
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
   cursor: pointer;
 }
 
-/* line 66, ../sass/general/_!main.scss */
+/* line 53, ../sass/modules/_!main.scss */
 a {
-  color: #930000;
+  color: inherit;
   text-decoration: none;
-  /**
-  *  increase the clickable area on links
-  *  Source: http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links
-  **/
-  position: relative;
-  padding: 0.5em;
-  margin: -0.5em;
+  border-bottom: 1px solid #80191f;
 }
-/* line 77, ../sass/general/_!main.scss */
+/* line 58, ../sass/modules/_!main.scss */
 a:hover, a:focus, a:active {
-  color: #c60000;
-  text-decoration: underline;
+  color: #80191f;
 }
 
-/* line 83, ../sass/general/_!main.scss */
+/* line 63, ../sass/modules/_!main.scss */
 ::-moz-selection, ::selection {
-  background: #c60000;
+  background: #80191f;
   color: white;
 }
 
@@ -1025,45 +1012,32 @@ a:hover, a:focus, a:active {
  *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
  *  and not upon the properties (margin-bottom) of the previous object
  */
-/* line 96, ../sass/general/_!main.scss */
-p, ul, ol {
+/* line 76, ../sass/modules/_!main.scss */
+p {
   margin-top: 1em;
 }
 
-/* line 100, ../sass/general/_!main.scss */
-ul, ol {
-  padding-left: 1.5em;
-}
-/* line 103, ../sass/general/_!main.scss */
-ul li, ol li {
-  margin-top: 0.3em;
-  /**
-   * Remove vertical spacing from nested lists.
-   */
-}
-/* line 109, ../sass/general/_!main.scss */
-ul li > ul,
-ul li > ol, ol li > ul,
-ol li > ol {
-  margin-top: 0.5em;
-}
-
-/* line 115, ../sass/general/_!main.scss */
-i, em, mark, q {
+/* line 80, ../sass/modules/_!main.scss */
+i, em, q {
   font-style: italic;
 }
 
-/* line 119, ../sass/general/_!main.scss */
+/* line 84, ../sass/modules/_!main.scss */
+mark, .mark {
+  background: #f7f4f0;
+}
+
+/* line 88, ../sass/modules/_!main.scss */
 hr {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #cccccc;
   margin-top: 1em;
   margin-bottom: 0.5em;
   height: 0;
 }
 
-/* line 126, ../sass/general/_!main.scss */
+/* line 95, ../sass/modules/_!main.scss */
 cite {
-  color: #565660;
+  color: #888888;
 }
 
 /************************************************************************************
@@ -1076,156 +1050,65 @@ cite {
  *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
  *  and not upon the properties (margin-bottom) of the previous object
  */
-/* line 13, ../sass/general/_headings.scss */
+/* line 13, ../sass/modules/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
-  font-weight: normal;
-  line-height: 1.3;
+  font-weight: 500;
+  line-height: 1.33;
   margin-top: 1.5em;
-  text-align: left;
-  color: black;
 }
 
-/* line 23, ../sass/general/_headings.scss */
+/* line 20, ../sass/modules/_headings.scss */
 h1 {
-  font-size: 172%;
+  font-size: 27.52px;
+  font-size: 1.72rem;
 }
 
-/* line 27, ../sass/general/_headings.scss */
+/* line 24, ../sass/modules/_headings.scss */
 h2 {
-  font-size: 165%;
+  font-size: 26.4px;
+  font-size: 1.65rem;
 }
 
-/* line 31, ../sass/general/_headings.scss */
+/* line 28, ../sass/modules/_headings.scss */
 h3 {
-  font-size: 130%;
+  font-size: 20.8px;
+  font-size: 1.3rem;
+}
+
+/* line 32, ../sass/modules/_headings.scss */
+h4 {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+}
+/* line 34, ../sass/modules/_headings.scss */
+h4 small {
+  font-size: 16.128px;
+  font-size: 1.008rem;
 }
 
 /**
- * These classes are used to make the introductory text (usually a paragraph)
- * of a document slightly larger.
+ * This class is used to make the introductory text (usually a paragraph)
+ * of a document larger.
  */
-/* line 41, ../sass/general/_headings.scss */
-h4,
-.lede,
+/* line 44, ../sass/modules/_headings.scss */
 .lead {
-  font-size: 120%;
-  font-style: italic;
+  font-size: 19.2px;
+  font-size: 1.2rem;
 }
 
-/* line 46, ../sass/general/_headings.scss */
-.title, .jumbotron .jumbotron__title {
-  font-size: 140%;
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  margin-top: 1.5em;
-  text-transform: uppercase;
-  text-align: center;
-  word-spacing: 0.5em;
-  color: #707682;
-}
-/* line 55, ../sass/general/_headings.scss */
-.title:first-letter, .jumbotron .jumbotron__title:first-letter {
-  border-bottom: 3px solid #c60000;
+/* line 50, ../sass/modules/_headings.scss */
+.title {
+  color: #80191f;
 }
 
-/**
- * This class is used to showcase key content on the site
- */
-/* line 65, ../sass/general/_headings.scss */
-.jumbo, .jumbotron .jumbotron__content {
-  font-size: 120%;
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  line-height: 1.9;
-  -webkit-font-smoothing: antialiased;
-}
-
-/**
- *  Jambotron - block component to showcase key content on the site. Analog of Hero or Hero-unit components
- */
-/* line 75, ../sass/general/_headings.scss */
-.jumbotron {
-  max-width: 43em;
-  margin: 1em auto;
-  padding: 0 1em;
-  clear: both;
-  text-align: center;
-}
-@media only screen and (min-width: 74em) {
-  /* line 75, ../sass/general/_headings.scss */
-  .jumbotron {
-    clear: none;
-  }
-}
-/* line 86, ../sass/general/_headings.scss */
-.jumbotron strong {
-  font-weight: normal;
-  border-bottom: 1px solid #707682;
-}
-/* line 91, ../sass/general/_headings.scss */
-.jumbotron .jumbotron__title {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  margin-top: 1.5em;
-  text-align: center;
-}
-/* line 98, ../sass/general/_headings.scss */
-.jumbotron .jumbotron__content {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  margin-top: 1em;
-  text-align: center;
-}
-/* line 104, ../sass/general/_headings.scss */
-.jumbotron .jumbotron__content p {
-  text-align: center;
-}
-/* line 107, ../sass/general/_headings.scss */
-.jumbotron .jumbotron__content p:first-child {
+/* line 54, ../sass/modules/_headings.scss */
+.header {
   margin-top: 0;
-}
-
-/* ==========================================================================
-   Contact Form
-   ========================================================================== */
-/* line 5, ../sass/general/_forms.scss */
-input, textarea {
-  max-width: 100%;
-}
-
-/* line 9, ../sass/general/_forms.scss */
-input[type="submit"] {
-  width: 8em;
-  height: 2.5em;
-  color: #707682;
-  border: 2px solid #707682;
-  background: #d9d9d9;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#d9d9d9));
-  background: -webkit-linear-gradient(top, white, #d9d9d9);
-  background: -moz-linear-gradient(top, white, #d9d9d9);
-  background: -ms-linear-gradient(top, white, #d9d9d9);
-  background: -o-linear-gradient(top, white, #d9d9d9);
-  background: linear-gradient(to bottom, #ffffff, #d9d9d9);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFD9D9D9', GradientType=0);
-  text-decoration: none;
-}
-/* line 58, ../sass/base/_mixins.scss */
-input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
-  background: #707682;
-  color: white;
-  text-decoration: none;
-}
-
-/* line 16, ../sass/general/_forms.scss */
-.contact-form {
-  margin: 1.5em 1em;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background: #f7f4f0;
 }
 
 /*------------------------------------*\
@@ -1234,12 +1117,12 @@ input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:act
 /**
  * Use an explicit font stack to ensure browsers render correct `line-height`.
  */
-/* line 7, ../sass/general/_code.scss */
+/* line 7, ../sass/modules/_code.scss */
 pre {
   overflow: auto;
 }
 
-/* line 10, ../sass/general/_code.scss */
+/* line 10, ../sass/modules/_code.scss */
 pre mark {
   background: none;
   border-bottom: 1px solid;
@@ -1252,7 +1135,7 @@ pre mark {
    <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
  *
  */
-/* line 23, ../sass/general/_code.scss */
+/* line 23, ../sass/modules/_code.scss */
 .code-comment {
   /**
    * Override this setting in your theme stylesheet
@@ -1261,7 +1144,7 @@ pre mark {
   filter: alpha(opacity=75);
 }
 
-/* line 32, ../sass/general/_code.scss */
+/* line 32, ../sass/modules/_code.scss */
 pre, code {
   font-family: "Bitstream Vera Sans Mono", "Droid Sans Mono", "Lucidia Console", "Menlo", "Courier New", Courier, monospace;
   font-size: 90%;
@@ -1279,63 +1162,38 @@ pre, code {
 /**
  * By default all images is placed at the center
  */
-/* line 9, ../sass/general/_images.scss */
+/* line 8, ../sass/modules/_images.scss */
 img {
+  margin-top: 1em;
   max-width: 100%;
   height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1em;
+  vertical-align: middle;
 }
 
 /**
- * Image size variations.
+ * Basic image modifiers. Extends `img`
  */
-/* line 21, ../sass/general/_images.scss */
-.img--small {
-  max-width: 7em;
+/* line 19, ../sass/modules/_images.scss */
+.img--rounded {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
 
-/* line 25, ../sass/general/_images.scss */
-.img--medium {
-  max-width: 15em;
+/* line 23, ../sass/modules/_images.scss */
+.img--circle {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
-/* line 29, ../sass/general/_images.scss */
+/* line 27, ../sass/modules/_images.scss */
 .img--lead {
-  width: 100%;
-}
-
-/**
- * Image placement variations.
- */
-/* line 39, ../sass/general/_images.scss */
-.img--right, .pull-image--right {
-  float: right;
-  margin: 1em;
-  margin-right: 0;
-}
-
-/* line 43, ../sass/general/_images.scss */
-.img--left, .pull-image--left {
-  float: left;
-  margin: 1em;
-  margin-left: 0;
-}
-
-/* line 47, ../sass/general/_images.scss */
-.pull-image--left, .pull-image--right {
-  max-width: 15em;
-}
-@media only screen and (max-width: 44em) {
-  /* line 47, ../sass/general/_images.scss */
-  .pull-image--left, .pull-image--right {
-    float: none;
-    max-width: 100%;
-    margin: 0 auto;
-    margin-top: 1.5em;
-  }
+  margin-top: 0;
 }
 
 /**
@@ -1345,500 +1203,545 @@ img {
  *   <figcaption>Optional figcaption</figcaption>
  * </figure>
  */
-/* line 69, ../sass/general/_images.scss */
+/* line 40, ../sass/modules/_images.scss */
 .figure {
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
-
-/**
-*  min-content, it is a valid value for width, min-width, max-width, height, min-height and max-height
-*  among other properties include flexbox and grid layout.
-*  In our case, we want the figure element to be as small as possible;
-*  basically, we want it to wrap around the image.
-*  Because <figure> is a block-level element, it stretches to the width of its parent (100%).
-*  We could set it to float: left or display: inline-block to make it collapse to the widest piece of content
-*  but if the caption happens to be wider than the image we have a problem
-*  Source: http://tympanus.net/codrops/2013/05/02/automatic-figure-numbering-with-css-counters/
-**/
-/* line 85, ../sass/general/_images.scss */
-.figure--left {
-  float: left;
-  margin: 1em;
-  margin-left: 0;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-/* line 91, ../sass/general/_images.scss */
-.figure--left img {
-  max-width: 15em;
-}
-
-/* line 96, ../sass/general/_images.scss */
-.figure--right {
-  float: right;
-  margin: 1em;
-  margin-right: 0;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-/* line 102, ../sass/general/_images.scss */
-.figure--right img {
-  max-width: 15em;
-}
-
-@media only screen and (max-width: 44em) {
-  /* line 107, ../sass/general/_images.scss */
-  .figure--left, .figure--right {
-    float: none;
-    margin: 0;
-    margin-top: 1.5em;
-    width: 100%;
-  }
-  /* line 114, ../sass/general/_images.scss */
-  .figure--left img, .figure--right img {
-    max-width: 100%;
-  }
-}
-
-/* line 121, ../sass/general/_images.scss */
-.figure img, .figure--left img, .figure--right img {
+/* line 42, ../sass/modules/_images.scss */
+.figure img {
   margin-top: 0;
 }
 
-/* line 126, ../sass/general/_images.scss */
+/* line 47, ../sass/modules/_images.scss */
 figcaption, .figcaption {
-  font-size: 87.5%;
   clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 14px;
+  font-size: 0.875rem;
   font-style: italic;
-  line-height: 1.3;
+  line-height: 1.33;
   text-align: center;
   max-width: 90%;
-  margin-top: 0.3em;
-  color: #565660;
+  margin-top: 0.25em;
+  color: #888888;
 }
 
-/** ---------------- Figures Usage -----------------------------
+/************************************************************************************
+Icons
+*************************************************************************************/
+/* line 5, ../sass/modules/_icons.scss */
+.icon-phone {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/phone.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
-<!-- Horizontally centered figure -->
-<figure class='figure'>
-    <img src="path/to/your/image.jpg" alt="" />
-    <figcaption>Here is the legend for your image<figcaption>
-</figure>
-
-<!-- Left floated figure -->
-<figure class='figure figure-left'>
-    <img src="path/to/your/image.jpg" alt="" />
-    <figcaption>Here is the legend for your image<figcaption>
-</figure>
-
-<!-- Right floated figure -->
-<figure class='figure figure-right'>
-    <img src="path/to/your/image.jpg" alt="" />
-    <figcaption>Here is the legend for your image<figcaption>
-</figure>
-
--------------------------------------------------------- **/
-/**
- * Images as small icons.
+/************************************************************************************
+BLOCKTEXT
+*************************************************************************************/
+/*
+ * Blocktext - a short block of text information with paddings.
+ * Can be used as a caption for img in thumbnails and media.  But also can be independent and contain img in itself.
  */
-/* line 169, ../sass/general/_images.scss */
-.icon--left {
-  margin: 0.3em;
-  margin-left: 0;
-  max-width: 7em;
+/* line 10, ../sass/modules/_blocktext.scss */
+.blocktext {
+  padding: 1em;
+  padding-top: 0.25em;
+  text-align: left;
+}
+/* line 17, ../sass/modules/_blocktext.scss */
+.blocktext h1, .blocktext h2, .blocktext h3, .blocktext h4, .blocktext h5, .blocktext h6 {
+  margin-top: 0;
+  text-align: center;
 }
 
-/* line 175, ../sass/general/_images.scss */
-.icon--right {
-  margin: 0.3em;
-  margin-right: 0;
-  max-width: 7em;
+/************************************************************************************
+   BLOCKLIST
+*************************************************************************************/
+/* line 9, ../sass/modules/_blocklist.scss */
+.blocklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 14, ../sass/modules/_blocklist.scss */
+.blocklist li {
+  margin: 0;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #cccccc;
+  text-align: center;
+  background: #e3ded3;
+}
+/* line 23, ../sass/modules/_blocklist.scss */
+.blocklist li:last-child {
+  border-bottom: none;
 }
 
 /************************************************************************************
     Blockquotes
 *************************************************************************************/
-/* line 6, ../sass/general/_quotes.scss */
+/* line 6, ../sass/modules/_blockquote.scss */
 blockquote {
-  font-size: 112.5%;
-  font-style: italic;
-  border-left: 5px solid #dddddd;
-  padding-left: 1em;
-  margin-left: 1em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  text-align: left;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
 }
-/* line 16, ../sass/general/_quotes.scss */
-blockquote p:first-of-type {
+/* line 12, ../sass/modules/_blockquote.scss */
+blockquote:first-child {
   margin-top: 0;
 }
 
-/* line 23, ../sass/general/_quotes.scss */
+/* line 19, ../sass/modules/_blockquote.scss */
 blockquote cite {
-  font-size: 87.5%;
-  line-height: 1.3;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.33;
   display: block;
-  margin-top: 0.3em;
+  margin-top: 0.25em;
   text-align: left;
 }
-/* line 30, ../sass/general/_quotes.scss */
+/* line 26, ../sass/modules/_blockquote.scss */
 blockquote cite:before {
   content: "\2014 \2009";
+}
+
+/* line 32, ../sass/modules/_blockquote.scss */
+blockquote:before, blockquote:after {
+  display: block;
+  width: 10em;
+  height: 5px;
+  background-color: #cccccc;
+  content: "\200B";
 }
 
 /************************************************************************************
     PullQuotes
 *************************************************************************************/
 /* use to  mark out some text as PullQuote but without pulling  */
-/* line 41, ../sass/general/_quotes.scss */
-.pullquote--center {
-  font-size: 120%;
-  border-top: 5px solid #c60000;
-  border-bottom: 5px solid #c60000;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  padding: 1em;
+/* line 7, ../sass/modules/_pullquotes.scss */
+.pullquote {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  margin: 1em auto;
+  padding: 1em 0;
   text-align: center;
-  width: 100%;
+  max-width: 43em;
 }
-/* line 51, ../sass/general/_quotes.scss */
-.pullquote--center p:first-of-type {
+/* line 14, ../sass/modules/_pullquotes.scss */
+.pullquote:first-child {
   margin-top: 0;
 }
 
-/*-----------------------Style with text-align: right and left accordingly-------------------------*/
-/* line 58, ../sass/general/_quotes.scss */
-.pullquote--left, .pullquote--right {
-  font-size: 120%;
-  max-width: 10em;
-  padding: 0;
-  color: black;
+/* line 19, ../sass/modules/_pullquotes.scss */
+.pullquote:before, .pullquote:after {
+  display: block;
+  width: 10em;
+  height: 5px;
+  background-color: #80191f;
+  content: "\200B";
 }
 
-/* line 65, ../sass/general/_quotes.scss */
-.pullquote--right {
+/*-----------------------Style with text-align: right and left accordingly-------------------------*/
+/* line 30, ../sass/modules/_pullquotes.scss */
+.pullquote-left, .pullquote-right {
+  margin-top: 1em;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  max-width: 10em;
+}
+/* line 35, ../sass/modules/_pullquotes.scss */
+.pullquote-left:first-child, .pullquote-right:first-child {
+  margin-top: 0;
+}
+
+/* line 40, ../sass/modules/_pullquotes.scss */
+.pullquote-right {
   float: right;
-  margin: 1em;
   margin-right: 0;
-  border-left: 5px solid #c60000;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  border-left: 5px solid #80191f;
   padding-left: 1em;
   text-align: right;
 }
 
-/* line 72, ../sass/general/_quotes.scss */
-.pullquote--left {
+/* line 47, ../sass/modules/_pullquotes.scss */
+.pullquote-left {
   float: left;
-  margin: 1em;
   margin-left: 0;
-  border-right: 5px solid #c60000;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  border-right: 5px solid #80191f;
   padding-rigth: 1em;
   text-align: left;
 }
 
 @media only screen and (max-width: 44em) {
-  /* line 79, ../sass/general/_quotes.scss */
-  .pullquote--left, .pullquote--right {
+  /* line 54, ../sass/modules/_pullquotes.scss */
+  .pullquote-left, .pullquote-right {
     border: none;
-    border-top: 5px solid #c60000;
-    border-bottom: 5px solid #c60000;
     float: none;
-    margin: 1.5em 0;
-    padding: 1em;
     max-width: 100%;
-    width: 100%;
-    text-align: center;
   }
 }
 
 /************************************************************************************
-Containers
+ NAVIGATION
 *************************************************************************************/
-/* line 7, ../sass/layout/_containers.scss */
-.row {
-  *zoom: 1;
-  max-width: 100em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-/* line 73, ../sass/base/_mixins.scss */
-.row:before, .row:after {
-  display: table;
-  content: " ";
-  line-height: 0;
-}
-/* line 80, ../sass/base/_mixins.scss */
-.row:after {
-  clear: both;
-}
-
-/*
- * Central wide content.
- */
-/* line 18, ../sass/layout/_containers.scss */
-.central-wide-content {
-  max-width: 60em;
-  margin: 0 auto;
-  text-align: left;
-}
-
-/* Central text content with the width restricted to the comfortable for reading line length */
-/* line 26, ../sass/layout/_containers.scss */
-.central-text-content {
-  max-width: 36em;
-  margin: 0 auto;
-  text-align: left;
-}
-/* line 31, ../sass/layout/_containers.scss */
-.central-text-content h1, .central-text-content h2, .central-text-content h3, .central-text-content h4, .central-text-content h5, .central-text-content h6 {
-  text-align: center;
-}
-
-/* line 36, ../sass/layout/_containers.scss */
-.column-text, .column-medium, .column-narrow, .column-mini {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  text-align: left;
-  max-width: 36em;
-}
-
-@media only screen and (min-width: 74em) {
-  /* line 43, ../sass/layout/_containers.scss */
-  .column-medium {
-    max-width: 24.5em;
-  }
-}
-
-@media only screen and (min-width: 74em) {
-  /* line 49, ../sass/layout/_containers.scss */
-  .column-narrow {
-    max-width: 20em;
-  }
-}
-
-@media only screen and (min-width: 74em) {
-  /* line 55, ../sass/layout/_containers.scss */
-  .column-mini {
-    max-width: 12em;
-  }
-}
-
-/* line 61, ../sass/layout/_containers.scss */
-.column-half {
-  float: left;
-  width: 50%;
-}
-@media only screen and (max-width: 44em) {
-  /* line 61, ../sass/layout/_containers.scss */
-  .column-half {
-    width: 100%;
-  }
-}
-
-/************************************************************************************
-    Page Header
-*************************************************************************************/
-/* line 5, ../sass/layout/_page-header.scss */
-.page-header {
-  border-bottom: 2px solid #c60000;
-}
-
-/************************************************************************************
-    Page footer
-*************************************************************************************/
-/* line 5, ../sass/layout/_page-footer.scss */
-.page-footer {
-  min-height: 30em;
-  border-top: 2px solid #c60000;
-}
-/* line 9, ../sass/layout/_page-footer.scss */
-.page-footer .page-footer__figure {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  max-width: 100%;
-  margin-top: 1.5em;
-  padding: 0.5em;
-}
-/* line 15, ../sass/layout/_page-footer.scss */
-.page-footer .page-footer__figure img {
-  margin-top: 0;
-}
-
-/************************************************************************************
-    Alerts. Notification Messages
-*************************************************************************************/
-/* line 11, ../sass/modules/_alerts.scss */
-.alert {
-  margin: 1.5em 0;
-  padding: 1em;
-  border: 1px solid;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-/* line 17, ../sass/modules/_alerts.scss */
-.alert .alert--info {
-  background: #bde5f8;
-  color: #00529b;
-  border-color: #8fd3f3;
-}
-/* line 21, ../sass/modules/_alerts.scss */
-.alert .alert--success {
-  background: #dff2bf;
-  color: #4f8a10;
-  border-color: #cae995;
-}
-/* line 25, ../sass/modules/_alerts.scss */
-.alert .alert--warning {
-  background: #feefb3;
-  color: #9f6000;
-  border-color: #fde481;
-}
-/* line 29, ../sass/modules/_alerts.scss */
-.alert .alert--error {
-  background: #ffbaba;
-  color: #d8000c;
-  border-color: #ff8787;
-}
-
-/*------------------------------------*\
-    $BLOCK-LIST
-\*------------------------------------*/
 /**
- * Create big blocky lists of content, e.g.:
+ * NAV.
+ * Navigation abstraction.
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
  *
-   <ul class=block-list>
-      <li>Foo</li>
-      <li>Bar</li>
-      <li>Baz</li>
-      <li><a href=# class=block-list__link>Foo Bar Baz</a></li>
+   <ul class=nav>
+       <li class=active><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
    </ul>
- *
- * Extend this object in your theme stylesheet.
- *
- * Demo: jsfiddle.net/inuitcss/hR57q
+
  *
  */
-/* line 23, ../sass/modules/_block-lists.scss */
-.block-list,
-.block-list > li {
-  border: 0 solid #cccccc;
-  /* Override this color in your theme stylesheet */
-}
-
-/* line 27, ../sass/modules/_block-lists.scss */
-.block-list {
+/* line 21, ../sass/modules/_navs.scss */
+.nav {
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-family: inherit;
   list-style: none;
-  margin-left: 0;
-  border-top-width: 1px;
+  margin: 0;
+  padding: 0;
 }
-/* line 32, ../sass/modules/_block-lists.scss */
-.block-list > li {
-  border-bottom-width: 1px;
-  padding: 0.5em;
+/* line 28, ../sass/modules/_navs.scss */
+.nav > li {
+  margin: 0;
+  padding: 0;
+}
+/* line 32, ../sass/modules/_navs.scss */
+.nav > li > a {
+  display: block;
+  margin: 0 1em 0 0;
+  padding: 0.5em 0;
+  text-decoration: none;
+  border-bottom: none;
+  border-top: 1px solid #80191f;
+}
+/* line 42, ../sass/modules/_navs.scss */
+.nav > .active > a {
+  color: #80191f;
 }
 
-/* line 37, ../sass/modules/_block-lists.scss */
-.block-list__link {
-  display: block;
-  padding: 0.5em;
-  margin: -0.5em;
+/************************************************************************************
+ NAVBAR
+*************************************************************************************/
+/**
+ * NAVBAR is a container for navigation [ .nav ]
+ */
+/* line 13, ../sass/modules/_navbars.scss */
+.navbar--left {
+  float: left;
+  margin-right: 0.5em;
+}
+
+/* line 18, ../sass/modules/_navbars.scss */
+.navbar--right {
+  float: right;
+  margin-left: 0.5em;
 }
 
 /************************************************************************************
  LOGO, BRAND
 *************************************************************************************/
-/* line 5, ../sass/modules/_brand.scss */
+/* line 5, ../sass/modules/_logo.scss */
 .logo {
-  font-family: "Della Respira", Georgia, serif;
+  float: left;
+  font-family: "Cardo", serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 145px 1em 1.5em 0;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #80191f;
 }
-/* line 7, ../sass/modules/_brand.scss */
-.logo sup {
-  font-size: 130%;
-  vertical-align: baseline;
-  position: relative;
-  top: -1px;
+/* line 15, ../sass/modules/_logo.scss */
+.logo a {
+  border: none;
+}
+/* line 18, ../sass/modules/_logo.scss */
+.logo a strong {
+  font-weight: normal;
+  color: #e5e0e0;
+}
+@media only screen and (max-width: 44em) {
+  /* line 5, ../sass/modules/_logo.scss */
+  .logo {
+    margin-bottom: 1em;
+    margin-top: 110px;
+  }
 }
 
-/* line 16, ../sass/modules/_brand.scss */
-.brand {
-  color: #c60000;
+/* line 31, ../sass/modules/_logo.scss */
+.logo-bg {
+  background-image: url(../img/bg1.jpg);
+  background-repeat: no-repeat;
+  background-position: 50px 10px;
+}
+
+/************************************************************************************
+Containers:  ROW, COLUMN and FLUID
+*************************************************************************************/
+/* line 6, ../sass/modules/_containers.scss */
+.row {
+  max-width: 100em;
+  text-align: center;
+}
+
+/*
+ * Central blocks
+ *
+ */
+/* line 18, ../sass/modules/_containers.scss */
+.central-wide {
+  max-width: 52em;
+}
+
+/* line 23, ../sass/modules/_containers.scss */
+.central-text {
+  max-width: 43em;
+}
+
+/*
+ * COLUMNS. FLOAT
+ * On small mobile screens their width = 100%
+ */
+/* line 34, ../sass/modules/_containers.scss */
+.column-half {
+  width: 50%;
+}
+
+/* line 38, ../sass/modules/_containers.scss */
+.column-third {
+  width: 33.33%;
+}
+
+/* line 42, ../sass/modules/_containers.scss */
+.column-fourth {
+  width: 25%;
+}
+
+/* line 47, ../sass/modules/_containers.scss */
+.column-half, .column-third, .column-fourth {
+  float: left;
+}
+@media only screen and (max-width: 44em) {
+  /* line 47, ../sass/modules/_containers.scss */
+  .column-half, .column-third, .column-fourth {
+    width: 100%;
+  }
+}
+
+/*
+ * Special columns to form two-column page with Content and Sidebar
+ *
+ */
+/* line 61, ../sass/modules/_containers.scss */
+.column-content, .column-sidebar {
+  float: left;
+}
+@media only screen and (max-width: 44em) {
+  /* line 61, ../sass/modules/_containers.scss */
+  .column-content, .column-sidebar {
+    width: 100%;
+  }
+}
+
+/* line 69, ../sass/modules/_containers.scss */
+.column-content {
+  width: 66%;
+}
+@media only screen and (min-width: 74em) {
+  /* line 69, ../sass/modules/_containers.scss */
+  .column-content {
+    width: 60%;
+  }
+}
+
+/* line 76, ../sass/modules/_containers.scss */
+.column-sidebar {
+  width: 34%;
+}
+@media only screen and (min-width: 74em) {
+  /* line 76, ../sass/modules/_containers.scss */
+  .column-sidebar {
+    width: 40%;
+  }
+}
+
+/*
+ * BOXES. INLINE blocks that fluidly arranging in one or few lines depending on the screen size.
+ * On small and medium screens they are all equals ( width = $widthText ) and took their true sizes only on "big" screens
+ * Used for galleries, previews and so on
+ */
+/* line 91, ../sass/modules/_containers.scss */
+.box-text, .box-base, .box-small, .box-mini {
+  max-width: 43em;
+}
+
+@media only screen and (min-width: 74em) {
+  /* line 96, ../sass/modules/_containers.scss */
+  .box-base {
+    max-width: 36em;
+  }
+}
+
+@media only screen and (min-width: 74em) {
+  /* line 102, ../sass/modules/_containers.scss */
+  .box-small {
+    max-width: 26em;
+  }
+}
+
+@media only screen and (min-width: 74em) {
+  /* line 108, ../sass/modules/_containers.scss */
+  .box-mini {
+    max-width: 18em;
+  }
+}
+
+/************************************************************************************
+Section
+*************************************************************************************/
+/* line 6, ../sass/modules/_section.scss */
+.section {
+  padding: 1.5em 0;
 }
 
 /************************************************************************************
  BUTTONS
 *************************************************************************************/
-/* line 7, ../sass/modules/_buttons.scss */
+/**
+ * helper mixin to set Buttons colors
+ */
+/* line 41, ../sass/modules/_buttons.scss */
 .button {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
   cursor: pointer;
   text-align: center;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.33;
   padding: 0.5em 1em;
   text-decoration: none;
-  color: #707682;
-  border: 2px solid #707682;
-  background: #d9d9d9;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#d9d9d9));
-  background: -webkit-linear-gradient(top, white, #d9d9d9);
-  background: -moz-linear-gradient(top, white, #d9d9d9);
-  background: -ms-linear-gradient(top, white, #d9d9d9);
-  background: -o-linear-gradient(top, white, #d9d9d9);
-  background: linear-gradient(to bottom, #ffffff, #d9d9d9);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFD9D9D9', GradientType=0);
-  text-decoration: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  color: #80191f;
+  border: 2px solid #80191f;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
-/* line 58, ../sass/base/_mixins.scss */
+/* line 18, ../sass/modules/_buttons.scss */
 .button:hover, .button:focus, .button:active {
-  background: #707682;
   color: white;
-  text-decoration: none;
+  background: black;
+  border-color: #000000;
 }
 
 /**
- * Basic button modifiers. Extends `.button`
+ * Button modifiers. Extends and used with the base ".button" class
  */
-/* line 23, ../sass/modules/_buttons.scss */
-.button--small {
-  font-size: 0.875;
-  padding: 0.3em 1em;
+/* line 57, ../sass/modules/_buttons.scss */
+.button--brand {
+  color: #80191f;
+  border: 2px solid #80191f;
+}
+/* line 18, ../sass/modules/_buttons.scss */
+.button--brand:hover, .button--brand:focus, .button--brand:active {
+  color: white;
+  background: black;
+  border-color: #000000;
 }
 
-/* line 28, ../sass/modules/_buttons.scss */
+/* line 62, ../sass/modules/_buttons.scss */
+.button--painted {
+  background: #80191f;
+  color: white;
+}
+/* line 32, ../sass/modules/_buttons.scss */
+.button--painted:hover, .button--painted:focus, .button--painted:active {
+  background: black;
+  border-color: #000000;
+}
+
+/* line 67, ../sass/modules/_buttons.scss */
+.button--brand.button--painted {
+  background: #80191f;
+  color: white;
+}
+/* line 32, ../sass/modules/_buttons.scss */
+.button--brand.button--painted:hover, .button--brand.button--painted:focus, .button--brand.button--painted:active {
+  background: black;
+  border-color: #000000;
+}
+
+/* line 71, ../sass/modules/_buttons.scss */
+.button--inverse {
+  color: #e5e0e0;
+  border: 2px solid #e5e0e0;
+}
+/* line 18, ../sass/modules/_buttons.scss */
+.button--inverse:hover, .button--inverse:focus, .button--inverse:active {
+  color: white;
+  background: black;
+  border-color: #000000;
+}
+/* line 73, ../sass/modules/_buttons.scss */
+.button--inverse:hover, .button--inverse:focus, .button--inverse:active {
+  border-color: #80191f;
+}
+
+/* line 82, ../sass/modules/_buttons.scss */
+.button----rounded {
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  border-radius: 24px;
+}
+
+/* line 90, ../sass/modules/_buttons.scss */
+.button--disabled {
+  background: #999999;
+  color: #cccccc;
+  border: 1px solid #666666;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+}
+/* line 96, ../sass/modules/_buttons.scss */
+.button--disabled:hover, .button--disabled:focus, .button--disabled:active {
+  background: #999999;
+  color: #cccccc;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+/* line 105, ../sass/modules/_buttons.scss */
+.button--small {
+  padding: 0.25em 1em;
+}
+
+/* line 109, ../sass/modules/_buttons.scss */
 .button--large {
-  font-size: 1.25;
+  font-size: 19.2px;
+  font-size: 1.2rem;
   padding: 1em;
 }
 
-/* line 33, ../sass/modules/_buttons.scss */
+/* line 114, ../sass/modules/_buttons.scss */
 .button--full {
   display: block;
   text-align: center;
@@ -1847,713 +1750,486 @@ Containers
   width: 100%;
 }
 
-/* line 41, ../sass/modules/_buttons.scss */
-.button--brand {
-  color: #c60000;
-  border: 2px solid #c60000;
-  background: #d9d9d9;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#d9d9d9));
-  background: -webkit-linear-gradient(top, white, #d9d9d9);
-  background: -moz-linear-gradient(top, white, #d9d9d9);
-  background: -ms-linear-gradient(top, white, #d9d9d9);
-  background: -o-linear-gradient(top, white, #d9d9d9);
-  background: linear-gradient(to bottom, #ffffff, #d9d9d9);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFD9D9D9', GradientType=0);
-  text-decoration: none;
-}
-/* line 58, ../sass/base/_mixins.scss */
-.button--brand:hover, .button--brand:focus, .button--brand:active {
-  background: #c60000;
-  color: white;
-  text-decoration: none;
-}
-
-/* line 45, ../sass/modules/_buttons.scss */
-.button--inverse {
-  color: #ff0033;
-  background: #707682;
-}
-/* line 49, ../sass/modules/_buttons.scss */
-.button--inverse:hover, .button--inverse:focus, .button--inverse:active {
-  background: #a6aab2;
-  color: #ff0033;
-}
-
+/************************************************************************************
+Cover.
+*************************************************************************************/
 /**
- * theme switch button
+ *  Cover is a kind of intro block (with title, lead img may by some text or Jumbotron)
  */
-/* line 59, ../sass/modules/_buttons.scss */
-.button--theme {
-  width: 2.3em;
-  height: 1.2em;
-  background: black;
-  color: black;
-  text-shadow: none;
-  overflow: hidden;
-  vertical-align: text-bottom;
-  *vertical-align: auto;
-}
-/* line 70, ../sass/modules/_buttons.scss */
-.button--theme:hover, .button--theme:focus, .button--theme:active {
-  background: black;
-  color: black;
+/* line 9, ../sass/modules/_cover.scss */
+.cover {
+  max-width: 36em;
 }
 
-/*------------------------------------*\
-    $MEDIA
-\*------------------------------------*/
+/************************************************************************************
+MEDIA
+*************************************************************************************/
 /**
- * Place any image- and text-like content side-by-side, as per:
- * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- * E.g.:
- *
-   <div class=media>
-       <img src=http://placekitten.com/200/300 alt="" class=media__img>
-       <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   </div>
- *
- * Demo: jsfiddle.net/inuitcss/cf4Qs
- *
- */
-/* line 18, ../sass/modules/_media.scss */
+* Place an media__object (img, video, audio) and corresponding textual content - media__body (.blocktext) side-by-side.
+* Used for thumbnails, blog comments, Tweets and any page blocks with img and corresponding text
+**/
+/**
+* Original non-responsive version like in Bootstrap
+* Source: http://stubbornella.org/content/?p=497
+**/
+/* line 16, ../sass/modules/_media.scss */
 .media {
-  display: block;
+  margin-top: 1em;
 }
-
-/* line 22, ../sass/modules/_media.scss */
-.media__img {
+/* line 19, ../sass/modules/_media.scss */
+.media > .media__object {
   float: left;
-  margin-right: 1em;
+  width: 50%;
 }
-
-/**
- * Reversed image location (right instead of left).
- */
-/* line 29, ../sass/modules/_media.scss */
-.media__img--rev {
+/* line 23, ../sass/modules/_media.scss */
+.media > .media__object > img {
   float: right;
-  margin-left: 1em;
-}
-
-/* line 35, ../sass/modules/_media.scss */
-.media__img img,
-.media__img--rev img {
-  display: block;
-}
-
-/* line 39, ../sass/modules/_media.scss */
-.media__body {
-  overflow: hidden;
-}
-
-/* line 43, ../sass/modules/_media.scss */
-.media__body,
-.media__body > :last-child {
-  margin-bottom: 0;
-}
-
-/************************************************************************************
- NAVIGATION
-*************************************************************************************/
-/**
- * Navigation abstraction.
- * When used on an `ol` or `ul`, this class throws the list into horizontal mode
- *
-   <ul class=nav>
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-/* line 18, ../sass/modules/_nav.scss */
-.nav {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  font-size: 75%;
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  font-weight: normal;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-}
-/* line 27, ../sass/modules/_nav.scss */
-.nav > li {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-}
-/* line 31, ../sass/modules/_nav.scss */
-.nav > li > a {
-  display: block;
-  margin: 0;
-  padding: 0.5em;
-  text-decoration: none;
-  color: #707682;
-}
-/* line 38, ../sass/modules/_nav.scss */
-.nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
-  text-decoration: none;
-  color: white;
-  background-color: #c60000;
-}
-/* line 43, ../sass/modules/_nav.scss */
-.nav > li > a:hover .brand, .nav > li > a:focus .brand, .nav > li > a:active .brand {
-  color: #ff5555;
-}
-/* line 50, ../sass/modules/_nav.scss */
-.nav > li.active > a {
-  color: #c60000;
-}
-/* line 53, ../sass/modules/_nav.scss */
-.nav > li.active > a:hover, .nav > li.active > a:focus, .nav > li.active > a:active {
-  color: white;
-  background-color: #c60000;
-}
-@media only screen and (min-width: 74em) {
-  /* line 18, ../sass/modules/_nav.scss */
-  .nav {
-    font-size: 70%;
-  }
-}
-@media only screen and (max-width: 44em) {
-  /* line 18, ../sass/modules/_nav.scss */
-  .nav {
-    font-size: 80%;
-  }
-}
-
-/**
- * Alternative, more general form to highlight active (current) nav item
- */
-/* line 74, ../sass/modules/_nav.scss */
-#index .nav > li.index a, #graphics .nav > li.graphics a, #contact .nav > li.contact a {
-  color: #c60000;
-}
-/* line 77, ../sass/modules/_nav.scss */
-#index .nav > li.index a:hover, #index .nav > li.index a:focus, #index .nav > li.index a:active, #graphics .nav > li.graphics a:hover, #graphics .nav > li.graphics a:focus, #graphics .nav > li.graphics a:active, #contact .nav > li.contact a:hover, #contact .nav > li.contact a:focus, #contact .nav > li.contact a:active {
-  text-shadow: none;
-  color: white;
-  background-color: #c60000;
-}
-
-/**
- * `.nav--stacked` extends `.nav` and throws the list into vertical mode.
- *  On small screens occupies approximately half of the screen. So it is possible to place two blocks of nav--stacked together
- */
-/* line 93, ../sass/modules/_nav.scss */
-.nav--stacked > li {
-  display: block;
-}
-@media only screen and (max-width: 44em) {
-  /* line 92, ../sass/modules/_nav.scss */
-  .nav--stacked {
-    width: 45%;
-  }
-  /* line 99, ../sass/modules/_nav.scss */
-  .nav--stacked > li {
-    width: 100%;
-  }
-  /* line 101, ../sass/modules/_nav.scss */
-  .nav--stacked > li > a {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-/**
- * `.nav--flip` extends `.nav`   And  throws the list into vertical mode only on big screens.
- */
-@media only screen and (min-width: 74em) {
-  /* line 114, ../sass/modules/_nav.scss */
-  .nav--flip > li {
-    display: block;
-  }
-}
-
-/**
- * `.nav--banner` extends `.nav` increases paddings  and  centres the text
- */
-/* line 124, ../sass/modules/_nav.scss */
-.nav--banner > li > a {
-  padding: 1.5em;
-  text-align: center;
-}
-
-/**
- * `.nav--border` extends `.nav` and adds border-bottom
- */
-/* line 134, ../sass/modules/_nav.scss */
-.nav--bordered > li > a {
-  border-bottom: 1px solid;
-}
-
-/**
- * Extends `.nav`. Make a list of keywords.
- */
-/* line 147, ../sass/modules/_nav.scss */
-.nav--keywords > li:after {
-  content: ", ";
-}
-/* line 151, ../sass/modules/_nav.scss */
-.nav--keywords > li:last-child:after {
-  display: none;
-}
-
-/**
- *  Extends `.nav`. Navigation visible only on small mobile screens.
- */
-/* line 161, ../sass/modules/_nav.scss */
-.nav--mobile-only {
-  display: none;
-}
-@media only screen and (max-width: 44em) {
-  /* line 161, ../sass/modules/_nav.scss */
-  .nav--mobile-only {
-    display: block;
-  }
-}
-
-/**
- * Extends `.nav`. Navigation will be hide (invisible) on small mobile screens.
- */
-@media only screen and (max-width: 44em) {
-  /* line 172, ../sass/modules/_nav.scss */
-  .nav--mobile-hide {
-    display: none;
-  }
-}
-
-/************************************************************************************
- NAVBAR
-*************************************************************************************/
-/**
- * Base classs - navbar  Generally it is a container (wrapper) for .nav
- */
-/* line 9, ../sass/modules/_navbar.scss */
-.navbar {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  text-align: center;
-  overflow: hidden;
-}
-
-/************************************************************************************
- Panels. To separate inside content
-*************************************************************************************/
-/**
- * Panel is used to box off content, leaving it closed on all sides.
- * It  applies some basic padding to the content.
- */
-/* line 10, ../sass/modules/_panels.scss */
-.panel {
-  padding: 0.3em 1em 1.5em 1em;
-}
-
-/* line 14, ../sass/modules/_panels.scss */
-.panel--isolated {
-  margin: 1em;
-}
-@media only screen and (max-width: 44em) {
-  /* line 14, ../sass/modules/_panels.scss */
-  .panel--isolated {
-    margin-left: 0.3em;
-    margin-right: 0.3em;
-  }
-}
-
-/* line 23, ../sass/modules/_panels.scss */
-.panel--decorated {
-  background: #eeeeee;
-  border-top: 1px solid white;
-  border-left: 1px solid white;
-  -webkit-box-shadow: 1px 1px 0 #b4afa7;
-  -moz-box-shadow: 1px 1px 0 #b4afa7;
-  box-shadow: 1px 1px 0 #b4afa7;
-  /*
-   -moz-box-shadow:0 0 4px rgba(0,0,0,0.4);
-   -webkit-box-shadow:0 0 4px rgba(0,0,0,0.4);
-   box-shadow:0 0 4px rgba(0,0,0,0.4);
-  */
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-/* line 28, ../sass/modules/_panels.scss */
-.panel--decorated hr {
-  border-color: #aaaaaa;
-}
-
-/************************************************************************************
- Zebra. To slightly change background color like in  Zebra Striping Tableы
-*************************************************************************************/
-/**
- * Zebra is used to separate content by slight variance of background color
- */
-/* line 9, ../sass/modules/_zebra.scss */
-.zebra {
-  background: #f7f4f0;
-  border-bottom: 1px solid #dddddd;
-  border-top: 1px solid #dddddd;
-}
-
-/************************************************************************************
- Divider
-*************************************************************************************/
-/**
- * Horizontal divider to separate elements
- */
-/* line 9, ../sass/modules/_divider.scss */
-.divider {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
+  margin-top: 0;
   margin-right: 1em;
+  margin-left: 1em;
+  border: 1px solid #cccccc;
+}
+/* line 32, ../sass/modules/_media.scss */
+.media > .media__body {
+  float: left;
+  width: 50%;
+}
+/* line 36, ../sass/modules/_media.scss */
+.media > .media__body > .blocktext {
+  float: left;
+}
+@media only screen and (max-width: 44em) {
+  /* line 44, ../sass/modules/_media.scss */
+  .media > .media__object {
+    float: none;
+    width: auto;
+    margin-bottom: 1em;
+  }
+  /* line 49, ../sass/modules/_media.scss */
+  .media > .media__object > img {
+    float: none;
+  }
+  /* line 55, ../sass/modules/_media.scss */
+  .media > .media__body {
+    float: none;
+    width: auto;
+  }
+  /* line 59, ../sass/modules/_media.scss */
+  .media > .media__body > .blocktext {
+    float: none;
+  }
+}
+
+/* line 73, ../sass/modules/_media.scss */
+.media--reverse > .media__object {
+  float: right;
+}
+/* line 76, ../sass/modules/_media.scss */
+.media--reverse > .media__object > img {
+  float: left;
+}
+/* line 81, ../sass/modules/_media.scss */
+.media--reverse > .media__body {
+  float: right;
+}
+/* line 84, ../sass/modules/_media.scss */
+.media--reverse > .media__body > .blocktext {
+  float: right;
+}
+
+/************************************************************************************
+COLORS Themes
+*************************************************************************************/
+/* line 9, ../sass/modules/_color-themes.scss */
+.theme-base {
+  background: #e5e0e0;
+  color: #424242;
+}
+
+/* line 18, ../sass/modules/_color-themes.scss */
+.theme-inverse {
+  background: black;
+  color: #e5e0e0;
 }
 
 /************************************************************************************
 Post, Articles
 *************************************************************************************/
-/** Preformed base classes for articles and blog posts with wide images, pullquotes and so on
-  * They are designed in contradiction with the standard OOP paradigm in order to facilitate their use.
-  * They permit to achieve "good look" only on the base of standard html-tags and minimal uses af additional classes
+/** Preformed base classes for articles and blog posts
   */
-/* line 11, ../sass/modules/_posts.scss */
-.post, .article {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60em;
+/* line 8, ../sass/modules/_post.scss */
+.post {
   text-align: left;
-  padding: 0.5em 1em 1.5em 1em;
-  /* all text elements are centered and limited to the line-wide comfortable for reading  */
+  margin-top: 1em;
+  padding: 1.5em;
+  max-width: 43em;
 }
-/* line 18, ../sass/modules/_posts.scss */
-.post p, .post ul, .post ol, .post blockquote, .post .pullquote--center, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .article p, .article ul, .article ol, .article blockquote, .article .pullquote--center, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 720px;
-  max-width: 45rem;
+/* line 16, ../sass/modules/_post.scss */
+.post > h1, .post > h2, .post > h3, .post > h4, .post > h5, .post > h6 {
+  text-align: center;
 }
-@media only screen and (min-width: 74em) {
-  /* line 18, ../sass/modules/_posts.scss */
-  .post p, .post ul, .post ol, .post blockquote, .post .pullquote--center, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .article p, .article ul, .article ol, .article blockquote, .article .pullquote--center, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
-    max-width: 748.8px;
-    max-width: 46.8rem;
-  }
+/* line 21, ../sass/modules/_post.scss */
+.post > ul,
+.post > ol {
+  padding-left: 2.5em;
+  margin-top: 1em;
+}
+/* line 25, ../sass/modules/_post.scss */
+.post > ul li,
+.post > ol li {
+  margin-top: 0.25em;
+  /**
+   * Remove vertical spacing from nested lists.
+   */
+}
+/* line 31, ../sass/modules/_post.scss */
+.post > ul li > ul,
+.post > ul li > ol,
+.post > ol li > ul,
+.post > ol li > ol {
+  margin-top: 0.5em;
 }
 @media only screen and (max-width: 44em) {
-  /* line 18, ../sass/modules/_posts.scss */
-  .post p, .post ul, .post ol, .post blockquote, .post .pullquote--center, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .article p, .article ul, .article ol, .article blockquote, .article .pullquote--center, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
-    max-width: 648px;
-    max-width: 40.5rem;
+  /* line 8, ../sass/modules/_post.scss */
+  .post {
+    padding: 1.5em 1em;
   }
-}
-/* line 31, ../sass/modules/_posts.scss */
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
-  text-align: center;
 }
 
 /************************************************************************************
  Thumbnails.
 *************************************************************************************/
 /**
- * Thumbnails - general class to organize preview of blog posts, articles and so on
- * This class is designed in contradiction with the standard OOP paradigm in order to facilitate its use.
- * and achieve "good look" only on the base of standard html-tags
- */
-/* line 11, ../sass/modules/_thumbnails.scss */
-.thumbnails {
-  list-style: none;
+ * Thumbnails are used to organize preview of blog posts, articles...
+ * or to easily display grids of images, videos, texts and so on.
+ * Thumbnail usually contain: img, .blocktext, .media...
+
+
+  <div class="thumbnail">
+     <img src="...">
+ </div>
+
+
+ <img class="thumbnail" src="...">
+
+
+ <div class="thumbnail">
+     <img src="...">
+     <div class="blocktext">
+         <h2>Заголовок</h2>
+         <p>
+             Какой-то текст или описание
+         </p>
+     </div>
+     <div><a class="button" href="...">Далее</a></div>
+ </div>
+
+
+ <div class="thumbnail">
+     <div class="media">
+          ....
+     </div>
+     <div><a class="button" href="...">Далее</a></div>
+ </div>
+ **/
+/* line 39, ../sass/modules/_thumbnails.scss */
+.thumbnail {
+  display: block;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  padding: 0.25em;
+  margin: 1em 0.5em;
+}
+/* line 46, ../sass/modules/_thumbnails.scss */
+.thumbnail img {
   margin: 0;
-  padding: 0;
-  margin-top: 1em;
+  border: none;
 }
 
-/* line 18, ../sass/modules/_thumbnails.scss */
-.thumbnails > li, .thumbnail {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  margin: 1% 2%;
-  padding: 2%;
-  padding-top: 0.3em;
-  width: 44%;
-  -webkit-box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
-  box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
-  text-align: left;
+/* line 54, ../sass/modules/_thumbnails.scss */
+a.thumbnail:hover,
+a.thumbnail:focus {
+  border-color: #80191f;
 }
-/* line 28, ../sass/modules/_thumbnails.scss */
-.thumbnails > li img, .thumbnail img {
-  float: left;
-  margin: 1em;
-  margin-left: 0;
-  margin-bottom: 0;
-  margin-top: 1.5em;
-  max-width: 35%;
+
+/* line 59, ../sass/modules/_thumbnails.scss */
+.thumbnail--brand {
+  border-color: #80191f;
 }
-/* line 36, ../sass/modules/_thumbnails.scss */
-.thumbnails > li h1, .thumbnails > li h2, .thumbnails > li h3, .thumbnails > li h4, .thumbnail h1, .thumbnail h2, .thumbnail h3, .thumbnail h4 {
-  font-size: 120%;
-  margin-top: 1em;
+
+/************************************************************************************
+    Page Header
+*************************************************************************************/
+/* line 5, ../sass/modules/_page-header.scss */
+.page-header {
+  background: black;
+  color: #e5e0e0;
 }
-/* line 40, ../sass/modules/_thumbnails.scss */
-.thumbnails > li h1 a, .thumbnails > li h2 a, .thumbnails > li h3 a, .thumbnails > li h4 a, .thumbnail h1 a, .thumbnail h2 a, .thumbnail h3 a, .thumbnail h4 a {
-  margin: 0;
-  padding: 0;
+
+/************************************************************************************
+    Page footer
+*************************************************************************************/
+/* line 5, ../sass/modules/_page-footer.scss */
+.page-footer {
+  background: black;
+  color: #e5e0e0;
+  min-height: 20em;
 }
-/* line 44, ../sass/modules/_thumbnails.scss */
-.thumbnails > li h1 a:hover, .thumbnails > li h1 a:focus, .thumbnails > li h1 a:active, .thumbnails > li h2 a:hover, .thumbnails > li h2 a:focus, .thumbnails > li h2 a:active, .thumbnails > li h3 a:hover, .thumbnails > li h3 a:focus, .thumbnails > li h3 a:active, .thumbnails > li h4 a:hover, .thumbnails > li h4 a:focus, .thumbnails > li h4 a:active, .thumbnail h1 a:hover, .thumbnail h1 a:focus, .thumbnail h1 a:active, .thumbnail h2 a:hover, .thumbnail h2 a:focus, .thumbnail h2 a:active, .thumbnail h3 a:hover, .thumbnail h3 a:focus, .thumbnail h3 a:active, .thumbnail h4 a:hover, .thumbnail h4 a:focus, .thumbnail h4 a:active {
-  color: white;
-  background-color: #930000;
-  text-decoration: none;
+
+/* line 11, ../sass/modules/_page-footer.scss */
+.footer-bg {
+  background-image: url(../img/footer_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 80px;
 }
 @media only screen and (max-width: 44em) {
-  /* line 18, ../sass/modules/_thumbnails.scss */
-  .thumbnails > li, .thumbnail {
-    max-width: 100%;
-    width: auto;
-    margin: 0.5em;
-    padding: 1em;
+  /* line 11, ../sass/modules/_page-footer.scss */
+  .footer-bg {
+    background-image: none;
   }
 }
 
 /************************************************************************************
-COLORS SCHEMES
+    Callouts. Notification Messages
+*************************************************************************************/
+/*
+ * Not quite alerts, but custom and helpful notes to emphasize a short part of text with its header.
+ */
+/* line 17, ../sass/modules/_callouts.scss */
+.callout-info, .callout-warning, .callout-attention {
+  margin: 1em;
+  padding: 1em;
+  border-left: 3px solid #eeeeee;
+}
+/* line 21, ../sass/modules/_callouts.scss */
+.callout-info h1, .callout-warning h1, .callout-attention h1, .callout-info h2, .callout-warning h2, .callout-attention h2, .callout-info h3, .callout-warning h3, .callout-attention h3, .callout-info h4, .callout-warning h4, .callout-attention h4, .callout-info h5, .callout-warning h5, .callout-attention h5, .callout-info h6, .callout-warning h6, .callout-attention h6 {
+  margin-top: 0;
+}
+
+/* line 26, ../sass/modules/_callouts.scss */
+.callout-info {
+  background: #f4f8fa;
+  border-color: #bce8f1;
+}
+/* line 12, ../sass/modules/_callouts.scss */
+.callout-info h1, .callout-info h2, .callout-info h3, .callout-info h4, .callout-info h5, .callout-info h6 {
+  color: #34789a;
+}
+
+/* line 31, ../sass/modules/_callouts.scss */
+.callout-warning {
+  background: #faf8f0;
+  border-color: #faebcc;
+}
+/* line 12, ../sass/modules/_callouts.scss */
+.callout-warning h1, .callout-warning h2, .callout-warning h3, .callout-warning h4, .callout-warning h5, .callout-warning h6 {
+  color: #8a6d3b;
+}
+
+/* line 36, ../sass/modules/_callouts.scss */
+.callout-attention {
+  background: #fdf7f7;
+  border-color: #eed3d7;
+}
+/* line 12, ../sass/modules/_callouts.scss */
+.callout-attention h1, .callout-attention h2, .callout-attention h3, .callout-attention h4, .callout-attention h5, .callout-attention h6 {
+  color: #b94a48;
+}
+
+/************************************************************************************
+    Alerts. Notification Messages
+*************************************************************************************/
+/* line 12, ../sass/modules/_alerts.scss */
+.alert-info, .alert-success, .alert-warning, .alert-error {
+  margin: 1.5em 0;
+  padding: 1em;
+  border: 1px solid;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 19, ../sass/modules/_alerts.scss */
+.alert-info {
+  background: #bde5f8;
+  color: #00529b;
+  border-color: #8fd3f3;
+}
+
+/* line 24, ../sass/modules/_alerts.scss */
+.alert-success {
+  background: #dff2bf;
+  color: #4f8a10;
+  border-color: #cae995;
+}
+
+/* line 29, ../sass/modules/_alerts.scss */
+.alert-warning {
+  background: #feefb3;
+  color: #9f6000;
+  border-color: #fde481;
+}
+
+/* line 34, ../sass/modules/_alerts.scss */
+.alert-error {
+  background: #ffbaba;
+  color: #d8000c;
+  border-color: #ff8787;
+}
+
+/************************************************************************************
+Hero
+*************************************************************************************/
+/* line 5, ../sass/modules/_hero.scss */
+.hero {
+  float: right;
+  margin: 1em;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  padding: 0;
+  padding-bottom: 0.5em;
+  text-align: center;
+  font-size: 17.6px;
+  font-size: 1.1rem;
+}
+/* line 16, ../sass/modules/_hero.scss */
+.hero h1, .hero h2, .hero h3 {
+  margin: 0;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+}
+@media only screen and (max-width: 44em) {
+  /* line 5, ../sass/modules/_hero.scss */
+  .hero {
+    margin-top: 1em;
+  }
+}
+/* line 25, ../sass/modules/_hero.scss */
+.hero .button {
+  margin: 0.5em 0;
+}
+
+/* line 1, ../sass/modules/_isle.scss */
+.isle {
+  padding: 1em;
+}
+
+/* line 5, ../sass/modules/_isle.scss */
+.isle_s {
+  padding: 14px;
+}
+
+/* line 9, ../sass/modules/_isle.scss */
+.isle_l {
+  padding: 56px;
+}
+
+/************************************************************************************
+ToTop Button
+*************************************************************************************/
+/* line 5, ../sass/modules/_toTop.scss */
+#toTop {
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  background: #555;
+  color: white;
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  display: none;
+}
+/* line 20, ../sass/modules/_toTop.scss */
+#toTop:hover {
+  background: #80191f;
+  color: white;
+}
+@media only screen and (min-width: 74em) {
+  /* line 5, ../sass/modules/_toTop.scss */
+  #toTop {
+    bottom: 0;
+  }
+}
+
+/************************************************************************************
+ADAPTIVE IFRAME (VIDEO, MAPS...)
+*************************************************************************************/
+/* line 6, ../sass/modules/_iframe.scss */
+iframe, object, embed {
+  max-width: 100%;
+}
+
+/* line 15, ../sass/modules/_iframe.scss */
+.iframeContainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+/* line 26, ../sass/modules/_iframe.scss */
+.iframeContainer iframe,
+.iframeContainer object,
+.iframeContainer embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 38, ../sass/modules/_iframe.scss */
+.iframeContainer--gmap {
+  padding-bottom: 100%;
+}
+
+/************************************************************************************
+vCard
+*************************************************************************************/
+/* line 8, ../sass/modules/_vCard.scss */
+.vCard {
+  padding: 1em;
+  text-align: left;
+}
+/* line 13, ../sass/modules/_vCard.scss */
+.vCard .phone, .vCard .address {
+  color: #80191f;
+}
+
+/************************************************************************************
+ Zebra. To slightly change background color like in  Zebra Striping Table, List and etc
 *************************************************************************************/
 /**
- *  Actually theme colors are used only for decorations and small pieces of text
- *  For posts, articles and so on are used base colors. So base colors should be very readable.
+ * Zebra is used to separate content by slight variance of background color
  *
- *  For explicit switching to the base colors  used class   "base-colors"  !!!
- *  For explicit switching to the theme colors  used class   "theme-colors"  !!!
+ * <ul class="zebra">
+ *  <li>content goes here</li>
+ *  <li>content goes here</li>
+ *  <li>content goes here</li>
+ * </ul>
+ *
+ *
+ * <div class="zebra">
+ *  <div class="zebra__item">content goes here</div>
+ *  <div class="zebra__item">content goes here</div >
+ *  <div class="zebra__item">content goes here</div >
+ * </div>
+ *
  */
-/*------------------------ Dark color theme --------------------------------*/
-/* line 76, ../sass/theme/_colors.scss */
-.dark {
-  background: #f8f8f8;
-  color: #211800;
-  text-shadow: none;
-}
-/* line 10, ../sass/theme/_colors.scss */
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: black;
-}
-/* line 14, ../sass/theme/_colors.scss */
-.dark .title, .dark .jumbotron .jumbotron__title, .jumbotron .dark .jumbotron__title {
-  color: #707682;
-}
-/* line 18, ../sass/theme/_colors.scss */
-.dark hr {
-  border-color: #dddddd;
-}
-/* line 80, ../sass/theme/_colors.scss */
-.dark .page-footer, .dark .page-header, .dark .theme-colors {
-  background: #171f30;
-  color: #d7d7d7;
-  text-shadow: none;
-  text-shadow: none;
-}
-/* line 10, ../sass/theme/_colors.scss */
-.dark .page-footer h1, .dark .page-footer h2, .dark .page-footer h3, .dark .page-footer h4, .dark .page-footer h5, .dark .page-footer h6, .dark .page-header h1, .dark .page-header h2, .dark .page-header h3, .dark .page-header h4, .dark .page-header h5, .dark .page-header h6, .dark .theme-colors h1, .dark .theme-colors h2, .dark .theme-colors h3, .dark .theme-colors h4, .dark .theme-colors h5, .dark .theme-colors h6 {
-  color: white;
-}
-/* line 14, ../sass/theme/_colors.scss */
-.dark .page-footer .title, .dark .page-footer .jumbotron .jumbotron__title, .jumbotron .dark .page-footer .jumbotron__title, .dark .page-header .title, .dark .page-header .jumbotron .jumbotron__title, .jumbotron .dark .page-header .jumbotron__title, .dark .theme-colors .title, .dark .theme-colors .jumbotron .jumbotron__title, .jumbotron .dark .theme-colors .jumbotron__title {
-  color: #707682;
-}
-/* line 18, ../sass/theme/_colors.scss */
-.dark .page-footer hr, .dark .page-header hr, .dark .theme-colors hr {
-  border-color: #282835;
-}
-/* line 85, ../sass/theme/_colors.scss */
-.dark .page-footer .nav--bordered > li > a, .dark .page-header .nav--bordered > li > a, .dark .theme-colors .nav--bordered > li > a {
-  border-color: #282835;
-}
-/* line 90, ../sass/theme/_colors.scss */
-.dark .page-footer .base-colors, .dark .page-footer .thumbnails > li, .dark .page-footer .thumbnail, .dark .page-header .base-colors, .dark .page-header .thumbnails > li, .dark .page-header .thumbnail, .dark .theme-colors .base-colors, .dark .theme-colors .thumbnails > li, .dark .theme-colors .thumbnail {
-  background: #f8f8f8;
-  color: #211800;
-  text-shadow: none;
-}
-/* line 10, ../sass/theme/_colors.scss */
-.dark .page-footer .base-colors h1, .dark .page-footer .base-colors h2, .dark .page-footer .base-colors h3, .dark .page-footer .base-colors h4, .dark .page-footer .base-colors h5, .dark .page-footer .base-colors h6, .dark .page-footer .thumbnails > li h1, .dark .page-footer .thumbnails > li h2, .dark .page-footer .thumbnails > li h3, .dark .page-footer .thumbnails > li h4, .dark .page-footer .thumbnails > li h5, .dark .page-footer .thumbnails > li h6, .dark .page-footer .thumbnail h1, .dark .page-footer .thumbnail h2, .dark .page-footer .thumbnail h3, .dark .page-footer .thumbnail h4, .dark .page-footer .thumbnail h5, .dark .page-footer .thumbnail h6, .dark .page-header .base-colors h1, .dark .page-header .base-colors h2, .dark .page-header .base-colors h3, .dark .page-header .base-colors h4, .dark .page-header .base-colors h5, .dark .page-header .base-colors h6, .dark .page-header .thumbnails > li h1, .dark .page-header .thumbnails > li h2, .dark .page-header .thumbnails > li h3, .dark .page-header .thumbnails > li h4, .dark .page-header .thumbnails > li h5, .dark .page-header .thumbnails > li h6, .dark .page-header .thumbnail h1, .dark .page-header .thumbnail h2, .dark .page-header .thumbnail h3, .dark .page-header .thumbnail h4, .dark .page-header .thumbnail h5, .dark .page-header .thumbnail h6, .dark .theme-colors .base-colors h1, .dark .theme-colors .base-colors h2, .dark .theme-colors .base-colors h3, .dark .theme-colors .base-colors h4, .dark .theme-colors .base-colors h5, .dark .theme-colors .base-colors h6, .dark .theme-colors .thumbnails > li h1, .dark .theme-colors .thumbnails > li h2, .dark .theme-colors .thumbnails > li h3, .dark .theme-colors .thumbnails > li h4, .dark .theme-colors .thumbnails > li h5, .dark .theme-colors .thumbnails > li h6, .dark .theme-colors .thumbnail h1, .dark .theme-colors .thumbnail h2, .dark .theme-colors .thumbnail h3, .dark .theme-colors .thumbnail h4, .dark .theme-colors .thumbnail h5, .dark .theme-colors .thumbnail h6 {
-  color: black;
-}
-/* line 14, ../sass/theme/_colors.scss */
-.dark .page-footer .base-colors .title, .dark .page-footer .base-colors .jumbotron .jumbotron__title, .jumbotron .dark .page-footer .base-colors .jumbotron__title, .dark .page-footer .thumbnails > li .title, .dark .page-footer .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .dark .page-footer .thumbnails > li .jumbotron__title, .dark .page-footer .thumbnail .title, .dark .page-footer .thumbnail .jumbotron .jumbotron__title, .jumbotron .dark .page-footer .thumbnail .jumbotron__title, .dark .page-header .base-colors .title, .dark .page-header .base-colors .jumbotron .jumbotron__title, .jumbotron .dark .page-header .base-colors .jumbotron__title, .dark .page-header .thumbnails > li .title, .dark .page-header .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .dark .page-header .thumbnails > li .jumbotron__title, .dark .page-header .thumbnail .title, .dark .page-header .thumbnail .jumbotron .jumbotron__title, .jumbotron .dark .page-header .thumbnail .jumbotron__title, .dark .theme-colors .base-colors .title, .dark .theme-colors .base-colors .jumbotron .jumbotron__title, .jumbotron .dark .theme-colors .base-colors .jumbotron__title, .dark .theme-colors .thumbnails > li .title, .dark .theme-colors .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .dark .theme-colors .thumbnails > li .jumbotron__title, .dark .theme-colors .thumbnail .title, .dark .theme-colors .thumbnail .jumbotron .jumbotron__title, .jumbotron .dark .theme-colors .thumbnail .jumbotron__title {
-  color: #707682;
-}
-/* line 18, ../sass/theme/_colors.scss */
-.dark .page-footer .base-colors hr, .dark .page-footer .thumbnails > li hr, .dark .page-footer .thumbnail hr, .dark .page-header .base-colors hr, .dark .page-header .thumbnails > li hr, .dark .page-header .thumbnail hr, .dark .theme-colors .base-colors hr, .dark .theme-colors .thumbnails > li hr, .dark .theme-colors .thumbnail hr {
-  border-color: #dddddd;
-}
-/* line 95, ../sass/theme/_colors.scss */
-.dark .page-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#171f30), to(#2f363d));
-  background: -webkit-linear-gradient(top, #171f30, #2f363d);
-  background: -moz-linear-gradient(top, #171f30, #2f363d);
-  background: -ms-linear-gradient(top, #171f30, #2f363d);
-  background: -o-linear-gradient(top, #171f30, #2f363d);
-  background: linear-gradient(to bottom, #171f30, #2f363d);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF171F30', endColorstr='#FF2F363D', GradientType=0);
-}
-/* line 100, ../sass/theme/_colors.scss */
-.dark .page-footer .page-footer__figure {
-  background: #2f363d;
-  background: -webkit-gradient(linear, left top, left bottom, from(#171f30), to(#2f363d));
-  background: -webkit-linear-gradient(top, #171f30, #2f363d);
-  background: -moz-linear-gradient(top, #171f30, #2f363d);
-  background: -ms-linear-gradient(top, #171f30, #2f363d);
-  background: -o-linear-gradient(top, #171f30, #2f363d);
-  background: linear-gradient(to bottom, #171f30, #2f363d);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF171F30', endColorstr='#FF2F363D', GradientType=0);
-  color: #707682;
-}
-/* line 107, ../sass/theme/_colors.scss */
-.dark .button--theme {
-  background: #fcf5e3;
-  color: #fcf5e3;
-}
-
-/*------------------------ Light color theme --------------------------------*/
-/* line 116, ../sass/theme/_colors.scss */
-.light {
-  background: white;
-  color: #333333;
-  text-shadow: none;
-}
-/* line 10, ../sass/theme/_colors.scss */
-.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
-  color: black;
-}
-/* line 14, ../sass/theme/_colors.scss */
-.light .title, .light .jumbotron .jumbotron__title, .jumbotron .light .jumbotron__title {
-  color: #707682;
-}
-/* line 18, ../sass/theme/_colors.scss */
-.light hr {
-  border-color: #dddddd;
-}
-/* line 119, ../sass/theme/_colors.scss */
-.light .page-footer, .light .page-header, .light .theme-colors {
-  background: #fcf5e3;
-  color: black;
-  text-shadow: none;
-}
-/* line 10, ../sass/theme/_colors.scss */
-.light .page-footer h1, .light .page-footer h2, .light .page-footer h3, .light .page-footer h4, .light .page-footer h5, .light .page-footer h6, .light .page-header h1, .light .page-header h2, .light .page-header h3, .light .page-header h4, .light .page-header h5, .light .page-header h6, .light .theme-colors h1, .light .theme-colors h2, .light .theme-colors h3, .light .theme-colors h4, .light .theme-colors h5, .light .theme-colors h6 {
-  color: #666666;
-}
-/* line 14, ../sass/theme/_colors.scss */
-.light .page-footer .title, .light .page-footer .jumbotron .jumbotron__title, .jumbotron .light .page-footer .jumbotron__title, .light .page-header .title, .light .page-header .jumbotron .jumbotron__title, .jumbotron .light .page-header .jumbotron__title, .light .theme-colors .title, .light .theme-colors .jumbotron .jumbotron__title, .jumbotron .light .theme-colors .jumbotron__title {
-  color: #707682;
-}
-/* line 18, ../sass/theme/_colors.scss */
-.light .page-footer hr, .light .page-header hr, .light .theme-colors hr {
-  border-color: #cccccc;
-}
-/* line 123, ../sass/theme/_colors.scss */
-.light .page-footer .nav--bordered > li > a, .light .page-header .nav--bordered > li > a, .light .theme-colors .nav--bordered > li > a {
-  border-color: #cccccc;
-}
-/* line 128, ../sass/theme/_colors.scss */
-.light .page-footer .base-colors, .light .page-footer .thumbnails > li, .light .page-footer .thumbnail, .light .page-header .base-colors, .light .page-header .thumbnails > li, .light .page-header .thumbnail, .light .theme-colors .base-colors, .light .theme-colors .thumbnails > li, .light .theme-colors .thumbnail {
-  background: white;
-  color: #333333;
-  text-shadow: none;
-}
-/* line 10, ../sass/theme/_colors.scss */
-.light .page-footer .base-colors h1, .light .page-footer .base-colors h2, .light .page-footer .base-colors h3, .light .page-footer .base-colors h4, .light .page-footer .base-colors h5, .light .page-footer .base-colors h6, .light .page-footer .thumbnails > li h1, .light .page-footer .thumbnails > li h2, .light .page-footer .thumbnails > li h3, .light .page-footer .thumbnails > li h4, .light .page-footer .thumbnails > li h5, .light .page-footer .thumbnails > li h6, .light .page-footer .thumbnail h1, .light .page-footer .thumbnail h2, .light .page-footer .thumbnail h3, .light .page-footer .thumbnail h4, .light .page-footer .thumbnail h5, .light .page-footer .thumbnail h6, .light .page-header .base-colors h1, .light .page-header .base-colors h2, .light .page-header .base-colors h3, .light .page-header .base-colors h4, .light .page-header .base-colors h5, .light .page-header .base-colors h6, .light .page-header .thumbnails > li h1, .light .page-header .thumbnails > li h2, .light .page-header .thumbnails > li h3, .light .page-header .thumbnails > li h4, .light .page-header .thumbnails > li h5, .light .page-header .thumbnails > li h6, .light .page-header .thumbnail h1, .light .page-header .thumbnail h2, .light .page-header .thumbnail h3, .light .page-header .thumbnail h4, .light .page-header .thumbnail h5, .light .page-header .thumbnail h6, .light .theme-colors .base-colors h1, .light .theme-colors .base-colors h2, .light .theme-colors .base-colors h3, .light .theme-colors .base-colors h4, .light .theme-colors .base-colors h5, .light .theme-colors .base-colors h6, .light .theme-colors .thumbnails > li h1, .light .theme-colors .thumbnails > li h2, .light .theme-colors .thumbnails > li h3, .light .theme-colors .thumbnails > li h4, .light .theme-colors .thumbnails > li h5, .light .theme-colors .thumbnails > li h6, .light .theme-colors .thumbnail h1, .light .theme-colors .thumbnail h2, .light .theme-colors .thumbnail h3, .light .theme-colors .thumbnail h4, .light .theme-colors .thumbnail h5, .light .theme-colors .thumbnail h6 {
-  color: black;
-}
-/* line 14, ../sass/theme/_colors.scss */
-.light .page-footer .base-colors .title, .light .page-footer .base-colors .jumbotron .jumbotron__title, .jumbotron .light .page-footer .base-colors .jumbotron__title, .light .page-footer .thumbnails > li .title, .light .page-footer .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .light .page-footer .thumbnails > li .jumbotron__title, .light .page-footer .thumbnail .title, .light .page-footer .thumbnail .jumbotron .jumbotron__title, .jumbotron .light .page-footer .thumbnail .jumbotron__title, .light .page-header .base-colors .title, .light .page-header .base-colors .jumbotron .jumbotron__title, .jumbotron .light .page-header .base-colors .jumbotron__title, .light .page-header .thumbnails > li .title, .light .page-header .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .light .page-header .thumbnails > li .jumbotron__title, .light .page-header .thumbnail .title, .light .page-header .thumbnail .jumbotron .jumbotron__title, .jumbotron .light .page-header .thumbnail .jumbotron__title, .light .theme-colors .base-colors .title, .light .theme-colors .base-colors .jumbotron .jumbotron__title, .jumbotron .light .theme-colors .base-colors .jumbotron__title, .light .theme-colors .thumbnails > li .title, .light .theme-colors .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .light .theme-colors .thumbnails > li .jumbotron__title, .light .theme-colors .thumbnail .title, .light .theme-colors .thumbnail .jumbotron .jumbotron__title, .jumbotron .light .theme-colors .thumbnail .jumbotron__title {
-  color: #707682;
-}
-/* line 18, ../sass/theme/_colors.scss */
-.light .page-footer .base-colors hr, .light .page-footer .thumbnails > li hr, .light .page-footer .thumbnail hr, .light .page-header .base-colors hr, .light .page-header .thumbnails > li hr, .light .page-header .thumbnail hr, .light .theme-colors .base-colors hr, .light .theme-colors .thumbnails > li hr, .light .theme-colors .thumbnail hr {
-  border-color: #dddddd;
-}
-/* line 135, ../sass/theme/_colors.scss */
-.light .page-footer .page-footer__figure {
-  background: #e0e0e0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fcf5e3), to(#e0e0e0));
-  background: -webkit-linear-gradient(top, #fcf5e3, #e0e0e0);
-  background: -moz-linear-gradient(top, #fcf5e3, #e0e0e0);
-  background: -ms-linear-gradient(top, #fcf5e3, #e0e0e0);
-  background: -o-linear-gradient(top, #fcf5e3, #e0e0e0);
-  background: linear-gradient(to bottom, #fcf5e3, #e0e0e0);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFCF5E3', endColorstr='#FFE0E0E0', GradientType=0);
-  color: #707682;
-}
-/* line 142, ../sass/theme/_colors.scss */
-.light .button--theme {
-  background: #171f30;
-  color: #171f30;
-}
-
-/*----------------------------------Mono-colors---------------------------------------------*/
-/* line 155, ../sass/theme/_colors.scss */
-.grey-dark {
-  background: #707682;
-  color: white;
-  text-shadow: none;
-}
-/* line 10, ../sass/theme/_colors.scss */
-.grey-dark h1, .grey-dark h2, .grey-dark h3, .grey-dark h4, .grey-dark h5, .grey-dark h6 {
-  color: #ece0e0;
-}
-/* line 14, ../sass/theme/_colors.scss */
-.grey-dark .title, .grey-dark .jumbotron .jumbotron__title, .jumbotron .grey-dark .jumbotron__title {
-  color: #707682;
-}
-/* line 18, ../sass/theme/_colors.scss */
-.grey-dark hr {
-  border-color: #8a909b;
-}
-
-/* line 164, ../sass/theme/_colors.scss */
-.grey-light {
-  background: #eeeeee;
-  color: #211800;
-  text-shadow: none;
-}
-/* line 10, ../sass/theme/_colors.scss */
-.grey-light h1, .grey-light h2, .grey-light h3, .grey-light h4, .grey-light h5, .grey-light h6 {
-  color: black;
-}
-/* line 14, ../sass/theme/_colors.scss */
-.grey-light .title, .grey-light .jumbotron .jumbotron__title, .jumbotron .grey-light .jumbotron__title {
-  color: #707682;
-}
-/* line 18, ../sass/theme/_colors.scss */
-.grey-light hr {
-  border-color: #d4d4d4;
+/* line 25, ../sass/modules/_zebra.scss */
+.zebra .zebra__item:nth-child(even),
+.zebra > li:nth-child(even) {
+  background: #e0e0e5;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
 }
