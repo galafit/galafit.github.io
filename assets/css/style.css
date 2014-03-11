@@ -1,0 +1,2559 @@
+/* normalize.css v1.1.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 22, ../sass/base/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 32, ../sass/base/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 43, ../sass/base/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 53, ../sass/base/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Prevent system color scheme's background color being used in Firefox, IE,
+ *    and Opera.
+ * 2. Prevent system color scheme's text color being used in Firefox, IE, and
+ *    Opera.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 4. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 72, ../sass/base/_normalize.scss */
+html {
+  background: #fff;
+  /* 1 */
+  color: #000;
+  /* 2 */
+  font-size: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 4 */
+  -ms-text-size-adjust: 100%;
+  /* 4 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 89, ../sass/base/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+/* line 97, ../sass/base/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 109, ../sass/base/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 118, ../sass/base/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 132, ../sass/base/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 137, ../sass/base/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 142, ../sass/base/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 147, ../sass/base/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 152, ../sass/base/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 157, ../sass/base/_normalize.scss */
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+/* line 166, ../sass/base/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 175, ../sass/base/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 179, ../sass/base/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 187, ../sass/base/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+/* line 196, ../sass/base/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+/* line 206, ../sass/base/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 216, ../sass/base/_normalize.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 227, ../sass/base/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 237, ../sass/base/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+/* line 247, ../sass/base/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+/* line 256, ../sass/base/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 265, ../sass/base/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 274, ../sass/base/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 281, ../sass/base/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 285, ../sass/base/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 300, ../sass/base/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 304, ../sass/base/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 314, ../sass/base/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 323, ../sass/base/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+/* line 337, ../sass/base/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 346, ../sass/base/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 358, ../sass/base/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+/* line 370, ../sass/base/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 378, ../sass/base/_normalize.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 390, ../sass/base/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+/* line 407, ../sass/base/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 420, ../sass/base/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 432, ../sass/base/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 449, ../sass/base/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 460, ../sass/base/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 472, ../sass/base/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 485, ../sass/base/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 498, ../sass/base/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+/* line 507, ../sass/base/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 517, ../sass/base/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 530, ../sass/base/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/************************************************************************************
+  FONTS
+*************************************************************************************/
+/* ------------- *
+ * Google Fonts *
+ * ------------- */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.googleapis.com/css?family=Open+Sans:400&subset=cyrillic,latin);
+}
+
+@font-face {
+  font-family: 'Della Respira';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.googleapis.com/css?family=Della+Respira&text=%43%52%4f%53%54%45);
+}
+
+/************************************************************************************
+    VARIABLES
+*************************************************************************************/
+/**
+ * breakpoints for big and small screens used in media queries
+ */
+/**
+ * Brand Staff
+ */
+/**
+ *  Font Families
+ */
+/**
+ * Improved Helvetica.
+ * This allows to use Helvetica on Mac and Arial on PC
+ * On PC Arial Helvetica looks worse then Arial
+ * Sourse: http://css-tricks.com/sans-serif/
+ * Sourse: http://css-tricks.com/snippets/css/better-helvetica/
+ */
+/**
+ * Base Topography
+ */
+/**
+ *  Headings y Component sizing
+ */
+/**
+ *  Title
+ */
+/**
+ *  Jumbo, Jumbotron
+ */
+/**
+ *  Navigation
+ */
+/**
+ *   Component sizing...
+ */
+/**
+ * Margins, Padding
+ */
+/**
+ * Images
+ */
+/**
+ * PullQuotes
+ */
+/**
+ * Blockquotes
+ */
+/**
+ *   Containers...
+ */
+/**
+ * length of  text line that is most comfortable for reading
+ */
+/**
+ * Borders
+ */
+/**
+ * Buttons
+ */
+/**
+ * theme switch button
+ */
+/**
+ * Zebra
+ */
+/**
+ * Panels
+ */
+/**
+ * Thumbnails
+ */
+/**
+ * Forms
+ */
+/* ==========================================================================
+   Helper mixins
+   ========================================================================== */
+/**
+ * Mixin handling breakpoints for media queries
+ * Source: http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+
+ * Modifying idea of "Progressive enhancement" or "mobile firs" I create all stiles for "medium screens" and
+ * then adapt them for small and big screens
+ */
+/**
+ * helper mixin to set Button color
+ */
+/**
+ *   Clearfix
+ *   For clearing floats like a boss h5bp.com/q
+ */
+/**
+ * Mixin to set font size. At the moment in %. By itself it has not much sense but it will be useful if in the future
+ * I wish to set font sizes in em or "rem". See @mixin font-size-rem below
+ */
+/*   linear gradient from top to bottom    */
+/*    Legacy support for inline-block in IE7 (maybe IE6)   */
+/**
+ * Mixins to set elements sizes. At the moment in em. By itself they have not much sense but they will be useful if in the future
+  * I wish to set sizes in "rem". See  max-width-rem and so on below
+ */
+/* Mixins to set sizes in rem */
+/* general - margin, padding... */
+/*
+p {
+   @include rem-fallback(margin, 10, 20, 30, 40);
+}
+
+gives:
+
+p {
+  margin: 160px 320px 480px 640px;
+  margin: 10rem 20rem 30rem 40rem;
+}
+*/
+/**
+ *   Blocks Align mixins
+ */
+/* ==========================================================================
+   Utilities. Helper classes
+   ========================================================================== */
+/*
+ * Clearfix: contain floats
+ */
+/* line 12, ../sass/base/_utilities.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 73, ../sass/base/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: " ";
+  line-height: 0;
+}
+/* line 80, ../sass/base/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * Blocks Align
+ */
+/* line 21, ../sass/base/_utilities.scss */
+.float-left {
+  float: left;
+}
+
+/* line 25, ../sass/base/_utilities.scss */
+.float-right {
+  float: right;
+}
+
+/* line 29, ../sass/base/_utilities.scss */
+.pull-left {
+  float: left;
+  margin: 1em;
+  margin-left: 0;
+}
+
+/* line 33, ../sass/base/_utilities.scss */
+.pull-right {
+  float: right;
+  margin: 1em;
+  margin-right: 0;
+}
+
+/* line 38, ../sass/base/_utilities.scss */
+.pull-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * Text Align
+ */
+/* line 47, ../sass/base/_utilities.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 52, ../sass/base/_utilities.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 56, ../sass/base/_utilities.scss */
+.text-center {
+  text-align: center;
+}
+
+/*
+ * Image replacement
+ */
+/* line 66, ../sass/base/_utilities.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 74, ../sass/base/_utilities.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 85, ../sass/base/_utilities.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 94, ../sass/base/_utilities.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 111, ../sass/base/_utilities.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 124, ../sass/base/_utilities.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 129, ../sass/base/_utilities.scss */
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 7, ../sass/base/_media-print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 15, ../sass/base/_media-print.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 19, ../sass/base/_media-print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 23, ../sass/base/_media-print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 33, ../sass/base/_media-print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 38, ../sass/base/_media-print.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  /* line 43, ../sass/base/_media-print.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 48, ../sass/base/_media-print.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 52, ../sass/base/_media-print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 62, ../sass/base/_media-print.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 68, ../sass/base/_media-print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/************************************************************************************
+ GENERAL STYLING. Standard Html tags
+*************************************************************************************/
+/** apply  Box Sizing model to all elements **/
+/* line 7, ../sass/general/_!main.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 17, ../sass/general/_!main.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, del, dfn, em, img, q, small, strike, strong, sub, sup, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header,
+hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 23, ../sass/general/_!main.scss */
+html, body {
+  min-height: 100%;
+}
+
+/* line 27, ../sass/general/_!main.scss */
+html {
+  overflow-y: scroll;
+  /* Stops Mobile Safari from auto-adjusting font-sizes */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* improves the text rendering in more recent browsers */
+  text-rendering: optimizeLegibility;
+}
+
+/* line 37, ../sass/general/_!main.scss */
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-size: 125%;
+  font-weight: 300;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1.667;
+  background: white;
+  color: #333333;
+}
+@media only screen and (min-width: 74em) {
+  /* line 37, ../sass/general/_!main.scss */
+  body {
+    font-size: 130%;
+  }
+}
+@media only screen and (max-width: 44em) {
+  /* line 37, ../sass/general/_!main.scss */
+  body {
+    font-size: 112.5%;
+  }
+}
+
+/**
+*  Give Clickable Elements a Pointer Cursor
+*  Source: http://css-tricks.com/snippets/css/give-clickable-elements-a-pointer-cursor/
+**/
+/* line 62, ../sass/general/_!main.scss */
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+  cursor: pointer;
+}
+
+/* line 66, ../sass/general/_!main.scss */
+a {
+  color: #930000;
+  text-decoration: none;
+  /**
+  *  increase the clickable area on links
+  *  Source: http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links
+  **/
+  position: relative;
+  padding: 0.5em;
+  margin: -0.5em;
+}
+/* line 77, ../sass/general/_!main.scss */
+a:hover, a:focus, a:active {
+  color: #c60000;
+  text-decoration: underline;
+}
+
+/* line 83, ../sass/general/_!main.scss */
+::-moz-selection, ::selection {
+  background: #c60000;
+  color: white;
+}
+
+/**
+ *  wherever possible is applied the principle of "Single-direction margin declarations"
+ *  Source: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ *  But instead of using margin-bottom I use margin-top.
+ *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
+ *  and not upon the properties (margin-bottom) of the previous object
+ */
+/* line 96, ../sass/general/_!main.scss */
+p, ul, ol {
+  margin-top: 1em;
+}
+
+/* line 100, ../sass/general/_!main.scss */
+ul, ol {
+  padding-left: 1.5em;
+}
+/* line 103, ../sass/general/_!main.scss */
+ul li, ol li {
+  margin-top: 0.3em;
+  /**
+   * Remove vertical spacing from nested lists.
+   */
+}
+/* line 109, ../sass/general/_!main.scss */
+ul li > ul,
+ul li > ol, ol li > ul,
+ol li > ol {
+  margin-top: 0.5em;
+}
+
+/* line 115, ../sass/general/_!main.scss */
+i, em, mark, q {
+  font-style: italic;
+}
+
+/* line 119, ../sass/general/_!main.scss */
+hr {
+  border-top: 2px solid #dddddd;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  height: 0;
+}
+
+/* line 126, ../sass/general/_!main.scss */
+cite {
+  color: #565660;
+}
+
+/************************************************************************************
+    HEADINGS
+*************************************************************************************/
+/**
+ *  wherever possible is applied the principle of "Single-direction margin declarations"
+ *  Source: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ *  But instead of using margin-bottom I use margin-top.
+ *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
+ *  and not upon the properties (margin-bottom) of the previous object
+ */
+/* line 13, ../sass/general/_headings.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  text-align: left;
+  color: black;
+}
+
+/* line 23, ../sass/general/_headings.scss */
+h1 {
+  font-size: 172%;
+}
+
+/* line 27, ../sass/general/_headings.scss */
+h2 {
+  font-size: 165%;
+}
+
+/* line 31, ../sass/general/_headings.scss */
+h3 {
+  font-size: 130%;
+}
+
+/**
+ * These classes are used to make the introductory text (usually a paragraph)
+ * of a document slightly larger.
+ */
+/* line 41, ../sass/general/_headings.scss */
+h4,
+.lede,
+.lead {
+  font-size: 120%;
+  font-style: italic;
+}
+
+/* line 46, ../sass/general/_headings.scss */
+.title, .jumbotron .jumbotron__title {
+  font-size: 140%;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  margin-top: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  word-spacing: 0.5em;
+  color: #707682;
+}
+/* line 55, ../sass/general/_headings.scss */
+.title:first-letter, .jumbotron .jumbotron__title:first-letter {
+  border-bottom: 3px solid #c60000;
+}
+
+/**
+ * This class is used to showcase key content on the site
+ */
+/* line 65, ../sass/general/_headings.scss */
+.jumbo, .jumbotron .jumbotron__content {
+  font-size: 120%;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ *  Jambotron - block component to showcase key content on the site. Analog of Hero or Hero-unit components
+ */
+/* line 75, ../sass/general/_headings.scss */
+.jumbotron {
+  max-width: 43em;
+  margin: 1em auto;
+  padding: 0 1em;
+  clear: both;
+  text-align: center;
+}
+@media only screen and (min-width: 74em) {
+  /* line 75, ../sass/general/_headings.scss */
+  .jumbotron {
+    clear: none;
+  }
+}
+/* line 86, ../sass/general/_headings.scss */
+.jumbotron strong {
+  font-weight: normal;
+  border-bottom: 1px solid #707682;
+}
+/* line 91, ../sass/general/_headings.scss */
+.jumbotron .jumbotron__title {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin-top: 1.5em;
+  text-align: center;
+}
+/* line 98, ../sass/general/_headings.scss */
+.jumbotron .jumbotron__content {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin-top: 1em;
+  text-align: center;
+}
+/* line 104, ../sass/general/_headings.scss */
+.jumbotron .jumbotron__content p {
+  text-align: center;
+}
+/* line 107, ../sass/general/_headings.scss */
+.jumbotron .jumbotron__content p:first-child {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   Contact Form
+   ========================================================================== */
+/* line 5, ../sass/general/_forms.scss */
+input, textarea {
+  max-width: 100%;
+}
+
+/* line 9, ../sass/general/_forms.scss */
+input[type="submit"] {
+  width: 8em;
+  height: 2.5em;
+  color: #707682;
+  border: 2px solid #707682;
+  background: #d9d9d9;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#d9d9d9));
+  background: -webkit-linear-gradient(top, white, #d9d9d9);
+  background: -moz-linear-gradient(top, white, #d9d9d9);
+  background: -ms-linear-gradient(top, white, #d9d9d9);
+  background: -o-linear-gradient(top, white, #d9d9d9);
+  background: linear-gradient(to bottom, #ffffff, #d9d9d9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFD9D9D9', GradientType=0);
+  text-decoration: none;
+}
+/* line 58, ../sass/base/_mixins.scss */
+input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
+  background: #707682;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 16, ../sass/general/_forms.scss */
+.contact-form {
+  margin: 1.5em 1em;
+}
+
+/*------------------------------------*\
+    $CODE
+\*------------------------------------*/
+/**
+ * Use an explicit font stack to ensure browsers render correct `line-height`.
+ */
+/* line 7, ../sass/general/_code.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 10, ../sass/general/_code.scss */
+pre mark {
+  background: none;
+  border-bottom: 1px solid;
+  color: inherit;
+}
+
+/**
+ * Add comments to your code examples, e.g.:
+ *
+   <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
+ *
+ */
+/* line 23, ../sass/general/_code.scss */
+.code-comment {
+  /**
+   * Override this setting in your theme stylesheet
+   */
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+/* line 32, ../sass/general/_code.scss */
+pre, code {
+  font-family: "Bitstream Vera Sans Mono", "Droid Sans Mono", "Lucidia Console", "Menlo", "Courier New", Courier, monospace;
+  font-size: 90%;
+  max-width: 100%;
+  overflow: auto;
+  padding: 0.2em 0.4em;
+  white-space: pre;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+/* ==========================================================================
+   IMAGES
+   ========================================================================== */
+/**
+ * By default all images is placed at the center
+ */
+/* line 9, ../sass/general/_images.scss */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+/**
+ * Image size variations.
+ */
+/* line 21, ../sass/general/_images.scss */
+.img--small {
+  max-width: 7em;
+}
+
+/* line 25, ../sass/general/_images.scss */
+.img--medium {
+  max-width: 15em;
+}
+
+/* line 29, ../sass/general/_images.scss */
+.img--lead {
+  width: 100%;
+}
+
+/**
+ * Image placement variations.
+ */
+/* line 39, ../sass/general/_images.scss */
+.img--right, .pull-image--right {
+  float: right;
+  margin: 1em;
+  margin-right: 0;
+}
+
+/* line 43, ../sass/general/_images.scss */
+.img--left, .pull-image--left {
+  float: left;
+  margin: 1em;
+  margin-left: 0;
+}
+
+/* line 47, ../sass/general/_images.scss */
+.pull-image--left, .pull-image--right {
+  max-width: 15em;
+}
+@media only screen and (max-width: 44em) {
+  /* line 47, ../sass/general/_images.scss */
+  .pull-image--left, .pull-image--right {
+    float: none;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+  }
+}
+
+/**
+ * Figures
+ * <figure class="figure">
+ *   <img src="path/to/image.jpg" alt="" />
+ *   <figcaption>Optional figcaption</figcaption>
+ * </figure>
+ */
+/* line 69, ../sass/general/_images.scss */
+.figure {
+  margin-top: 1.5em;
+}
+
+/**
+*  min-content, it is a valid value for width, min-width, max-width, height, min-height and max-height
+*  among other properties include flexbox and grid layout.
+*  In our case, we want the figure element to be as small as possible;
+*  basically, we want it to wrap around the image.
+*  Because <figure> is a block-level element, it stretches to the width of its parent (100%).
+*  We could set it to float: left or display: inline-block to make it collapse to the widest piece of content
+*  but if the caption happens to be wider than the image we have a problem
+*  Source: http://tympanus.net/codrops/2013/05/02/automatic-figure-numbering-with-css-counters/
+**/
+/* line 85, ../sass/general/_images.scss */
+.figure--left {
+  float: left;
+  margin: 1em;
+  margin-left: 0;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+/* line 91, ../sass/general/_images.scss */
+.figure--left img {
+  max-width: 15em;
+}
+
+/* line 96, ../sass/general/_images.scss */
+.figure--right {
+  float: right;
+  margin: 1em;
+  margin-right: 0;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+/* line 102, ../sass/general/_images.scss */
+.figure--right img {
+  max-width: 15em;
+}
+
+@media only screen and (max-width: 44em) {
+  /* line 107, ../sass/general/_images.scss */
+  .figure--left, .figure--right {
+    float: none;
+    margin: 0;
+    margin-top: 1.5em;
+    width: 100%;
+  }
+  /* line 114, ../sass/general/_images.scss */
+  .figure--left img, .figure--right img {
+    max-width: 100%;
+  }
+}
+
+/* line 121, ../sass/general/_images.scss */
+.figure img, .figure--left img, .figure--right img {
+  margin-top: 0;
+}
+
+/* line 126, ../sass/general/_images.scss */
+figcaption, .figcaption {
+  font-size: 87.5%;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  line-height: 1.3;
+  text-align: center;
+  max-width: 90%;
+  margin-top: 0.3em;
+  color: #565660;
+}
+
+/** ---------------- Figures Usage -----------------------------
+
+<!-- Horizontally centered figure -->
+<figure class='figure'>
+    <img src="path/to/your/image.jpg" alt="" />
+    <figcaption>Here is the legend for your image<figcaption>
+</figure>
+
+<!-- Left floated figure -->
+<figure class='figure figure-left'>
+    <img src="path/to/your/image.jpg" alt="" />
+    <figcaption>Here is the legend for your image<figcaption>
+</figure>
+
+<!-- Right floated figure -->
+<figure class='figure figure-right'>
+    <img src="path/to/your/image.jpg" alt="" />
+    <figcaption>Here is the legend for your image<figcaption>
+</figure>
+
+-------------------------------------------------------- **/
+/**
+ * Images as small icons.
+ */
+/* line 169, ../sass/general/_images.scss */
+.icon--left {
+  margin: 0.3em;
+  margin-left: 0;
+  max-width: 7em;
+}
+
+/* line 175, ../sass/general/_images.scss */
+.icon--right {
+  margin: 0.3em;
+  margin-right: 0;
+  max-width: 7em;
+}
+
+/************************************************************************************
+    Blockquotes
+*************************************************************************************/
+/* line 6, ../sass/general/_quotes.scss */
+blockquote {
+  font-size: 112.5%;
+  font-style: italic;
+  border-left: 5px solid #dddddd;
+  padding-left: 1em;
+  margin-left: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+/* line 16, ../sass/general/_quotes.scss */
+blockquote p:first-of-type {
+  margin-top: 0;
+}
+
+/* line 23, ../sass/general/_quotes.scss */
+blockquote cite {
+  font-size: 87.5%;
+  line-height: 1.3;
+  display: block;
+  margin-top: 0.3em;
+  text-align: left;
+}
+/* line 30, ../sass/general/_quotes.scss */
+blockquote cite:before {
+  content: "\2014 \2009";
+}
+
+/************************************************************************************
+    PullQuotes
+*************************************************************************************/
+/* use to  mark out some text as PullQuote but without pulling  */
+/* line 41, ../sass/general/_quotes.scss */
+.pullquote--center {
+  font-size: 120%;
+  border-top: 5px solid #c60000;
+  border-bottom: 5px solid #c60000;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}
+/* line 51, ../sass/general/_quotes.scss */
+.pullquote--center p:first-of-type {
+  margin-top: 0;
+}
+
+/*-----------------------Style with text-align: right and left accordingly-------------------------*/
+/* line 58, ../sass/general/_quotes.scss */
+.pullquote--left, .pullquote--right {
+  font-size: 120%;
+  max-width: 10em;
+  padding: 0;
+  color: black;
+}
+
+/* line 65, ../sass/general/_quotes.scss */
+.pullquote--right {
+  float: right;
+  margin: 1em;
+  margin-right: 0;
+  border-left: 5px solid #c60000;
+  padding-left: 1em;
+  text-align: right;
+}
+
+/* line 72, ../sass/general/_quotes.scss */
+.pullquote--left {
+  float: left;
+  margin: 1em;
+  margin-left: 0;
+  border-right: 5px solid #c60000;
+  padding-rigth: 1em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 44em) {
+  /* line 79, ../sass/general/_quotes.scss */
+  .pullquote--left, .pullquote--right {
+    border: none;
+    border-top: 5px solid #c60000;
+    border-bottom: 5px solid #c60000;
+    float: none;
+    margin: 1.5em 0;
+    padding: 1em;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/************************************************************************************
+Containers
+*************************************************************************************/
+/* line 7, ../sass/layout/_containers.scss */
+.row {
+  *zoom: 1;
+  max-width: 100em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* line 73, ../sass/base/_mixins.scss */
+.row:before, .row:after {
+  display: table;
+  content: " ";
+  line-height: 0;
+}
+/* line 80, ../sass/base/_mixins.scss */
+.row:after {
+  clear: both;
+}
+
+/*
+ * Central wide content.
+ */
+/* line 18, ../sass/layout/_containers.scss */
+.central-wide-content {
+  max-width: 60em;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Central text content with the width restricted to the comfortable for reading line length */
+/* line 26, ../sass/layout/_containers.scss */
+.central-text-content {
+  max-width: 36em;
+  margin: 0 auto;
+  text-align: left;
+}
+/* line 31, ../sass/layout/_containers.scss */
+.central-text-content h1, .central-text-content h2, .central-text-content h3, .central-text-content h4, .central-text-content h5, .central-text-content h6 {
+  text-align: center;
+}
+
+/* line 36, ../sass/layout/_containers.scss */
+.column-text, .column-medium, .column-narrow, .column-mini {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  text-align: left;
+  max-width: 36em;
+}
+
+@media only screen and (min-width: 74em) {
+  /* line 43, ../sass/layout/_containers.scss */
+  .column-medium {
+    max-width: 24.5em;
+  }
+}
+
+@media only screen and (min-width: 74em) {
+  /* line 49, ../sass/layout/_containers.scss */
+  .column-narrow {
+    max-width: 20em;
+  }
+}
+
+@media only screen and (min-width: 74em) {
+  /* line 55, ../sass/layout/_containers.scss */
+  .column-mini {
+    max-width: 12em;
+  }
+}
+
+/* line 61, ../sass/layout/_containers.scss */
+.column-half {
+  float: left;
+  width: 50%;
+}
+@media only screen and (max-width: 44em) {
+  /* line 61, ../sass/layout/_containers.scss */
+  .column-half {
+    width: 100%;
+  }
+}
+
+/************************************************************************************
+    Page Header
+*************************************************************************************/
+/* line 5, ../sass/layout/_page-header.scss */
+.page-header {
+  border-bottom: 2px solid #c60000;
+}
+
+/************************************************************************************
+    Page footer
+*************************************************************************************/
+/* line 5, ../sass/layout/_page-footer.scss */
+.page-footer {
+  min-height: 30em;
+  border-top: 2px solid #c60000;
+}
+/* line 9, ../sass/layout/_page-footer.scss */
+.page-footer .page-footer__figure {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  max-width: 100%;
+  margin-top: 1.5em;
+  padding: 0.5em;
+}
+/* line 15, ../sass/layout/_page-footer.scss */
+.page-footer .page-footer__figure img {
+  margin-top: 0;
+}
+
+/************************************************************************************
+    Alerts. Notification Messages
+*************************************************************************************/
+/* line 11, ../sass/modules/_alerts.scss */
+.alert {
+  margin: 1.5em 0;
+  padding: 1em;
+  border: 1px solid;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 17, ../sass/modules/_alerts.scss */
+.alert .alert--info {
+  background: #bde5f8;
+  color: #00529b;
+  border-color: #8fd3f3;
+}
+/* line 21, ../sass/modules/_alerts.scss */
+.alert .alert--success {
+  background: #dff2bf;
+  color: #4f8a10;
+  border-color: #cae995;
+}
+/* line 25, ../sass/modules/_alerts.scss */
+.alert .alert--warning {
+  background: #feefb3;
+  color: #9f6000;
+  border-color: #fde481;
+}
+/* line 29, ../sass/modules/_alerts.scss */
+.alert .alert--error {
+  background: #ffbaba;
+  color: #d8000c;
+  border-color: #ff8787;
+}
+
+/*------------------------------------*\
+    $BLOCK-LIST
+\*------------------------------------*/
+/**
+ * Create big blocky lists of content, e.g.:
+ *
+   <ul class=block-list>
+      <li>Foo</li>
+      <li>Bar</li>
+      <li>Baz</li>
+      <li><a href=# class=block-list__link>Foo Bar Baz</a></li>
+   </ul>
+ *
+ * Extend this object in your theme stylesheet.
+ *
+ * Demo: jsfiddle.net/inuitcss/hR57q
+ *
+ */
+/* line 23, ../sass/modules/_block-lists.scss */
+.block-list,
+.block-list > li {
+  border: 0 solid #cccccc;
+  /* Override this color in your theme stylesheet */
+}
+
+/* line 27, ../sass/modules/_block-lists.scss */
+.block-list {
+  list-style: none;
+  margin-left: 0;
+  border-top-width: 1px;
+}
+/* line 32, ../sass/modules/_block-lists.scss */
+.block-list > li {
+  border-bottom-width: 1px;
+  padding: 0.5em;
+}
+
+/* line 37, ../sass/modules/_block-lists.scss */
+.block-list__link {
+  display: block;
+  padding: 0.5em;
+  margin: -0.5em;
+}
+
+/************************************************************************************
+ LOGO, BRAND
+*************************************************************************************/
+/* line 5, ../sass/modules/_brand.scss */
+.logo {
+  font-family: "Della Respira", Georgia, serif;
+}
+/* line 7, ../sass/modules/_brand.scss */
+.logo sup {
+  font-size: 130%;
+  vertical-align: baseline;
+  position: relative;
+  top: -1px;
+}
+
+/* line 16, ../sass/modules/_brand.scss */
+.brand {
+  color: #c60000;
+}
+
+/************************************************************************************
+ BUTTONS
+*************************************************************************************/
+/* line 7, ../sass/modules/_buttons.scss */
+.button {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #707682;
+  border: 2px solid #707682;
+  background: #d9d9d9;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#d9d9d9));
+  background: -webkit-linear-gradient(top, white, #d9d9d9);
+  background: -moz-linear-gradient(top, white, #d9d9d9);
+  background: -ms-linear-gradient(top, white, #d9d9d9);
+  background: -o-linear-gradient(top, white, #d9d9d9);
+  background: linear-gradient(to bottom, #ffffff, #d9d9d9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFD9D9D9', GradientType=0);
+  text-decoration: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 58, ../sass/base/_mixins.scss */
+.button:hover, .button:focus, .button:active {
+  background: #707682;
+  color: white;
+  text-decoration: none;
+}
+
+/**
+ * Basic button modifiers. Extends `.button`
+ */
+/* line 23, ../sass/modules/_buttons.scss */
+.button--small {
+  font-size: 0.875;
+  padding: 0.3em 1em;
+}
+
+/* line 28, ../sass/modules/_buttons.scss */
+.button--large {
+  font-size: 1.25;
+  padding: 1em;
+}
+
+/* line 33, ../sass/modules/_buttons.scss */
+.button--full {
+  display: block;
+  text-align: center;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+
+/* line 41, ../sass/modules/_buttons.scss */
+.button--brand {
+  color: #c60000;
+  border: 2px solid #c60000;
+  background: #d9d9d9;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#d9d9d9));
+  background: -webkit-linear-gradient(top, white, #d9d9d9);
+  background: -moz-linear-gradient(top, white, #d9d9d9);
+  background: -ms-linear-gradient(top, white, #d9d9d9);
+  background: -o-linear-gradient(top, white, #d9d9d9);
+  background: linear-gradient(to bottom, #ffffff, #d9d9d9);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFD9D9D9', GradientType=0);
+  text-decoration: none;
+}
+/* line 58, ../sass/base/_mixins.scss */
+.button--brand:hover, .button--brand:focus, .button--brand:active {
+  background: #c60000;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 45, ../sass/modules/_buttons.scss */
+.button--inverse {
+  color: #ff0033;
+  background: #707682;
+}
+/* line 49, ../sass/modules/_buttons.scss */
+.button--inverse:hover, .button--inverse:focus, .button--inverse:active {
+  background: #a6aab2;
+  color: #ff0033;
+}
+
+/**
+ * theme switch button
+ */
+/* line 59, ../sass/modules/_buttons.scss */
+.button--theme {
+  width: 2.3em;
+  height: 1.2em;
+  background: black;
+  color: black;
+  text-shadow: none;
+  overflow: hidden;
+  vertical-align: text-bottom;
+  *vertical-align: auto;
+}
+/* line 70, ../sass/modules/_buttons.scss */
+.button--theme:hover, .button--theme:focus, .button--theme:active {
+  background: black;
+  color: black;
+}
+
+/*------------------------------------*\
+    $MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+   <div class=media>
+       <img src=http://placekitten.com/200/300 alt="" class=media__img>
+       <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+/* line 18, ../sass/modules/_media.scss */
+.media {
+  display: block;
+}
+
+/* line 22, ../sass/modules/_media.scss */
+.media__img {
+  float: left;
+  margin-right: 1em;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+/* line 29, ../sass/modules/_media.scss */
+.media__img--rev {
+  float: right;
+  margin-left: 1em;
+}
+
+/* line 35, ../sass/modules/_media.scss */
+.media__img img,
+.media__img--rev img {
+  display: block;
+}
+
+/* line 39, ../sass/modules/_media.scss */
+.media__body {
+  overflow: hidden;
+}
+
+/* line 43, ../sass/modules/_media.scss */
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0;
+}
+
+/************************************************************************************
+ NAVIGATION
+*************************************************************************************/
+/**
+ * Navigation abstraction.
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ *
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+/* line 18, ../sass/modules/_nav.scss */
+.nav {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  font-size: 75%;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+/* line 27, ../sass/modules/_nav.scss */
+.nav > li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+/* line 31, ../sass/modules/_nav.scss */
+.nav > li > a {
+  display: block;
+  margin: 0;
+  padding: 0.5em;
+  text-decoration: none;
+  color: #707682;
+}
+/* line 38, ../sass/modules/_nav.scss */
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
+  text-decoration: none;
+  color: white;
+  background-color: #c60000;
+}
+/* line 43, ../sass/modules/_nav.scss */
+.nav > li > a:hover .brand, .nav > li > a:focus .brand, .nav > li > a:active .brand {
+  color: #ff5555;
+}
+/* line 50, ../sass/modules/_nav.scss */
+.nav > li.active > a {
+  color: #c60000;
+}
+/* line 53, ../sass/modules/_nav.scss */
+.nav > li.active > a:hover, .nav > li.active > a:focus, .nav > li.active > a:active {
+  color: white;
+  background-color: #c60000;
+}
+@media only screen and (min-width: 74em) {
+  /* line 18, ../sass/modules/_nav.scss */
+  .nav {
+    font-size: 70%;
+  }
+}
+@media only screen and (max-width: 44em) {
+  /* line 18, ../sass/modules/_nav.scss */
+  .nav {
+    font-size: 80%;
+  }
+}
+
+/**
+ * Alternative, more general form to highlight active (current) nav item
+ */
+/* line 74, ../sass/modules/_nav.scss */
+#index .nav > li.index a, #graphics .nav > li.graphics a, #contact .nav > li.contact a {
+  color: #c60000;
+}
+/* line 77, ../sass/modules/_nav.scss */
+#index .nav > li.index a:hover, #index .nav > li.index a:focus, #index .nav > li.index a:active, #graphics .nav > li.graphics a:hover, #graphics .nav > li.graphics a:focus, #graphics .nav > li.graphics a:active, #contact .nav > li.contact a:hover, #contact .nav > li.contact a:focus, #contact .nav > li.contact a:active {
+  text-shadow: none;
+  color: white;
+  background-color: #c60000;
+}
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode.
+ *  On small screens occupies approximately half of the screen. So it is possible to place two blocks of nav--stacked together
+ */
+/* line 93, ../sass/modules/_nav.scss */
+.nav--stacked > li {
+  display: block;
+}
+@media only screen and (max-width: 44em) {
+  /* line 92, ../sass/modules/_nav.scss */
+  .nav--stacked {
+    width: 45%;
+  }
+  /* line 99, ../sass/modules/_nav.scss */
+  .nav--stacked > li {
+    width: 100%;
+  }
+  /* line 101, ../sass/modules/_nav.scss */
+  .nav--stacked > li > a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/**
+ * `.nav--flip` extends `.nav`   And  throws the list into vertical mode only on big screens.
+ */
+@media only screen and (min-width: 74em) {
+  /* line 114, ../sass/modules/_nav.scss */
+  .nav--flip > li {
+    display: block;
+  }
+}
+
+/**
+ * `.nav--banner` extends `.nav` increases paddings  and  centres the text
+ */
+/* line 124, ../sass/modules/_nav.scss */
+.nav--banner > li > a {
+  padding: 1.5em;
+  text-align: center;
+}
+
+/**
+ * `.nav--border` extends `.nav` and adds border-bottom
+ */
+/* line 134, ../sass/modules/_nav.scss */
+.nav--bordered > li > a {
+  border-bottom: 1px solid;
+}
+
+/**
+ * Extends `.nav`. Make a list of keywords.
+ */
+/* line 147, ../sass/modules/_nav.scss */
+.nav--keywords > li:after {
+  content: ", ";
+}
+/* line 151, ../sass/modules/_nav.scss */
+.nav--keywords > li:last-child:after {
+  display: none;
+}
+
+/**
+ *  Extends `.nav`. Navigation visible only on small mobile screens.
+ */
+/* line 161, ../sass/modules/_nav.scss */
+.nav--mobile-only {
+  display: none;
+}
+@media only screen and (max-width: 44em) {
+  /* line 161, ../sass/modules/_nav.scss */
+  .nav--mobile-only {
+    display: block;
+  }
+}
+
+/**
+ * Extends `.nav`. Navigation will be hide (invisible) on small mobile screens.
+ */
+@media only screen and (max-width: 44em) {
+  /* line 172, ../sass/modules/_nav.scss */
+  .nav--mobile-hide {
+    display: none;
+  }
+}
+
+/************************************************************************************
+ NAVBAR
+*************************************************************************************/
+/**
+ * Base classs - navbar  Generally it is a container (wrapper) for .nav
+ */
+/* line 9, ../sass/modules/_navbar.scss */
+.navbar {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+/************************************************************************************
+ Panels. To separate inside content
+*************************************************************************************/
+/**
+ * Panel is used to box off content, leaving it closed on all sides.
+ * It  applies some basic padding to the content.
+ */
+/* line 10, ../sass/modules/_panels.scss */
+.panel {
+  padding: 0.3em 1em 1.5em 1em;
+}
+
+/* line 14, ../sass/modules/_panels.scss */
+.panel--isolated {
+  margin: 1em;
+}
+@media only screen and (max-width: 44em) {
+  /* line 14, ../sass/modules/_panels.scss */
+  .panel--isolated {
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+  }
+}
+
+/* line 23, ../sass/modules/_panels.scss */
+.panel--decorated {
+  background: #eeeeee;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  -webkit-box-shadow: 1px 1px 0 #b4afa7;
+  -moz-box-shadow: 1px 1px 0 #b4afa7;
+  box-shadow: 1px 1px 0 #b4afa7;
+  /*
+   -moz-box-shadow:0 0 4px rgba(0,0,0,0.4);
+   -webkit-box-shadow:0 0 4px rgba(0,0,0,0.4);
+   box-shadow:0 0 4px rgba(0,0,0,0.4);
+  */
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 28, ../sass/modules/_panels.scss */
+.panel--decorated hr {
+  border-color: #aaaaaa;
+}
+
+/************************************************************************************
+ Zebra. To slightly change background color like in  Zebra Striping Tableы
+*************************************************************************************/
+/**
+ * Zebra is used to separate content by slight variance of background color
+ */
+/* line 9, ../sass/modules/_zebra.scss */
+.zebra {
+  background: #f7f4f0;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+}
+
+/************************************************************************************
+ Divider
+*************************************************************************************/
+/**
+ * Horizontal divider to separate elements
+ */
+/* line 9, ../sass/modules/_divider.scss */
+.divider {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin-right: 1em;
+}
+
+/************************************************************************************
+Post, Articles
+*************************************************************************************/
+/** Preformed base classes for articles and blog posts with wide images, pullquotes and so on
+  * They are designed in contradiction with the standard OOP paradigm in order to facilitate their use.
+  * They permit to achieve "good look" only on the base of standard html-tags and minimal uses af additional classes
+  */
+/* line 11, ../sass/modules/_posts.scss */
+.post, .article {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60em;
+  text-align: left;
+  padding: 0.5em 1em 1.5em 1em;
+  /* all text elements are centered and limited to the line-wide comfortable for reading  */
+}
+/* line 18, ../sass/modules/_posts.scss */
+.post p, .post ul, .post ol, .post blockquote, .post .pullquote--center, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .article p, .article ul, .article ol, .article blockquote, .article .pullquote--center, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  max-width: 45rem;
+}
+@media only screen and (min-width: 74em) {
+  /* line 18, ../sass/modules/_posts.scss */
+  .post p, .post ul, .post ol, .post blockquote, .post .pullquote--center, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .article p, .article ul, .article ol, .article blockquote, .article .pullquote--center, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
+    max-width: 748.8px;
+    max-width: 46.8rem;
+  }
+}
+@media only screen and (max-width: 44em) {
+  /* line 18, ../sass/modules/_posts.scss */
+  .post p, .post ul, .post ol, .post blockquote, .post .pullquote--center, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .article p, .article ul, .article ol, .article blockquote, .article .pullquote--center, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
+    max-width: 648px;
+    max-width: 40.5rem;
+  }
+}
+/* line 31, ../sass/modules/_posts.scss */
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
+  text-align: center;
+}
+
+/************************************************************************************
+ Thumbnails.
+*************************************************************************************/
+/**
+ * Thumbnails - general class to organize preview of blog posts, articles and so on
+ * This class is designed in contradiction with the standard OOP paradigm in order to facilitate its use.
+ * and achieve "good look" only on the base of standard html-tags
+ */
+/* line 11, ../sass/modules/_thumbnails.scss */
+.thumbnails {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;
+}
+
+/* line 18, ../sass/modules/_thumbnails.scss */
+.thumbnails > li, .thumbnail {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin: 1% 2%;
+  padding: 2%;
+  padding-top: 0.3em;
+  width: 44%;
+  -webkit-box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
+  text-align: left;
+}
+/* line 28, ../sass/modules/_thumbnails.scss */
+.thumbnails > li img, .thumbnail img {
+  float: left;
+  margin: 1em;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 1.5em;
+  max-width: 35%;
+}
+/* line 36, ../sass/modules/_thumbnails.scss */
+.thumbnails > li h1, .thumbnails > li h2, .thumbnails > li h3, .thumbnails > li h4, .thumbnail h1, .thumbnail h2, .thumbnail h3, .thumbnail h4 {
+  font-size: 120%;
+  margin-top: 1em;
+}
+/* line 40, ../sass/modules/_thumbnails.scss */
+.thumbnails > li h1 a, .thumbnails > li h2 a, .thumbnails > li h3 a, .thumbnails > li h4 a, .thumbnail h1 a, .thumbnail h2 a, .thumbnail h3 a, .thumbnail h4 a {
+  margin: 0;
+  padding: 0;
+}
+/* line 44, ../sass/modules/_thumbnails.scss */
+.thumbnails > li h1 a:hover, .thumbnails > li h1 a:focus, .thumbnails > li h1 a:active, .thumbnails > li h2 a:hover, .thumbnails > li h2 a:focus, .thumbnails > li h2 a:active, .thumbnails > li h3 a:hover, .thumbnails > li h3 a:focus, .thumbnails > li h3 a:active, .thumbnails > li h4 a:hover, .thumbnails > li h4 a:focus, .thumbnails > li h4 a:active, .thumbnail h1 a:hover, .thumbnail h1 a:focus, .thumbnail h1 a:active, .thumbnail h2 a:hover, .thumbnail h2 a:focus, .thumbnail h2 a:active, .thumbnail h3 a:hover, .thumbnail h3 a:focus, .thumbnail h3 a:active, .thumbnail h4 a:hover, .thumbnail h4 a:focus, .thumbnail h4 a:active {
+  color: white;
+  background-color: #930000;
+  text-decoration: none;
+}
+@media only screen and (max-width: 44em) {
+  /* line 18, ../sass/modules/_thumbnails.scss */
+  .thumbnails > li, .thumbnail {
+    max-width: 100%;
+    width: auto;
+    margin: 0.5em;
+    padding: 1em;
+  }
+}
+
+/************************************************************************************
+COLORS SCHEMES
+*************************************************************************************/
+/**
+ *  Actually theme colors are used only for decorations and small pieces of text
+ *  For posts, articles and so on are used base colors. So base colors should be very readable.
+ *
+ *  For explicit switching to the base colors  used class   "base-colors"  !!!
+ *  For explicit switching to the theme colors  used class   "theme-colors"  !!!
+ */
+/*------------------------ Dark color theme --------------------------------*/
+/* line 76, ../sass/theme/_colors.scss */
+.dark {
+  background: #f8f8f8;
+  color: #211800;
+  text-shadow: none;
+}
+/* line 10, ../sass/theme/_colors.scss */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: black;
+}
+/* line 14, ../sass/theme/_colors.scss */
+.dark .title, .dark .jumbotron .jumbotron__title, .jumbotron .dark .jumbotron__title {
+  color: #707682;
+}
+/* line 18, ../sass/theme/_colors.scss */
+.dark hr {
+  border-color: #dddddd;
+}
+/* line 80, ../sass/theme/_colors.scss */
+.dark .page-footer, .dark .page-header, .dark .theme-colors {
+  background: #171f30;
+  color: #d7d7d7;
+  text-shadow: none;
+  text-shadow: none;
+}
+/* line 10, ../sass/theme/_colors.scss */
+.dark .page-footer h1, .dark .page-footer h2, .dark .page-footer h3, .dark .page-footer h4, .dark .page-footer h5, .dark .page-footer h6, .dark .page-header h1, .dark .page-header h2, .dark .page-header h3, .dark .page-header h4, .dark .page-header h5, .dark .page-header h6, .dark .theme-colors h1, .dark .theme-colors h2, .dark .theme-colors h3, .dark .theme-colors h4, .dark .theme-colors h5, .dark .theme-colors h6 {
+  color: white;
+}
+/* line 14, ../sass/theme/_colors.scss */
+.dark .page-footer .title, .dark .page-footer .jumbotron .jumbotron__title, .jumbotron .dark .page-footer .jumbotron__title, .dark .page-header .title, .dark .page-header .jumbotron .jumbotron__title, .jumbotron .dark .page-header .jumbotron__title, .dark .theme-colors .title, .dark .theme-colors .jumbotron .jumbotron__title, .jumbotron .dark .theme-colors .jumbotron__title {
+  color: #707682;
+}
+/* line 18, ../sass/theme/_colors.scss */
+.dark .page-footer hr, .dark .page-header hr, .dark .theme-colors hr {
+  border-color: #282835;
+}
+/* line 85, ../sass/theme/_colors.scss */
+.dark .page-footer .nav--bordered > li > a, .dark .page-header .nav--bordered > li > a, .dark .theme-colors .nav--bordered > li > a {
+  border-color: #282835;
+}
+/* line 90, ../sass/theme/_colors.scss */
+.dark .page-footer .base-colors, .dark .page-footer .thumbnails > li, .dark .page-footer .thumbnail, .dark .page-header .base-colors, .dark .page-header .thumbnails > li, .dark .page-header .thumbnail, .dark .theme-colors .base-colors, .dark .theme-colors .thumbnails > li, .dark .theme-colors .thumbnail {
+  background: #f8f8f8;
+  color: #211800;
+  text-shadow: none;
+}
+/* line 10, ../sass/theme/_colors.scss */
+.dark .page-footer .base-colors h1, .dark .page-footer .base-colors h2, .dark .page-footer .base-colors h3, .dark .page-footer .base-colors h4, .dark .page-footer .base-colors h5, .dark .page-footer .base-colors h6, .dark .page-footer .thumbnails > li h1, .dark .page-footer .thumbnails > li h2, .dark .page-footer .thumbnails > li h3, .dark .page-footer .thumbnails > li h4, .dark .page-footer .thumbnails > li h5, .dark .page-footer .thumbnails > li h6, .dark .page-footer .thumbnail h1, .dark .page-footer .thumbnail h2, .dark .page-footer .thumbnail h3, .dark .page-footer .thumbnail h4, .dark .page-footer .thumbnail h5, .dark .page-footer .thumbnail h6, .dark .page-header .base-colors h1, .dark .page-header .base-colors h2, .dark .page-header .base-colors h3, .dark .page-header .base-colors h4, .dark .page-header .base-colors h5, .dark .page-header .base-colors h6, .dark .page-header .thumbnails > li h1, .dark .page-header .thumbnails > li h2, .dark .page-header .thumbnails > li h3, .dark .page-header .thumbnails > li h4, .dark .page-header .thumbnails > li h5, .dark .page-header .thumbnails > li h6, .dark .page-header .thumbnail h1, .dark .page-header .thumbnail h2, .dark .page-header .thumbnail h3, .dark .page-header .thumbnail h4, .dark .page-header .thumbnail h5, .dark .page-header .thumbnail h6, .dark .theme-colors .base-colors h1, .dark .theme-colors .base-colors h2, .dark .theme-colors .base-colors h3, .dark .theme-colors .base-colors h4, .dark .theme-colors .base-colors h5, .dark .theme-colors .base-colors h6, .dark .theme-colors .thumbnails > li h1, .dark .theme-colors .thumbnails > li h2, .dark .theme-colors .thumbnails > li h3, .dark .theme-colors .thumbnails > li h4, .dark .theme-colors .thumbnails > li h5, .dark .theme-colors .thumbnails > li h6, .dark .theme-colors .thumbnail h1, .dark .theme-colors .thumbnail h2, .dark .theme-colors .thumbnail h3, .dark .theme-colors .thumbnail h4, .dark .theme-colors .thumbnail h5, .dark .theme-colors .thumbnail h6 {
+  color: black;
+}
+/* line 14, ../sass/theme/_colors.scss */
+.dark .page-footer .base-colors .title, .dark .page-footer .base-colors .jumbotron .jumbotron__title, .jumbotron .dark .page-footer .base-colors .jumbotron__title, .dark .page-footer .thumbnails > li .title, .dark .page-footer .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .dark .page-footer .thumbnails > li .jumbotron__title, .dark .page-footer .thumbnail .title, .dark .page-footer .thumbnail .jumbotron .jumbotron__title, .jumbotron .dark .page-footer .thumbnail .jumbotron__title, .dark .page-header .base-colors .title, .dark .page-header .base-colors .jumbotron .jumbotron__title, .jumbotron .dark .page-header .base-colors .jumbotron__title, .dark .page-header .thumbnails > li .title, .dark .page-header .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .dark .page-header .thumbnails > li .jumbotron__title, .dark .page-header .thumbnail .title, .dark .page-header .thumbnail .jumbotron .jumbotron__title, .jumbotron .dark .page-header .thumbnail .jumbotron__title, .dark .theme-colors .base-colors .title, .dark .theme-colors .base-colors .jumbotron .jumbotron__title, .jumbotron .dark .theme-colors .base-colors .jumbotron__title, .dark .theme-colors .thumbnails > li .title, .dark .theme-colors .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .dark .theme-colors .thumbnails > li .jumbotron__title, .dark .theme-colors .thumbnail .title, .dark .theme-colors .thumbnail .jumbotron .jumbotron__title, .jumbotron .dark .theme-colors .thumbnail .jumbotron__title {
+  color: #707682;
+}
+/* line 18, ../sass/theme/_colors.scss */
+.dark .page-footer .base-colors hr, .dark .page-footer .thumbnails > li hr, .dark .page-footer .thumbnail hr, .dark .page-header .base-colors hr, .dark .page-header .thumbnails > li hr, .dark .page-header .thumbnail hr, .dark .theme-colors .base-colors hr, .dark .theme-colors .thumbnails > li hr, .dark .theme-colors .thumbnail hr {
+  border-color: #dddddd;
+}
+/* line 95, ../sass/theme/_colors.scss */
+.dark .page-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#171f30), to(#2f363d));
+  background: -webkit-linear-gradient(top, #171f30, #2f363d);
+  background: -moz-linear-gradient(top, #171f30, #2f363d);
+  background: -ms-linear-gradient(top, #171f30, #2f363d);
+  background: -o-linear-gradient(top, #171f30, #2f363d);
+  background: linear-gradient(to bottom, #171f30, #2f363d);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF171F30', endColorstr='#FF2F363D', GradientType=0);
+}
+/* line 100, ../sass/theme/_colors.scss */
+.dark .page-footer .page-footer__figure {
+  background: #2f363d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#171f30), to(#2f363d));
+  background: -webkit-linear-gradient(top, #171f30, #2f363d);
+  background: -moz-linear-gradient(top, #171f30, #2f363d);
+  background: -ms-linear-gradient(top, #171f30, #2f363d);
+  background: -o-linear-gradient(top, #171f30, #2f363d);
+  background: linear-gradient(to bottom, #171f30, #2f363d);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF171F30', endColorstr='#FF2F363D', GradientType=0);
+  color: #707682;
+}
+/* line 107, ../sass/theme/_colors.scss */
+.dark .button--theme {
+  background: #fcf5e3;
+  color: #fcf5e3;
+}
+
+/*------------------------ Light color theme --------------------------------*/
+/* line 116, ../sass/theme/_colors.scss */
+.light {
+  background: white;
+  color: #333333;
+  text-shadow: none;
+}
+/* line 10, ../sass/theme/_colors.scss */
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+  color: black;
+}
+/* line 14, ../sass/theme/_colors.scss */
+.light .title, .light .jumbotron .jumbotron__title, .jumbotron .light .jumbotron__title {
+  color: #707682;
+}
+/* line 18, ../sass/theme/_colors.scss */
+.light hr {
+  border-color: #dddddd;
+}
+/* line 119, ../sass/theme/_colors.scss */
+.light .page-footer, .light .page-header, .light .theme-colors {
+  background: #fcf5e3;
+  color: black;
+  text-shadow: none;
+}
+/* line 10, ../sass/theme/_colors.scss */
+.light .page-footer h1, .light .page-footer h2, .light .page-footer h3, .light .page-footer h4, .light .page-footer h5, .light .page-footer h6, .light .page-header h1, .light .page-header h2, .light .page-header h3, .light .page-header h4, .light .page-header h5, .light .page-header h6, .light .theme-colors h1, .light .theme-colors h2, .light .theme-colors h3, .light .theme-colors h4, .light .theme-colors h5, .light .theme-colors h6 {
+  color: #666666;
+}
+/* line 14, ../sass/theme/_colors.scss */
+.light .page-footer .title, .light .page-footer .jumbotron .jumbotron__title, .jumbotron .light .page-footer .jumbotron__title, .light .page-header .title, .light .page-header .jumbotron .jumbotron__title, .jumbotron .light .page-header .jumbotron__title, .light .theme-colors .title, .light .theme-colors .jumbotron .jumbotron__title, .jumbotron .light .theme-colors .jumbotron__title {
+  color: #707682;
+}
+/* line 18, ../sass/theme/_colors.scss */
+.light .page-footer hr, .light .page-header hr, .light .theme-colors hr {
+  border-color: #cccccc;
+}
+/* line 123, ../sass/theme/_colors.scss */
+.light .page-footer .nav--bordered > li > a, .light .page-header .nav--bordered > li > a, .light .theme-colors .nav--bordered > li > a {
+  border-color: #cccccc;
+}
+/* line 128, ../sass/theme/_colors.scss */
+.light .page-footer .base-colors, .light .page-footer .thumbnails > li, .light .page-footer .thumbnail, .light .page-header .base-colors, .light .page-header .thumbnails > li, .light .page-header .thumbnail, .light .theme-colors .base-colors, .light .theme-colors .thumbnails > li, .light .theme-colors .thumbnail {
+  background: white;
+  color: #333333;
+  text-shadow: none;
+}
+/* line 10, ../sass/theme/_colors.scss */
+.light .page-footer .base-colors h1, .light .page-footer .base-colors h2, .light .page-footer .base-colors h3, .light .page-footer .base-colors h4, .light .page-footer .base-colors h5, .light .page-footer .base-colors h6, .light .page-footer .thumbnails > li h1, .light .page-footer .thumbnails > li h2, .light .page-footer .thumbnails > li h3, .light .page-footer .thumbnails > li h4, .light .page-footer .thumbnails > li h5, .light .page-footer .thumbnails > li h6, .light .page-footer .thumbnail h1, .light .page-footer .thumbnail h2, .light .page-footer .thumbnail h3, .light .page-footer .thumbnail h4, .light .page-footer .thumbnail h5, .light .page-footer .thumbnail h6, .light .page-header .base-colors h1, .light .page-header .base-colors h2, .light .page-header .base-colors h3, .light .page-header .base-colors h4, .light .page-header .base-colors h5, .light .page-header .base-colors h6, .light .page-header .thumbnails > li h1, .light .page-header .thumbnails > li h2, .light .page-header .thumbnails > li h3, .light .page-header .thumbnails > li h4, .light .page-header .thumbnails > li h5, .light .page-header .thumbnails > li h6, .light .page-header .thumbnail h1, .light .page-header .thumbnail h2, .light .page-header .thumbnail h3, .light .page-header .thumbnail h4, .light .page-header .thumbnail h5, .light .page-header .thumbnail h6, .light .theme-colors .base-colors h1, .light .theme-colors .base-colors h2, .light .theme-colors .base-colors h3, .light .theme-colors .base-colors h4, .light .theme-colors .base-colors h5, .light .theme-colors .base-colors h6, .light .theme-colors .thumbnails > li h1, .light .theme-colors .thumbnails > li h2, .light .theme-colors .thumbnails > li h3, .light .theme-colors .thumbnails > li h4, .light .theme-colors .thumbnails > li h5, .light .theme-colors .thumbnails > li h6, .light .theme-colors .thumbnail h1, .light .theme-colors .thumbnail h2, .light .theme-colors .thumbnail h3, .light .theme-colors .thumbnail h4, .light .theme-colors .thumbnail h5, .light .theme-colors .thumbnail h6 {
+  color: black;
+}
+/* line 14, ../sass/theme/_colors.scss */
+.light .page-footer .base-colors .title, .light .page-footer .base-colors .jumbotron .jumbotron__title, .jumbotron .light .page-footer .base-colors .jumbotron__title, .light .page-footer .thumbnails > li .title, .light .page-footer .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .light .page-footer .thumbnails > li .jumbotron__title, .light .page-footer .thumbnail .title, .light .page-footer .thumbnail .jumbotron .jumbotron__title, .jumbotron .light .page-footer .thumbnail .jumbotron__title, .light .page-header .base-colors .title, .light .page-header .base-colors .jumbotron .jumbotron__title, .jumbotron .light .page-header .base-colors .jumbotron__title, .light .page-header .thumbnails > li .title, .light .page-header .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .light .page-header .thumbnails > li .jumbotron__title, .light .page-header .thumbnail .title, .light .page-header .thumbnail .jumbotron .jumbotron__title, .jumbotron .light .page-header .thumbnail .jumbotron__title, .light .theme-colors .base-colors .title, .light .theme-colors .base-colors .jumbotron .jumbotron__title, .jumbotron .light .theme-colors .base-colors .jumbotron__title, .light .theme-colors .thumbnails > li .title, .light .theme-colors .thumbnails > li .jumbotron .jumbotron__title, .jumbotron .light .theme-colors .thumbnails > li .jumbotron__title, .light .theme-colors .thumbnail .title, .light .theme-colors .thumbnail .jumbotron .jumbotron__title, .jumbotron .light .theme-colors .thumbnail .jumbotron__title {
+  color: #707682;
+}
+/* line 18, ../sass/theme/_colors.scss */
+.light .page-footer .base-colors hr, .light .page-footer .thumbnails > li hr, .light .page-footer .thumbnail hr, .light .page-header .base-colors hr, .light .page-header .thumbnails > li hr, .light .page-header .thumbnail hr, .light .theme-colors .base-colors hr, .light .theme-colors .thumbnails > li hr, .light .theme-colors .thumbnail hr {
+  border-color: #dddddd;
+}
+/* line 135, ../sass/theme/_colors.scss */
+.light .page-footer .page-footer__figure {
+  background: #e0e0e0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fcf5e3), to(#e0e0e0));
+  background: -webkit-linear-gradient(top, #fcf5e3, #e0e0e0);
+  background: -moz-linear-gradient(top, #fcf5e3, #e0e0e0);
+  background: -ms-linear-gradient(top, #fcf5e3, #e0e0e0);
+  background: -o-linear-gradient(top, #fcf5e3, #e0e0e0);
+  background: linear-gradient(to bottom, #fcf5e3, #e0e0e0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFCF5E3', endColorstr='#FFE0E0E0', GradientType=0);
+  color: #707682;
+}
+/* line 142, ../sass/theme/_colors.scss */
+.light .button--theme {
+  background: #171f30;
+  color: #171f30;
+}
+
+/*----------------------------------Mono-colors---------------------------------------------*/
+/* line 155, ../sass/theme/_colors.scss */
+.grey-dark {
+  background: #707682;
+  color: white;
+  text-shadow: none;
+}
+/* line 10, ../sass/theme/_colors.scss */
+.grey-dark h1, .grey-dark h2, .grey-dark h3, .grey-dark h4, .grey-dark h5, .grey-dark h6 {
+  color: #ece0e0;
+}
+/* line 14, ../sass/theme/_colors.scss */
+.grey-dark .title, .grey-dark .jumbotron .jumbotron__title, .jumbotron .grey-dark .jumbotron__title {
+  color: #707682;
+}
+/* line 18, ../sass/theme/_colors.scss */
+.grey-dark hr {
+  border-color: #8a909b;
+}
+
+/* line 164, ../sass/theme/_colors.scss */
+.grey-light {
+  background: #eeeeee;
+  color: #211800;
+  text-shadow: none;
+}
+/* line 10, ../sass/theme/_colors.scss */
+.grey-light h1, .grey-light h2, .grey-light h3, .grey-light h4, .grey-light h5, .grey-light h6 {
+  color: black;
+}
+/* line 14, ../sass/theme/_colors.scss */
+.grey-light .title, .grey-light .jumbotron .jumbotron__title, .jumbotron .grey-light .jumbotron__title {
+  color: #707682;
+}
+/* line 18, ../sass/theme/_colors.scss */
+.grey-light hr {
+  border-color: #d4d4d4;
+}

@@ -1,0 +1,41 @@
+---
+
+layout: default
+
+---
+
+<div class="row">
+    <div class="post">
+
+        {% assign LANGUAGE = page.categories[0] %}
+        {% assign CATEGORY = page.categories[1] %}
+        {% capture SUBNAV %}{{ CATEGORY }}_{{ LANGUAGE }}{% endcapture %}
+
+        {% if site[SUBNAV] %}
+            {% for link in site[SUBNAV] %}
+                <h2>{{ link.name }}</h2>
+                {% assign SUBCATEGORY = link.folder %}
+                {% for post in site.categories[SUBCATEGORY]  %}
+                     {% if post.categories[0] == LANGUAGE and post.categories[1] == CATEGORY and  post.title != "Index" %}
+                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <div>
+                           {{ post.excerpt }}
+                         </div>
+                     {% endif %}
+                {% endfor %}
+            {% endfor %}
+            <hr>
+        {% endif %}
+
+        {% for post in site.categories[CATEGORY]  %}
+            {% if (post.categories[2] == null) and (post.categories[0] == LANGUAGE) and (post.title != "Index") %}
+             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+             <div>
+                 {{ post.excerpt }}
+             </div>
+             <hr>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
