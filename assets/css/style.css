@@ -994,7 +994,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 /* line 53, ../sass/modules/_!main.scss */
 a {
-  color: #de0781;
+  color: #c40873;
   text-decoration: none;
 }
 /* line 57, ../sass/modules/_!main.scss */
@@ -1341,7 +1341,7 @@ blockquote:before, blockquote:after {
   display: block;
   width: 10em;
   height: 5px;
-  background-color: #de0781;
+  background-color: #c40873;
   content: "\200B";
 }
 
@@ -1364,7 +1364,7 @@ blockquote:before, blockquote:after {
   margin-right: 0;
   margin-left: 1em;
   margin-bottom: 0.5em;
-  border-left: 5px solid #de0781;
+  border-left: 5px solid #c40873;
   padding-left: 1em;
   text-align: right;
 }
@@ -1375,7 +1375,7 @@ blockquote:before, blockquote:after {
   margin-left: 0;
   margin-right: 1em;
   margin-bottom: 0.5em;
-  border-right: 5px solid #de0781;
+  border-right: 5px solid #c40873;
   padding-rigth: 1em;
   text-align: left;
 }
@@ -1427,23 +1427,23 @@ blockquote:before, blockquote:after {
   margin: 0 1px 1px 0;
   padding: 1em;
   text-decoration: none;
-  color: #de0781;
+  color: #c40873;
 }
 /* line 40, ../sass/modules/_navs.scss */
 .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
   color: white;
-  background: #de0781;
+  background: #c40873;
 }
 /* line 47, ../sass/modules/_navs.scss */
 .nav > .active > a {
   color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#de0781), to(#30233d));
-  background: -webkit-linear-gradient(top, #de0781, #30233d);
-  background: -moz-linear-gradient(top, #de0781, #30233d);
-  background: -ms-linear-gradient(top, #de0781, #30233d);
-  background: -o-linear-gradient(top, #de0781, #30233d);
-  background: linear-gradient(to bottom, #de0781, #30233d);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFDE0781', endColorstr='#FF30233D', GradientType=0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c40873), to(#30233d));
+  background: -webkit-linear-gradient(top, #c40873, #30233d);
+  background: -moz-linear-gradient(top, #c40873, #30233d);
+  background: -ms-linear-gradient(top, #c40873, #30233d);
+  background: -o-linear-gradient(top, #c40873, #30233d);
+  background: linear-gradient(to bottom, #c40873, #30233d);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC40873', endColorstr='#FF30233D', GradientType=0);
 }
 
 /************************************************************************************
@@ -1475,7 +1475,7 @@ blockquote:before, blockquote:after {
 }
 /* line 10, ../sass/modules/_logo.scss */
 .logo a {
-  color: #de0781;
+  color: #c40873;
 }
 
 /************************************************************************************
@@ -1819,7 +1819,7 @@ COLORS Themes
 /* line 5, ../sass/modules/_color-themes.scss */
 .dark, .theme-background, .page-header, .page-footer {
   background: #30233d;
-  color: #bec4cc;
+  color: #cccccc;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 /* line 10, ../sass/modules/_color-themes.scss */
@@ -1828,7 +1828,7 @@ COLORS Themes
 }
 /* line 14, ../sass/modules/_color-themes.scss */
 .dark figcaption, .theme-background figcaption, .page-header figcaption, .page-footer figcaption, .dark .figcaption, .theme-background .figcaption, .page-header .figcaption, .page-footer .figcaption, .dark cite, .theme-background cite, .page-header cite, .page-footer cite {
-  color: #66696d;
+  color: #888888;
 }
 
 /* line 20, ../sass/modules/_color-themes.scss */
@@ -1840,7 +1840,7 @@ COLORS Themes
 /* line 37, ../sass/modules/_color-themes.scss */
 .beige, .theme-zebra, .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even) {
-  background: #fbfaf4;
+  background: #fafaf8;
   color: #3f3034;
   text-shadow: 0 1px 1px white;
 }
@@ -1899,7 +1899,7 @@ Post, Articles
 /* line 35, ../sass/modules/_post.scss */
 .post h4 {
   font-weight: bold;
-  border-left: 4px solid #de0781;
+  border-left: 4px solid #c40873;
 }
 /* line 44, ../sass/modules/_post.scss */
 .post ul,
