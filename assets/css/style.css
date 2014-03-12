@@ -1840,7 +1840,7 @@ COLORS Themes
 /* line 37, ../sass/modules/_color-themes.scss */
 .beige, .theme-zebra, .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even) {
-  background: #fbfaf3;
+  background: #fbfaf4;
   color: #3f3034;
   text-shadow: 0 1px 1px white;
 }
