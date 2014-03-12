@@ -21,7 +21,7 @@
     <div class="page-header" id="header">
         <div class="row">
 
-            <div class="navbar float-left">
+            <div class="navbar navbar--left">
                 <ul class="nav">
                     <li class="logo">
                         <a href="{{ {{ SITE_URL }}{{ site[HOME] }}">
@@ -38,7 +38,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="navbar float-right">
+            <div class="navbar navbar--right">
                 <ul class="nav">
                     {% if LANGUAGE == "ru" %}
                     <li><a href="{{ SITE_URL }}{{ site.home_en }}">Eng</a></li>
@@ -48,7 +48,13 @@
                     {% endif %}
                 </ul>
             </div>
-
+        </div>
+        <div class="row">
+            <div class="aphorism">
+                {{ page.aphorism }}
+            </div>
+        </div>
+         <div class="row">
             {% if page.header_img %}
                <img class="" src="{{ site.img }}/{{ page.header_img }}" alt="">
             {% endif %}
