@@ -1832,40 +1832,31 @@ COLORS Themes
 }
 
 /* line 20, ../sass/modules/_color-themes.scss */
-.light, .theme-zebra, .zebra .zebra__item:nth-child(even),
-.zebra > li:nth-child(even) {
-  background: #f7f9fa;
-  color: #252e35;
+.light, .theme-base, body {
+  background: #faf4f0;
   text-shadow: 0 1px 1px white;
-}
-/* line 26, ../sass/modules/_color-themes.scss */
-.light h1, .theme-zebra h1, .zebra .zebra__item:nth-child(even) h1,
-.zebra > li:nth-child(even) h1, .light h2, .theme-zebra h2, .zebra .zebra__item:nth-child(even) h2,
-.zebra > li:nth-child(even) h2, .light h3, .theme-zebra h3, .zebra .zebra__item:nth-child(even) h3,
-.zebra > li:nth-child(even) h3, .light h4, .theme-zebra h4, .zebra .zebra__item:nth-child(even) h4,
-.zebra > li:nth-child(even) h4 {
-  color: #303c45;
-}
-/* line 31, ../sass/modules/_color-themes.scss */
-.light figcaption, .theme-zebra figcaption, .zebra .zebra__item:nth-child(even) figcaption,
-.zebra > li:nth-child(even) figcaption, .light .figcaption, .theme-zebra .figcaption, .zebra .zebra__item:nth-child(even) .figcaption,
-.zebra > li:nth-child(even) .figcaption, .light cite, .theme-zebra cite, .zebra .zebra__item:nth-child(even) cite,
-.zebra > li:nth-child(even) cite {
-  color: #93a0a9;
 }
 
 /* line 37, ../sass/modules/_color-themes.scss */
-.beige, .theme-base, body {
+.beige, .theme-zebra, .zebra .zebra__item:nth-child(even),
+.zebra > li:nth-child(even) {
   background: #fbfaf3;
   color: #3f3034;
   text-shadow: 0 1px 1px white;
 }
 /* line 43, ../sass/modules/_color-themes.scss */
-.beige h1, .theme-base h1, body h1, .beige h2, .theme-base h2, body h2, .beige h3, .theme-base h3, body h3, .beige h4, .theme-base h4, body h4 {
+.beige h1, .theme-zebra h1, .zebra .zebra__item:nth-child(even) h1,
+.zebra > li:nth-child(even) h1, .beige h2, .theme-zebra h2, .zebra .zebra__item:nth-child(even) h2,
+.zebra > li:nth-child(even) h2, .beige h3, .theme-zebra h3, .zebra .zebra__item:nth-child(even) h3,
+.zebra > li:nth-child(even) h3, .beige h4, .theme-zebra h4, .zebra .zebra__item:nth-child(even) h4,
+.zebra > li:nth-child(even) h4 {
   color: #3f3034;
 }
 /* line 49, ../sass/modules/_color-themes.scss */
-.beige figcaption, .theme-base figcaption, body figcaption, .beige .figcaption, .theme-base .figcaption, body .figcaption, .beige cite, .theme-base cite, body cite {
+.beige figcaption, .theme-zebra figcaption, .zebra .zebra__item:nth-child(even) figcaption,
+.zebra > li:nth-child(even) figcaption, .beige .figcaption, .theme-zebra .figcaption, .zebra .zebra__item:nth-child(even) .figcaption,
+.zebra > li:nth-child(even) .figcaption, .beige cite, .theme-zebra cite, .zebra .zebra__item:nth-child(even) cite,
+.zebra > li:nth-child(even) cite {
   color: #907264;
 }
 
@@ -1900,21 +1891,23 @@ Post, Articles
 /* line 27, ../sass/modules/_post.scss */
 .post h3 {
   background: #ebe8ed;
+  background: #EAE7D7;
+  background: #f0e3da;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-/* line 33, ../sass/modules/_post.scss */
+/* line 35, ../sass/modules/_post.scss */
 .post h4 {
   font-weight: bold;
   border-left: 4px solid #de0781;
 }
-/* line 42, ../sass/modules/_post.scss */
+/* line 44, ../sass/modules/_post.scss */
 .post ul,
 .post ol {
   padding-left: 2.5em;
   margin-top: 1em;
 }
-/* line 46, ../sass/modules/_post.scss */
+/* line 48, ../sass/modules/_post.scss */
 .post ul li,
 .post ol li {
   margin-top: 0.25em;
