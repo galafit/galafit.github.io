@@ -583,8 +583,8 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
  * Sourse: http://css-tricks.com/snippets/css/better-helvetica/
  */
 /* Page sizes */
-/* Box sizes */
 /* length of  text line that is most comfortable for reading */
+/* Box sizes */
 /* ==========================================================================
    Helper mixins and placeholders
    ========================================================================== */
@@ -610,7 +610,7 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
 
 /* Legacy support for inline-block in IE7 (maybe IE6)   */
 /* line 27, ../sass/base/_mixins.scss */
-.nav, .nav > li, .navbar, .box-text, .box-base, .box-small, .box-mini, .button, #toTop, .vCard {
+.nav, .navbar, .box-text, .box-base, .box-small, .box-mini, .button, #toTop, .vCard {
   display: inline-block;
   vertical-align: top;
   /* IE hacks */
@@ -634,7 +634,12 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
  *   Blocks Align
  */
 /* line 53, ../sass/base/_mixins.scss */
-img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:before, .pullquote:after, .row, .central-wide, .central-text, .cover, .post {
+img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:before, .pullquote:after, .row, .central-wide, .central-page, .central-text, .cover, .post p,
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6,
+.post blockquote,
+.post .pullquote,
+.post ul,
+.post ol {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -661,6 +666,7 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
   * I wish to set sizes in "rem". See  max-width-rem and so on below
  */
 /* Mixins to set sizes in rem */
+/* Mixins to set paddings in rem */
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
@@ -975,8 +981,6 @@ body {
   font-style: normal;
   font-variant: normal;
   line-height: 1.667;
-  background: #e5e0e0;
-  color: #424242;
 }
 
 /**
@@ -990,16 +994,19 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 /* line 53, ../sass/modules/_!main.scss */
 a {
-  color: inherit;
+  color: #de0781;
   text-decoration: none;
-  border-bottom: 1px solid #80191f;
 }
-/* line 58, ../sass/modules/_!main.scss */
+/* line 57, ../sass/modules/_!main.scss */
 a:hover, a:focus, a:active {
-  color: #80191f;
+  color: deeppink;
+}
+/* line 61, ../sass/modules/_!main.scss */
+a:visited {
+  color: #8c64b4;
 }
 
-/* line 63, ../sass/modules/_!main.scss */
+/* line 68, ../sass/modules/_!main.scss */
 ::-moz-selection, ::selection {
   background: #80191f;
   color: white;
@@ -1012,32 +1019,27 @@ a:hover, a:focus, a:active {
  *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
  *  and not upon the properties (margin-bottom) of the previous object
  */
-/* line 76, ../sass/modules/_!main.scss */
+/* line 81, ../sass/modules/_!main.scss */
 p {
   margin-top: 1em;
 }
 
-/* line 80, ../sass/modules/_!main.scss */
+/* line 85, ../sass/modules/_!main.scss */
 i, em, q {
   font-style: italic;
 }
 
-/* line 84, ../sass/modules/_!main.scss */
+/* line 89, ../sass/modules/_!main.scss */
 mark, .mark {
   background: #f7f4f0;
 }
 
-/* line 88, ../sass/modules/_!main.scss */
+/* line 93, ../sass/modules/_!main.scss */
 hr {
   border-top: 2px solid #cccccc;
   margin-top: 1em;
   margin-bottom: 0.5em;
   height: 0;
-}
-
-/* line 95, ../sass/modules/_!main.scss */
-cite {
-  color: #888888;
 }
 
 /************************************************************************************
@@ -1099,7 +1101,7 @@ h4 small {
 
 /* line 50, ../sass/modules/_headings.scss */
 .title {
-  color: #80191f;
+  color: inherit;
 }
 
 /* line 54, ../sass/modules/_headings.scss */
@@ -1222,7 +1224,6 @@ figcaption, .figcaption {
   text-align: center;
   max-width: 90%;
   margin-top: 0.25em;
-  color: #888888;
 }
 
 /************************************************************************************
@@ -1272,7 +1273,6 @@ BLOCKTEXT
   padding: 0.5em 0;
   border-bottom: 1px solid #cccccc;
   text-align: center;
-  background: #e3ded3;
 }
 /* line 23, ../sass/modules/_blocklist.scss */
 .blocklist li:last-child {
@@ -1329,7 +1329,7 @@ blockquote:before, blockquote:after {
   margin: 1em auto;
   padding: 1em 0;
   text-align: center;
-  max-width: 43em;
+  max-width: 40em;
 }
 /* line 14, ../sass/modules/_pullquotes.scss */
 .pullquote:first-child {
@@ -1341,7 +1341,7 @@ blockquote:before, blockquote:after {
   display: block;
   width: 10em;
   height: 5px;
-  background-color: #80191f;
+  background-color: #de0781;
   content: "\200B";
 }
 
@@ -1364,7 +1364,7 @@ blockquote:before, blockquote:after {
   margin-right: 0;
   margin-left: 1em;
   margin-bottom: 0.5em;
-  border-left: 5px solid #80191f;
+  border-left: 5px solid #de0781;
   padding-left: 1em;
   text-align: right;
 }
@@ -1375,7 +1375,7 @@ blockquote:before, blockquote:after {
   margin-left: 0;
   margin-right: 1em;
   margin-bottom: 0.5em;
-  border-right: 5px solid #80191f;
+  border-right: 5px solid #de0781;
   padding-rigth: 1em;
   text-align: left;
 }
@@ -1408,8 +1408,8 @@ blockquote:before, blockquote:after {
  */
 /* line 21, ../sass/modules/_navs.scss */
 .nav {
-  font-size: 14.4px;
-  font-size: 0.9rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-family: inherit;
   list-style: none;
   margin: 0;
@@ -1417,21 +1417,33 @@ blockquote:before, blockquote:after {
 }
 /* line 28, ../sass/modules/_navs.scss */
 .nav > li {
+  float: left;
   margin: 0;
   padding: 0;
 }
-/* line 32, ../sass/modules/_navs.scss */
+/* line 33, ../sass/modules/_navs.scss */
 .nav > li > a {
   display: block;
-  margin: 0 1em 0 0;
-  padding: 0.5em 0;
+  margin: 0 1px 1px 0;
+  padding: 1em;
   text-decoration: none;
-  border-bottom: none;
-  border-top: 1px solid #80191f;
+  color: #de0781;
 }
-/* line 42, ../sass/modules/_navs.scss */
+/* line 40, ../sass/modules/_navs.scss */
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
+  color: white;
+  background: #de0781;
+}
+/* line 47, ../sass/modules/_navs.scss */
 .nav > .active > a {
-  color: #80191f;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#de0781), to(#30233d));
+  background: -webkit-linear-gradient(top, #de0781, #30233d);
+  background: -moz-linear-gradient(top, #de0781, #30233d);
+  background: -ms-linear-gradient(top, #de0781, #30233d);
+  background: -o-linear-gradient(top, #de0781, #30233d);
+  background: linear-gradient(to bottom, #de0781, #30233d);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFDE0781', endColorstr='#FF30233D', GradientType=0);
 }
 
 /************************************************************************************
@@ -1457,38 +1469,13 @@ blockquote:before, blockquote:after {
 *************************************************************************************/
 /* line 5, ../sass/modules/_logo.scss */
 .logo {
-  float: left;
   font-family: "Cardo", serif;
-  font-size: 24px;
-  font-size: 1.5rem;
-  padding: 0;
-  margin: 145px 1em 1.5em 0;
   text-decoration: none;
   letter-spacing: 1px;
-  color: #80191f;
 }
-/* line 15, ../sass/modules/_logo.scss */
+/* line 10, ../sass/modules/_logo.scss */
 .logo a {
-  border: none;
-}
-/* line 18, ../sass/modules/_logo.scss */
-.logo a strong {
-  font-weight: normal;
-  color: #e5e0e0;
-}
-@media only screen and (max-width: 44em) {
-  /* line 5, ../sass/modules/_logo.scss */
-  .logo {
-    margin-bottom: 1em;
-    margin-top: 110px;
-  }
-}
-
-/* line 31, ../sass/modules/_logo.scss */
-.logo-bg {
-  background-image: url(../img/bg1.jpg);
-  background-repeat: no-repeat;
-  background-position: 50px 10px;
+  color: #de0781;
 }
 
 /************************************************************************************
@@ -1506,39 +1493,44 @@ Containers:  ROW, COLUMN and FLUID
  */
 /* line 18, ../sass/modules/_containers.scss */
 .central-wide {
-  max-width: 52em;
+  max-width: 70em;
 }
 
 /* line 23, ../sass/modules/_containers.scss */
+.central-page {
+  max-width: 60em;
+}
+
+/* line 28, ../sass/modules/_containers.scss */
 .central-text {
-  max-width: 43em;
+  max-width: 40em;
 }
 
 /*
  * COLUMNS. FLOAT
  * On small mobile screens their width = 100%
  */
-/* line 34, ../sass/modules/_containers.scss */
+/* line 39, ../sass/modules/_containers.scss */
 .column-half {
   width: 50%;
 }
 
-/* line 38, ../sass/modules/_containers.scss */
+/* line 43, ../sass/modules/_containers.scss */
 .column-third {
   width: 33.33%;
 }
 
-/* line 42, ../sass/modules/_containers.scss */
+/* line 47, ../sass/modules/_containers.scss */
 .column-fourth {
   width: 25%;
 }
 
-/* line 47, ../sass/modules/_containers.scss */
+/* line 52, ../sass/modules/_containers.scss */
 .column-half, .column-third, .column-fourth {
   float: left;
 }
 @media only screen and (max-width: 44em) {
-  /* line 47, ../sass/modules/_containers.scss */
+  /* line 52, ../sass/modules/_containers.scss */
   .column-half, .column-third, .column-fourth {
     width: 100%;
   }
@@ -1548,34 +1540,34 @@ Containers:  ROW, COLUMN and FLUID
  * Special columns to form two-column page with Content and Sidebar
  *
  */
-/* line 61, ../sass/modules/_containers.scss */
+/* line 66, ../sass/modules/_containers.scss */
 .column-content, .column-sidebar {
   float: left;
 }
 @media only screen and (max-width: 44em) {
-  /* line 61, ../sass/modules/_containers.scss */
+  /* line 66, ../sass/modules/_containers.scss */
   .column-content, .column-sidebar {
     width: 100%;
   }
 }
 
-/* line 69, ../sass/modules/_containers.scss */
+/* line 74, ../sass/modules/_containers.scss */
 .column-content {
   width: 66%;
 }
 @media only screen and (min-width: 74em) {
-  /* line 69, ../sass/modules/_containers.scss */
+  /* line 74, ../sass/modules/_containers.scss */
   .column-content {
     width: 60%;
   }
 }
 
-/* line 76, ../sass/modules/_containers.scss */
+/* line 81, ../sass/modules/_containers.scss */
 .column-sidebar {
   width: 34%;
 }
 @media only screen and (min-width: 74em) {
-  /* line 76, ../sass/modules/_containers.scss */
+  /* line 81, ../sass/modules/_containers.scss */
   .column-sidebar {
     width: 40%;
   }
@@ -1586,27 +1578,27 @@ Containers:  ROW, COLUMN and FLUID
  * On small and medium screens they are all equals ( width = $widthText ) and took their true sizes only on "big" screens
  * Used for galleries, previews and so on
  */
-/* line 91, ../sass/modules/_containers.scss */
+/* line 96, ../sass/modules/_containers.scss */
 .box-text, .box-base, .box-small, .box-mini {
-  max-width: 43em;
+  max-width: 40em;
 }
 
 @media only screen and (min-width: 74em) {
-  /* line 96, ../sass/modules/_containers.scss */
+  /* line 101, ../sass/modules/_containers.scss */
   .box-base {
     max-width: 36em;
   }
 }
 
 @media only screen and (min-width: 74em) {
-  /* line 102, ../sass/modules/_containers.scss */
+  /* line 107, ../sass/modules/_containers.scss */
   .box-small {
     max-width: 26em;
   }
 }
 
 @media only screen and (min-width: 74em) {
-  /* line 108, ../sass/modules/_containers.scss */
+  /* line 113, ../sass/modules/_containers.scss */
   .box-mini {
     max-width: 18em;
   }
@@ -1665,44 +1657,28 @@ Section
 }
 
 /* line 62, ../sass/modules/_buttons.scss */
-.button--painted {
+.button--filled {
   background: #80191f;
   color: white;
 }
 /* line 32, ../sass/modules/_buttons.scss */
-.button--painted:hover, .button--painted:focus, .button--painted:active {
+.button--filled:hover, .button--filled:focus, .button--filled:active {
   background: black;
   border-color: #000000;
 }
 
 /* line 67, ../sass/modules/_buttons.scss */
-.button--brand.button--painted {
+.button--brand.button--filled {
   background: #80191f;
   color: white;
 }
 /* line 32, ../sass/modules/_buttons.scss */
-.button--brand.button--painted:hover, .button--brand.button--painted:focus, .button--brand.button--painted:active {
+.button--brand.button--filled:hover, .button--brand.button--filled:focus, .button--brand.button--filled:active {
   background: black;
   border-color: #000000;
 }
 
-/* line 71, ../sass/modules/_buttons.scss */
-.button--inverse {
-  color: #e5e0e0;
-  border: 2px solid #e5e0e0;
-}
-/* line 18, ../sass/modules/_buttons.scss */
-.button--inverse:hover, .button--inverse:focus, .button--inverse:active {
-  color: white;
-  background: black;
-  border-color: #000000;
-}
-/* line 73, ../sass/modules/_buttons.scss */
-.button--inverse:hover, .button--inverse:focus, .button--inverse:active {
-  border-color: #80191f;
-}
-
-/* line 82, ../sass/modules/_buttons.scss */
+/* line 74, ../sass/modules/_buttons.scss */
 .button----rounded {
   -moz-border-radius: 24px;
   -webkit-border-radius: 24px;
@@ -1711,7 +1687,7 @@ Section
   border-radius: 24px;
 }
 
-/* line 90, ../sass/modules/_buttons.scss */
+/* line 82, ../sass/modules/_buttons.scss */
 .button--disabled {
   background: #999999;
   color: #cccccc;
@@ -1720,7 +1696,7 @@ Section
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
 }
-/* line 96, ../sass/modules/_buttons.scss */
+/* line 88, ../sass/modules/_buttons.scss */
 .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
   background: #999999;
   color: #cccccc;
@@ -1729,19 +1705,19 @@ Section
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
 }
 
-/* line 105, ../sass/modules/_buttons.scss */
+/* line 97, ../sass/modules/_buttons.scss */
 .button--small {
   padding: 0.25em 1em;
 }
 
-/* line 109, ../sass/modules/_buttons.scss */
+/* line 101, ../sass/modules/_buttons.scss */
 .button--large {
   font-size: 19.2px;
   font-size: 1.2rem;
   padding: 1em;
 }
 
-/* line 114, ../sass/modules/_buttons.scss */
+/* line 106, ../sass/modules/_buttons.scss */
 .button--full {
   display: block;
   text-align: center;
@@ -1840,16 +1816,57 @@ MEDIA
 /************************************************************************************
 COLORS Themes
 *************************************************************************************/
-/* line 9, ../sass/modules/_color-themes.scss */
-.theme-base {
-  background: #e5e0e0;
-  color: #424242;
+/* line 5, ../sass/modules/_color-themes.scss */
+.dark, .theme-background, .page-header, .page-footer {
+  background: #30233d;
+  color: #bec4cc;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+/* line 10, ../sass/modules/_color-themes.scss */
+.dark h1, .theme-background h1, .page-header h1, .page-footer h1, .dark h2, .theme-background h2, .page-header h2, .page-footer h2, .dark h3, .theme-background h3, .page-header h3, .page-footer h3, .dark h4, .theme-background h4, .page-header h4, .page-footer h4 {
+  color: white;
+}
+/* line 14, ../sass/modules/_color-themes.scss */
+.dark figcaption, .theme-background figcaption, .page-header figcaption, .page-footer figcaption, .dark .figcaption, .theme-background .figcaption, .page-header .figcaption, .page-footer .figcaption, .dark cite, .theme-background cite, .page-header cite, .page-footer cite {
+  color: #66696d;
 }
 
-/* line 18, ../sass/modules/_color-themes.scss */
-.theme-inverse {
-  background: black;
-  color: #e5e0e0;
+/* line 20, ../sass/modules/_color-themes.scss */
+.light, .theme-zebra, .zebra .zebra__item:nth-child(even),
+.zebra > li:nth-child(even) {
+  background: #f7f9fa;
+  color: #252e35;
+  text-shadow: 0 1px 1px white;
+}
+/* line 26, ../sass/modules/_color-themes.scss */
+.light h1, .theme-zebra h1, .zebra .zebra__item:nth-child(even) h1,
+.zebra > li:nth-child(even) h1, .light h2, .theme-zebra h2, .zebra .zebra__item:nth-child(even) h2,
+.zebra > li:nth-child(even) h2, .light h3, .theme-zebra h3, .zebra .zebra__item:nth-child(even) h3,
+.zebra > li:nth-child(even) h3, .light h4, .theme-zebra h4, .zebra .zebra__item:nth-child(even) h4,
+.zebra > li:nth-child(even) h4 {
+  color: #303c45;
+}
+/* line 31, ../sass/modules/_color-themes.scss */
+.light figcaption, .theme-zebra figcaption, .zebra .zebra__item:nth-child(even) figcaption,
+.zebra > li:nth-child(even) figcaption, .light .figcaption, .theme-zebra .figcaption, .zebra .zebra__item:nth-child(even) .figcaption,
+.zebra > li:nth-child(even) .figcaption, .light cite, .theme-zebra cite, .zebra .zebra__item:nth-child(even) cite,
+.zebra > li:nth-child(even) cite {
+  color: #93a0a9;
+}
+
+/* line 37, ../sass/modules/_color-themes.scss */
+.beige, .theme-base, body {
+  background: #fbfaf3;
+  color: #3f3034;
+  text-shadow: 0 1px 1px white;
+}
+/* line 43, ../sass/modules/_color-themes.scss */
+.beige h1, .theme-base h1, body h1, .beige h2, .theme-base h2, body h2, .beige h3, .theme-base h3, body h3, .beige h4, .theme-base h4, body h4 {
+  color: #3f3034;
+}
+/* line 49, ../sass/modules/_color-themes.scss */
+.beige figcaption, .theme-base figcaption, body figcaption, .beige .figcaption, .theme-base .figcaption, body .figcaption, .beige cite, .theme-base cite, body cite {
+  color: #907264;
 }
 
 /************************************************************************************
@@ -1857,43 +1874,53 @@ Post, Articles
 *************************************************************************************/
 /** Preformed base classes for articles and blog posts
   */
-/* line 8, ../sass/modules/_post.scss */
+/* line 7, ../sass/modules/_post.scss */
 .post {
   text-align: left;
-  margin-top: 1em;
-  padding: 1.5em;
-  max-width: 43em;
+  /* all text elements are centered and limited to the line-wide comfortable for reading  */
 }
-/* line 16, ../sass/modules/_post.scss */
-.post > h1, .post > h2, .post > h3, .post > h4, .post > h5, .post > h6 {
+/* line 17, ../sass/modules/_post.scss */
+.post p,
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6,
+.post blockquote,
+.post .pullquote,
+.post ul,
+.post ol {
+  max-width: 640px;
+  max-width: 40rem;
+  padding-right: 16px;
+  padding-right: 1rem;
+  padding-left: 16px;
+  padding-left: 1rem;
+}
+/* line 23, ../sass/modules/_post.scss */
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
   text-align: center;
 }
-/* line 21, ../sass/modules/_post.scss */
-.post > ul,
-.post > ol {
+/* line 27, ../sass/modules/_post.scss */
+.post h3 {
+  background: #ebe8ed;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+/* line 33, ../sass/modules/_post.scss */
+.post h4 {
+  font-weight: bold;
+  border-left: 4px solid #de0781;
+}
+/* line 42, ../sass/modules/_post.scss */
+.post ul,
+.post ol {
   padding-left: 2.5em;
   margin-top: 1em;
 }
-/* line 25, ../sass/modules/_post.scss */
-.post > ul li,
-.post > ol li {
+/* line 46, ../sass/modules/_post.scss */
+.post ul li,
+.post ol li {
   margin-top: 0.25em;
   /**
    * Remove vertical spacing from nested lists.
    */
-}
-/* line 31, ../sass/modules/_post.scss */
-.post > ul li > ul,
-.post > ul li > ol,
-.post > ol li > ul,
-.post > ol li > ol {
-  margin-top: 0.5em;
-}
-@media only screen and (max-width: 44em) {
-  /* line 8, ../sass/modules/_post.scss */
-  .post {
-    padding: 1.5em 1em;
-  }
 }
 
 /************************************************************************************
@@ -1962,8 +1989,7 @@ a.thumbnail:focus {
 *************************************************************************************/
 /* line 5, ../sass/modules/_page-header.scss */
 .page-header {
-  background: black;
-  color: #e5e0e0;
+  padding-bottom: 1em;
 }
 
 /************************************************************************************
@@ -1971,19 +1997,17 @@ a.thumbnail:focus {
 *************************************************************************************/
 /* line 5, ../sass/modules/_page-footer.scss */
 .page-footer {
-  background: black;
-  color: #e5e0e0;
   min-height: 20em;
 }
 
-/* line 11, ../sass/modules/_page-footer.scss */
+/* line 10, ../sass/modules/_page-footer.scss */
 .footer-bg {
   background-image: url(../img/footer_bg.jpg);
   background-repeat: no-repeat;
   background-position: 0 80px;
 }
 @media only screen and (max-width: 44em) {
-  /* line 11, ../sass/modules/_page-footer.scss */
+  /* line 10, ../sass/modules/_page-footer.scss */
   .footer-bg {
     background-image: none;
   }
@@ -2229,7 +2253,18 @@ vCard
 /* line 25, ../sass/modules/_zebra.scss */
 .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even) {
-  background: #e0e0e5;
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
+}
+
+/************************************************************************************
+    Aphorism
+*************************************************************************************/
+/* line 5, ../sass/modules/_aphorism.scss */
+.aphorism {
+  float: right;
+  padding: 0 1em;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  max-width: 30em;
 }
