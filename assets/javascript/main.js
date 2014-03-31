@@ -99,11 +99,11 @@ function changeTheme() {
     if (el.hasClass('theme-inverse-intense')) {
         el.removeClass('theme-inverse-intense');
         el.addClass("theme-base-intense");
-        setCookie("theme", "base");
+        setCookie("theme", "base", "", '/', 'mixdreams.com','');
     }
     else if (el.hasClass('theme-inverse')) {
         el.removeClass('theme-inverse');
-        setCookie("theme", "base");
+        ssetCookie("theme", "base", "", '/', 'mixdreams.com','');
     }
     else if (el.hasClass('theme-base-intense')) {
         el.removeClass('theme-base-intense');
