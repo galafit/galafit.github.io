@@ -41,13 +41,15 @@ $(document).ready(function () {
  Color Theme Change
  *************************************************************************************/
 
-function setCookie(name, value, expires, path, domain, secure) {
-    document.cookie = name + "=" + escape(value) +
+function setCookie (name, value, expires, path, domain, secure) {
+      document.cookie = name + "=" + value +
         ((expires) ? "; expires=" + expires : "") +
         ((path) ? "; path=" + path : "") +
         ((domain) ? "; domain=" + domain : "") +
         ((secure) ? "; secure" : "");
 }
+
+
 
 function getCookie(name) {
     var cookie = " " + document.cookie;
@@ -63,11 +65,23 @@ function getCookie(name) {
             if (end == -1) {
                 end = cookie.length;
             }
-            setStr = unescape(cookie.substring(offset, end));
+            setStr = cookie.substring(offset, end);
         }
     }
     return(setStr);
 }
+
+function setCookie_(name, value){
+    $.cookie(name, value);
+}
+
+function getCookie_(name){
+    $.cookie(name);
+}
+
+
+
+
 
 function setTheme(theme) {
     //el = $(document.body);
@@ -85,25 +99,25 @@ function changeTheme() {
     if (el.hasClass('theme-inverse-intense')) {
         el.removeClass('theme-inverse-intense');
         el.addClass("theme-base-intense");
-        setCookie("theme", null);
+        setCookie("theme", "base");
     }
     else if (el.hasClass('theme-inverse')) {
         el.removeClass('theme-inverse');
-        setCookie("theme", null);
+        setCookie("theme", "base");
     }
     else if (el.hasClass('theme-base-intense')) {
         el.removeClass('theme-base-intense');
         el.addClass("theme-inverse-intense");
-        setCookie("theme", "inverse");
+        setCookie("theme", "inverse", "", '/', 'mixdreams.com','');
     }
     else {
         el.addClass("theme-inverse");
-        setCookie("theme", "inverse");
+        setCookie("theme", "inverse", "", '/', 'mixdreams.com','');
     }
 }
 
 function init() {
-    cookie = getCookie("theme")
+    cookie = getCookie("theme");
     el = $(document.documentElement);
     if (cookie == "inverse") {
         if (el.hasClass('theme-base-intense')) {
