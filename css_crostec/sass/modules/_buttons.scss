@@ -1,0 +1,113 @@
+/************************************************************************************
+ BUTTONS
+*************************************************************************************/
+
+/**
+ * helper mixin to set Buttons colors
+ */
+@mixin button-shadow($color: white, $alfa: 0.5) {
+    -webkit-box-shadow: 0 1px 0 rgba($color, $alfa) inset;
+    -moz-box-shadow: 0 1px 0 rgba($color, $alfa) inset;
+    box-shadow: 0 1px 0 rgba($color, $alfa) inset;
+}
+
+@mixin button-color($button-color) {
+    color: $button-color;
+    border: $button-border-width solid $button-color;
+
+    &:hover, &:focus, &:active {
+        background: $button-color;
+        color: white;
+    }
+}
+
+@mixin button-painted-color($button-color) {
+    background: $button-color;
+    color: white;
+   // border: 1px solid darken($button-color, 20%);
+  //  @include button-shadow();
+
+    &:hover, &:focus, &:active {
+        background: inherit;
+        color: $button-color;
+        border: $button-border-width solid $button-color;
+    }
+}
+
+// Base Button style
+// --------------------------------------------------
+
+.button {
+    @extend %inline-block ;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    line-height: $line-height-small;
+    padding: $gap-small $gap-base;
+    text-decoration: none;
+    @include button-color($button-color);
+    @include border-radius($button-border-radius);
+
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+    }
+}
+
+/**
+ * Button modifiers. Extends and used with the base ".button" class
+ */
+
+.button--brand {
+    @include button-color($button-brand-color);
+}
+
+// painted, filled with the color buttons
+.button--painted {
+    @include button-painted-color($button-color);
+
+}
+
+.button--brand.button--painted {
+    @include button-painted-color($button-brand-color);
+}
+
+// Buttons disabled
+// --------------------------------------------------
+
+.button--disabled {
+    background: $button-disabled-bg;
+    color: $button-disabled-color;
+    border: 1px solid darken($button-disabled-bg, 20%);
+    @include button-shadow(black, 0.2);
+
+    &:hover, &:focus, &:active {
+        background: $button-disabled-bg;
+        color: $button-disabled-color;
+        @include button-shadow(black, 0.2);
+    }
+}
+
+// Buttons sizes
+// --------------------------------------------------
+.button--small {
+    font-size: $font-size-small;
+    padding: $gap-mini $gap-base;
+}
+
+.button--large {
+    font-size: $font-size-large;
+    padding: $gap-base;
+}
+
+.button--full {
+    display: block;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+}
+
+
+
+
+

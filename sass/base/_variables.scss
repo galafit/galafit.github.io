@@ -1,0 +1,291 @@
+/************************************************************************************
+    VARIABLES
+*************************************************************************************/
+
+
+// Fonts
+// -------------------------
+
+/** google fonts */
+@import url(http://fonts.googleapis.com/css?family=Cardo);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin);
+
+
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+/**
+ * Improved Helvetica.
+ * This allows to use Helvetica on Mac and Arial on PC
+ * On PC Helvetica looks worse then Arial
+ * Sourse: http://css-tricks.com/sans-serif/
+ * Sourse: http://css-tricks.com/snippets/css/better-helvetica/
+ */
+$font-family-sans-serif-light-400:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",  sans-serif;
+$font-family-sans-serif-light-300: 'Open Sans',  sans-serif;
+
+$font-family-arial: Arial, sans-serif;
+
+
+//$font-family-sans-serif-light-400: 'Noto Sans', sans-serif;
+
+
+// Breakpoints for big and small screens used in media queries
+// -------------------------
+$screen-big: 74;
+$screen-small: 44;
+
+
+
+// Containers
+// -------------------------
+
+/* Page sizes */
+$width-wide: 70;
+$width-page: 60;
+$width-text: 40; /* length of  text line that is most comfortable for reading */
+
+/* Box sizes */
+$width-media: 36;
+$width-small: 26;
+$width-mini: 18;
+
+$width-max: $width-text * 2;
+
+
+// Relative sizing (for blocks and img)
+// -----------------------------------
+
+$big: 65%;
+$small: 35%;
+$icon: 15%;
+
+
+// Margins, Padding
+// -------------------------
+
+$gap-base: 1em;
+$gap-huge: 2 * $gap-base;
+$gap-large: 1.5 * $gap-base;
+$gap-small: .5 * $gap-base;
+$gap-mini: .25 * $gap-base;
+
+$gap-base-rem: 1;
+
+
+// Rounded Corners
+// -------------------------
+
+$border-radius: 6px;
+$border-radius-large:   24px;
+
+
+
+
+
+// Brand staff
+// -------------------------
+$brand-font-family: 'Cardo', serif;
+
+$brand-color: #3F1F1F;
+$accent-color: #d63e3b;
+
+
+// Links
+// -------------------------
+$link-color: #c27c82;
+$link-visited-color: #8c64b4;
+$link-hover-color: $accent-color;
+
+
+
+// Base color theme (beige)
+// ----------------------
+$base-font-family: $font-family-sans-serif-light-400;
+
+$base-bg: #f9efe2; //lighten(#f0d7b8, 10);
+$base-intense: #f5e4d1; //desaturate(lighten(#f5d7b8, 5), 10);
+$base-bg: lighten(#f9efe2, 3); //lighten(#f0d7b8, 10);
+$base-intense: lighten(#f5e4d1, 3); //desaturate(lighten(#f5d7b8, 5), 10);
+
+$base-text: #422d1c;
+$base-text-strong: saturate(#907264, 15); //#440000; //#3F3034;
+
+$base-title: darken($link-color, 25); //desaturate(lighten(#3F1F1F, 20), 5) ;
+
+$base-caption: rgba(#907264, .9); //rgba($base-text, .7);
+$base-border-color: rgba(black, 0.1);
+
+
+
+
+// Inverse color theme (gray)
+// ----------------------
+
+$inverse-font-family: $font-family-sans-serif-light-300;
+
+$inverse-intense: #1f252e; //darken(desaturate(#273040, 5), 5);
+$inverse-bg: #282e3a; //darken(desaturate(#273040, 5), 1);
+
+$inverse-text: #BEC4CC;
+$inverse-text: #BEC4C9;
+$inverse-text-strong: saturate(darken($inverse-text, 30), 10); // #60798e;
+$inverse-title: #baa3a3; // desaturate(lighten(#3F1F1F, 50), 20);
+
+$inverse-caption: rgba($inverse-text, .7);
+$inverse-border-color: rgba(white, 0.05);
+
+
+// Dark  color
+// ----------------------
+
+$dark: darken($inverse-intense, 3);
+
+
+// Image background colors
+// ----------------------
+
+$img-text: rgba(white, .6);
+$img-title: rgba(white, .8);
+$img-logo: #d6d6d6;
+
+
+
+// Typography
+// -------------------------
+
+$base-line-height: 1.667;
+$base-font-size: 1.25;
+$base-font-size-screen-big: 1.3;  // for big screens
+$base-font-size-screen-small: 1.125; // for small screens
+
+
+$line-height-large: 1.8;
+$line-height-small: 1.33;
+
+
+// Headings
+// -------------------------
+$headings-line-height:  $line-height-small;
+
+$font-size-h1: 1.9;
+$font-size-h2: 1.7;
+$font-size-h3: 1.7;
+$font-size-h4: 1.4;
+$font-size-h5: 1;
+
+
+
+// Lead text
+// -------------------------
+$lead-font-size: 1.26;
+$lead-width: $width-text + 10;
+
+
+
+// Navigation
+// -------------------------
+$nav-font-family: $font-family-sans-serif-light-400;
+$nav-font-size: .7;
+
+
+
+// Hero unit
+// -------------------------
+$hero-font-size: 1.1;
+$hero-h1: 1.4;
+$hero-border-color: $accent-color;
+
+
+// Cite
+// -------------------------
+$cite-font-size: .9;
+
+
+// Aphorism
+// -------------------------
+$aphorism-font-big: 1.4;
+$aphorism-width: 30;
+
+
+// Blocktext
+// -------------------------
+$blocktext-title-size: 1.3;
+
+
+// Blockquotes
+// -------------------------
+
+$blockquote-font-size: 1.2;
+$blockquote-border-length: 10em;
+$blockquote-border-width: 5px;
+$blockquote-border-color: #ccc;
+
+
+
+// PullQuotes
+// -------------------------
+
+$pullquote-font-size: 1.2;
+$pullquote-width: 10;
+$pullquote-border-width: 5px;
+$pullquote-border-length: 10em;
+$pullquote-border-color: $link-color;
+
+
+
+
+// Buttons
+// -------------------------
+
+$button-disabled-bg:          rgba(black, .2);
+$button-disabled-text:        rgba(#555, .6);
+
+
+
+// Alerts
+// -------------------------
+
+$alert-info-text:                #00529B;
+$alert-info-bg:                  #BDE5F8;
+
+$alert-success-text:             #4F8A10;
+$alert-success-bg:               #DFF2BF;
+
+$alert-error-text:             #D8000C;
+$alert-error-bg:               #FFBABA;
+
+$alert-warning-text:             #9F6000;
+$alert-warning-bg:               #FEEFB3;
+
+
+
+// Callouts
+// -------------------------
+
+$callout-border-width: 3px;
+
+$callout-info-text:                #34789a;
+$callout-info-bg:                  #f4f8fa;
+$callout-info-border:              #bce8f1;
+
+$callout-attention-text:             #b94a48;
+$callout-attention-bg:               #fdf7f7;
+$callout-attention-border:           #eed3d7;
+
+$callout-warning-text:             #8a6d3b;
+$callout-warning-bg:               #faf8f0;
+$callout-warning-border:           #faebcc;
+
+
+
+
+
+// Forms
+// -------------------------
+
+$submit-button-width: 8;
+$submit-button-height: 2.5;
+$submit-button-color: #ccc;
+

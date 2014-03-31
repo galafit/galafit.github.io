@@ -1,0 +1,59 @@
+{% include setup %}
+
+{% if page.header_img %}
+{% capture HEADER_BG %} url( {{ site.img }}/{{ page.header_img }} ){% endcapture %}
+{% assign COVER  = "cover-img" %}
+{% else %}
+{% assign COVER  = "cover" %}
+{% assign HEADER_BG  = "none" %}
+{% endif %}
+
+<div class="page-header" id="header">
+    <div class="row">
+        <div class="navbar">
+            <ul class="nav">
+                {% for link in site[NAV] %}
+                {% if link.folder == CATEGORY %}
+                <li class="active"><a href="{{ SITE_URL }}/{{ LANGUAGE }}/{{ link.folder }}">{{ link.name }}</a>
+                </li>
+                {% assign CATEGOTY_NAME = link.name %}
+                {% else %}
+                <li><a href="{{ SITE_URL }}/{{ LANGUAGE }}/{{ link.folder }}">{{ link.name }}</a></li>
+                {% endif %}
+                {% endfor %}
+
+                <li class="reverse"><a href="#" onClick='changeTheme();'><span class="button-theme">&nbsp;</span></a></li>
+                {% if LANGUAGE == "ru" %}
+                <li class="reverse"><a href="{{ SITE_URL }}{{ site.home_en }}">Eng</a></li>
+                {% endif %}
+                {% if LANGUAGE == "en" %}
+                <li class="reverse"><a href="{{ SITE_URL }}{{ site.home_ru }}">Ru</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="{{ COVER }}" style="background-image: {{ HEADER_BG }} ">
+        <div class="row">
+            <div class="text-left">
+                <a href="{{ {{ SITE_URL }}{{ site[HOME] }}" class="logo">
+                    <span class="logo__part1">mix</span><span class="logo__part2">Dreams</span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            {% if page.title == "Index" or  page.title == null %}
+            <H1 class="title">{{ CATEGOTY_NAME }}</H1>
+                 {% if page.aphorism %}
+                 <p class="aphorism-big">{{ page.aphorism }}</p>
+                 {% endif %}
+            {% else %}
+             <H1 class="title">{{ page.title }}</H1>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+

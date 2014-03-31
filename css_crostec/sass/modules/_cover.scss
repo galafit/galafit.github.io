@@ -1,0 +1,20 @@
+/************************************************************************************
+Cover.
+*************************************************************************************/
+
+/**
+ *  Cover is a kind of intro block (with title, lead img may by some text or Jumbotron)
+ */
+
+.cover {
+    //padding-top: $gap-mini;
+
+}
+
+.cover--inverse {
+    @extend .inverse;
+   //border-bottom: 3px solid #ccc;
+    //border-top: 3px solid #ccc;
+}
+
+

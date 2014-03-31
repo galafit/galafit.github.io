@@ -1,0 +1,256 @@
+/* ==========================================================================
+   Helper mixins and placeholders
+   ========================================================================== */
+
+
+/**
+ *   Clearfix
+ *   For clearing floats like a boss h5bp.com/q
+ */
+%clearfix {
+    *zoom: 1;
+    overflow: hidden;
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+        // Fixes Opera/contenteditable bug:
+        // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* Legacy support for inline-block in IE7 (maybe IE6)   */
+%inline-block {
+    display: inline-block;
+    vertical-align: top;
+/* IE hacks */
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+}
+
+/** Box Sizing model  **/
+%box-sizing {
+    -moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari и Chrome */
+    box-sizing: border-box; /* Для IE и Opera */
+
+}
+
+%box-shadow {
+    -webkit-box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
+    box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
+}
+
+/**
+ *   Blocks Align
+ */
+%pull-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@mixin pull-left($margin: $gap-base) {
+    float: left;
+    margin-left: 0;
+    margin-right: $margin;
+    margin-bottom: $margin;
+
+}
+
+@mixin pull-right($margin: $gap-base) {
+    float: right;
+    margin-right: 0;
+    margin-left: $margin;
+    margin-bottom: $margin;
+}
+
+
+/**
+ * Mixin handling breakpoints for media queries
+ * Source: http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+
+ * Modifying idea of "Progressive enhancement" or "mobile firs" I create all stiles for "medium screens" and
+ * then adapt them for small and big screens
+ */
+@mixin breakpoint($point) {
+    @if $point == big {
+        @media only screen and (min-width: $screen-big + em) {
+            @content;
+        }
+    }
+
+    @if $point == small {
+        @media only screen and (max-width: $screen-small + em) {
+            @content;
+        }
+    }
+}
+
+
+@mixin border-radius($radius: $border-radius-base) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+@mixin box-decoration($shadow-color: #b4afa7) {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    -webkit-box-shadow: 1px 1px 0 $shadow-color;
+    -moz-box-shadow: 1px 1px 0 $shadow-color;
+    box-shadow: 1px 1px 0 $shadow-color;
+
+/*
+ -moz-box-shadow:0 0 4px rgba(0,0,0,0.4);
+ -webkit-box-shadow:0 0 4px rgba(0,0,0,0.4);
+ box-shadow:0 0 4px rgba(0,0,0,0.4);
+*/
+}
+
+
+/*   linear gradient from top to bottom    */
+@mixin gradient-vertical($from, $to) {
+    background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+// Safari 4+, Chrome 2+
+    background: -webkit-linear-gradient(top, $from, $to);
+// Safari 5.1+, Chrome 10+
+    background: -moz-linear-gradient(top, $from, $to);
+// FF 3.6+
+    background: -ms-linear-gradient(top, $from, $to);
+    background: -o-linear-gradient(top, $from, $to);
+// Opera 11.10
+    background: linear-gradient(to bottom, $from, $to);
+// Standard, IE10
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($from)}', endColorstr='#{ie-hex-str($to)}', GradientType=0);
+// IE9 and down
+
+}
+
+
+/**
+ * Mixin to set font size. At the moment in %. By itself it has not much sense but it will be useful if in the future
+ * I wish to set font sizes in em or "rem". See @mixin font-size-rem below
+
+@mixin font-size($val) {
+    font-size: $val * 100%;
+}
+ */
+
+
+// Font sizes in rem
+// -------------------------
+@mixin font-size($val) {
+    font-size: ($val * 16) + px;
+    font-size: $val + rem;
+}
+
+
+/**
+ * Mixins to set elements sizes. At the moment in em. By itself they have not much sense but they will be useful if in the future
+  * I wish to set sizes in "rem". See  max-width-rem and so on below
+ */
+
+@mixin height($val) {
+    height: $val + em;
+}
+
+@mixin width($val) {
+    width: $val + em;
+}
+
+@mixin max-width($val) {
+    max-width: $val + em;
+}
+
+@mixin min-height($val) {
+    min-height: $val + em;
+}
+
+
+/* --------------------------    Mixins providing a PX fallback for REM--------------------------------
+
+// Source: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+
+
+/* Mixin to set font size in rem */
+
+@mixin font-size-rem($val) {
+    font-size: ($val * 16) + px;
+    font-size: $val + rem;
+}
+
+/* Mixins to set sizes in rem */
+
+@mixin max-width-rem($val) {
+    max-width: $val*16 + px;
+    max-width: $val + rem;
+}
+
+/* Mixins to set paddings in rem */
+
+@mixin padding-horizontal-rem($val) {
+    padding-right: $val*16 + px;
+    padding-right: $val + rem;
+
+    padding-left: $val*16 + px;
+    padding-left: $val + rem;
+}
+
+/* general - margin, padding... */
+
+/*
+p {
+   @include rem-fallback(margin, 10, 20, 30, 40);
+}
+
+gives:
+
+p {
+  margin: 160px 320px 480px 640px;
+  margin: 10rem 20rem 30rem 40rem;
+}
+*/
+
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+    $max: length($values);
+    $pxValues: '';
+    $remValues: '';
+
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $pxValues: #{$pxValues + $value*16}px;
+
+        @if $i < $max {
+            $pxValues: #{$pxValues + " "};
+        }
+    }
+
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $remValues: #{$remValues + $value}rem;
+
+        @if $i < $max {
+            $remValues: #{$remValues + " "};
+        }
+    }
+
+    #{$property}: $pxValues;
+    #{$property}: $remValues;
+}
+

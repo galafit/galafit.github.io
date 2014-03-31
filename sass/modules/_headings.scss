@@ -1,0 +1,87 @@
+/************************************************************************************
+    HEADINGS
+*************************************************************************************/
+
+/**
+ *  wherever possible is applied the principle of "Single-direction margin declarations"
+ *  Source: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ *  But instead of using margin-bottom I use margin-top.
+ *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
+ *  and not upon the properties (margin-bottom) of the previous object
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: $headings-line-height;
+    margin-top: $gap-huge;
+    text-align: center;
+}
+
+h1 {
+    font-family: $font-family-arial;
+    @include font-size($font-size-h1);
+}
+
+
+h2 {
+    font-family: $font-family-arial;
+    @include font-size($font-size-h2);
+    text-transform: uppercase;
+
+}
+
+
+h3 {
+    font-family: $font-family-arial;
+    @include font-size($font-size-h3);
+    border-bottom: 2px solid $base-border-color;
+}
+
+h4 {
+    @include font-size($font-size-h4);
+}
+
+
+h5 {
+    @include font-size($font-size-h5);
+    font-weight: bold;
+}
+
+
+
+/**
+ * This class is used to make the introductory text (usually a paragraph)
+ * of a document larger.
+ */
+.lead {
+    @include font-size($lead-font-size);
+    @include max-width($lead-width);
+
+}
+
+
+.title {
+
+}
+
+
+.header {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: $gap-small;
+    padding-bottom: $gap-small;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

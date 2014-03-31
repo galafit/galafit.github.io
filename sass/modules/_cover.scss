@@ -1,0 +1,32 @@
+/************************************************************************************
+COVER.
+*************************************************************************************/
+
+/**
+ *  Cover is a kind of intro block (normally page title, may be some background or lead img, author info and so on)
+ */
+
+%cover-base {
+    @extend %text-normalize;
+    padding-top: $gap-mini;
+    padding-bottom: $gap-base;
+    // border-bottom: 2px solid;
+
+    h1 {
+        text-align: center;
+        margin-top: $gap-base;
+    }
+}
+
+.cover {
+    @extend %cover-base;
+}
+
+.cover-img {
+    background-color: $dark;
+    @extend %cover-base;
+    @extend %image-bg;
+    @extend .img-colors;
+    padding-top: $gap-large;
+    padding-bottom: $gap-large * 2;
+}

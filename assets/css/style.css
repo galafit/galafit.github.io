@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Cardo);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin);
 /* normalize.css v1.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -578,7 +579,7 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
 /**
  * Improved Helvetica.
  * This allows to use Helvetica on Mac and Arial on PC
- * On PC Arial Helvetica looks worse then Arial
+ * On PC Helvetica looks worse then Arial
  * Sourse: http://css-tricks.com/sans-serif/
  * Sourse: http://css-tricks.com/snippets/css/better-helvetica/
  */
@@ -592,35 +593,118 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
  *   Clearfix
  *   For clearing floats like a boss h5bp.com/q
  */
-/* line 10, ../sass/base/_mixins.scss */
-.clearfix, .row, .media {
+/* line 9, ../sass/base/_mixins.scss */
+.clearfix, .navbar, .row, .media {
   *zoom: 1;
   overflow: hidden;
 }
-/* line 14, ../sass/base/_mixins.scss */
-.clearfix:before, .row:before, .media:before, .clearfix:after, .row:after, .media:after {
+/* line 13, ../sass/base/_mixins.scss */
+.clearfix:before, .navbar:before, .row:before, .media:before, .clearfix:after, .navbar:after, .row:after, .media:after {
   display: table;
   content: " ";
   line-height: 0;
 }
-/* line 21, ../sass/base/_mixins.scss */
-.clearfix:after, .row:after, .media:after {
+/* line 20, ../sass/base/_mixins.scss */
+.clearfix:after, .navbar:after, .row:after, .media:after {
   clear: both;
 }
 
 /* Legacy support for inline-block in IE7 (maybe IE6)   */
-/* line 27, ../sass/base/_mixins.scss */
-.nav, .navbar, .box-text, .box-base, .box-small, .box-mini, .button, #toTop, .vCard {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
+/**
+ * Mixin handling breakpoints for media queries
+ * Source: http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+
+ * Modifying idea of "Progressive enhancement" or "mobile firs" I create all stiles for "medium screens" and
+ * then adapt them for small and big screens
+ */
+/*
+p {
+   @include rem-fallback(margin, 10, 20, 30, 40);
+}
+
+gives:
+
+p {
+  margin: 160px 320px 480px 640px;
+  margin: 10rem 20rem 30rem 40rem;
+}
+*/
+/* Mixins to set sizes in rem */
+/* Mixins to set paddings in rem */
+/* Mixins to set paddings in rem */
+/* all text elements are centered and limited to the line-wide comfortable for reading  */
+/* line 140, ../sass/base/_mixins.scss */
+.blocktext, .cover, .cover-img, .post {
+  text-align: left;
+}
+/* line 148, ../sass/base/_mixins.scss */
+.blocktext p, .cover p, .cover-img p, .post p, .blocktext .p, .cover .p, .cover-img .p, .post .p,
+.blocktext h1,
+.cover h1,
+.cover-img h1,
+.post h1, .blocktext h2, .cover h2, .cover-img h2, .post h2, .blocktext h3, .cover h3, .cover-img h3, .post h3, .blocktext h4, .cover h4, .cover-img h4, .post h4, .blocktext h5, .cover h5, .cover-img h5, .post h5, .blocktext h6, .cover h6, .cover-img h6, .post h6,
+.blocktext blockquote,
+.cover blockquote,
+.cover-img blockquote,
+.post blockquote,
+.blocktext .pullquote,
+.cover .pullquote,
+.cover-img .pullquote,
+.post .pullquote,
+.blocktext cite,
+.cover cite,
+.cover-img cite,
+.post cite,
+.blocktext figcaption,
+.cover figcaption,
+.cover-img figcaption,
+.post figcaption,
+.blocktext .figcaption,
+.cover .figcaption,
+.cover-img .figcaption,
+.post .figcaption,
+.blocktext .figure p,
+.figure .blocktext p,
+.cover .figure p,
+.figure .cover p,
+.cover-img .figure p,
+.figure .cover-img p,
+.post .figure p,
+.figure .post p,
+.blocktext blockquote cite,
+blockquote .blocktext cite,
+.cover blockquote cite,
+blockquote .cover cite,
+.cover-img blockquote cite,
+blockquote .cover-img cite,
+.post blockquote cite,
+blockquote .post cite,
+.blocktext .aphorism,
+.cover .aphorism,
+.cover-img .aphorism,
+.post .aphorism,
+.blocktext .aphorism-big,
+.cover .aphorism-big,
+.cover-img .aphorism-big,
+.post .aphorism-big,
+.blocktext ul,
+.cover ul,
+.cover-img ul,
+.post ul,
+.blocktext ol,
+.cover ol,
+.cover-img ol,
+.post ol {
+  max-width: 640px;
+  max-width: 40rem;
+  margin-right: 16px;
+  margin-right: 1rem;
+  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 /** Box Sizing model  **/
-/* line 37, ../sass/base/_mixins.scss */
+/* line 157, ../sass/base/_mixins.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   /* Для Firefox */
@@ -631,42 +715,90 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
 }
 
 /**
+ *   Background Img
+ */
+/* line 194, ../sass/base/_mixins.scss */
+.cover-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-image: url(../header-bg.jpg);
+}
+
+/**
  *   Blocks Align
  */
-/* line 53, ../sass/base/_mixins.scss */
-img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:before, .pullquote:after, .row, .central-wide, .central-page, .central-text, .cover, .post p,
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6,
+/* line 210, ../sass/base/_mixins.scss */
+.blocktext p, .cover p, .cover-img p, .post p, .blocktext .p, .cover .p, .cover-img .p, .post .p,
+.blocktext h1,
+.cover h1,
+.cover-img h1,
+.post h1, .blocktext h2, .cover h2, .cover-img h2, .post h2, .blocktext h3, .cover h3, .cover-img h3, .post h3, .blocktext h4, .cover h4, .cover-img h4, .post h4, .blocktext h5, .cover h5, .cover-img h5, .post h5, .blocktext h6, .cover h6, .cover-img h6, .post h6,
+.blocktext blockquote,
+.cover blockquote,
+.cover-img blockquote,
 .post blockquote,
+.blocktext .pullquote,
+.cover .pullquote,
+.cover-img .pullquote,
 .post .pullquote,
+.blocktext cite,
+.cover cite,
+.cover-img cite,
+.post cite,
+.blocktext figcaption,
+.cover figcaption,
+.cover-img figcaption,
+.post figcaption,
+.blocktext .figcaption,
+.cover .figcaption,
+.cover-img .figcaption,
+.post .figcaption,
+.blocktext .figure p,
+.figure .blocktext p,
+.cover .figure p,
+.figure .cover p,
+.cover-img .figure p,
+.figure .cover-img p,
+.post .figure p,
+.figure .post p,
+.blocktext blockquote cite,
+blockquote .blocktext cite,
+.cover blockquote cite,
+blockquote .cover cite,
+.cover-img blockquote cite,
+blockquote .cover-img cite,
+.post blockquote cite,
+blockquote .post cite,
+.blocktext .aphorism,
+.cover .aphorism,
+.cover-img .aphorism,
+.post .aphorism,
+.blocktext .aphorism-big,
+.cover .aphorism-big,
+.cover-img .aphorism-big,
+.post .aphorism-big,
+.blocktext ul,
+.cover ul,
+.cover-img ul,
 .post ul,
-.post ol {
+.blocktext ol,
+.cover ol,
+.cover-img ol,
+.post ol, img, figcaption, .figcaption, .figure p, blockquote:before, blockquote:after, .pullquote:before, .pullquote:after, .row, .central-wide, .central-page, .central-text, .column-half, .column-third, .post hr:after {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 /**
- * Mixin handling breakpoints for media queries
- * Source: http://css-tricks.com/media-queries-sass-3-2-and-codekit/
-
- * Modifying idea of "Progressive enhancement" or "mobile firs" I create all stiles for "medium screens" and
- * then adapt them for small and big screens
- */
-/*   linear gradient from top to bottom    */
-/**
- * Mixin to set font size. At the moment in %. By itself it has not much sense but it will be useful if in the future
- * I wish to set font sizes in em or "rem". See @mixin font-size-rem below
-
-@mixin font-size($val) {
-    font-size: $val * 100%;
-}
- */
-/**
  * Mixins to set elements sizes. At the moment in em. By itself they have not much sense but they will be useful if in the future
   * I wish to set sizes in "rem". See  max-width-rem and so on below
  */
-/* Mixins to set sizes in rem */
-/* Mixins to set paddings in rem */
+/*   linear gradient from top to bottom    */
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
@@ -756,7 +888,7 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 .pull-right, .pull-right-adapt {
   float: right;
   margin-right: 0;
-  margin-left: 1em;
+  margin-left: 0.5em;
   margin-bottom: 0.5em;
 }
 
@@ -764,7 +896,7 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 .pull-left, .pull-left-adapt {
   float: left;
   margin-left: 0;
-  margin-right: 1em;
+  margin-right: 0.5em;
   margin-bottom: 0.5em;
 }
 
@@ -775,28 +907,38 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
   }
 }
 
-/* line 28, ../sass/modules/_utilities.scss */
+/* line 25, ../sass/modules/_utilities.scss */
+.float-left {
+  float: left;
+}
+
+/* line 29, ../sass/modules/_utilities.scss */
+.float-right {
+  float: right;
+}
+
+/* line 37, ../sass/modules/_utilities.scss */
 .icon {
   max-width: 15%;
 }
 
-/* line 33, ../sass/modules/_utilities.scss */
+/* line 42, ../sass/modules/_utilities.scss */
 .small {
   max-width: 35%;
 }
 
-/* line 37, ../sass/modules/_utilities.scss */
+/* line 46, ../sass/modules/_utilities.scss */
 .half {
   max-width: 50%;
 }
 @media only screen and (max-width: 44em) {
-  /* line 37, ../sass/modules/_utilities.scss */
+  /* line 46, ../sass/modules/_utilities.scss */
   .half {
     max-width: 100%;
   }
 }
 
-/* line 44, ../sass/modules/_utilities.scss */
+/* line 53, ../sass/modules/_utilities.scss */
 .big {
   max-width: 65%;
 }
@@ -804,17 +946,17 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 /*
  * Text Align
  */
-/* line 54, ../sass/modules/_utilities.scss */
+/* line 63, ../sass/modules/_utilities.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 59, ../sass/modules/_utilities.scss */
+/* line 68, ../sass/modules/_utilities.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 63, ../sass/modules/_utilities.scss */
+/* line 72, ../sass/modules/_utilities.scss */
 .text-center {
   text-align: center;
 }
@@ -822,17 +964,12 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 /*
  * Text Decoration
  */
-/* line 72, ../sass/modules/_utilities.scss */
+/* line 81, ../sass/modules/_utilities.scss */
 .text-crossed {
   text-decoration: line-through;
 }
 
-/* line 76, ../sass/modules/_utilities.scss */
-.text-light {
-  color: #888888;
-}
-
-/* line 80, ../sass/modules/_utilities.scss */
+/* line 85, ../sass/modules/_utilities.scss */
 .text-nowrap {
   white-space: nowrap;
 }
@@ -840,26 +977,26 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 /*
  * Adaptation
  */
-/* line 89, ../sass/modules/_utilities.scss */
+/* line 94, ../sass/modules/_utilities.scss */
 .mobile-only {
   display: none;
 }
 @media only screen and (max-width: 44em) {
-  /* line 89, ../sass/modules/_utilities.scss */
+  /* line 94, ../sass/modules/_utilities.scss */
   .mobile-only {
     display: block;
   }
 }
 
 @media only screen and (max-width: 44em) {
-  /* line 96, ../sass/modules/_utilities.scss */
+  /* line 101, ../sass/modules/_utilities.scss */
   .mobile-hide {
     display: none;
   }
 }
 
 @media only screen and (max-width: 44em) {
-  /* line 102, ../sass/modules/_utilities.scss */
+  /* line 107, ../sass/modules/_utilities.scss */
   .mobile-full {
     padding-right: 0;
     padding-left: 0;
@@ -873,7 +1010,7 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 /*
  * Image replacement
  */
-/* line 122, ../sass/modules/_utilities.scss */
+/* line 127, ../sass/modules/_utilities.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -882,7 +1019,7 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
   *text-indent: -9999px;
 }
 
-/* line 130, ../sass/modules/_utilities.scss */
+/* line 135, ../sass/modules/_utilities.scss */
 .ir:before {
   content: "";
   display: block;
@@ -893,7 +1030,7 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 141, ../sass/modules/_utilities.scss */
+/* line 146, ../sass/modules/_utilities.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -902,7 +1039,7 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 150, ../sass/modules/_utilities.scss */
+/* line 155, ../sass/modules/_utilities.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -918,7 +1055,7 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 167, ../sass/modules/_utilities.scss */
+/* line 172, ../sass/modules/_utilities.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -932,27 +1069,271 @@ img, figcaption, .figcaption, blockquote:before, blockquote:after, .pullquote:be
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 180, ../sass/modules/_utilities.scss */
+/* line 185, ../sass/modules/_utilities.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 184, ../sass/modules/_utilities.scss */
+/* line 189, ../sass/modules/_utilities.scss */
 .disabled {
   pointer-events: none;
   opacity: 0.5;
 }
 
 /************************************************************************************
+COLORS Themes
+*************************************************************************************/
+/* line 5, ../sass/modules/_color-themes.scss */
+.red {
+  background: red;
+}
+
+/* line 9, ../sass/modules/_color-themes.scss */
+.theme-base, .theme-base-intense, html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  background: #fcf6ef;
+  color: #422d1c;
+}
+/* line 17, ../sass/modules/_color-themes.scss */
+.theme-base strong, .theme-base-intense strong, html strong, .theme-base em, .theme-base-intense em, html em {
+  color: #a26b52;
+}
+/* line 22, ../sass/modules/_color-themes.scss */
+.theme-base .post h2, .theme-base-intense .post h2, html .post h2, .theme-base .post h3, .theme-base-intense .post h3, html .post h3, .theme-base .post h4, .theme-base-intense .post h4, html .post h4 {
+  text-shadow: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  border-color: #e2ddd7;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+/* line 28, ../sass/modules/_color-themes.scss */
+.theme-base .post h3, .theme-base-intense .post h3, html .post h3 {
+  color: #823d42;
+}
+/* line 33, ../sass/modules/_color-themes.scss */
+.theme-base .post h4, .theme-base-intense .post h4, html .post h4, .theme-base .post h5, .theme-base-intense .post h5, html .post h5, .theme-base .post h6, .theme-base-intense .post h6, html .post h6 {
+  font-family: Arial, sans-serif;
+  color: #a26b52;
+}
+/* line 39, ../sass/modules/_color-themes.scss */
+.theme-base cite, .theme-base-intense cite, html cite, .theme-base figcaption, .theme-base-intense figcaption, html figcaption, .theme-base .figcaption, .theme-base-intense .figcaption, html .figcaption, .theme-base .figure p, .figure .theme-base p, .theme-base-intense .figure p, .figure .theme-base-intense p, html .figure p, .figure html p, .theme-base blockquote cite, blockquote .theme-base cite, .theme-base-intense blockquote cite, blockquote .theme-base-intense cite, html blockquote cite, blockquote html cite, .theme-base .aphorism, .theme-base-intense .aphorism, html .aphorism, .theme-base .aphorism-big, .theme-base-intense .aphorism-big, html .aphorism-big {
+  color: rgba(144, 114, 100, 0.9);
+  text-shadow: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+/* line 47, ../sass/modules/_color-themes.scss */
+.theme-base .blocktext .blocktext__title a, .theme-base-intense .blocktext .blocktext__title a, html .blocktext .blocktext__title a {
+  color: #823d42;
+  text-shadow: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+/* line 52, ../sass/modules/_color-themes.scss */
+.theme-base .blocktext .blocktext__title a:hover, .theme-base-intense .blocktext .blocktext__title a:hover, html .blocktext .blocktext__title a:hover, .theme-base .blocktext .blocktext__title a:focus, .theme-base-intense .blocktext .blocktext__title a:focus, html .blocktext .blocktext__title a:focus, .theme-base .blocktext .blocktext__title a:active, .theme-base-intense .blocktext .blocktext__title a:active, html .blocktext .blocktext__title a:active {
+  color: #c27c82;
+  text-decoration: none;
+}
+/* line 63, ../sass/modules/_color-themes.scss */
+.theme-base .navbar, .theme-base-intense .navbar, html .navbar,
+.theme-base .thumbnail,
+.theme-base-intense .thumbnail,
+html .thumbnail,
+.theme-base .zebra .zebra__item:nth-child(even),
+.theme-base-intense .zebra .zebra__item:nth-child(even),
+html .zebra .zebra__item:nth-child(even),
+.theme-base .zebra > li:nth-child(even),
+.theme-base-intense .zebra > li:nth-child(even),
+html .zebra > li:nth-child(even) {
+  border-color: #e2ddd7;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+/* line 67, ../sass/modules/_color-themes.scss */
+.theme-base .button-theme, .theme-base-intense .button-theme, html .button-theme {
+  background: #282e3a;
+  border-color: #323843;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* line 73, ../sass/modules/_color-themes.scss */
+.theme-inverse, .theme-inverse-intense {
+  font-family: "Open Sans", sans-serif;
+  background: #282e3a;
+  color: #bec4c9;
+}
+/* line 79, ../sass/modules/_color-themes.scss */
+.theme-inverse strong, .theme-inverse-intense strong, .theme-inverse em, .theme-inverse-intense em {
+  color: #60798e;
+}
+/* line 84, ../sass/modules/_color-themes.scss */
+.theme-inverse .post h2, .theme-inverse-intense .post h2, .theme-inverse .post h3, .theme-inverse-intense .post h3, .theme-inverse .post h4, .theme-inverse-intense .post h4 {
+  text-shadow: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-color: #323843;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+/* line 90, ../sass/modules/_color-themes.scss */
+.theme-inverse .post h3, .theme-inverse-intense .post h3 {
+  color: #baa3a3;
+}
+/* line 94, ../sass/modules/_color-themes.scss */
+.theme-inverse .post h4, .theme-inverse-intense .post h4, .theme-inverse .post h5, .theme-inverse-intense .post h5, .theme-inverse .post h6, .theme-inverse-intense .post h6 {
+  color: #60798e;
+  font-family: inherit;
+}
+/* line 102, ../sass/modules/_color-themes.scss */
+.theme-inverse cite, .theme-inverse-intense cite, .theme-inverse figcaption, .theme-inverse-intense figcaption, .theme-inverse .figcaption, .theme-inverse-intense .figcaption, .theme-inverse .figure p, .figure .theme-inverse p, .theme-inverse-intense .figure p, .figure .theme-inverse-intense p, .theme-inverse blockquote cite, blockquote .theme-inverse cite, .theme-inverse-intense blockquote cite, blockquote .theme-inverse-intense cite, .theme-inverse .aphorism, .theme-inverse-intense .aphorism, .theme-inverse .aphorism-big, .theme-inverse-intense .aphorism-big {
+  color: rgba(190, 196, 201, 0.7);
+  text-shadow: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+/* line 110, ../sass/modules/_color-themes.scss */
+.theme-inverse .blocktext .blocktext__title a, .theme-inverse-intense .blocktext .blocktext__title a {
+  text-shadow: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  color: #baa3a3;
+}
+/* line 115, ../sass/modules/_color-themes.scss */
+.theme-inverse .blocktext .blocktext__title a:hover, .theme-inverse-intense .blocktext .blocktext__title a:hover, .theme-inverse .blocktext .blocktext__title a:focus, .theme-inverse-intense .blocktext .blocktext__title a:focus, .theme-inverse .blocktext .blocktext__title a:active, .theme-inverse-intense .blocktext .blocktext__title a:active {
+  color: #c27c82;
+  text-decoration: none;
+}
+/* line 126, ../sass/modules/_color-themes.scss */
+.theme-inverse .navbar, .theme-inverse-intense .navbar,
+.theme-inverse .thumbnail,
+.theme-inverse-intense .thumbnail,
+.theme-inverse .zebra .zebra__item,
+.theme-inverse-intense .zebra .zebra__item,
+.theme-inverse .zebra > li,
+.theme-inverse-intense .zebra > li {
+  border-color: #323843;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+/* line 131, ../sass/modules/_color-themes.scss */
+.theme-inverse .button-theme, .theme-inverse-intense .button-theme {
+  background: #fcf6ef;
+  border-color: #e2ddd7;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 138, ../sass/modules/_color-themes.scss */
+.img-colors, .cover-img, .page-footer {
+  font-family: "Open Sans", sans-serif;
+  text-shadow: none;
+  color: #999999;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 143, ../sass/modules/_color-themes.scss */
+.img-colors cite, .cover-img cite, .page-footer cite, .img-colors figcaption, .cover-img figcaption, .page-footer figcaption, .img-colors .figcaption, .cover-img .figcaption, .page-footer .figcaption, .img-colors .figure p, .figure .img-colors p, .cover-img .figure p, .figure .cover-img p, .page-footer .figure p, .figure .page-footer p, .cover-img blockquote cite, blockquote .cover-img cite, .page-footer blockquote cite, blockquote .page-footer cite, .img-colors .aphorism, .cover-img .aphorism, .page-footer .aphorism, .img-colors .aphorism-big, .cover-img .aphorism-big, .page-footer .aphorism-big {
+  text-shadow: none;
+  color: #999999;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 148, ../sass/modules/_color-themes.scss */
+.img-colors h1, .cover-img h1, .page-footer h1, .img-colors h2, .cover-img h2, .page-footer h2, .img-colors h3, .cover-img h3, .page-footer h3, .img-colors h4, .cover-img h4, .page-footer h4, .img-colors h5, .cover-img h5, .page-footer h5, .img-colors h6, .cover-img h6, .page-footer h6 {
+  text-shadow: none;
+  color: #cccccc;
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 153, ../sass/modules/_color-themes.scss */
+.img-colors .logo, .cover-img .logo, .page-footer .logo {
+  color: #d6d6d6;
+}
+
+/**
+ * Zebra. To slightly change background color like in  Zebra Striping Table, List and etc
+ * Zebra is used to separate content by slight variance of background color
+ *
+ * <ul class="zebra">
+ *  <li>content goes here</li>
+ *  <li>content goes here</li>
+ *  <li>content goes here</li>
+ * </ul>
+ *
+ *
+ * <div class="zebra">
+ *  <div class="zebra__item">content goes here</div>
+ *  <div class="zebra__item">content goes here</div >
+ *  <div class="zebra__item">content goes here</div >
+ * </div>
+ *
+ */
+/* line 180, ../sass/modules/_color-themes.scss */
+.zebra .zebra__item:nth-child(even),
+.zebra > li:nth-child(even) {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+
+/* line 192, ../sass/modules/_color-themes.scss */
+.theme-base .highlight, .theme-base-intense .highlight, html .highlight {
+  background: #f8ebde;
+}
+/* line 197, ../sass/modules/_color-themes.scss */
+.theme-base .zebra .zebra__item:nth-child(even), .theme-base-intense .zebra .zebra__item:nth-child(even), html .zebra .zebra__item:nth-child(even),
+.theme-base .zebra > li:nth-child(even),
+.theme-base-intense .zebra > li:nth-child(even),
+html .zebra > li:nth-child(even) {
+  background: #f8ebde;
+  text: #a26b52;
+}
+
+/* line 203, ../sass/modules/_color-themes.scss */
+.theme-base-intense {
+  background: #f8ebde;
+}
+/* line 207, ../sass/modules/_color-themes.scss */
+.theme-base-intense .highlight {
+  background: #fcf6ef;
+}
+/* line 212, ../sass/modules/_color-themes.scss */
+.theme-base-intense .zebra .zebra__item:nth-child(even),
+.theme-base-intense .zebra > li:nth-child(even) {
+  background: #fcf6ef;
+  text: #422d1c;
+}
+
+/* line 224, ../sass/modules/_color-themes.scss */
+.theme-inverse h1, .theme-inverse-intense h1 {
+  color: #bec4c9;
+}
+/* line 228, ../sass/modules/_color-themes.scss */
+.theme-inverse .highlight, .theme-inverse-intense .highlight {
+  background: #1f252e;
+}
+/* line 233, ../sass/modules/_color-themes.scss */
+.theme-inverse .zebra .zebra__item:nth-child(even), .theme-inverse-intense .zebra .zebra__item:nth-child(even),
+.theme-inverse .zebra > li:nth-child(even),
+.theme-inverse-intense .zebra > li:nth-child(even) {
+  background: #1f252e;
+}
+
+/* line 238, ../sass/modules/_color-themes.scss */
+.theme-inverse-intense {
+  background: #1f252e;
+}
+/* line 242, ../sass/modules/_color-themes.scss */
+.theme-inverse-intense .highlight {
+  background: #282e3a;
+}
+/* line 247, ../sass/modules/_color-themes.scss */
+.theme-inverse-intense .zebra .zebra__item:nth-child(even),
+.theme-inverse-intense .zebra > li:nth-child(even) {
+  background: #282e3a;
+}
+
+/************************************************************************************
  GENERAL STYLING. Standard Html tags
 *************************************************************************************/
 /** apply  Box Sizing model to all elements **/
-/* line 12, ../sass/modules/_!main.scss */
-html, body {
-  min-height: 100%;
+/* line 11, ../sass/modules/_!main.scss */
+html {
+  height: 100%;
 }
 
-/* line 16, ../sass/modules/_!main.scss */
+/* line 15, ../sass/modules/_!main.scss */
+body {
+  height: 100%;
+}
+
+/* line 20, ../sass/modules/_!main.scss */
 html {
   overflow-y: scroll;
   /* Stops Mobile Safari from auto-adjusting font-sizes */
@@ -963,21 +1344,20 @@ html {
   font-size: 1.25em;
 }
 @media only screen and (min-width: 74em) {
-  /* line 16, ../sass/modules/_!main.scss */
+  /* line 20, ../sass/modules/_!main.scss */
   html {
     font-size: 1.3em;
   }
 }
 @media only screen and (max-width: 44em) {
-  /* line 16, ../sass/modules/_!main.scss */
+  /* line 20, ../sass/modules/_!main.scss */
   html {
     font-size: 1.125em;
   }
 }
 
-/* line 35, ../sass/modules/_!main.scss */
+/* line 41, ../sass/modules/_!main.scss */
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-variant: normal;
   line-height: 1.667;
@@ -987,28 +1367,25 @@ body {
 *  Give Clickable Elements a Pointer Cursor
 *  Source: http://css-tricks.com/snippets/css/give-clickable-elements-a-pointer-cursor/
 **/
-/* line 49, ../sass/modules/_!main.scss */
+/* line 53, ../sass/modules/_!main.scss */
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
   cursor: pointer;
 }
 
-/* line 53, ../sass/modules/_!main.scss */
+/* line 57, ../sass/modules/_!main.scss */
 a {
-  color: #c40873;
+  color: #c27c82;
   text-decoration: none;
 }
-/* line 57, ../sass/modules/_!main.scss */
-a:hover, a:focus, a:active {
-  color: deeppink;
-}
 /* line 61, ../sass/modules/_!main.scss */
-a:visited {
-  color: #8c64b4;
+a:hover, a:focus, a:active {
+  color: #d63e3b;
+  text-decoration: underline;
 }
 
-/* line 68, ../sass/modules/_!main.scss */
+/* line 73, ../sass/modules/_!main.scss */
 ::-moz-selection, ::selection {
-  background: #80191f;
+  background: #3f1f1f;
   color: white;
 }
 
@@ -1019,27 +1396,29 @@ a:visited {
  *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
  *  and not upon the properties (margin-bottom) of the previous object
  */
-/* line 81, ../sass/modules/_!main.scss */
+/* line 86, ../sass/modules/_!main.scss */
 p {
   margin-top: 1em;
+  margin-bottom: 1.5em;
 }
 
-/* line 85, ../sass/modules/_!main.scss */
+/* line 91, ../sass/modules/_!main.scss */
 i, em, q {
   font-style: italic;
 }
 
-/* line 89, ../sass/modules/_!main.scss */
-mark, .mark {
-  background: #f7f4f0;
+/* line 95, ../sass/modules/_!main.scss */
+hr {
+  border: none;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  margin-top: 1em;
+  height: 0;
 }
 
-/* line 93, ../sass/modules/_!main.scss */
-hr {
-  border-top: 2px solid #cccccc;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  height: 0;
+/* line 103, ../sass/modules/_!main.scss */
+cite, figcaption, .figcaption, .figure p, blockquote cite, .aphorism, .aphorism-big {
+  font-size: 14.4px;
+  font-size: 0.9rem;
 }
 
 /************************************************************************************
@@ -1054,63 +1433,65 @@ hr {
  */
 /* line 13, ../sass/modules/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: inherit;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 1.33;
-  margin-top: 1.5em;
+  margin-top: 2em;
+  text-align: center;
 }
 
 /* line 20, ../sass/modules/_headings.scss */
 h1 {
-  font-size: 27.52px;
-  font-size: 1.72rem;
+  font-family: Arial, sans-serif;
+  font-size: 30.4px;
+  font-size: 1.9rem;
 }
 
-/* line 24, ../sass/modules/_headings.scss */
+/* line 26, ../sass/modules/_headings.scss */
 h2 {
-  font-size: 26.4px;
-  font-size: 1.65rem;
+  font-family: Arial, sans-serif;
+  font-size: 27.2px;
+  font-size: 1.7rem;
+  text-transform: uppercase;
 }
 
-/* line 28, ../sass/modules/_headings.scss */
-h3 {
-  font-size: 20.8px;
-  font-size: 1.3rem;
-}
-
-/* line 32, ../sass/modules/_headings.scss */
-h4 {
-  font-size: 19.2px;
-  font-size: 1.2rem;
-}
 /* line 34, ../sass/modules/_headings.scss */
-h4 small {
-  font-size: 16.128px;
-  font-size: 1.008rem;
+h3 {
+  font-family: Arial, sans-serif;
+  font-size: 27.2px;
+  font-size: 1.7rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* line 40, ../sass/modules/_headings.scss */
+h4 {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+}
+
+/* line 45, ../sass/modules/_headings.scss */
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /**
  * This class is used to make the introductory text (usually a paragraph)
  * of a document larger.
  */
-/* line 44, ../sass/modules/_headings.scss */
+/* line 56, ../sass/modules/_headings.scss */
 .lead {
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 20.16px;
+  font-size: 1.26rem;
+  max-width: 50em;
 }
 
-/* line 50, ../sass/modules/_headings.scss */
-.title {
-  color: inherit;
-}
-
-/* line 54, ../sass/modules/_headings.scss */
+/* line 68, ../sass/modules/_headings.scss */
 .header {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  background: #f7f4f0;
 }
 
 /*------------------------------------*\
@@ -1166,7 +1547,7 @@ pre, code {
  */
 /* line 8, ../sass/modules/_images.scss */
 img {
-  margin-top: 1em;
+  margin-top: 1.5em;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
@@ -1206,24 +1587,22 @@ img {
  * </figure>
  */
 /* line 40, ../sass/modules/_images.scss */
-.figure {
-  margin-top: 1em;
-}
-/* line 42, ../sass/modules/_images.scss */
-.figure img {
-  margin-top: 0;
-}
-
-/* line 47, ../sass/modules/_images.scss */
-figcaption, .figcaption {
+figcaption, .figcaption, .figure p {
   clear: both;
-  font-size: 14px;
-  font-size: 0.875rem;
   font-style: italic;
   line-height: 1.33;
   text-align: center;
   max-width: 90%;
   margin-top: 0.25em;
+}
+
+/* line 52, ../sass/modules/_images.scss */
+.figure {
+  margin-top: 1.5em;
+}
+/* line 54, ../sass/modules/_images.scss */
+.figure img {
+  margin-top: 0;
 }
 
 /************************************************************************************
@@ -1248,33 +1627,55 @@ BLOCKTEXT
  */
 /* line 10, ../sass/modules/_blocktext.scss */
 .blocktext {
-  padding: 1em;
-  padding-top: 0.25em;
+  padding: 0.5em 1em;
   text-align: left;
 }
-/* line 17, ../sass/modules/_blocktext.scss */
-.blocktext h1, .blocktext h2, .blocktext h3, .blocktext h4, .blocktext h5, .blocktext h6 {
+/* line 15, ../sass/modules/_blocktext.scss */
+.blocktext p {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+/* line 20, ../sass/modules/_blocktext.scss */
+.blocktext .blocktext__title {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  font-family: inherit;
   margin-top: 0;
-  text-align: center;
+  border: none;
+  text-align: left;
 }
 
 /************************************************************************************
-   BLOCKLIST
+   LISTS
 *************************************************************************************/
-/* line 9, ../sass/modules/_blocklist.scss */
+/* line 5, ../sass/modules/_lists.scss */
+.list-dashed {
+  list-style: none;
+}
+/* line 8, ../sass/modules/_lists.scss */
+.list-dashed li:before {
+  content: "\2014 ";
+}
+
+/* line 11, ../sass/modules/_lists.scss */
+.list-unstyled {
+  list-style: none;
+}
+
+/* line 17, ../sass/modules/_lists.scss */
 .blocklist {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 14, ../sass/modules/_blocklist.scss */
+/* line 22, ../sass/modules/_lists.scss */
 .blocklist li {
   margin: 0;
   padding: 0.5em 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid;
   text-align: center;
 }
-/* line 23, ../sass/modules/_blocklist.scss */
+/* line 31, ../sass/modules/_lists.scss */
 .blocklist li:last-child {
   border-bottom: none;
 }
@@ -1296,16 +1697,14 @@ blockquote:first-child {
 }
 
 /* line 19, ../sass/modules/_blockquote.scss */
-blockquote cite {
-  font-size: 14px;
-  font-size: 0.875rem;
+blockquote cite, blockquote figcaption, blockquote .figcaption, blockquote .figure p, .figure blockquote p, blockquote cite, blockquote .aphorism, blockquote .aphorism-big {
   line-height: 1.33;
   display: block;
   margin-top: 0.25em;
   text-align: left;
 }
 /* line 26, ../sass/modules/_blockquote.scss */
-blockquote cite:before {
+blockquote cite:before, blockquote figcaption:before, blockquote .figcaption:before, blockquote .figure p:before, .figure blockquote p:before, blockquote .aphorism:before, blockquote .aphorism-big:before {
   content: "\2014 \2009";
 }
 
@@ -1341,7 +1740,7 @@ blockquote:before, blockquote:after {
   display: block;
   width: 10em;
   height: 5px;
-  background-color: #c40873;
+  background-color: #c27c82;
   content: "\200B";
 }
 
@@ -1362,9 +1761,9 @@ blockquote:before, blockquote:after {
 .pullquote-right {
   float: right;
   margin-right: 0;
-  margin-left: 1em;
+  margin-left: 0.5em;
   margin-bottom: 0.5em;
-  border-left: 5px solid #c40873;
+  border-left: 5px solid #c27c82;
   padding-left: 1em;
   text-align: right;
 }
@@ -1373,9 +1772,9 @@ blockquote:before, blockquote:after {
 .pullquote-left {
   float: left;
   margin-left: 0;
-  margin-right: 1em;
+  margin-right: 0.5em;
   margin-bottom: 0.5em;
-  border-right: 5px solid #c40873;
+  border-right: 5px solid #c27c82;
   padding-rigth: 1em;
   text-align: left;
 }
@@ -1406,14 +1805,15 @@ blockquote:before, blockquote:after {
 
  *
  */
-/* line 21, ../sass/modules/_navs.scss */
+/* line 20, ../sass/modules/_navs.scss */
 .nav {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: inherit;
+  font-size: 11.2px;
+  font-size: 0.7rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   list-style: none;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 /* line 28, ../sass/modules/_navs.scss */
 .nav > li {
@@ -1424,26 +1824,66 @@ blockquote:before, blockquote:after {
 /* line 33, ../sass/modules/_navs.scss */
 .nav > li > a {
   display: block;
-  margin: 0 1px 1px 0;
   padding: 1em;
   text-decoration: none;
-  color: #c40873;
+  color: #c27c82;
 }
 /* line 40, ../sass/modules/_navs.scss */
 .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
+  text-shadow: none;
   color: white;
-  background: #c40873;
+  background: #c27c82;
 }
-/* line 47, ../sass/modules/_navs.scss */
+/* line 48, ../sass/modules/_navs.scss */
 .nav > .active > a {
+  text-shadow: none;
+  background: #c27c82;
   color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c40873), to(#30233d));
-  background: -webkit-linear-gradient(top, #c40873, #30233d);
-  background: -moz-linear-gradient(top, #c40873, #30233d);
-  background: -ms-linear-gradient(top, #c40873, #30233d);
-  background: -o-linear-gradient(top, #c40873, #30233d);
-  background: linear-gradient(to bottom, #c40873, #30233d);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC40873', endColorstr='#FF30233D', GradientType=0);
+}
+/* line 54, ../sass/modules/_navs.scss */
+.nav > .reverse {
+  float: right;
+}
+
+/* line 59, ../sass/modules/_navs.scss */
+.nav--central {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+/* line 61, ../sass/modules/_navs.scss */
+.nav--central > li {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+/* line 66, ../sass/modules/_navs.scss */
+.nav--decorated {
+  margin-bottom: 1em;
+}
+/* line 68, ../sass/modules/_navs.scss */
+.nav--decorated > li {
+  margin: 1em 0.5em;
+  margin-top: 0;
+}
+/* line 71, ../sass/modules/_navs.scss */
+.nav--decorated > li > a {
+  border-bottom: 1px solid #c27c82;
+}
+
+@media only screen and (max-width: 44em) {
+  /* line 79, ../sass/modules/_navs.scss */
+  .nav--adapt > li {
+    float: none;
+    width: 95%;
+  }
 }
 
 /************************************************************************************
@@ -1452,16 +1892,9 @@ blockquote:before, blockquote:after {
 /**
  * NAVBAR is a container for navigation [ .nav ]
  */
-/* line 13, ../sass/modules/_navbars.scss */
-.navbar--left {
-  float: left;
-  margin-right: 0.5em;
-}
-
-/* line 18, ../sass/modules/_navbars.scss */
-.navbar--right {
-  float: right;
-  margin-left: 0.5em;
+/* line 9, ../sass/modules/_navbars.scss */
+.navbar {
+  border-bottom: 2px solid;
 }
 
 /************************************************************************************
@@ -1469,13 +1902,35 @@ blockquote:before, blockquote:after {
 *************************************************************************************/
 /* line 5, ../sass/modules/_logo.scss */
 .logo {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
   font-family: "Cardo", serif;
-  text-decoration: none;
-  letter-spacing: 1px;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  border-radius: 24px;
+  text-align: center;
+  padding: 0 0.5em;
+  margin-left: 1em;
+  margin-top: 0.5em;
+  border: 1px solid #c27c82;
 }
-/* line 10, ../sass/modules/_logo.scss */
-.logo a {
-  color: #c40873;
+/* line 16, ../sass/modules/_logo.scss */
+.logo:hover, .logo:focus, .logo:active {
+  color: white;
+  text-decoration: none;
+  background: #c27c82;
+}
+@media only screen and (max-width: 44em) {
+  /* line 5, ../sass/modules/_logo.scss */
+  .logo {
+    margin-top: 1em;
+  }
 }
 
 /************************************************************************************
@@ -1483,7 +1938,7 @@ Containers:  ROW, COLUMN and FLUID
 *************************************************************************************/
 /* line 6, ../sass/modules/_containers.scss */
 .row {
-  max-width: 100em;
+  max-width: 80em;
   text-align: center;
 }
 
@@ -1507,31 +1962,61 @@ Containers:  ROW, COLUMN and FLUID
 }
 
 /*
- * COLUMNS. FLOAT
- * On small mobile screens their width = 100%
+ * COLUMNS.
+ *
  */
-/* line 39, ../sass/modules/_containers.scss */
+/*.column-half {
+    width: 50%;
+    float: left;
+
+    @include breakpoint(small) {
+          width: 100%;
+      }
+}*/
+/* line 49, ../sass/modules/_containers.scss */
 .column-half {
-  width: 50%;
+  max-width: 40em;
+}
+@media only screen and (min-width: 74em) {
+  /* line 49, ../sass/modules/_containers.scss */
+  .column-half {
+    display: inline-block;
+    vertical-align: top;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    width: 47%;
+  }
 }
 
-/* line 43, ../sass/modules/_containers.scss */
+/* line 59, ../sass/modules/_containers.scss */
 .column-third {
-  width: 33.33%;
+  max-width: 40em;
+}
+@media only screen and (min-width: 74em) {
+  /* line 59, ../sass/modules/_containers.scss */
+  .column-third {
+    width: 33.33%;
+    float: left;
+  }
 }
 
-/* line 47, ../sass/modules/_containers.scss */
+/* line 69, ../sass/modules/_containers.scss */
 .column-fourth {
-  width: 25%;
-}
-
-/* line 52, ../sass/modules/_containers.scss */
-.column-half, .column-third, .column-fourth {
+  width: 50%;
   float: left;
 }
+@media only screen and (min-width: 74em) {
+  /* line 69, ../sass/modules/_containers.scss */
+  .column-fourth {
+    width: 25%;
+    float: left;
+  }
+}
 @media only screen and (max-width: 44em) {
-  /* line 52, ../sass/modules/_containers.scss */
-  .column-half, .column-third, .column-fourth {
+  /* line 69, ../sass/modules/_containers.scss */
+  .column-fourth {
     width: 100%;
   }
 }
@@ -1540,34 +2025,34 @@ Containers:  ROW, COLUMN and FLUID
  * Special columns to form two-column page with Content and Sidebar
  *
  */
-/* line 66, ../sass/modules/_containers.scss */
+/* line 92, ../sass/modules/_containers.scss */
 .column-content, .column-sidebar {
   float: left;
 }
 @media only screen and (max-width: 44em) {
-  /* line 66, ../sass/modules/_containers.scss */
+  /* line 92, ../sass/modules/_containers.scss */
   .column-content, .column-sidebar {
     width: 100%;
   }
 }
 
-/* line 74, ../sass/modules/_containers.scss */
+/* line 100, ../sass/modules/_containers.scss */
 .column-content {
   width: 66%;
 }
 @media only screen and (min-width: 74em) {
-  /* line 74, ../sass/modules/_containers.scss */
+  /* line 100, ../sass/modules/_containers.scss */
   .column-content {
     width: 60%;
   }
 }
 
-/* line 81, ../sass/modules/_containers.scss */
+/* line 107, ../sass/modules/_containers.scss */
 .column-sidebar {
   width: 34%;
 }
 @media only screen and (min-width: 74em) {
-  /* line 81, ../sass/modules/_containers.scss */
+  /* line 107, ../sass/modules/_containers.scss */
   .column-sidebar {
     width: 40%;
   }
@@ -1578,27 +2063,33 @@ Containers:  ROW, COLUMN and FLUID
  * On small and medium screens they are all equals ( width = $widthText ) and took their true sizes only on "big" screens
  * Used for galleries, previews and so on
  */
-/* line 96, ../sass/modules/_containers.scss */
+/* line 122, ../sass/modules/_containers.scss */
 .box-text, .box-base, .box-small, .box-mini {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
   max-width: 40em;
 }
 
 @media only screen and (min-width: 74em) {
-  /* line 101, ../sass/modules/_containers.scss */
+  /* line 127, ../sass/modules/_containers.scss */
   .box-base {
     max-width: 36em;
   }
 }
 
 @media only screen and (min-width: 74em) {
-  /* line 107, ../sass/modules/_containers.scss */
+  /* line 133, ../sass/modules/_containers.scss */
   .box-small {
     max-width: 26em;
   }
 }
 
 @media only screen and (min-width: 74em) {
-  /* line 113, ../sass/modules/_containers.scss */
+  /* line 139, ../sass/modules/_containers.scss */
   .box-mini {
     max-width: 18em;
   }
@@ -1609,7 +2100,8 @@ Section
 *************************************************************************************/
 /* line 6, ../sass/modules/_section.scss */
 .section {
-  padding: 1.5em 0;
+  padding-bottom: 1.5em;
+  padding-top: 0.25em;
 }
 
 /************************************************************************************
@@ -1618,123 +2110,158 @@ Section
 /**
  * helper mixin to set Buttons colors
  */
-/* line 41, ../sass/modules/_buttons.scss */
-.button {
+/* line 39, ../sass/modules/_buttons.scss */
+.button, .button-theme, #toTop {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
   cursor: pointer;
   text-align: center;
-  margin: 0;
   line-height: 1.33;
-  padding: 0.5em 1em;
   text-decoration: none;
-  color: #80191f;
-  border: 2px solid #80191f;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-/* line 18, ../sass/modules/_buttons.scss */
-.button:hover, .button:focus, .button:active {
-  color: white;
-  background: black;
-  border-color: #000000;
 }
 
-/**
- * Button modifiers. Extends and used with the base ".button" class
- */
-/* line 57, ../sass/modules/_buttons.scss */
-.button--brand {
-  color: #80191f;
-  border: 2px solid #80191f;
-}
-/* line 18, ../sass/modules/_buttons.scss */
-.button--brand:hover, .button--brand:focus, .button--brand:active {
-  color: white;
-  background: black;
-  border-color: #000000;
-}
-
-/* line 62, ../sass/modules/_buttons.scss */
-.button--filled {
-  background: #80191f;
-  color: white;
-}
-/* line 32, ../sass/modules/_buttons.scss */
-.button--filled:hover, .button--filled:focus, .button--filled:active {
-  background: black;
-  border-color: #000000;
-}
-
-/* line 67, ../sass/modules/_buttons.scss */
-.button--brand.button--filled {
-  background: #80191f;
-  color: white;
-}
-/* line 32, ../sass/modules/_buttons.scss */
-.button--brand.button--filled:hover, .button--brand.button--filled:focus, .button--brand.button--filled:active {
-  background: black;
-  border-color: #000000;
-}
-
-/* line 74, ../sass/modules/_buttons.scss */
-.button----rounded {
+/* line 50, ../sass/modules/_buttons.scss */
+.button {
+  margin: 1em 0.5em;
+  padding: 0.5em 1em;
+  color: #c27c82;
+  border: 2px solid #c27c82;
+  font-weight: bold;
   -moz-border-radius: 24px;
   -webkit-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
   border-radius: 24px;
 }
+/* line 19, ../sass/modules/_buttons.scss */
+.button:hover, .button:focus, .button:active {
+  text-decoration: none;
+  color: white;
+  background: #c27c82;
+}
 
-/* line 82, ../sass/modules/_buttons.scss */
+/* line 61, ../sass/modules/_buttons.scss */
+.button--filled {
+  background: #c27c82;
+  color: white;
+}
+/* line 32, ../sass/modules/_buttons.scss */
+.button--filled:hover, .button--filled:focus, .button--filled:active {
+  background: #3f1f1f;
+  border-color: #3f1f1f;
+}
+
+/* line 70, ../sass/modules/_buttons.scss */
 .button--disabled {
-  background: #999999;
-  color: #cccccc;
-  border: 1px solid #666666;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  border-color: #c9c4bf;
+  border-color: rgba(0, 0, 0, 0.2);
+  background: #c9c4bf;
+  background: rgba(0, 0, 0, 0.2);
+  color: #979592;
+  color: rgba(85, 85, 85, 0.6);
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
 }
-/* line 88, ../sass/modules/_buttons.scss */
+/* line 77, ../sass/modules/_buttons.scss */
 .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
-  background: #999999;
-  color: #cccccc;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  background: #c9c4bf;
+  background: rgba(0, 0, 0, 0.2);
+  color: #979592;
+  color: rgba(85, 85, 85, 0.6);
 }
 
-/* line 97, ../sass/modules/_buttons.scss */
-.button--small {
-  padding: 0.25em 1em;
-}
-
-/* line 101, ../sass/modules/_buttons.scss */
-.button--large {
-  font-size: 19.2px;
-  font-size: 1.2rem;
-  padding: 1em;
-}
-
-/* line 106, ../sass/modules/_buttons.scss */
-.button--full {
+/* line 86, ../sass/modules/_buttons.scss */
+.button--long {
   display: block;
-  text-align: center;
-  padding-right: 0;
-  padding-left: 0;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40em;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 74em) {
+  /* line 86, ../sass/modules/_buttons.scss */
+  .button--long {
+    display: inline-block;
+    vertical-align: top;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    width: 47%;
+  }
 }
 
 /************************************************************************************
-Cover.
+Theme Button
+*************************************************************************************/
+/* line 105, ../sass/modules/_buttons.scss */
+.button-theme {
+  vertical-align: text-bottom;
+  *vertical-align: auto;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  padding: 0 1em;
+}
+
+/************************************************************************************
+ToTop Button
+*************************************************************************************/
+/* line 119, ../sass/modules/_buttons.scss */
+#toTop {
+  margin: 0;
+  padding: 1em 1.5em;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  background: #555;
+  color: white;
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  display: none;
+}
+/* line 131, ../sass/modules/_buttons.scss */
+#toTop:hover {
+  background: #d63e3b;
+  color: white;
+}
+@media only screen and (min-width: 74em) {
+  /* line 119, ../sass/modules/_buttons.scss */
+  #toTop {
+    bottom: 0;
+  }
+}
+
+/************************************************************************************
+COVER.
 *************************************************************************************/
 /**
- *  Cover is a kind of intro block (with title, lead img may by some text or Jumbotron)
+ *  Cover is a kind of intro block (normally page title, may be some background or lead img, author info and so on)
  */
 /* line 9, ../sass/modules/_cover.scss */
-.cover {
-  max-width: 36em;
+.cover, .cover-img {
+  padding-top: 0.25em;
+  padding-bottom: 1em;
+}
+/* line 15, ../sass/modules/_cover.scss */
+.cover h1, .cover-img h1 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* line 25, ../sass/modules/_cover.scss */
+.cover-img {
+  background-color: #191e25;
+  padding-top: 1.5em;
+  padding-bottom: 3em;
 }
 
 /************************************************************************************
@@ -1763,7 +2290,7 @@ MEDIA
   margin-top: 0;
   margin-right: 1em;
   margin-left: 1em;
-  border: 1px solid #cccccc;
+  border: 1px solid;
 }
 /* line 32, ../sass/modules/_media.scss */
 .media > .media__body {
@@ -1814,106 +2341,74 @@ MEDIA
 }
 
 /************************************************************************************
-COLORS Themes
-*************************************************************************************/
-/* line 5, ../sass/modules/_color-themes.scss */
-.dark, .theme-background, .page-header, .page-footer {
-  background: #30233d;
-  color: #cccccc;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-/* line 10, ../sass/modules/_color-themes.scss */
-.dark h1, .theme-background h1, .page-header h1, .page-footer h1, .dark h2, .theme-background h2, .page-header h2, .page-footer h2, .dark h3, .theme-background h3, .page-header h3, .page-footer h3, .dark h4, .theme-background h4, .page-header h4, .page-footer h4 {
-  color: white;
-}
-/* line 14, ../sass/modules/_color-themes.scss */
-.dark figcaption, .theme-background figcaption, .page-header figcaption, .page-footer figcaption, .dark .figcaption, .theme-background .figcaption, .page-header .figcaption, .page-footer .figcaption, .dark cite, .theme-background cite, .page-header cite, .page-footer cite {
-  color: #888888;
-}
-
-/* line 20, ../sass/modules/_color-themes.scss */
-.light, .theme-base, body {
-  background: #faf4f0;
-  text-shadow: 0 1px 1px white;
-}
-
-/* line 37, ../sass/modules/_color-themes.scss */
-.beige, .theme-zebra, .zebra .zebra__item:nth-child(even),
-.zebra > li:nth-child(even) {
-  background: #fafaf8;
-  color: #3f3034;
-  text-shadow: 0 1px 1px white;
-}
-/* line 43, ../sass/modules/_color-themes.scss */
-.beige h1, .theme-zebra h1, .zebra .zebra__item:nth-child(even) h1,
-.zebra > li:nth-child(even) h1, .beige h2, .theme-zebra h2, .zebra .zebra__item:nth-child(even) h2,
-.zebra > li:nth-child(even) h2, .beige h3, .theme-zebra h3, .zebra .zebra__item:nth-child(even) h3,
-.zebra > li:nth-child(even) h3, .beige h4, .theme-zebra h4, .zebra .zebra__item:nth-child(even) h4,
-.zebra > li:nth-child(even) h4 {
-  color: #3f3034;
-}
-/* line 49, ../sass/modules/_color-themes.scss */
-.beige figcaption, .theme-zebra figcaption, .zebra .zebra__item:nth-child(even) figcaption,
-.zebra > li:nth-child(even) figcaption, .beige .figcaption, .theme-zebra .figcaption, .zebra .zebra__item:nth-child(even) .figcaption,
-.zebra > li:nth-child(even) .figcaption, .beige cite, .theme-zebra cite, .zebra .zebra__item:nth-child(even) cite,
-.zebra > li:nth-child(even) cite {
-  color: #907264;
-}
-
-/************************************************************************************
 Post, Articles
 *************************************************************************************/
 /** Preformed base classes for articles and blog posts
   */
 /* line 7, ../sass/modules/_post.scss */
 .post {
-  text-align: left;
-  /* all text elements are centered and limited to the line-wide comfortable for reading  */
+  padding-top: 0.25em;
+  padding-bottom: 3em;
 }
-/* line 17, ../sass/modules/_post.scss */
-.post p,
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6,
-.post blockquote,
-.post .pullquote,
-.post ul,
-.post ol {
-  max-width: 640px;
-  max-width: 40rem;
-  padding-right: 16px;
-  padding-right: 1rem;
-  padding-left: 16px;
-  padding-left: 1rem;
+/* line 13, ../sass/modules/_post.scss */
+.post h3, .post h4 {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
 }
-/* line 23, ../sass/modules/_post.scss */
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-  text-align: center;
-}
-/* line 27, ../sass/modules/_post.scss */
-.post h3 {
-  background: #ebe8ed;
-  background: #EAE7D7;
-  background: #f0e3da;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-/* line 35, ../sass/modules/_post.scss */
+/* line 21, ../sass/modules/_post.scss */
 .post h4 {
-  font-weight: bold;
-  border-left: 4px solid #c40873;
+  text-align: left;
 }
-/* line 44, ../sass/modules/_post.scss */
+/* line 25, ../sass/modules/_post.scss */
+.post .lead {
+  max-width: 800px;
+  max-width: 50rem;
+  text-align: center;
+  font-style: italic;
+}
+/* line 32, ../sass/modules/_post.scss */
 .post ul,
 .post ol {
-  padding-left: 2.5em;
-  margin-top: 1em;
+  padding-left: 3em;
+  margin-top: 1.5em;
 }
-/* line 48, ../sass/modules/_post.scss */
+/* line 36, ../sass/modules/_post.scss */
 .post ul li,
 .post ol li {
-  margin-top: 0.25em;
+  margin-top: 1em;
   /**
    * Remove vertical spacing from nested lists.
    */
+}
+/* line 41, ../sass/modules/_post.scss */
+.post ul li > ul, .post ul li > ol,
+.post ol li > ul,
+.post ol li > ol {
+  margin-top: 0;
+}
+/* line 45, ../sass/modules/_post.scss */
+.post ul li > p,
+.post ol li > p {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 52, ../sass/modules/_post.scss */
+.post hr {
+  border: none;
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+  height: 0;
+}
+/* line 58, ../sass/modules/_post.scss */
+.post hr:after {
+  max-width: 5em;
+  content: "************";
+}
+/* line 66, ../sass/modules/_post.scss */
+.post .table-of-contents li {
+  margin-top: 0;
 }
 
 /************************************************************************************
@@ -1955,7 +2450,7 @@ Post, Articles
 /* line 39, ../sass/modules/_thumbnails.scss */
 .thumbnail {
   display: block;
-  border: 1px solid #cccccc;
+  border: 1px solid;
   border-radius: 6px;
   padding: 0.25em;
   margin: 1em 0.5em;
@@ -1966,15 +2461,26 @@ Post, Articles
   border: none;
 }
 
-/* line 54, ../sass/modules/_thumbnails.scss */
-a.thumbnail:hover,
-a.thumbnail:focus {
-  border-color: #80191f;
+/* line 55, ../sass/modules/_thumbnails.scss */
+a.thumbnail,
+a.thumbnail {
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.5em;
+  text-decoration: none;
+  background: #c27c82;
+  color: white;
+  font-family: "Open Sans", sans-serif;
 }
-
-/* line 59, ../sass/modules/_thumbnails.scss */
-.thumbnail--brand {
-  border-color: #80191f;
+/* line 65, ../sass/modules/_thumbnails.scss */
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active,
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail:active {
+  background: #3f1f1f;
+  color: white;
+  text-decoration: none;
 }
 
 /************************************************************************************
@@ -1982,28 +2488,30 @@ a.thumbnail:focus {
 *************************************************************************************/
 /* line 5, ../sass/modules/_page-header.scss */
 .page-header {
-  padding-bottom: 1em;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/************************************************************************************
+    Page Main
+*************************************************************************************/
+/* line 5, ../sass/modules/_page-main.scss */
+.page-main {
+  min-height: 80%;
 }
 
 /************************************************************************************
     Page footer
 *************************************************************************************/
 /* line 5, ../sass/modules/_page-footer.scss */
-.page-footer {
-  min-height: 20em;
+.page-footer-img {
+  padding-bottom: 1.5em;
 }
 
 /* line 10, ../sass/modules/_page-footer.scss */
-.footer-bg {
-  background-image: url(../img/footer_bg.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 80px;
-}
-@media only screen and (max-width: 44em) {
-  /* line 10, ../sass/modules/_page-footer.scss */
-  .footer-bg {
-    background-image: none;
-  }
+.page-footer {
+  padding-bottom: 1.5em;
+  min-height: 15em;
+  background: #191e25;
 }
 
 /************************************************************************************
@@ -2144,40 +2652,6 @@ Hero
 }
 
 /************************************************************************************
-ToTop Button
-*************************************************************************************/
-/* line 5, ../sass/modules/_toTop.scss */
-#toTop {
-  cursor: pointer;
-  text-align: center;
-  margin: 0;
-  padding: 1em 1.5em;
-  text-decoration: none;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  background: #555;
-  color: white;
-  position: fixed;
-  bottom: 3%;
-  right: 3%;
-  display: none;
-}
-/* line 20, ../sass/modules/_toTop.scss */
-#toTop:hover {
-  background: #80191f;
-  color: white;
-}
-@media only screen and (min-width: 74em) {
-  /* line 5, ../sass/modules/_toTop.scss */
-  #toTop {
-    bottom: 0;
-  }
-}
-
-/************************************************************************************
 ADAPTIVE IFRAME (VIDEO, MAPS...)
 *************************************************************************************/
 /* line 6, ../sass/modules/_iframe.scss */
@@ -2220,34 +2694,7 @@ vCard
 }
 /* line 13, ../sass/modules/_vCard.scss */
 .vCard .phone, .vCard .address {
-  color: #80191f;
-}
-
-/************************************************************************************
- Zebra. To slightly change background color like in  Zebra Striping Table, List and etc
-*************************************************************************************/
-/**
- * Zebra is used to separate content by slight variance of background color
- *
- * <ul class="zebra">
- *  <li>content goes here</li>
- *  <li>content goes here</li>
- *  <li>content goes here</li>
- * </ul>
- *
- *
- * <div class="zebra">
- *  <div class="zebra__item">content goes here</div>
- *  <div class="zebra__item">content goes here</div >
- *  <div class="zebra__item">content goes here</div >
- * </div>
- *
- */
-/* line 25, ../sass/modules/_zebra.scss */
-.zebra .zebra__item:nth-child(even),
-.zebra > li:nth-child(even) {
-  border-bottom: 1px solid #cccccc;
-  border-top: 1px solid #cccccc;
+  color: #d63e3b;
 }
 
 /************************************************************************************
@@ -2256,8 +2703,48 @@ vCard
 /* line 5, ../sass/modules/_aphorism.scss */
 .aphorism {
   float: right;
-  padding: 0 1em;
-  font-size: 14.4px;
-  font-size: 0.9rem;
+  font-family: "Open Sans", sans-serif;
+  margin: 0.5em 1em;
   max-width: 30em;
+}
+
+/* line 13, ../sass/modules/_aphorism.scss */
+.aphorism-big {
+  margin-top: 0.25em;
+  margin-bottom: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/************************************************************************************
+Table of Contents
+*************************************************************************************/
+/* line 6, ../sass/modules/_table-of-contents.scss */
+.table-of-contents li {
+  margin-top: 0;
+}
+
+/************************************************************************************
+Post, Articles
+*************************************************************************************/
+/* line 5, ../sass/modules/_post-preview.scss */
+.post-preview {
+  padding: 1em;
+  text-align: left;
+  margin: 1em;
+}
+/* line 10, ../sass/modules/_post-preview.scss */
+.post-preview p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+/* line 15, ../sass/modules/_post-preview.scss */
+.post-preview h1, .post-preview h2, .post-preview h3, .post-preview h4 {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  margin-top: 0;
+  border: none;
+  text-align: center;
 }

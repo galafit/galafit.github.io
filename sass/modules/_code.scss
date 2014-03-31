@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $CODE
+\*------------------------------------*/
+/**
+ * Use an explicit font stack to ensure browsers render correct `line-height`.
+ */
+pre{
+    overflow:auto;
+}
+    pre mark{
+        background:none;
+        border-bottom:1px solid;
+        color:inherit;
+    }
+
+
+/**
+ * Add comments to your code examples, e.g.:
+ *
+   <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
+ *
+ */
+.code-comment{
+    /**
+     * Override this setting in your theme stylesheet
+     */
+    opacity:0.75;
+    filter:alpha(opacity=75);
+}
+
+
+pre, code {
+    font-family: 'Bitstream Vera Sans Mono', "Droid Sans Mono", "Lucidia Console", "Menlo", "Courier New", Courier, monospace;
+    font-size: 90%;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0.2em 0.4em;
+    white-space: pre;
+    word-wrap: break-word;
+    text-align: left
+}
+

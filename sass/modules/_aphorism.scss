@@ -1,0 +1,20 @@
+/************************************************************************************
+    Aphorism
+*************************************************************************************/
+
+.aphorism {
+    @extend cite;
+    float: right;
+    font-family: $inverse-font-family;
+    margin: $gap-small $gap-base;
+    @include max-width ($aphorism-width);
+}
+
+.aphorism-big {
+    @extend cite;
+    margin-top: $gap-mini;
+    margin-bottom: 0;
+    font-family: $inverse-font-family;
+    @include font-size($aphorism-font-big);
+    text-align: center;
+}

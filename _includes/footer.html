@@ -1,0 +1,50 @@
+{% include setup %}
+
+
+{% if page.footer_img %}
+{% capture FOOTER_BG %} url( {{ site.img }}/{{ page.footer_img }} ){% endcapture %}
+{% assign FOOTER  = "page-footer-img" %}
+{% else %}
+{% assign FOOTER_BG  = "none" %}
+{% assign FOOTER  = "page-footer" %}
+{% endif %}
+
+
+<footer id="footer">
+    <p></p>
+    <div class="{{ FOOTER }}" style="background-image: {{ FOOTER_BG }}">
+        <div class="row">
+            <ul class="nav nav--central nav--decorated nav--adapt">
+                {% for link in site[NAV] %}
+                {% if link.folder == CATEGORY %}
+                <li class="active"><a href="{{ SITE_URL }}/{{ LANGUAGE }}/{{ link.folder }}">{{ link.name }}</a>
+                </li>
+                {% assign CATEGOTY_NAME = link.name %}
+                {% else %}
+                <li><a href="{{ SITE_URL }}/{{ LANGUAGE }}/{{ link.folder }}">{{ link.name }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="nav nav--central nav--decorated">
+                <li class="reverse"><a href="#footer" onClick='changeTheme();'><span class="button-theme">&nbsp;</span></a></li>
+                {% if LANGUAGE == "ru" %}
+                <li><a href="{{ SITE_URL }}{{ site.home_en }}">Eng</a></li>
+                {% endif %}
+                {% if LANGUAGE == "en" %}
+                <li><a href="{{ SITE_URL }}{{ site.home_ru }}">Ru</a></li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class="row">
+            <div>
+                <a href="{{ {{ SITE_URL }}{{ site[HOME] }}" class="logo">
+                    <span class="logo__part1">mix</span><span class="logo__part2">Dreams</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end page-footer-->

@@ -1,0 +1,268 @@
+/************************************************************************************
+COLORS Themes
+*************************************************************************************/
+
+.red {
+    background: red;
+}
+
+%base-colors {
+    font-family: $base-font-family;
+    background: $base-bg;
+    color: $base-text;
+    //text-shadow: 0 1px #fff;
+    // text-shadow: 0 1px 1px white;
+    //text-shadow: 0 1px 1px rgba(white, 0.6);
+
+    strong, em {
+        color: $base-text-strong;
+    }
+
+    .post {
+        h2, h3, h4 {
+            text-shadow: none;
+            text-shadow: 0 1px 1px rgba(white, 0.5);
+            @include alpha-color(border-color, $base-border-color, $base-bg);
+        }
+
+        h3 {
+            color: $base-title;
+        }
+
+
+        h4, h5, h6 {
+            font-family: $font-family-arial;
+            color: $base-text-strong;
+        }
+    }
+
+    cite {
+        color: $base-caption;
+        text-shadow: none;
+        text-shadow: 0 1px 1px rgba(white, 0.5);
+    }
+
+    .blocktext {
+        .blocktext__title {
+            a {
+                color: $base-title;
+                text-shadow: none;
+                text-shadow: 0 1px 1px rgba(white, 0.5);
+
+                &:hover, &:focus, &:active {
+                    color: $link-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .navbar,
+    .thumbnail,
+    .zebra .zebra__item:nth-child(even),
+    .zebra > li:nth-child(even) {
+        @include alpha-color(border-color, $base-border-color, $base-bg);
+    }
+
+    .button-theme {
+        background: $inverse-bg;
+        @include alpha-color(border-color, $inverse-border-color, $inverse-bg);
+     }
+}
+
+%inverse-colors {
+    font-family: $inverse-font-family;
+    background: $inverse-bg;
+    color: $inverse-text;
+    //text-shadow: 0 -1px 1px rgba(black, 0.25);
+
+    strong, em {
+        color: $inverse-text-strong;
+    }
+
+    .post {
+        h2, h3, h4 {
+            text-shadow: none;
+            text-shadow: 0 -1px 1px rgba(black, 0.25);
+            @include alpha-color(border-color, $inverse-border-color, $inverse-bg);
+        }
+
+        h3 {
+            color: $inverse-title;
+        }
+
+        h4, h5, h6 {
+            color: $inverse-text-strong;
+            font-family: inherit;
+        }
+    }
+
+
+
+    cite {
+        color: $inverse-caption;
+        text-shadow: none;
+        text-shadow: 0 -1px 1px rgba(black, 0.25);
+    }
+
+    .blocktext {
+        .blocktext__title {
+            a {
+                text-shadow: none;
+                text-shadow: 0 -1px 1px rgba(black, 0.25);
+                color: $inverse-title;
+
+                &:hover, &:focus, &:active {
+                    color: $link-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .navbar,
+    .thumbnail,
+    .zebra .zebra__item,
+    .zebra > li {
+        @include alpha-color(border-color, $inverse-border-color, $inverse-bg);
+    }
+
+
+    .button-theme {
+        background: $base-bg;
+        @include alpha-color(border-color, $base-border-color, $base-bg);
+     }
+
+}
+
+.img-colors {
+    font-family: $inverse-font-family;
+    text-shadow: none;
+    @include alpha-color(color, $img-text, black);
+
+    cite {
+        text-shadow: none;
+        @include alpha-color(color, $img-text, black);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-shadow: none;
+        @include alpha-color(color, $img-title, black);
+    }
+
+    .logo {
+        color: $img-logo;
+    }
+
+}
+
+/**
+ * Zebra. To slightly change background color like in  Zebra Striping Table, List and etc
+ * Zebra is used to separate content by slight variance of background color
+ *
+ * <ul class="zebra">
+ *  <li>content goes here</li>
+ *  <li>content goes here</li>
+ *  <li>content goes here</li>
+ * </ul>
+ *
+ *
+ * <div class="zebra">
+ *  <div class="zebra__item">content goes here</div>
+ *  <div class="zebra__item">content goes here</div >
+ *  <div class="zebra__item">content goes here</div >
+ * </div>
+ *
+ */
+
+.zebra {
+    .zebra__item:nth-child(even),
+    > li:nth-child(even) {
+        border-top: 2px solid;
+        border-bottom: 2px solid;
+    }
+}
+
+// Base color themes (for body)
+// ----------------------
+
+.theme-base {
+    @extend %base-colors;
+
+    .highlight {
+        background: $base-intense;
+    }
+
+    .zebra .zebra__item:nth-child(even),
+    .zebra > li:nth-child(even) {
+        background: $base-intense;
+        text: $base-text-strong;
+    }
+}
+
+.theme-base-intense {
+    @extend .theme-base;
+    background: $base-intense;
+
+    .highlight {
+        background: $base-bg;
+    }
+
+    .zebra .zebra__item:nth-child(even),
+    .zebra > li:nth-child(even) {
+        background: $base-bg;
+        text: $base-text;
+    }
+}
+
+// Inverse color themes
+// ----------------------
+
+.theme-inverse {
+    @extend %inverse-colors;
+
+    h1 {
+        color: $inverse-text;
+    }
+
+    .highlight {
+        background: $inverse-intense;
+    }
+
+    .zebra .zebra__item:nth-child(even),
+    .zebra > li:nth-child(even) {
+        background: $inverse-intense;
+    }
+}
+
+.theme-inverse-intense {
+    @extend .theme-inverse;
+    background: $inverse-intense;
+
+    .highlight {
+        background: $inverse-bg;
+    }
+
+    .zebra .zebra__item:nth-child(even),
+    .zebra > li:nth-child(even) {
+        background: $inverse-bg;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

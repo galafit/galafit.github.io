@@ -1,0 +1,141 @@
+/************************************************************************************
+ BUTTONS
+*************************************************************************************/
+
+/**
+ * helper mixin to set Buttons colors
+ */
+@mixin button-shadow($color: white, $alfa: 0.5) {
+    -webkit-box-shadow: 0 1px 0 rgba($color, $alfa) inset;
+    -moz-box-shadow: 0 1px 0 rgba($color, $alfa) inset;
+    box-shadow: 0 1px 0 rgba($color, $alfa) inset;
+}
+
+@mixin button-color($button-color) {
+    color: $button-color;
+    border: 2px solid $button-color;
+    font-weight: bold;
+
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        color: white;
+        background: $button-color;
+    }
+}
+
+@mixin button-filled-color($button-color) {
+    background: $button-color;
+    color: white;
+// border: 1px solid darken($button-color, 20%);
+//  @include button-shadow();
+
+    &:hover, &:focus, &:active {
+        background: $brand-color;
+        border-color: $brand-color;;
+    }
+}
+
+
+%button-base {
+    @include inline-block;
+    cursor: pointer;
+    text-align: center;
+    line-height: $line-height-small;
+    text-decoration: none;
+}
+
+// Base Button style
+// --------------------------------------------------
+
+.button {
+    @extend  %button-base;
+    margin: $gap-base $gap-small;
+    padding: $gap-small $gap-base;
+    @include button-color($link-color);
+    @include border-radius($border-radius-large);
+}
+
+
+
+// painted, filled with the color buttons
+.button--filled {
+    @include button-filled-color($link-color);
+
+}
+
+
+// Buttons disabled
+// --------------------------------------------------
+
+.button--disabled {
+    @include alpha-color(border-color, $button-disabled-bg);
+    @include alpha-color(background, $button-disabled-bg);
+    @include alpha-color(color, $button-disabled-text);
+    //text-shadow: 0 1px 1px rgba(white, 0.5);
+    text-shadow: 0px 1px 0px rgba(white,0.5);
+
+    &:hover, &:focus, &:active {
+        @include alpha-color(background, $button-disabled-bg);
+        @include alpha-color(color, $button-disabled-text);
+    }
+}
+
+
+// Buttons sizes
+
+.button--long {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include max-width ($width-text);
+    text-transform: uppercase;
+
+
+    @include breakpoint(big) {
+        @include inline-block;
+        width: 47%;
+    }
+}
+
+
+/************************************************************************************
+Theme Button
+*************************************************************************************/
+
+.button-theme {
+    @extend %button-base;
+    vertical-align: text-bottom;
+    *vertical-align: auto;
+    @include border-radius($border-radius);
+    padding: 0 $gap-base;
+    border: 2px solid;
+}
+
+
+
+/************************************************************************************
+ToTop Button
+*************************************************************************************/
+
+#toTop {
+    @extend %button-base;
+    margin: 0;
+    padding: $gap-base $gap-large;
+    @include border-radius($border-radius);
+    background: #555;
+    color: white;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    display: none;
+
+    &:hover {
+        background: $accent-color;
+        color: white;
+    }
+
+    @include breakpoint(big) {
+        bottom: 0;
+     }
+}
+

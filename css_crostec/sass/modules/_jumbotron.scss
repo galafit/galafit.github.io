@@ -1,0 +1,28 @@
+/************************************************************************************
+JUMBOTRON
+*************************************************************************************/
+
+
+// Jumbotron (Hero Unit) is used to show key content of the page
+// --------------------------------------------------
+
+
+
+.jumbotron {
+    @include font-size($jumbotron-font-size);
+    font-family: $jumbotron-font-family;
+    font-weight: 300;
+    line-height: $jumbotron-line-height;
+ //   -webkit-font-smoothing: antialiased;
+
+    padding: $gap-base;
+    padding-top: $gap-mini;
+    text-align: center;
+
+    h1 {
+        font-family: $base-font-family;
+        font-weight: normal;
+    }
+}
+
+

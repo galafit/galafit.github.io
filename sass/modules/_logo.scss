@@ -1,0 +1,27 @@
+/************************************************************************************
+ LOGO, BRAND
+*************************************************************************************/
+
+.logo {
+    @include inline-block;
+    font-family: $brand-font-family;
+    @include border-radius($border-radius-large);
+    text-align: center;
+    padding: 0 $gap-small;
+    margin-left: $gap-base;
+    margin-top: $gap-small;
+
+    border: 1px solid $link-color;
+
+    &:hover, &:focus, &:active {
+        color: white;
+        text-decoration: none;
+        background: $link-color;
+    }
+
+    @include breakpoint(small) {
+        margin-top: $gap-base;
+    }
+}
+
+

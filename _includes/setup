@@ -1,0 +1,21 @@
+{% if site.localhost  %}
+{% assign SITE_URL = "" %}
+{% else %}
+{% assign SITE_URL = site.url %}
+{% endif %}
+<!-- for github pages where jekyll works in Safe Mode-->
+{% if site.safe  %}
+{% assign SITE_URL = site.url %}
+{% endif %}
+
+
+{% assign LANGUAGE  = page.categories[0] %}
+{% assign CATEGORY  = page.categories[1] %}
+{% capture NAV %}navigation_{{ LANGUAGE }}{% endcapture %}
+{% capture HOME %}home_{{ LANGUAGE }}{% endcapture %}
+
+{% for link in site[NAV] %}
+    {% if link.folder == CATEGORY %}
+{% assign CATEGORY_NAME = link.name %}
+     {% endif %}
+{% endfor %}

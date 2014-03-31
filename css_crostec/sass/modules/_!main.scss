@@ -1,0 +1,110 @@
+/************************************************************************************
+ GENERAL STYLING. Standard Html tags
+*************************************************************************************/
+
+/** apply  Box Sizing model to all elements **/
+*, *:before, *:after {
+    @extend %box-sizing;
+
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, del, dfn, em, img, q, small, strike, strong, sub, sup, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header,
+hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+html {
+    overflow-y: scroll;
+    /* Stops Mobile Safari from auto-adjusting font-sizes */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    /* improves the text rendering in more recent browsers */
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: $base-font-family;
+    font-style: normal;
+    font-variant: normal;
+    line-height: $base-line-height;
+    background: $body-bg;
+    color: $text-color;
+
+    @include font-size($base-font-size);
+
+    @include breakpoint(big) {
+        @include font-size($base-font-size-screen-big);
+    }
+
+    @include breakpoint(small) {
+        @include font-size($base-font-size-screen-small);
+    }
+}
+
+/**
+*  Give Clickable Elements a Pointer Cursor
+*  Source: http://css-tricks.com/snippets/css/give-clickable-elements-a-pointer-cursor/
+**/
+
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: pointer;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    /**
+    *  increase the clickable area on links
+    *  Source: http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links
+    **/
+    position: relative;
+    padding: $gap-small;
+    margin: -$gap-small;
+
+    &:hover, &:focus, &:active {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+::-moz-selection, ::selection {
+    background: $accent-color;
+    color: white;
+}
+
+/**
+ *  wherever possible is applied the principle of "Single-direction margin declarations"
+ *  Source: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ *  But instead of using margin-bottom I use margin-top.
+ *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
+ *  and not upon the properties (margin-bottom) of the previous object
+ */
+
+p {
+    margin-top: $gap-base;
+}
+
+i, em, mark, q {
+    font-style: italic;
+}
+
+hr {
+    border-top: $hr-width solid $hr-border-color;
+    margin-top: $gap-base;
+    margin-bottom: $gap-small;
+    height: 0;
+}
+
+cite {
+    color: $captionColor;
+}
+

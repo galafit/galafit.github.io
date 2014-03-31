@@ -1,0 +1,96 @@
+/************************************************************************************
+ NAVIGATION
+*************************************************************************************/
+
+/**
+ * NAV.
+ * Navigation abstraction.
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ *
+   <ul class=nav>
+       <li class=active><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+
+ *
+ */
+
+.nav {
+    // @include inline-block;
+    @include font-size($nav-font-size);
+    font-family: $nav-font-family;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    > li {
+        // @include inline-block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        > a {
+            display: block;
+            //margin: 0 1px 1px 0;
+            padding: $gap-base;
+            text-decoration: none;
+            color: $link-color;
+
+            &:hover, &:focus, &:active {
+                text-shadow: none;
+                color: white;
+                background: $link-color;
+            }
+        }
+    }
+
+    > .active > a {
+        text-shadow: none;
+        background: $link-color;
+        color: white;
+    }
+
+    > .reverse {
+        float: right;
+    }
+}
+
+.nav--central {
+    @include inline-block;
+    > li {
+        @include inline-block;
+    }
+}
+
+.nav--decorated {
+    margin-bottom: $gap-base;
+    > li {
+        margin: $gap-base $gap-small;
+        margin-top: 0;
+        > a {
+            border-bottom: 1px solid $link-color;
+        }
+    }
+}
+
+.nav--adapt {
+    @include breakpoint(small) {
+        > li {
+            float: none;
+            width: 95%;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -67,10 +67,10 @@ home_en:         /en
 navigation_ru:
   - name:         Сны
     folder:       dreams
-  - name:         Теории
-    folder:       theories
   - name:         Образование
     folder:       education
+  - name:         Теории
+    folder:       theories
   - name:         Библиотека
     folder:       library
   - name:         Сказки

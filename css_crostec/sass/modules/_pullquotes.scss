@@ -1,0 +1,60 @@
+/************************************************************************************
+    PullQuotes
+*************************************************************************************/
+
+/* use to  mark out some text as PullQuote but without pulling  */
+
+.pullquote {
+    @include font-size($pullquote-font-size);
+    margin: $gap-base 0;
+    padding: $gap-base 0;
+    text-align: center;
+
+    &:first-child  {
+        margin-top: 0
+    }
+}
+
+.pullquote:before, .pullquote:after {
+    @extend %pull-center;
+    display: block;
+    width: $pullquote-border-length;
+    height: $pullquote-border-width;
+    background-color: $pullquote-border-color;
+    content: "\200B"
+}
+
+/*-----------------------Style with text-align: right and left accordingly-------------------------*/
+
+.pullquote-left, .pullquote-right {
+    margin-top: $gap-base;
+    @include font-size($pullquote-font-size);
+    @include max-width ($pullquote-width);
+
+    &:first-child  {
+        margin-top: 0
+    }
+}
+
+.pullquote-right {
+    @include pull-right();
+    border-left: $pullquote-border-width solid $pullquote-border-color;
+    padding-left: $gap-base;
+    text-align: right;
+}
+
+.pullquote-left {
+    @include pull-left();
+    border-right: $pullquote-border-width solid $pullquote-border-color;
+    padding-rigth: $gap-base;
+    text-align: left;
+}
+
+.pullquote-left, .pullquote-right {
+    @include breakpoint(small) {
+        @extend pullquote;
+        border: none;
+        float: none;
+        max-width: 100%;
+    }
+}

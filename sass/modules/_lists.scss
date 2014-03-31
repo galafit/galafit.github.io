@@ -1,0 +1,35 @@
+/************************************************************************************
+   LISTS
+*************************************************************************************/
+
+.list-dashed {
+
+    list-style: none;
+    li:before {content:"\2014 ";}
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+// Easily usable on <ul>, <ol>, or <div>.
+
+.blocklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        margin: 0;
+        padding: $gap-small 0;
+
+        border-bottom: 1px solid;
+        text-align: center;
+        //background: $beige;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+}
+

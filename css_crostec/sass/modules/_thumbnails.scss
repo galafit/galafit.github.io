@@ -1,0 +1,59 @@
+/************************************************************************************
+ Thumbnails.
+*************************************************************************************/
+
+/**
+ * Thumbnails are used to organize preview of blog posts, articles...
+ * or to easily display grids of images, videos, texts and so on.
+ * Thumbnail usually contain: img, .blocktext, .media...
+
+
+  <div class="thumbnail">
+     <img src="...">
+ </div>
+
+
+ <img class="thumbnail" src="...">
+
+
+ <div class="thumbnail">
+     <img src="...">
+     <div class="blocktext">
+         <h2>Заголовок</h2>
+         <p>
+             Какой-то текст или описание
+         </p>
+     </div>
+     <div><a class="button" href="...">Далее</a></div>
+ </div>
+
+
+ <div class="thumbnail">
+     <div class="media">
+          ....
+     </div>
+     <div><a class="button" href="...">Далее</a></div>
+ </div>
+ **/
+
+.thumbnail {
+    @extend %inline-block;
+    margin-top: $gap-base;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+// Add a hover state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus {
+    border-color: $link-color;
+}
+
+
+
+
+
+
+

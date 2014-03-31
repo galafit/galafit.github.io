@@ -1,0 +1,66 @@
+/* ==========================================================================
+   IMAGES
+   ========================================================================== */
+
+/**
+ * By default all images is placed at the center
+ */
+img {
+    @extend %pull-center;
+    margin-top: $gap-base;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+}
+
+/**
+ * Basic image modifiers. Extends `img`
+ */
+.img--rounded {
+    @include border-radius(6px);
+}
+
+.img--circle {
+    @include border-radius(50%);
+}
+
+.img--lead {
+    margin-top: 0;
+}
+
+
+/**
+ * Figures
+ * <figure class="figure">
+ *   <img src="path/to/image.jpg" alt="" />
+ *   <figcaption>Optional figcaption</figcaption>
+ * </figure>
+ */
+
+.figure {
+    margin-top: $gap-base;
+    img {
+        margin-top: 0;
+    }
+}
+
+figcaption, .figcaption {
+    @extend %pull-center;
+    clear: both;
+    @include font-size($font-size-small);
+    font-style: italic;
+    line-height: $line-height-small;
+    text-align: center;
+    max-width: 90%;
+    margin-top: $gap-mini;
+    color: $captionColor;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+/************************************************************************************
+Post, Articles
+*************************************************************************************/
+
+
+/** Preformed base classes for articles and blog posts with wide images, pullquotes and so on
+  * They are designed in contradiction with the standard OOP paradigm in order to facilitate their use.
+  * They permit to achieve "good look" only on the base of standard html-tags and minimal uses af additional classes
+  */
+
+.post, .article {
+    text-align: left;
+    margin-top: $gap-base;
+    padding-bottom: $gap-base;
+
+    /* all text elements are centered and limited to the line-wide comfortable for reading  */
+    > p,
+    > h1, >h2, >h3, >h4, >h5, >h6,
+    >blockquote,
+    >.pullquote,
+    > ul,
+    > ol,
+ {
+        @extend %pull-center;
+        @include max-width-rem($width-text);
+        @include padding-horizontal-rem($gap-base);
+    }
+
+    > h1, >h2, >h3, >h4, >h5, >h6 {
+        text-align: center;
+    }
+
+    > ul,
+    > ol {
+        padding-left: $gap-large+$gap-base;
+        margin-top: $gap-base;
+
+        li {
+            margin-top: $gap-mini;
+            /**
+             * Remove vertical spacing from nested lists.
+             */
+            > ul,
+            > ol {
+                margin-top: $gap-small;
+            }
+        }
+    }
+}
+

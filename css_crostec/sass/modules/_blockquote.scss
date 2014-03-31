@@ -1,0 +1,43 @@
+/************************************************************************************
+    Blockquotes
+*************************************************************************************/
+
+
+blockquote {
+    @include font-size($blockquote-font-size);
+    margin-top: $gap-base;
+    margin-bottom: $gap-base;
+    text-align: left;
+
+    &:first-child  {
+        margin-top: 0
+    }
+}
+
+
+
+blockquote cite {
+    @include font-size($font-size-small);
+    line-height: $line-height-small;;
+    display: block;
+    margin-top: $gap-mini;
+    text-align: left;
+
+    &:before {
+        content: "\2014 \2009";
+    }
+}
+
+
+blockquote:before, blockquote:after {
+    display: block;
+    width: $blockquote-border-length;
+    height: $blockquote-border-width;
+    @extend %pull-center;
+    background-color: $blockquote-border-color;
+    content: "\200B"
+}
+
+
+
+

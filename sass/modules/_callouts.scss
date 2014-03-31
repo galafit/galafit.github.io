@@ -1,0 +1,41 @@
+/************************************************************************************
+    Callouts. Notification Messages
+*************************************************************************************/
+
+/*
+ * Not quite alerts, but custom and helpful notes to emphasize a short part of text with its header.
+ */
+
+@mixin colors($background, $color, $border) {
+    background: $background;
+    border-color: $border;
+    h1, h2, h3, h4, h5, h6 {
+        color: $color;
+    }
+}
+
+%callout {
+    margin: $gap-base;
+    padding: $gap-base;
+    border-left: 3px solid #eee;
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+    }
+}
+
+.callout-info {
+    @extend %callout;
+    @include colors($callout-info-bg, $callout-info-text, $callout-info-border);
+}
+
+.callout-warning {
+    @extend %callout;
+    @include colors($callout-warning-bg, $callout-warning-text, $callout-warning-border);
+}
+
+.callout-attention {
+    @extend %callout;
+    @include colors($callout-attention-bg, $callout-attention-text, $callout-attention-border);
+}
+
+

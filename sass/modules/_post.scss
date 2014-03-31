@@ -1,0 +1,74 @@
+/************************************************************************************
+Post, Articles
+*************************************************************************************/
+
+/** Preformed base classes for articles and blog posts
+  */
+.post {
+    @extend %text-normalize;
+    padding-top: $gap-mini;
+    padding-bottom: $gap-large * 2;
+
+
+    h3, h4 {
+        padding-top: $gap-mini;
+        padding-bottom: $gap-mini;
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+    }
+
+
+    h4 {
+        text-align: left;
+    }
+
+    .lead {
+        @include max-width-rem($lead-width);
+        text-align: center;
+        font-style: italic;
+    }
+
+    ul,
+    ol {
+        padding-left: $gap-large * 2;
+        margin-top: $gap-large;
+
+        li {
+            margin-top: $gap-base;
+            /**
+             * Remove vertical spacing from nested lists.
+             */
+            > ul, > ol {
+                margin-top: 0;
+            }
+
+            > p {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    hr {
+        border: none;
+        margin-top: $gap-large;
+        margin-bottom: $gap-large * 2;
+        height: 0;
+
+        &:after {
+            @extend %pull-center;
+            max-width: 5em;
+            content: "************";
+        }
+    }
+
+    .table-of-contents {
+        li {
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+
