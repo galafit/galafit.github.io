@@ -688,7 +688,66 @@ p {
   padding-left: 16px;
   padding-left: 1rem;
 }
-/* line 150, ../sass/base/_mixins.scss */
+/* line 149, ../sass/base/_mixins.scss */
+.blocktext ul, .cover ul, .cover-dark ul, .cover-img ul, .post ul, .page-main ul,
+.blocktext ol,
+.cover ol,
+.cover-dark ol,
+.cover-img ol,
+.post ol,
+.page-main ol {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+/* line 154, ../sass/base/_mixins.scss */
+.blocktext ul li, .cover ul li, .cover-dark ul li, .cover-img ul li, .post ul li, .page-main ul li,
+.blocktext ol li,
+.cover ol li,
+.cover-dark ol li,
+.cover-img ol li,
+.post ol li,
+.page-main ol li {
+  margin-top: 1em;
+  margin-left: 2em;
+  /**
+   * Remove vertical spacing from nested lists.
+   */
+}
+/* line 160, ../sass/base/_mixins.scss */
+.blocktext ul li > ul, .cover ul li > ul, .cover-dark ul li > ul, .cover-img ul li > ul, .post ul li > ul, .page-main ul li > ul, .blocktext ul li > ol, .cover ul li > ol, .cover-dark ul li > ol, .cover-img ul li > ol, .post ul li > ol, .page-main ul li > ol,
+.blocktext ol li > ul,
+.cover ol li > ul,
+.cover-dark ol li > ul,
+.cover-img ol li > ul,
+.post ol li > ul,
+.page-main ol li > ul,
+.blocktext ol li > ol,
+.cover ol li > ol,
+.cover-dark ol li > ol,
+.cover-img ol li > ol,
+.post ol li > ol,
+.page-main ol li > ol {
+  margin: 0;
+  margin-left: 1em;
+}
+@media only screen and (max-width: 700px) {
+  /* line 154, ../sass/base/_mixins.scss */
+  .blocktext ul li, .cover ul li, .cover-dark ul li, .cover-img ul li, .post ul li, .page-main ul li,
+  .blocktext ol li,
+  .cover ol li,
+  .cover-dark ol li,
+  .cover-img ol li,
+  .post ol li,
+  .page-main ol li {
+    margin-left: 1em;
+  }
+}
+/* line 172, ../sass/base/_mixins.scss */
+.blocktext .list-compact li, .cover .list-compact li, .cover-dark .list-compact li, .cover-img .list-compact li, .post .list-compact li, .page-main .list-compact li {
+  margin-top: 0;
+}
+/* line 180, ../sass/base/_mixins.scss */
 .blocktext .blocktext p, .cover .blocktext p, .cover-dark .blocktext p, .cover-img .blocktext p, .post .blocktext p, .page-main .blocktext p,
 .blocktext ul li p,
 .cover ul li p,
@@ -707,7 +766,7 @@ p {
 }
 
 /** Box Sizing model  **/
-/* line 159, ../sass/base/_mixins.scss */
+/* line 189, ../sass/base/_mixins.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   /* Для Firefox */
@@ -720,7 +779,7 @@ p {
 /**
  *   Blocks Align
  */
-/* line 194, ../sass/base/_mixins.scss */
+/* line 224, ../sass/base/_mixins.scss */
 .blocktext p, .cover p, .cover-dark p, .cover-img p, .post p, .page-main p, .blocktext .p, .cover .p, .cover-dark .p, .cover-img .p, .post .p, .page-main .p,
 .blocktext h1,
 .cover h1,
@@ -776,7 +835,7 @@ p {
 /**
  *   Background Img
  */
-/* line 244, ../sass/base/_mixins.scss */
+/* line 274, ../sass/base/_mixins.scss */
 .cover-img {
   background-color: #240020;
   background-repeat: no-repeat;
@@ -1741,69 +1800,38 @@ BLOCKTEXT
    LISTS
 *************************************************************************************/
 /* line 6, ../sass/modules/_lists.scss */
-ul,
-ol {
-  margin-top: 1em;
-  margin-bottom: 1.5em;
-  text-align: left;
-}
-/* line 11, ../sass/modules/_lists.scss */
-ul li,
-ol li {
-  margin-top: 1em;
-  margin-left: 1.5em;
-  /**
-   * Remove vertical spacing from nested lists.
-   */
-}
-/* line 17, ../sass/modules/_lists.scss */
-ul li > ul, ul li > ol,
-ol li > ul,
-ol li > ol {
-  margin: 0;
-  margin-left: 1em;
-}
-@media only screen and (max-width: 700px) {
-  /* line 11, ../sass/modules/_lists.scss */
-  ul li,
-  ol li {
-    margin-left: 0;
-  }
-}
-
-/* line 29, ../sass/modules/_lists.scss */
 .list-dashed {
   list-style: none;
 }
-/* line 32, ../sass/modules/_lists.scss */
+/* line 8, ../sass/modules/_lists.scss */
 .list-dashed li:before {
   content: "\2014 ";
 }
 
-/* line 37, ../sass/modules/_lists.scss */
+/* line 13, ../sass/modules/_lists.scss */
 .list-unstyled {
   list-style: none;
 }
 
-/* line 42, ../sass/modules/_lists.scss */
+/* line 18, ../sass/modules/_lists.scss */
 .list-compact li {
   margin-top: 0;
 }
 
-/* line 49, ../sass/modules/_lists.scss */
+/* line 25, ../sass/modules/_lists.scss */
 .blocklist {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 54, ../sass/modules/_lists.scss */
+/* line 30, ../sass/modules/_lists.scss */
 .blocklist li {
   margin: 0;
   padding: 0.5em 0;
   border-bottom: 1px solid;
   text-align: center;
 }
-/* line 63, ../sass/modules/_lists.scss */
+/* line 39, ../sass/modules/_lists.scss */
 .blocklist li:last-child {
   border-bottom: none;
 }
