@@ -1321,7 +1321,7 @@ html {
 @media only screen and (max-width: 700px) {
   /* line 20, ../sass/modules/_!main.scss */
   html {
-    font-size: 1.16em;
+    font-size: 1.1em;
   }
 }
 
@@ -1745,7 +1745,7 @@ ol {
 ul li,
 ol li {
   margin-top: 1em;
-  margin-left: 2em;
+  margin-left: 1.5em;
   /**
    * Remove vertical spacing from nested lists.
    */
@@ -1757,40 +1757,47 @@ ol li > ol {
   margin: 0;
   margin-left: 1em;
 }
+@media only screen and (max-width: 700px) {
+  /* line 11, ../sass/modules/_lists.scss */
+  ul li,
+  ol li {
+    margin-left: 0;
+  }
+}
 
-/* line 25, ../sass/modules/_lists.scss */
+/* line 29, ../sass/modules/_lists.scss */
 .list-dashed {
   list-style: none;
 }
-/* line 28, ../sass/modules/_lists.scss */
+/* line 32, ../sass/modules/_lists.scss */
 .list-dashed li:before {
   content: "\2014 ";
 }
 
-/* line 33, ../sass/modules/_lists.scss */
+/* line 37, ../sass/modules/_lists.scss */
 .list-unstyled {
   list-style: none;
 }
 
-/* line 38, ../sass/modules/_lists.scss */
+/* line 42, ../sass/modules/_lists.scss */
 .list-compact li {
   margin-top: 0;
 }
 
-/* line 45, ../sass/modules/_lists.scss */
+/* line 49, ../sass/modules/_lists.scss */
 .blocklist {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 50, ../sass/modules/_lists.scss */
+/* line 54, ../sass/modules/_lists.scss */
 .blocklist li {
   margin: 0;
   padding: 0.5em 0;
   border-bottom: 1px solid;
   text-align: center;
 }
-/* line 59, ../sass/modules/_lists.scss */
+/* line 63, ../sass/modules/_lists.scss */
 .blocklist li:last-child {
   border-bottom: none;
 }
@@ -2552,8 +2559,14 @@ Post, Articles
   margin: 0;
   border: none;
 }
+@media only screen and (max-width: 700px) {
+  /* line 39, ../sass/modules/_thumbnails.scss */
+  .thumbnail {
+    margin: 1.5em 0.25em;
+  }
+}
 
-/* line 58, ../sass/modules/_thumbnails.scss */
+/* line 62, ../sass/modules/_thumbnails.scss */
 a.thumbnail {
   cursor: pointer;
   text-align: center;
@@ -2564,7 +2577,7 @@ a.thumbnail {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
   color: #5f4b32;
 }
-/* line 68, ../sass/modules/_thumbnails.scss */
+/* line 72, ../sass/modules/_thumbnails.scss */
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active {
   background: #784746;
   text-shadow: none;
