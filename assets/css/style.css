@@ -752,7 +752,13 @@ p {
 .blocktext .list-compact li, .cover .list-compact li, .cover-dark .list-compact li, .cover-img .list-compact li, .post .list-compact li, .page-main .list-compact li {
   margin-top: 0;
 }
-/* line 181, ../sass/base/_mixins.scss */
+@media only screen and (max-width: 700px) {
+  /* line 172, ../sass/base/_mixins.scss */
+  .blocktext .list-compact li, .cover .list-compact li, .cover-dark .list-compact li, .cover-img .list-compact li, .post .list-compact li, .page-main .list-compact li {
+    margin-left: 0;
+  }
+}
+/* line 185, ../sass/base/_mixins.scss */
 .blocktext .blocktext p, .cover .blocktext p, .cover-dark .blocktext p, .cover-img .blocktext p, .post .blocktext p, .page-main .blocktext p,
 .blocktext .blocktext h1,
 .cover .blocktext h1,
@@ -849,7 +855,7 @@ p {
 }
 
 /** Box Sizing model  **/
-/* line 190, ../sass/base/_mixins.scss */
+/* line 194, ../sass/base/_mixins.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   /* Для Firefox */
@@ -862,7 +868,7 @@ p {
 /**
  *   Blocks Align
  */
-/* line 225, ../sass/base/_mixins.scss */
+/* line 229, ../sass/base/_mixins.scss */
 .blocktext p, .cover p, .cover-dark p, .cover-img p, .post p, .page-main p, .blocktext .p, .cover .p, .cover-dark .p, .cover-img .p, .post .p, .page-main .p,
 .blocktext h1,
 .cover h1,
@@ -918,7 +924,7 @@ p {
 /**
  *   Background Img
  */
-/* line 275, ../sass/base/_mixins.scss */
+/* line 279, ../sass/base/_mixins.scss */
 .cover-img {
   background-color: #240020;
   background-repeat: no-repeat;
