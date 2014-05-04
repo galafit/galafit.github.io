@@ -714,8 +714,14 @@ p {
    * Remove vertical spacing from nested lists.
    */
 }
-/* line 160, ../sass/base/_mixins.scss */
-.blocktext ul li > ul, .cover ul li > ul, .cover-dark ul li > ul, .cover-img ul li > ul, .post ul li > ul, .page-main ul li > ul, .blocktext ul li > ol, .cover ul li > ol, .cover-dark ul li > ol, .cover-img ul li > ol, .post ul li > ol, .page-main ul li > ol,
+/* line 161, ../sass/base/_mixins.scss */
+.blocktext ul li > ul, .cover ul li > ul, .cover-dark ul li > ul, .cover-img ul li > ul, .post ul li > ul, .page-main ul li > ul,
+.blocktext ul li > ol,
+.cover ul li > ol,
+.cover-dark ul li > ol,
+.cover-img ul li > ol,
+.post ul li > ol,
+.page-main ul li > ol,
 .blocktext ol li > ul,
 .cover ol li > ul,
 .cover-dark ol li > ul,
@@ -729,7 +735,6 @@ p {
 .post ol li > ol,
 .page-main ol li > ol {
   margin: 0;
-  margin-left: 1em;
 }
 @media only screen and (max-width: 700px) {
   /* line 154, ../sass/base/_mixins.scss */
@@ -747,26 +752,104 @@ p {
 .blocktext .list-compact li, .cover .list-compact li, .cover-dark .list-compact li, .cover-img .list-compact li, .post .list-compact li, .page-main .list-compact li {
   margin-top: 0;
 }
-/* line 180, ../sass/base/_mixins.scss */
+/* line 181, ../sass/base/_mixins.scss */
 .blocktext .blocktext p, .cover .blocktext p, .cover-dark .blocktext p, .cover-img .blocktext p, .post .blocktext p, .page-main .blocktext p,
+.blocktext .blocktext h1,
+.cover .blocktext h1,
+.cover-dark .blocktext h1,
+.cover-img .blocktext h1,
+.post .blocktext h1,
+.page-main .blocktext h1, .blocktext .blocktext h2, .cover .blocktext h2, .cover-dark .blocktext h2, .cover-img .blocktext h2, .post .blocktext h2, .page-main .blocktext h2, .blocktext .blocktext h3, .cover .blocktext h3, .cover-dark .blocktext h3, .cover-img .blocktext h3, .post .blocktext h3, .page-main .blocktext h3, .blocktext .blocktext h4, .cover .blocktext h4, .cover-dark .blocktext h4, .cover-img .blocktext h4, .post .blocktext h4, .page-main .blocktext h4, .blocktext .blocktext h5, .cover .blocktext h5, .cover-dark .blocktext h5, .cover-img .blocktext h5, .post .blocktext h5, .page-main .blocktext h5, .blocktext .blocktext h6, .cover .blocktext h6, .cover-dark .blocktext h6, .cover-img .blocktext h6, .post .blocktext h6, .page-main .blocktext h6,
 .blocktext ul li p,
 .cover ul li p,
 .cover-dark ul li p,
 .cover-img ul li p,
 .post ul li p,
 .page-main ul li p,
+.blocktext ul li h1,
+.cover ul li h1,
+.cover-dark ul li h1,
+.cover-img ul li h1,
+.post ul li h1,
+.page-main ul li h1,
+.blocktext ul li h2,
+.cover ul li h2,
+.cover-dark ul li h2,
+.cover-img ul li h2,
+.post ul li h2,
+.page-main ul li h2,
+.blocktext ul li h3,
+.cover ul li h3,
+.cover-dark ul li h3,
+.cover-img ul li h3,
+.post ul li h3,
+.page-main ul li h3,
+.blocktext ul li h4,
+.cover ul li h4,
+.cover-dark ul li h4,
+.cover-img ul li h4,
+.post ul li h4,
+.page-main ul li h4,
+.blocktext ul li h5,
+.cover ul li h5,
+.cover-dark ul li h5,
+.cover-img ul li h5,
+.post ul li h5,
+.page-main ul li h5,
+.blocktext ul li h6,
+.cover ul li h6,
+.cover-dark ul li h6,
+.cover-img ul li h6,
+.post ul li h6,
+.page-main ul li h6,
 .blocktext ol li p,
 .cover ol li p,
 .cover-dark ol li p,
 .cover-img ol li p,
 .post ol li p,
-.page-main ol li p {
+.page-main ol li p,
+.blocktext ol li h1,
+.cover ol li h1,
+.cover-dark ol li h1,
+.cover-img ol li h1,
+.post ol li h1,
+.page-main ol li h1,
+.blocktext ol li h2,
+.cover ol li h2,
+.cover-dark ol li h2,
+.cover-img ol li h2,
+.post ol li h2,
+.page-main ol li h2,
+.blocktext ol li h3,
+.cover ol li h3,
+.cover-dark ol li h3,
+.cover-img ol li h3,
+.post ol li h3,
+.page-main ol li h3,
+.blocktext ol li h4,
+.cover ol li h4,
+.cover-dark ol li h4,
+.cover-img ol li h4,
+.post ol li h4,
+.page-main ol li h4,
+.blocktext ol li h5,
+.cover ol li h5,
+.cover-dark ol li h5,
+.cover-img ol li h5,
+.post ol li h5,
+.page-main ol li h5,
+.blocktext ol li h6,
+.cover ol li h6,
+.cover-dark ol li h6,
+.cover-img ol li h6,
+.post ol li h6,
+.page-main ol li h6 {
   padding-left: 0;
   padding-right: 0;
 }
 
 /** Box Sizing model  **/
-/* line 189, ../sass/base/_mixins.scss */
+/* line 190, ../sass/base/_mixins.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   /* Для Firefox */
@@ -779,7 +862,7 @@ p {
 /**
  *   Blocks Align
  */
-/* line 224, ../sass/base/_mixins.scss */
+/* line 225, ../sass/base/_mixins.scss */
 .blocktext p, .cover p, .cover-dark p, .cover-img p, .post p, .page-main p, .blocktext .p, .cover .p, .cover-dark .p, .cover-img .p, .post .p, .page-main .p,
 .blocktext h1,
 .cover h1,
@@ -835,7 +918,7 @@ p {
 /**
  *   Background Img
  */
-/* line 274, ../sass/base/_mixins.scss */
+/* line 275, ../sass/base/_mixins.scss */
 .cover-img {
   background-color: #240020;
   background-repeat: no-repeat;
