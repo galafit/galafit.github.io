@@ -1296,9 +1296,7 @@ h2, h3, h4, h5, h6 {
 
 /* line 46, ../sass/modules/_color-themes.scss */
 .thumbnail, .zebra .zebra__item:nth-child(even),
-.zebra > li:nth-child(even), .zebra-shadow .zebra__item:nth-child(even),
-.zebra-shadow > li:nth-child(even), .zebra-dark .zebra__item:nth-child(even),
-.zebra-dark > li:nth-child(even) {
+.zebra > li:nth-child(even) {
   border-color: #ece1cd;
   border-color: rgba(46, 36, 46, 0.07);
 }
@@ -1335,9 +1333,7 @@ figcaption, .figcaption, .figure p, .blocktext cite, blockquote cite, .pullquote
 }
 /* line 87, ../sass/modules/_color-themes.scss */
 .theme-inverse .thumbnail, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
-.theme-inverse .zebra > li:nth-child(even), .theme-inverse .zebra-shadow .zebra__item:nth-child(even), .zebra-shadow .theme-inverse .zebra__item:nth-child(even),
-.theme-inverse .zebra-shadow > li:nth-child(even), .theme-inverse .zebra-dark .zebra__item:nth-child(even), .zebra-dark .theme-inverse .zebra__item:nth-child(even),
-.theme-inverse .zebra-dark > li:nth-child(even) {
+.theme-inverse .zebra > li:nth-child(even) {
   border-color: #3c373e;
   border-color: rgba(255, 255, 255, 0.05);
 }
@@ -1935,7 +1931,7 @@ blockquote {
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: left;
-  border-left: 3px solid #f08b84;
+  border-left: 3px solid #e0918b;
   font-style: italic;
 }
 /* line 13, ../sass/modules/_blockquote.scss */
@@ -1985,7 +1981,7 @@ blockquote:after {
   display: block;
   width: 10em;
   height: 4px;
-  background-color: #f08b84;
+  background-color: #e0918b;
   content: "\200B";
 }
 
@@ -2012,8 +2008,8 @@ blockquote:after {
   margin: 1.5em;
   margin-bottom: 0;
   padding: 1em;
-  border-top: 4px solid #f08b84;
-  border-bottom: 4px solid #f08b84;
+  border-top: 4px solid #e0918b;
+  border-bottom: 4px solid #e0918b;
   text-align: center;
 }
 
@@ -2023,7 +2019,7 @@ blockquote:after {
     max-width: 15em;
     float: right;
     border: none;
-    border-left: 4px solid #f08b84;
+    border-left: 4px solid #e0918b;
     padding: 0;
     padding-left: 0.25em;
     margin-bottom: 1em;
@@ -2037,7 +2033,7 @@ blockquote:after {
     max-width: 15em;
     float: left;
     border: none;
-    border-right: 4px solid #f08b84;
+    border-right: 4px solid #e0918b;
     padding: 0;
     padding-right: 0.25em;
     margin-bottom: 1em;
@@ -2785,25 +2781,6 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active {
 /* line 23, ../sass/modules/_zebra.scss */
 .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even) {
-  border-style: solid;
-  border-width: 2px;
-  border-left: none;
-  border-right: none;
-}
-
-/* line 35, ../sass/modules/_zebra.scss */
-.zebra-shadow .zebra__item:nth-child(even),
-.zebra-shadow > li:nth-child(even) {
-  border-style: solid;
-  border-width: 2px;
-  border-left: none;
-  border-right: none;
-}
-
-/* line 47, ../sass/modules/_zebra.scss */
-.zebra-dark .zebra__item:nth-child(even),
-.zebra-dark > li:nth-child(even) {
-  background: #2e242e;
   border-style: solid;
   border-width: 2px;
   border-left: none;
