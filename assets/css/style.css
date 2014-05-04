@@ -633,11 +633,11 @@ p {
 /* Mixins to set paddings in rem */
 /* Mixins to set paddings in rem */
 /* all text elements are centered and limited to the line-wide comfortable for reading  */
-/* line 139, ../sass/base/_mixins.scss */
+/* line 132, ../sass/base/_mixins.scss */
 .blocktext, .cover, .cover-dark, .cover-img, .post, .page-main {
   text-align: left;
 }
-/* line 148, ../sass/base/_mixins.scss */
+/* line 141, ../sass/base/_mixins.scss */
 .blocktext p, .cover p, .cover-dark p, .cover-img p, .post p, .page-main p, .blocktext .p, .cover .p, .cover-dark .p, .cover-img .p, .post .p, .page-main .p,
 .blocktext h1,
 .cover h1,
@@ -688,20 +688,26 @@ p {
   padding-left: 16px;
   padding-left: 1rem;
 }
-/* line 158, ../sass/base/_mixins.scss */
-.blocktext ul li > p, .cover ul li > p, .cover-dark ul li > p, .cover-img ul li > p, .post ul li > p, .page-main ul li > p,
-.blocktext ol li > p,
-.cover ol li > p,
-.cover-dark ol li > p,
-.cover-img ol li > p,
-.post ol li > p,
-.page-main ol li > p {
+/* line 150, ../sass/base/_mixins.scss */
+.blocktext .blocktext p, .cover .blocktext p, .cover-dark .blocktext p, .cover-img .blocktext p, .post .blocktext p, .page-main .blocktext p,
+.blocktext ul li p,
+.cover ul li p,
+.cover-dark ul li p,
+.cover-img ul li p,
+.post ul li p,
+.page-main ul li p,
+.blocktext ol li p,
+.cover ol li p,
+.cover-dark ol li p,
+.cover-img ol li p,
+.post ol li p,
+.page-main ol li p {
   padding-left: 0;
   padding-right: 0;
 }
 
 /** Box Sizing model  **/
-/* line 167, ../sass/base/_mixins.scss */
+/* line 159, ../sass/base/_mixins.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   /* Для Firefox */
@@ -714,7 +720,7 @@ p {
 /**
  *   Blocks Align
  */
-/* line 204, ../sass/base/_mixins.scss */
+/* line 194, ../sass/base/_mixins.scss */
 .blocktext p, .cover p, .cover-dark p, .cover-img p, .post p, .page-main p, .blocktext .p, .cover .p, .cover-dark .p, .cover-img .p, .post .p, .page-main .p,
 .blocktext h1,
 .cover h1,
@@ -770,7 +776,7 @@ p {
 /**
  *   Background Img
  */
-/* line 261, ../sass/base/_mixins.scss */
+/* line 244, ../sass/base/_mixins.scss */
 .cover-img {
   background-color: #240020;
   background-repeat: no-repeat;
@@ -2551,7 +2557,7 @@ Post, Articles
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
-  padding: 0.25em;
+  padding: 0.25em 1em;
   margin: 1.5em 1em;
 }
 /* line 49, ../sass/modules/_thumbnails.scss */
@@ -2562,7 +2568,8 @@ Post, Articles
 @media only screen and (max-width: 700px) {
   /* line 39, ../sass/modules/_thumbnails.scss */
   .thumbnail {
-    margin: 1.5em 0.25em;
+    margin: 1.5em 0.5em;
+    padding: 0.25em;
   }
 }
 
