@@ -755,7 +755,7 @@ p {
 @media only screen and (max-width: 700px) {
   /* line 172, ../sass/base/_mixins.scss */
   .blocktext .list-compact li, .cover .list-compact li, .cover-dark .list-compact li, .cover-img .list-compact li, .post .list-compact li, .page-main .list-compact li {
-    margin-left: 0;
+    margin-left: 0.25em;
   }
 }
 /* line 185, ../sass/base/_mixins.scss */
@@ -926,7 +926,7 @@ p {
  */
 /* line 279, ../sass/base/_mixins.scss */
 .cover-img {
-  background-color: #240020;
+  background-color: #2e242e;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1231,22 +1231,22 @@ COLORS Themes
 *************************************************************************************/
 /* line 5, ../sass/modules/_color-themes.scss */
 .dark, .cover-dark, .cover-img, .page-footer {
-  background-color: #240020;
+  background-color: #2e242e;
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   text-shadow: none;
-  color: #deced2;
+  color: #dfd3d4;
   color: rgba(255, 243, 242, 0.85);
 }
 /* line 12, ../sass/modules/_color-themes.scss */
 .dark figcaption, .cover-dark figcaption, .cover-img figcaption, .page-footer figcaption, .dark .figcaption, .cover-dark .figcaption, .cover-img .figcaption, .page-footer .figcaption, .dark .figure p, .figure .dark p, .cover-dark .figure p, .figure .cover-dark p, .cover-img .figure p, .figure .cover-img p, .page-footer .figure p, .figure .page-footer p, .dark .blocktext cite, .blocktext .dark cite, .cover-dark .blocktext cite, .blocktext .cover-dark cite, .cover-img .blocktext cite, .blocktext .cover-img cite, .page-footer .blocktext cite, .blocktext .page-footer cite, .dark blockquote cite, blockquote .dark cite, .cover-dark blockquote cite, blockquote .cover-dark cite, .cover-img blockquote cite, blockquote .cover-img cite, .page-footer blockquote cite, blockquote .page-footer cite, .dark .pullquote-left, .cover-dark .pullquote-left, .cover-img .pullquote-left, .page-footer .pullquote-left, .dark .pullquote-right, .cover-dark .pullquote-right, .cover-img .pullquote-right, .page-footer .pullquote-right, .dark .aphorism, .cover-dark .aphorism, .cover-img .aphorism, .page-footer .aphorism {
   text-shadow: none;
-  color: #b4a0aa;
+  color: #b7acaf;
   color: rgba(255, 243, 242, 0.66);
 }
 /* line 17, ../sass/modules/_color-themes.scss */
 .dark h1, .cover-dark h1, .cover-img h1, .page-footer h1, .dark h2, .cover-dark h2, .cover-img h2, .page-footer h2, .dark h3, .cover-dark h3, .cover-img h3, .page-footer h3, .dark h4, .cover-dark h4, .cover-img h4, .page-footer h4, .dark h5, .cover-dark h5, .cover-img h5, .page-footer h5, .dark h6, .cover-dark h6, .cover-img h6, .page-footer h6 {
   text-shadow: none;
-  color: #deced2;
+  color: #dfd3d4;
   color: rgba(255, 243, 242, 0.85);
 }
 
@@ -1254,7 +1254,7 @@ COLORS Themes
 .highlight, .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even), .table-2-column p:nth-child(4n),
 .table-2-column p:nth-child(4n-1) {
-  background: #fdf8ee;
+  background: #fdf7eb;
 }
 /* line 25, ../sass/modules/_color-themes.scss */
 .highlight .highlight, .zebra .zebra__item:nth-child(even) .highlight,
@@ -1288,40 +1288,41 @@ COLORS Themes
   background: #f0e3c9;
 }
 
-/* line 40, ../sass/modules/_color-themes.scss */
+/* line 39, ../sass/modules/_color-themes.scss */
 h2, h3, h4, h5, h6 {
   text-shadow: none;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
-/* line 47, ../sass/modules/_color-themes.scss */
+/* line 46, ../sass/modules/_color-themes.scss */
 .thumbnail, .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even), .zebra-shadow .zebra__item:nth-child(even),
-.zebra-shadow > li:nth-child(even) {
-  border-color: #ebdfcc;
-  border-color: rgba(36, 0, 32, 0.07);
+.zebra-shadow > li:nth-child(even), .zebra-dark .zebra__item:nth-child(even),
+.zebra-dark > li:nth-child(even) {
+  border-color: #ece1cd;
+  border-color: rgba(46, 36, 46, 0.07);
 }
 
-/* line 52, ../sass/modules/_color-themes.scss */
+/* line 51, ../sass/modules/_color-themes.scss */
 .button-theme {
   background: #322d34;
 }
 
-/* line 57, ../sass/modules/_color-themes.scss */
+/* line 56, ../sass/modules/_color-themes.scss */
 figcaption, .figcaption, .figure p, .blocktext cite, blockquote cite, .pullquote-left, .pullquote-right, .aphorism {
   text-shadow: none;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
   color: #9c7676;
 }
 
-/* line 65, ../sass/modules/_color-themes.scss */
+/* line 64, ../sass/modules/_color-themes.scss */
 .theme-base, html {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   background: #fbf0d9;
   color: #5f4b32;
 }
 
-/* line 76, ../sass/modules/_color-themes.scss */
+/* line 75, ../sass/modules/_color-themes.scss */
 .theme-inverse {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   background: #322d34;
@@ -1335,7 +1336,8 @@ figcaption, .figcaption, .figure p, .blocktext cite, blockquote cite, .pullquote
 /* line 87, ../sass/modules/_color-themes.scss */
 .theme-inverse .thumbnail, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
 .theme-inverse .zebra > li:nth-child(even), .theme-inverse .zebra-shadow .zebra__item:nth-child(even), .zebra-shadow .theme-inverse .zebra__item:nth-child(even),
-.theme-inverse .zebra-shadow > li:nth-child(even) {
+.theme-inverse .zebra-shadow > li:nth-child(even), .theme-inverse .zebra-dark .zebra__item:nth-child(even), .zebra-dark .theme-inverse .zebra__item:nth-child(even),
+.theme-inverse .zebra-dark > li:nth-child(even) {
   border-color: #3c373e;
   border-color: rgba(255, 255, 255, 0.05);
 }
@@ -1372,7 +1374,7 @@ figcaption, .figcaption, .figure p, .blocktext cite, blockquote cite, .pullquote
 .theme-inverse .zebra > li:nth-child(even), .theme-inverse .table-2-column p:nth-child(4n), .table-2-column .theme-inverse p:nth-child(4n),
 .theme-inverse .table-2-column p:nth-child(4n-1),
 .table-2-column .theme-inverse p:nth-child(4n-1) {
-  background: #3f3942;
+  background: #3d363f;
 }
 /* line 124, ../sass/modules/_color-themes.scss */
 .theme-inverse .highlight .highlight, .theme-inverse .zebra .zebra__item:nth-child(even) .highlight, .zebra .theme-inverse .zebra__item:nth-child(even) .highlight,
@@ -1418,7 +1420,7 @@ figcaption, .figcaption, .figure p, .blocktext cite, blockquote cite, .pullquote
 /* line 134, ../sass/modules/_color-themes.scss */
 .theme-inverse .dark figcaption, .theme-inverse .cover-dark figcaption, .theme-inverse .cover-img figcaption, .theme-inverse .page-footer figcaption, .theme-inverse .dark .figcaption, .theme-inverse .cover-dark .figcaption, .theme-inverse .cover-img .figcaption, .theme-inverse .page-footer .figcaption, .theme-inverse .dark .figure p, .figure .theme-inverse .dark p, .theme-inverse .cover-dark .figure p, .figure .theme-inverse .cover-dark p, .theme-inverse .cover-img .figure p, .figure .theme-inverse .cover-img p, .theme-inverse .page-footer .figure p, .figure .theme-inverse .page-footer p, .theme-inverse .dark .blocktext cite, .blocktext .theme-inverse .dark cite, .theme-inverse .cover-dark .blocktext cite, .blocktext .theme-inverse .cover-dark cite, .theme-inverse .cover-img .blocktext cite, .blocktext .theme-inverse .cover-img cite, .theme-inverse .page-footer .blocktext cite, .blocktext .theme-inverse .page-footer cite, .theme-inverse .dark blockquote cite, blockquote .theme-inverse .dark cite, .theme-inverse .cover-dark blockquote cite, blockquote .theme-inverse .cover-dark cite, .theme-inverse .cover-img blockquote cite, blockquote .theme-inverse .cover-img cite, .theme-inverse .page-footer blockquote cite, blockquote .theme-inverse .page-footer cite, .theme-inverse .dark .pullquote-left, .theme-inverse .cover-dark .pullquote-left, .theme-inverse .cover-img .pullquote-left, .theme-inverse .page-footer .pullquote-left, .theme-inverse .dark .pullquote-right, .theme-inverse .cover-dark .pullquote-right, .theme-inverse .cover-img .pullquote-right, .theme-inverse .page-footer .pullquote-right, .theme-inverse .dark .aphorism, .theme-inverse .cover-dark .aphorism, .theme-inverse .cover-img .aphorism, .theme-inverse .page-footer .aphorism {
   text-shadow: none;
-  color: #b4a0aa;
+  color: #b7acaf;
   color: rgba(255, 243, 242, 0.66);
 }
 
@@ -2201,7 +2203,7 @@ blockquote:after {
   /* line 130, ../sass/modules/_navs.scss */
   .nav--adaptive {
     display: none;
-    background: #240020;
+    background: #2e242e;
     padding: 0.5em;
     padding-bottom: 1.5em;
     position: absolute;
@@ -2792,6 +2794,16 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active {
 /* line 35, ../sass/modules/_zebra.scss */
 .zebra-shadow .zebra__item:nth-child(even),
 .zebra-shadow > li:nth-child(even) {
+  border-style: solid;
+  border-width: 2px;
+  border-left: none;
+  border-right: none;
+}
+
+/* line 47, ../sass/modules/_zebra.scss */
+.zebra-dark .zebra__item:nth-child(even),
+.zebra-dark > li:nth-child(even) {
+  background: #2e242e;
   border-style: solid;
   border-width: 2px;
   border-left: none;
