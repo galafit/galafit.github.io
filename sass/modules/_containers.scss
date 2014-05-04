@@ -1,0 +1,153 @@
+/************************************************************************************
+Containers:  ROW, COLUMN and FLUID
+*************************************************************************************/
+
+
+.row {
+    @extend %clearfix;
+    @extend %pull-center;
+    @include max-width ($width-max);
+    text-align: center;
+}
+
+
+/*
+ * Central blocks
+ *
+ */
+.central-wide {
+    @extend %pull-center;
+    @include max-width ($width-wide);
+}
+
+.central-page {
+    @extend %pull-center;
+    @include max-width ($width-page);
+}
+
+.central-text {
+    @extend %pull-center;
+    @include max-width ($width-text);
+}
+
+
+
+/*
+ * COLUMNS.
+ *
+ */
+
+/*.column-half {
+    width: 50%;
+    float: left;
+
+    @include breakpoint(small) {
+          width: 100%;
+      }
+}*/
+
+.column-half {
+     @extend %pull-center;
+     @include max-width ($width-text);
+
+     @include breakpoint(big) {
+         @include inline-block;
+         width: 47%;
+     }
+}
+
+.column-third {
+    @extend %pull-center;
+    @include max-width ($width-text);
+
+    @include breakpoint(big) {
+        width: 33.33%;
+        float: left;
+      }
+}
+
+.column-fourth {
+    width: 50%;
+    float: left;
+
+    @include breakpoint(big) {
+        width: 25%;
+        float: left;
+      }
+
+    @include breakpoint(small) {
+           width: 100%;
+       }
+}
+
+
+
+
+
+/*
+ * Special columns to form two-column page with Content and Sidebar
+ *
+ */
+
+.column-content, .column-sidebar {
+    float: left;
+    @include breakpoint(small) {
+          width: 100%;
+      }
+}
+
+
+.column-content {
+    width: 66%;
+    @include breakpoint(big) {
+          width: 60%;
+      }
+}
+
+.column-sidebar {
+    width: 34%;
+    @include breakpoint(big) {
+          width: 40%;
+      }
+}
+
+
+
+/*
+ * BOXES. INLINE blocks that fluidly arranging in one or few lines depending on the screen size.
+ * On small and medium screens they are all equals ( width = $widthText ) and took their true sizes only on "big" screens
+ * Used for galleries, previews and so on
+ */
+
+.box-text, .box-base, .box-small, .box-mini {
+    @include inline-block;
+    @include max-width ($width-text);
+}
+
+.box-base {
+    @include breakpoint(big) {
+        @include max-width ($width-media);
+     }
+}
+
+.box-small {
+    @include breakpoint(big) {
+        @include max-width ($width-small);
+     }
+}
+
+.box-mini {
+    @include breakpoint(big) {
+        @include max-width ($width-mini);
+     }
+}
+
+
+
+
+
+
+
+
+
+

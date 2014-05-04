@@ -1,0 +1,88 @@
+/************************************************************************************
+ Thumbnails.
+*************************************************************************************/
+
+/**
+ * Thumbnails are used to organize preview of blog posts, articles...
+ * or to easily display grids of images, videos, texts and so on.
+ * Thumbnail usually contain: img, .blocktext, .media...
+
+
+  <div class="thumbnail">
+     <img src="...">
+ </div>
+
+
+ <img class="thumbnail" src="...">
+
+
+ <div class="thumbnail">
+     <img src="...">
+     <div class="blocktext">
+         <h2>Заголовок</h2>
+         <p>
+             Какой-то текст или описание
+         </p>
+     </div>
+     <div><a class="button" href="...">Далее</a></div>
+ </div>
+
+
+ <div class="thumbnail">
+     <div class="media">
+          ....
+     </div>
+     <div><a class="button" href="...">Далее</a></div>
+ </div>
+ **/
+
+.thumbnail {
+
+ //   @extend %inline-block;
+    @extend %border-color;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: $border-radius;
+    padding: $gap-mini;
+    margin: $gap-large $gap-base;
+    img {
+        margin: 0;
+        border: none;
+    }
+}
+
+
+// Add a hover state for linked versions only
+
+a.thumbnail {
+    cursor: pointer;
+    text-align: center;
+    padding: $gap-small;
+    margin: $gap-small;
+    text-decoration: none;
+    background: $link-soft;
+    text-shadow: 0 1px 1px rgba(white, 0.6);
+    color: $base-text;
+
+    &:hover, &:focus, &:active {
+        background: $brand-color;
+        text-shadow: none;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+
+// Helper class for js that makes all inside
+// .thumbnails of equal height
+// ------------------------------------------
+.thumbnail-container {}
+
+
+
+
+
+
+

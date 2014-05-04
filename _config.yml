@@ -1,0 +1,108 @@
+
+permalink:        /:categories/:title.html
+
+paginate:         10
+
+pygments:         true
+markdown:         kramdown
+
+exclude: ['README.md', "Rakefile", 'sass/']
+
+
+title:            mixDreams
+
+
+# Website url address.
+# It must be a valid url.
+# This means always setting the protocol (http|https) or prefixing with "/"
+url:        http://mixdreams.com
+
+#   - When in localhost, the site will run from root "/" regardless of url
+#   - Only the following values are falsy: ["", null, false]
+localhost:  true
+
+
+# Base folder to store images.
+# In website we can use it to indicate image src: <img src="{{ site.img }}/img-name" >
+#
+# In YAML blok  liquid variables cant be used so there we write just img-name
+#
+# ---
+# header_img: img-name
+# ---
+#
+# and it will be converted then to {{site.img}}/img-name
+img:      /assets/images
+
+# Base folder to store css files.
+css:         /assets/css
+
+# Base folder to store javascript files.
+js:  /assets/javascript
+
+
+author:
+  name:     Gennady Troshchenko
+  email:    mixdreams007@gmail.ru
+  avatar:    'https://secure.gravatar.com/avatar/afd3cc3e385d754183336c859d9e694a?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png'
+
+
+description_ru:      "Исследования процесса сна. Осознанные сновидения. Организация сознания. Развитие способностей. Обучение. Прибор, эксперименты, разные материалы и размышления на эту тему "
+
+description_en:      "Mind & Lucid Dream Studies. Experiments and some hypothesis on human mind organization "
+
+#################
+# NAVIGATION
+################
+
+logo:
+  part1:       mix
+  part2:       Dreams
+
+# Folder for main index file.
+home_ru:         /
+home_en:         /en
+
+# relative to folder ru
+navigation_ru:
+  - name:         Сны
+    folder:       dreams
+  - name:         Обучение
+    folder:       education
+  - name:         Теории
+    folder:       theories
+  - name:         Библиотека
+    folder:       library
+
+# relative to folder en
+navigation_en:
+
+
+
+##################
+# SUB NAVIGATIONS
+#################
+
+# [dreams]  subNavigation:
+# relative to folder ru/dreams
+dreams_ru:
+  - name:         Aппаратура
+    folder:       equipment
+  - name:         Эксперименты
+    folder:       experiments
+  - name:         Наблюдения
+    folder:       findings
+
+
+# [theoies]  subNavigation:
+# relative to folder ru/theories
+theories_ru:
+  - name:         &#34;Светлая&#34; шизофрения
+    folder:       schizophrenia
+  - name:         Внутренний мир. Душа
+    folder:       inworld
+    excerpt:      "Здесь пока только неоконченное, &#34;сырое&#34; или даже просто фрагменты.  Все же, при желании, даже из этих отрывков можно получить представление о нашем понимании внутреннего мира, души человека. Того понимания, которое начало у нас формироваться в процессе &#34;домашнего обучения&#34;, потом развивалось в исследованиях сна и сновидений, в результате наших размышлений и дискуссий"
+  - name:         Здоровье
+    folder:       health
+
+

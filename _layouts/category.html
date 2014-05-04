@@ -1,0 +1,59 @@
+---
+
+layout: default
+
+---
+
+{% include setup %}
+
+<div class="section shadow">
+    {% if site[SUBNAV] %}
+    {% for link in site[SUBNAV] %}
+    <div class="row">
+        <div class="central-text">
+            <h2 class="title">{{ link.name }}</h2>
+            {% if link.excerpt %}
+            <div class="blocktext">{{ link.excerpt }}</div>
+            {% endif %}
+            {% assign SUBCATEGORY = link.folder %}
+            {% for post in site.categories[SUBCATEGORY] %}
+            {% if post.categories[0] == LANGUAGE and post.categories[1] == CATEGORY %}
+            {% unless post.url contains "index.html" %}
+            <div class="thumbnail highlight">
+                <div class="blocktext">
+                    <h3 class="blocktext__title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
+                    <p>
+                        {{ post.excerpt }}
+                    </p>
+                </div>
+            </div>
+            {% endunless %}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="row">
+        <div class="central-text">
+            {% for post in site.categories[CATEGORY] %}
+            {% if (post.categories[2] == null) and (post.categories[0] == LANGUAGE) %}
+            {% unless post.url contains "index.html" %}
+            <div class="thumbnail highlight">
+                <div class="blocktext">
+                    <h3 class="blocktext__title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <cite>{{ post.author }}</cite>
+
+                    <p>
+                        {{ post.excerpt }}
+                    </p>
+                </div>
+            </div>
+            {% endunless %}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

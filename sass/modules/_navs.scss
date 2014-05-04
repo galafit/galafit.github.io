@@ -1,0 +1,189 @@
+/************************************************************************************
+ NAVIGATION
+*************************************************************************************/
+
+/**
+ * NAV.
+ * Navigation abstraction.
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ *
+   <ul class=nav>
+       <li class=active><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+
+ *
+ */
+
+.nav {
+    // @include inline-block;
+    @include font-size($nav-font-size);
+    font-family: $nav-font-family;
+    list-style: none;
+    padding: 0;
+    margin: 0 $gap-base;
+    text-transform: uppercase;
+    text-align: center;
+    > li {
+        // @include inline-block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        > a {
+            display: block;
+            //margin: 2px;
+            margin: 0 $gap-mini;
+            padding: $gap-small;
+            padding-top: $gap-large;
+            text-decoration: none;
+            border: 2px solid transparent;
+            @include border-radius($border-radius);
+
+            &:hover, &:focus, &:active {
+                text-shadow: 0 1px 1px rgba(white, 0.6);
+                color: $base-text;
+                background: $link-soft;
+            }
+
+        }
+    }
+
+    > .current > a {
+        border-color: $link-color;
+    }
+
+    > .active > a {
+        border-color: $link-color;
+
+        &:after {
+            //content: "\25BE";
+            //content: " \2191";
+            content: " \5E";
+
+        }
+    }
+
+    > .reverse {
+        float: right;
+    }
+
+    @include breakpoint(small) {
+        @include font-size($nav-font-size-screen-small);
+    }
+}
+
+.nav--shift {
+    margin-left: 8em;
+}
+
+.nav--central {
+    @include inline-block;
+    > li {
+        @include inline-block;
+        margin: 0 $gap-base;
+
+        > a {
+            padding: $gap-base;
+        }
+    }
+}
+
+.nav--decorated {
+    padding: 0 $gap-small;
+    margin-bottom: $gap-large;
+    > li {
+
+        > a {
+            margin: 0;
+            @include border-radius(0);
+            border: 2px solid transparent;
+            border-bottom: 1px solid $link-soft;
+
+        }
+    }
+
+    > .current > a {
+         border-bottom-width: 2px;
+         border-top-width: 1px;
+     }
+
+     > .active > a {
+         border-bottom-width: 2px;
+         border-top-width: 1px;
+     }
+}
+
+.nav--stacked {
+    @include inline-block;
+    > li {
+        float: none;
+        display: block;
+        > a {
+            margin: 0;
+            padding: $gap-base $gap-huge;
+        }
+    }
+}
+
+.nav--adaptive {
+    @include breakpoint(small) {
+        //display: block;
+        display: none;
+        background: $dark;
+        padding: $gap-small;
+        padding-bottom: $gap-large;
+        position: absolute;
+        top: 4.3em;
+        right: 0;
+        z-index: 20;
+
+        > li {
+            float: none;
+            display: block;
+            margin: 0 $gap-small;
+
+            > a {
+                margin: 0;
+                padding: $gap-base;
+                @include border-radius(0);
+                border: 2px solid transparent;
+                border-bottom: 1px solid $link-soft;
+
+            }
+        }
+
+        > .current > a {
+            border-bottom-width: 2px;
+            border-top-width: 1px;
+        }
+
+        > .active > a {
+            border-bottom-width: 2px;
+            border-top-width: 1px;
+        }
+
+    }
+}
+
+.nav--adaptive.open {
+    @include breakpoint(small) {
+        display: block;
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

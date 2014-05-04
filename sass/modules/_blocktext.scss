@@ -1,0 +1,43 @@
+/************************************************************************************
+BLOCKTEXT
+*************************************************************************************/
+
+/*
+ * Blocktext - a short block of text information with paddings.
+ * Can be used as a caption for img in thumbnails and media.  But also can be independent and contain img in itself.
+ */
+
+.blocktext {
+    @extend %text-normalize;
+    padding: $gap-small $gap-base;
+    text-align: left;
+
+    p {
+        margin-top: $gap-small;
+        margin-bottom: 0;
+    }
+
+    cite {
+        @extend %caption-color;
+        text-align: left;
+        //@include font-size($cover-cite-font-size);
+
+        &:before {
+            content: "";
+        }
+    }
+
+    .blocktext__title {
+        @include font-size($blocktext-title-size);
+        font-weight: normal;
+        font-family: inherit;
+        margin-top: 0;
+        border: none;
+        text-align: left;
+    }
+}
+
+
+
+
+

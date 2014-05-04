@@ -1,0 +1,25 @@
+/************************************************************************************
+Post, Articles
+*************************************************************************************/
+
+/** Preformed base classes for articles and blog posts
+  */
+.post {
+    @extend %text-normalize;
+    padding-top: $gap-mini;
+    padding-bottom: $gap-huge;
+
+    blockquote p, .pullquote p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .lead {
+        @include rem-fallback(max-width, $lead-width);
+    }
+
+}
+
+
+
+

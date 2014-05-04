@@ -1,0 +1,50 @@
+/************************************************************************************
+    Blockquotes
+*************************************************************************************/
+
+
+blockquote {
+    margin-top: $gap-huge;
+    margin-bottom: $gap-huge;
+    text-align: left;
+    border-left: 3px solid $link-color;
+    font-style: italic;
+
+    &:first-child  {
+        margin-top: 0
+    }
+
+    &:last-child  {
+        margin-bottom: 0
+    }
+
+    cite {
+        @extend %caption-color;
+        text-align: left;
+    }
+}
+
+
+
+
+
+/*blockquote:before, blockquote:after {
+    display: block;
+    width: $blockquote-border-length;
+    height: $blockquote-border-width;
+    @extend %pull-center;
+    background-color: $link-color;
+    content: "\200B";
+}
+
+blockquote:before {
+    margin-bottom: $gap-small;
+}
+
+blockquote:after {
+    margin-top: $gap-small;
+}*/
+
+
+
+
