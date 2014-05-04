@@ -11,59 +11,78 @@
  */
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+    font-family: $headings-font-family;
+    font-weight: bold;
     line-height: $headings-line-height;
     margin-top: $gap-huge;
     text-align: center;
 }
 
 h1 {
-    font-family: $font-family-arial;
+    font-weight: normal;
     @include font-size($font-size-h1);
+    margin-top: $gap-large;
 }
 
 
 h2 {
     font-family: $font-family-arial;
+    font-weight: normal;
     @include font-size($font-size-h2);
-    text-transform: uppercase;
-
+    margin-top: $gap-large;
 }
 
 
 h3 {
-    font-family: $font-family-arial;
     @include font-size($font-size-h3);
-    border-bottom: 2px solid $base-border-color;
+    text-align: left;
 }
 
 h4 {
     @include font-size($font-size-h4);
+    text-align: left;
 }
 
 
 h5 {
     @include font-size($font-size-h5);
-    font-weight: bold;
+    text-align: left;
+}
+
+h6 {
+    @include font-size($font-size-h6);
 }
 
 
-
-/**
- * This class is used to make the introductory text (usually a paragraph)
- * of a document larger.
- */
-.lead {
-    @include font-size($lead-font-size);
-    @include max-width($lead-width);
+h2, h3, h4, h5, h6 {
+    @extend %text-shadow;
 
 }
 
 
 .title {
+    margin-top: $gap-huge;
+   // font-family: $font-family-arial;
+    text-transform: uppercase;
+    text-align: center;
 
 }
 
+.subtitle {
+    color: $link-color;
+    text-align: center;
+}
+
+
+/**
+  * This class is used to make the introductory text (usually a paragraph)
+  * of a document larger.
+  */
+ .lead {
+      @include font-size($lead-font-size);
+      text-align: center;
+      font-style: italic;
+  }
 
 .header {
     margin-top: 0;

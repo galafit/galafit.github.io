@@ -594,18 +594,18 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
  *   For clearing floats like a boss h5bp.com/q
  */
 /* line 9, ../sass/base/_mixins.scss */
-.clearfix, .navbar, .row, .media {
+.clearfix, .row, .media {
   *zoom: 1;
   overflow: hidden;
 }
 /* line 13, ../sass/base/_mixins.scss */
-.clearfix:before, .navbar:before, .row:before, .media:before, .clearfix:after, .navbar:after, .row:after, .media:after {
+.clearfix:before, .row:before, .media:before, .clearfix:after, .row:after, .media:after {
   display: table;
   content: " ";
   line-height: 0;
 }
 /* line 20, ../sass/base/_mixins.scss */
-.clearfix:after, .navbar:after, .row:after, .media:after {
+.clearfix:after, .row:after, .media:after {
   clear: both;
 }
 
@@ -633,78 +633,75 @@ p {
 /* Mixins to set paddings in rem */
 /* Mixins to set paddings in rem */
 /* all text elements are centered and limited to the line-wide comfortable for reading  */
-/* line 140, ../sass/base/_mixins.scss */
-.blocktext, .cover, .cover-img, .post {
+/* line 139, ../sass/base/_mixins.scss */
+.blocktext, .cover, .cover-dark, .cover-img, .post, .page-main {
   text-align: left;
 }
 /* line 148, ../sass/base/_mixins.scss */
-.blocktext p, .cover p, .cover-img p, .post p, .blocktext .p, .cover .p, .cover-img .p, .post .p,
+.blocktext p, .cover p, .cover-dark p, .cover-img p, .post p, .page-main p, .blocktext .p, .cover .p, .cover-dark .p, .cover-img .p, .post .p, .page-main .p,
 .blocktext h1,
 .cover h1,
+.cover-dark h1,
 .cover-img h1,
-.post h1, .blocktext h2, .cover h2, .cover-img h2, .post h2, .blocktext h3, .cover h3, .cover-img h3, .post h3, .blocktext h4, .cover h4, .cover-img h4, .post h4, .blocktext h5, .cover h5, .cover-img h5, .post h5, .blocktext h6, .cover h6, .cover-img h6, .post h6,
-.blocktext blockquote,
-.cover blockquote,
-.cover-img blockquote,
-.post blockquote,
-.blocktext .pullquote,
-.cover .pullquote,
-.cover-img .pullquote,
-.post .pullquote,
+.post h1,
+.page-main h1, .blocktext h2, .cover h2, .cover-dark h2, .cover-img h2, .post h2, .page-main h2, .blocktext h3, .cover h3, .cover-dark h3, .cover-img h3, .post h3, .page-main h3, .blocktext h4, .cover h4, .cover-dark h4, .cover-img h4, .post h4, .page-main h4, .blocktext h5, .cover h5, .cover-dark h5, .cover-img h5, .post h5, .page-main h5, .blocktext h6, .cover h6, .cover-dark h6, .cover-img h6, .post h6, .page-main h6,
 .blocktext cite,
 .cover cite,
+.cover-dark cite,
 .cover-img cite,
 .post cite,
-.blocktext figcaption,
-.cover figcaption,
-.cover-img figcaption,
-.post figcaption,
-.blocktext .figcaption,
-.cover .figcaption,
-.cover-img .figcaption,
-.post .figcaption,
-.blocktext .figure p,
-.figure .blocktext p,
-.cover .figure p,
-.figure .cover p,
-.cover-img .figure p,
-.figure .cover-img p,
-.post .figure p,
-.figure .post p,
-.blocktext blockquote cite,
-blockquote .blocktext cite,
-.cover blockquote cite,
-blockquote .cover cite,
-.cover-img blockquote cite,
-blockquote .cover-img cite,
-.post blockquote cite,
-blockquote .post cite,
+.page-main cite,
+.blocktext blockquote,
+.cover blockquote,
+.cover-dark blockquote,
+.cover-img blockquote,
+.post blockquote,
+.page-main blockquote,
+.blocktext .pullquote,
+.cover .pullquote,
+.cover-dark .pullquote,
+.cover-img .pullquote,
+.post .pullquote,
+.page-main .pullquote,
 .blocktext .aphorism,
 .cover .aphorism,
+.cover-dark .aphorism,
 .cover-img .aphorism,
 .post .aphorism,
-.blocktext .aphorism-big,
-.cover .aphorism-big,
-.cover-img .aphorism-big,
-.post .aphorism-big,
+.page-main .aphorism,
 .blocktext ul,
 .cover ul,
+.cover-dark ul,
 .cover-img ul,
 .post ul,
+.page-main ul,
 .blocktext ol,
 .cover ol,
+.cover-dark ol,
 .cover-img ol,
-.post ol {
-  max-width: 640px;
-  max-width: 40rem;
-  margin-right: 16px;
-  margin-right: 1rem;
-  margin-left: 16px;
-  margin-left: 1rem;
+.post ol,
+.page-main ol {
+  max-width: 608px;
+  max-width: 38rem;
+  padding-right: 16px;
+  padding-right: 1rem;
+  padding-left: 16px;
+  padding-left: 1rem;
+}
+/* line 158, ../sass/base/_mixins.scss */
+.blocktext ul li > p, .cover ul li > p, .cover-dark ul li > p, .cover-img ul li > p, .post ul li > p, .page-main ul li > p,
+.blocktext ol li > p,
+.cover ol li > p,
+.cover-dark ol li > p,
+.cover-img ol li > p,
+.post ol li > p,
+.page-main ol li > p {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /** Box Sizing model  **/
-/* line 157, ../sass/base/_mixins.scss */
+/* line 167, ../sass/base/_mixins.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   /* Для Firefox */
@@ -715,80 +712,52 @@ blockquote .post cite,
 }
 
 /**
- *   Background Img
- */
-/* line 194, ../sass/base/_mixins.scss */
-.cover-img {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-image: url(../header-bg.jpg);
-}
-
-/**
  *   Blocks Align
  */
-/* line 210, ../sass/base/_mixins.scss */
-.blocktext p, .cover p, .cover-img p, .post p, .blocktext .p, .cover .p, .cover-img .p, .post .p,
+/* line 204, ../sass/base/_mixins.scss */
+.blocktext p, .cover p, .cover-dark p, .cover-img p, .post p, .page-main p, .blocktext .p, .cover .p, .cover-dark .p, .cover-img .p, .post .p, .page-main .p,
 .blocktext h1,
 .cover h1,
+.cover-dark h1,
 .cover-img h1,
-.post h1, .blocktext h2, .cover h2, .cover-img h2, .post h2, .blocktext h3, .cover h3, .cover-img h3, .post h3, .blocktext h4, .cover h4, .cover-img h4, .post h4, .blocktext h5, .cover h5, .cover-img h5, .post h5, .blocktext h6, .cover h6, .cover-img h6, .post h6,
-.blocktext blockquote,
-.cover blockquote,
-.cover-img blockquote,
-.post blockquote,
-.blocktext .pullquote,
-.cover .pullquote,
-.cover-img .pullquote,
-.post .pullquote,
+.post h1,
+.page-main h1, .blocktext h2, .cover h2, .cover-dark h2, .cover-img h2, .post h2, .page-main h2, .blocktext h3, .cover h3, .cover-dark h3, .cover-img h3, .post h3, .page-main h3, .blocktext h4, .cover h4, .cover-dark h4, .cover-img h4, .post h4, .page-main h4, .blocktext h5, .cover h5, .cover-dark h5, .cover-img h5, .post h5, .page-main h5, .blocktext h6, .cover h6, .cover-dark h6, .cover-img h6, .post h6, .page-main h6,
 .blocktext cite,
 .cover cite,
+.cover-dark cite,
 .cover-img cite,
 .post cite,
-.blocktext figcaption,
-.cover figcaption,
-.cover-img figcaption,
-.post figcaption,
-.blocktext .figcaption,
-.cover .figcaption,
-.cover-img .figcaption,
-.post .figcaption,
-.blocktext .figure p,
-.figure .blocktext p,
-.cover .figure p,
-.figure .cover p,
-.cover-img .figure p,
-.figure .cover-img p,
-.post .figure p,
-.figure .post p,
-.blocktext blockquote cite,
-blockquote .blocktext cite,
-.cover blockquote cite,
-blockquote .cover cite,
-.cover-img blockquote cite,
-blockquote .cover-img cite,
-.post blockquote cite,
-blockquote .post cite,
+.page-main cite,
+.blocktext blockquote,
+.cover blockquote,
+.cover-dark blockquote,
+.cover-img blockquote,
+.post blockquote,
+.page-main blockquote,
+.blocktext .pullquote,
+.cover .pullquote,
+.cover-dark .pullquote,
+.cover-img .pullquote,
+.post .pullquote,
+.page-main .pullquote,
 .blocktext .aphorism,
 .cover .aphorism,
+.cover-dark .aphorism,
 .cover-img .aphorism,
 .post .aphorism,
-.blocktext .aphorism-big,
-.cover .aphorism-big,
-.cover-img .aphorism-big,
-.post .aphorism-big,
+.page-main .aphorism,
 .blocktext ul,
 .cover ul,
+.cover-dark ul,
 .cover-img ul,
 .post ul,
+.page-main ul,
 .blocktext ol,
 .cover ol,
+.cover-dark ol,
 .cover-img ol,
-.post ol, img, figcaption, .figcaption, .figure p, blockquote:before, blockquote:after, .pullquote:before, .pullquote:after, .row, .central-wide, .central-page, .central-text, .column-half, .column-third, .post hr:after {
+.post ol,
+.page-main ol, img, figcaption, .figcaption, .figure p, .pullquote:before, .pullquote:after, .row, .central-wide, .central-page, .central-text, .column-half, .column-third {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -798,6 +767,21 @@ blockquote .post cite,
  * Mixins to set elements sizes. At the moment in em. By itself they have not much sense but they will be useful if in the future
   * I wish to set sizes in "rem". See  max-width-rem and so on below
  */
+/**
+ *   Background Img
+ */
+/* line 261, ../sass/base/_mixins.scss */
+.cover-img {
+  background-color: #240020;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-height: 20em;
+}
+
 /*   linear gradient from top to bottom    */
 /* ==========================================================================
    Print styles.
@@ -900,7 +884,7 @@ blockquote .post cite,
   margin-bottom: 0.5em;
 }
 
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 700px) {
   /* line 17, ../sass/modules/_utilities.scss */
   .pull-left-adapt, .pull-right-adapt {
     float: none;
@@ -931,7 +915,7 @@ blockquote .post cite,
 .half {
   max-width: 50%;
 }
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 700px) {
   /* line 46, ../sass/modules/_utilities.scss */
   .half {
     max-width: 100%;
@@ -975,28 +959,36 @@ blockquote .post cite,
 }
 
 /*
+ * Borders
+ */
+/* line 93, ../sass/modules/_utilities.scss */
+.border-top {
+  border-top: 1px solid #e0918b;
+}
+
+/*
  * Adaptation
  */
-/* line 94, ../sass/modules/_utilities.scss */
+/* line 101, ../sass/modules/_utilities.scss */
 .mobile-only {
   display: none;
 }
-@media only screen and (max-width: 44em) {
-  /* line 94, ../sass/modules/_utilities.scss */
+@media only screen and (max-width: 700px) {
+  /* line 101, ../sass/modules/_utilities.scss */
   .mobile-only {
     display: block;
   }
 }
 
-@media only screen and (max-width: 44em) {
-  /* line 101, ../sass/modules/_utilities.scss */
+@media only screen and (max-width: 700px) {
+  /* line 108, ../sass/modules/_utilities.scss */
   .mobile-hide {
     display: none;
   }
 }
 
-@media only screen and (max-width: 44em) {
-  /* line 107, ../sass/modules/_utilities.scss */
+@media only screen and (max-width: 700px) {
+  /* line 114, ../sass/modules/_utilities.scss */
   .mobile-full {
     padding-right: 0;
     padding-left: 0;
@@ -1010,7 +1002,7 @@ blockquote .post cite,
 /*
  * Image replacement
  */
-/* line 127, ../sass/modules/_utilities.scss */
+/* line 136, ../sass/modules/_utilities.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1019,7 +1011,7 @@ blockquote .post cite,
   *text-indent: -9999px;
 }
 
-/* line 135, ../sass/modules/_utilities.scss */
+/* line 144, ../sass/modules/_utilities.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1030,7 +1022,7 @@ blockquote .post cite,
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 146, ../sass/modules/_utilities.scss */
+/* line 155, ../sass/modules/_utilities.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -1039,7 +1031,7 @@ blockquote .post cite,
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 155, ../sass/modules/_utilities.scss */
+/* line 164, ../sass/modules/_utilities.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1055,7 +1047,7 @@ blockquote .post cite,
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 172, ../sass/modules/_utilities.scss */
+/* line 181, ../sass/modules/_utilities.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1069,12 +1061,12 @@ blockquote .post cite,
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 185, ../sass/modules/_utilities.scss */
+/* line 194, ../sass/modules/_utilities.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 189, ../sass/modules/_utilities.scss */
+/* line 198, ../sass/modules/_utilities.scss */
 .disabled {
   pointer-events: none;
   opacity: 0.5;
@@ -1084,239 +1076,216 @@ blockquote .post cite,
 COLORS Themes
 *************************************************************************************/
 /* line 5, ../sass/modules/_color-themes.scss */
-.red {
-  background: red;
+.dark, .cover-dark, .cover-img, .page-footer {
+  background-color: #240020;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  text-shadow: none;
+  color: #deced2;
+  color: rgba(255, 243, 242, 0.85);
 }
-
-/* line 9, ../sass/modules/_color-themes.scss */
-.theme-base, .theme-base-intense, html {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  background: #fcf6ef;
-  color: #422d1c;
+/* line 12, ../sass/modules/_color-themes.scss */
+.dark figcaption, .cover-dark figcaption, .cover-img figcaption, .page-footer figcaption, .dark .figcaption, .cover-dark .figcaption, .cover-img .figcaption, .page-footer .figcaption, .dark .figure p, .figure .dark p, .cover-dark .figure p, .figure .cover-dark p, .cover-img .figure p, .figure .cover-img p, .page-footer .figure p, .figure .page-footer p, .dark .blocktext cite, .blocktext .dark cite, .cover-dark .blocktext cite, .blocktext .cover-dark cite, .cover-img .blocktext cite, .blocktext .cover-img cite, .page-footer .blocktext cite, .blocktext .page-footer cite, .dark blockquote cite, blockquote .dark cite, .cover-dark blockquote cite, blockquote .cover-dark cite, .cover-img blockquote cite, blockquote .cover-img cite, .page-footer blockquote cite, blockquote .page-footer cite, .dark .pullquote-left, .cover-dark .pullquote-left, .cover-img .pullquote-left, .page-footer .pullquote-left, .dark .pullquote-right, .cover-dark .pullquote-right, .cover-img .pullquote-right, .page-footer .pullquote-right, .dark .aphorism, .cover-dark .aphorism, .cover-img .aphorism, .page-footer .aphorism {
+  text-shadow: none;
+  color: #b4a0aa;
+  color: rgba(255, 243, 242, 0.66);
 }
 /* line 17, ../sass/modules/_color-themes.scss */
-.theme-base strong, .theme-base-intense strong, html strong, .theme-base em, .theme-base-intense em, html em {
-  color: #a26b52;
-}
-/* line 22, ../sass/modules/_color-themes.scss */
-.theme-base .post h2, .theme-base-intense .post h2, html .post h2, .theme-base .post h3, .theme-base-intense .post h3, html .post h3, .theme-base .post h4, .theme-base-intense .post h4, html .post h4 {
+.dark h1, .cover-dark h1, .cover-img h1, .page-footer h1, .dark h2, .cover-dark h2, .cover-img h2, .page-footer h2, .dark h3, .cover-dark h3, .cover-img h3, .page-footer h3, .dark h4, .cover-dark h4, .cover-img h4, .page-footer h4, .dark h5, .cover-dark h5, .cover-img h5, .page-footer h5, .dark h6, .cover-dark h6, .cover-img h6, .page-footer h6 {
   text-shadow: none;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-  border-color: #e2ddd7;
-  border-color: rgba(0, 0, 0, 0.1);
+  color: #deced2;
+  color: rgba(255, 243, 242, 0.85);
 }
-/* line 28, ../sass/modules/_color-themes.scss */
-.theme-base .post h3, .theme-base-intense .post h3, html .post h3 {
-  color: #823d42;
+
+/* line 23, ../sass/modules/_color-themes.scss */
+.highlight, .zebra .zebra__item:nth-child(even),
+.zebra > li:nth-child(even), .table-2-column p:nth-child(4n),
+.table-2-column p:nth-child(4n-1) {
+  background: #fdf8ee;
 }
-/* line 33, ../sass/modules/_color-themes.scss */
-.theme-base .post h4, .theme-base-intense .post h4, html .post h4, .theme-base .post h5, .theme-base-intense .post h5, html .post h5, .theme-base .post h6, .theme-base-intense .post h6, html .post h6 {
-  font-family: Arial, sans-serif;
-  color: #a26b52;
+/* line 25, ../sass/modules/_color-themes.scss */
+.highlight .highlight, .zebra .zebra__item:nth-child(even) .highlight,
+.zebra > li:nth-child(even) .highlight, .table-2-column p:nth-child(4n) .highlight,
+.table-2-column p:nth-child(4n-1) .highlight, .highlight .zebra .zebra__item:nth-child(even), .zebra .highlight .zebra__item:nth-child(even), .zebra .zebra__item:nth-child(even) .zebra__item:nth-child(even),
+.zebra > li:nth-child(even) .zebra__item:nth-child(even), .table-2-column p:nth-child(4n) .zebra .zebra__item:nth-child(even), .zebra .table-2-column p:nth-child(4n) .zebra__item:nth-child(even),
+.table-2-column p:nth-child(4n-1) .zebra .zebra__item:nth-child(even),
+.zebra .table-2-column p:nth-child(4n-1) .zebra__item:nth-child(even),
+.highlight .zebra > li:nth-child(even),
+.zebra .zebra__item:nth-child(even) .zebra > li:nth-child(even),
+.zebra > li:nth-child(even) .zebra > li:nth-child(even),
+.table-2-column p:nth-child(4n) .zebra > li:nth-child(even),
+.table-2-column p:nth-child(4n-1) .zebra > li:nth-child(even), .highlight .table-2-column p:nth-child(4n), .table-2-column .highlight p:nth-child(4n), .zebra .zebra__item:nth-child(even) .table-2-column p:nth-child(4n), .table-2-column .zebra .zebra__item:nth-child(even) p:nth-child(4n),
+.zebra > li:nth-child(even) .table-2-column p:nth-child(4n),
+.table-2-column .zebra > li:nth-child(even) p:nth-child(4n), .table-2-column p:nth-child(4n) p:nth-child(4n),
+.table-2-column p:nth-child(4n-1) p:nth-child(4n),
+.highlight .table-2-column p:nth-child(4n-1),
+.table-2-column .highlight p:nth-child(4n-1),
+.zebra .zebra__item:nth-child(even) .table-2-column p:nth-child(4n-1),
+.table-2-column .zebra .zebra__item:nth-child(even) p:nth-child(4n-1),
+.zebra > li:nth-child(even) .table-2-column p:nth-child(4n-1),
+.table-2-column .zebra > li:nth-child(even) p:nth-child(4n-1),
+.table-2-column p:nth-child(4n) p:nth-child(4n-1),
+.table-2-column p:nth-child(4n-1) p:nth-child(4n-1) {
+  background: #fbf0d9;
 }
-/* line 39, ../sass/modules/_color-themes.scss */
-.theme-base cite, .theme-base-intense cite, html cite, .theme-base figcaption, .theme-base-intense figcaption, html figcaption, .theme-base .figcaption, .theme-base-intense .figcaption, html .figcaption, .theme-base .figure p, .figure .theme-base p, .theme-base-intense .figure p, .figure .theme-base-intense p, html .figure p, .figure html p, .theme-base blockquote cite, blockquote .theme-base cite, .theme-base-intense blockquote cite, blockquote .theme-base-intense cite, html blockquote cite, blockquote html cite, .theme-base .aphorism, .theme-base-intense .aphorism, html .aphorism, .theme-base .aphorism-big, .theme-base-intense .aphorism-big, html .aphorism-big {
-  color: rgba(144, 114, 100, 0.9);
+
+/* line 30, ../sass/modules/_color-themes.scss */
+.shadow, .navbar, .zebra-shadow .zebra__item:nth-child(even),
+.zebra-shadow > li:nth-child(even) {
+  background: #f0e3c9;
+}
+
+/* line 40, ../sass/modules/_color-themes.scss */
+h2, h3, h4, h5, h6 {
   text-shadow: none;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
+
 /* line 47, ../sass/modules/_color-themes.scss */
-.theme-base .blocktext .blocktext__title a, .theme-base-intense .blocktext .blocktext__title a, html .blocktext .blocktext__title a {
-  color: #823d42;
-  text-shadow: none;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+.thumbnail, .zebra .zebra__item:nth-child(even),
+.zebra > li:nth-child(even), .zebra-shadow .zebra__item:nth-child(even),
+.zebra-shadow > li:nth-child(even) {
+  border-color: #ebdfcc;
+  border-color: rgba(36, 0, 32, 0.07);
 }
+
 /* line 52, ../sass/modules/_color-themes.scss */
-.theme-base .blocktext .blocktext__title a:hover, .theme-base-intense .blocktext .blocktext__title a:hover, html .blocktext .blocktext__title a:hover, .theme-base .blocktext .blocktext__title a:focus, .theme-base-intense .blocktext .blocktext__title a:focus, html .blocktext .blocktext__title a:focus, .theme-base .blocktext .blocktext__title a:active, .theme-base-intense .blocktext .blocktext__title a:active, html .blocktext .blocktext__title a:active {
-  color: #c27c82;
-  text-decoration: none;
-}
-/* line 63, ../sass/modules/_color-themes.scss */
-.theme-base .navbar, .theme-base-intense .navbar, html .navbar,
-.theme-base .thumbnail,
-.theme-base-intense .thumbnail,
-html .thumbnail,
-.theme-base .zebra .zebra__item:nth-child(even),
-.theme-base-intense .zebra .zebra__item:nth-child(even),
-html .zebra .zebra__item:nth-child(even),
-.theme-base .zebra > li:nth-child(even),
-.theme-base-intense .zebra > li:nth-child(even),
-html .zebra > li:nth-child(even) {
-  border-color: #e2ddd7;
-  border-color: rgba(0, 0, 0, 0.1);
-}
-/* line 67, ../sass/modules/_color-themes.scss */
-.theme-base .button-theme, .theme-base-intense .button-theme, html .button-theme {
-  background: #282e3a;
-  border-color: #323843;
-  border-color: rgba(255, 255, 255, 0.05);
+.button-theme {
+  background: #322d34;
 }
 
-/* line 73, ../sass/modules/_color-themes.scss */
-.theme-inverse, .theme-inverse-intense {
-  font-family: "Open Sans", sans-serif;
-  background: #282e3a;
-  color: #bec4c9;
-}
-/* line 79, ../sass/modules/_color-themes.scss */
-.theme-inverse strong, .theme-inverse-intense strong, .theme-inverse em, .theme-inverse-intense em {
-  color: #60798e;
-}
-/* line 84, ../sass/modules/_color-themes.scss */
-.theme-inverse .post h2, .theme-inverse-intense .post h2, .theme-inverse .post h3, .theme-inverse-intense .post h3, .theme-inverse .post h4, .theme-inverse-intense .post h4 {
+/* line 57, ../sass/modules/_color-themes.scss */
+figcaption, .figcaption, .figure p, .blocktext cite, blockquote cite, .pullquote-left, .pullquote-right, .aphorism {
   text-shadow: none;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-  border-color: #323843;
-  border-color: rgba(255, 255, 255, 0.05);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  color: #9c7676;
 }
-/* line 90, ../sass/modules/_color-themes.scss */
-.theme-inverse .post h3, .theme-inverse-intense .post h3 {
-  color: #baa3a3;
+
+/* line 65, ../sass/modules/_color-themes.scss */
+.theme-base, html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  background: #fbf0d9;
+  color: #5f4b32;
 }
-/* line 94, ../sass/modules/_color-themes.scss */
-.theme-inverse .post h4, .theme-inverse-intense .post h4, .theme-inverse .post h5, .theme-inverse-intense .post h5, .theme-inverse .post h6, .theme-inverse-intense .post h6 {
-  color: #60798e;
-  font-family: inherit;
+
+/* line 76, ../sass/modules/_color-themes.scss */
+.theme-inverse {
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  background: #322d34;
+  color: #e4e0e0;
 }
-/* line 102, ../sass/modules/_color-themes.scss */
-.theme-inverse cite, .theme-inverse-intense cite, .theme-inverse figcaption, .theme-inverse-intense figcaption, .theme-inverse .figcaption, .theme-inverse-intense .figcaption, .theme-inverse .figure p, .figure .theme-inverse p, .theme-inverse-intense .figure p, .figure .theme-inverse-intense p, .theme-inverse blockquote cite, blockquote .theme-inverse cite, .theme-inverse-intense blockquote cite, blockquote .theme-inverse-intense cite, .theme-inverse .aphorism, .theme-inverse-intense .aphorism, .theme-inverse .aphorism-big, .theme-inverse-intense .aphorism-big {
-  color: rgba(190, 196, 201, 0.7);
+/* line 82, ../sass/modules/_color-themes.scss */
+.theme-inverse h2, .theme-inverse h3, .theme-inverse h4, .theme-inverse h5, .theme-inverse h6 {
   text-shadow: none;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
-/* line 110, ../sass/modules/_color-themes.scss */
-.theme-inverse .blocktext .blocktext__title a, .theme-inverse-intense .blocktext .blocktext__title a {
-  text-shadow: none;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-  color: #baa3a3;
-}
-/* line 115, ../sass/modules/_color-themes.scss */
-.theme-inverse .blocktext .blocktext__title a:hover, .theme-inverse-intense .blocktext .blocktext__title a:hover, .theme-inverse .blocktext .blocktext__title a:focus, .theme-inverse-intense .blocktext .blocktext__title a:focus, .theme-inverse .blocktext .blocktext__title a:active, .theme-inverse-intense .blocktext .blocktext__title a:active {
-  color: #c27c82;
-  text-decoration: none;
-}
-/* line 126, ../sass/modules/_color-themes.scss */
-.theme-inverse .navbar, .theme-inverse-intense .navbar,
-.theme-inverse .thumbnail,
-.theme-inverse-intense .thumbnail,
-.theme-inverse .zebra .zebra__item,
-.theme-inverse-intense .zebra .zebra__item,
-.theme-inverse .zebra > li,
-.theme-inverse-intense .zebra > li {
-  border-color: #323843;
+/* line 87, ../sass/modules/_color-themes.scss */
+.theme-inverse .thumbnail, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
+.theme-inverse .zebra > li:nth-child(even), .theme-inverse .zebra-shadow .zebra__item:nth-child(even), .zebra-shadow .theme-inverse .zebra__item:nth-child(even),
+.theme-inverse .zebra-shadow > li:nth-child(even) {
+  border-color: #3c373e;
   border-color: rgba(255, 255, 255, 0.05);
 }
-/* line 131, ../sass/modules/_color-themes.scss */
-.theme-inverse .button-theme, .theme-inverse-intense .button-theme {
-  background: #fcf6ef;
-  border-color: #e2ddd7;
-  border-color: rgba(0, 0, 0, 0.1);
+/* line 91, ../sass/modules/_color-themes.scss */
+.theme-inverse .button-theme {
+  background: #fbf0d9;
 }
-
-/* line 138, ../sass/modules/_color-themes.scss */
-.img-colors, .cover-img, .page-footer {
-  font-family: "Open Sans", sans-serif;
+/* line 95, ../sass/modules/_color-themes.scss */
+.theme-inverse h2 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+}
+/* line 100, ../sass/modules/_color-themes.scss */
+.theme-inverse h3, .theme-inverse h4, .theme-inverse h5, .theme-inverse h6 {
+  color: #b59494;
+  font-weight: normal;
+}
+/* line 105, ../sass/modules/_color-themes.scss */
+.theme-inverse strong, .theme-inverse em {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  color: #fcfbfb;
+}
+/* line 111, ../sass/modules/_color-themes.scss */
+.theme-inverse .subtitle {
+  color: #f08b84;
+}
+/* line 116, ../sass/modules/_color-themes.scss */
+.theme-inverse figcaption, .theme-inverse .figcaption, .theme-inverse .figure p, .figure .theme-inverse p, .theme-inverse .blocktext cite, .blocktext .theme-inverse cite, .theme-inverse blockquote cite, blockquote .theme-inverse cite, .theme-inverse .pullquote-left, .theme-inverse .pullquote-right, .theme-inverse .aphorism {
   text-shadow: none;
-  color: #999999;
-  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  color: #b59494;
 }
-/* line 143, ../sass/modules/_color-themes.scss */
-.img-colors cite, .cover-img cite, .page-footer cite, .img-colors figcaption, .cover-img figcaption, .page-footer figcaption, .img-colors .figcaption, .cover-img .figcaption, .page-footer .figcaption, .img-colors .figure p, .figure .img-colors p, .cover-img .figure p, .figure .cover-img p, .page-footer .figure p, .figure .page-footer p, .cover-img blockquote cite, blockquote .cover-img cite, .page-footer blockquote cite, blockquote .page-footer cite, .img-colors .aphorism, .cover-img .aphorism, .page-footer .aphorism, .img-colors .aphorism-big, .cover-img .aphorism-big, .page-footer .aphorism-big {
+/* line 122, ../sass/modules/_color-themes.scss */
+.theme-inverse .highlight, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
+.theme-inverse .zebra > li:nth-child(even), .theme-inverse .table-2-column p:nth-child(4n), .table-2-column .theme-inverse p:nth-child(4n),
+.theme-inverse .table-2-column p:nth-child(4n-1),
+.table-2-column .theme-inverse p:nth-child(4n-1) {
+  background: #3f3942;
+}
+/* line 124, ../sass/modules/_color-themes.scss */
+.theme-inverse .highlight .highlight, .theme-inverse .zebra .zebra__item:nth-child(even) .highlight, .zebra .theme-inverse .zebra__item:nth-child(even) .highlight,
+.theme-inverse .zebra > li:nth-child(even) .highlight, .theme-inverse .table-2-column p:nth-child(4n) .highlight, .table-2-column .theme-inverse p:nth-child(4n) .highlight,
+.theme-inverse .table-2-column p:nth-child(4n-1) .highlight,
+.table-2-column .theme-inverse p:nth-child(4n-1) .highlight, .theme-inverse .highlight .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .highlight .zebra__item:nth-child(even), .theme-inverse .zebra .zebra__item:nth-child(even) .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even) .zebra__item:nth-child(even),
+.theme-inverse .zebra > li:nth-child(even) .zebra__item:nth-child(even), .theme-inverse .table-2-column p:nth-child(4n) .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .table-2-column p:nth-child(4n) .zebra__item:nth-child(even), .table-2-column .theme-inverse p:nth-child(4n) .zebra .zebra__item:nth-child(even), .zebra .table-2-column .theme-inverse p:nth-child(4n) .zebra__item:nth-child(even),
+.theme-inverse .table-2-column p:nth-child(4n-1) .zebra .zebra__item:nth-child(even),
+.zebra .theme-inverse .table-2-column p:nth-child(4n-1) .zebra__item:nth-child(even),
+.table-2-column .theme-inverse p:nth-child(4n-1) .zebra .zebra__item:nth-child(even),
+.zebra .table-2-column .theme-inverse p:nth-child(4n-1) .zebra__item:nth-child(even),
+.theme-inverse .highlight .zebra > li:nth-child(even),
+.theme-inverse .zebra .zebra__item:nth-child(even) .zebra > li:nth-child(even),
+.zebra .theme-inverse .zebra__item:nth-child(even) .zebra > li:nth-child(even),
+.theme-inverse .zebra > li:nth-child(even) .zebra > li:nth-child(even),
+.theme-inverse .table-2-column p:nth-child(4n) .zebra > li:nth-child(even),
+.table-2-column .theme-inverse p:nth-child(4n) .zebra > li:nth-child(even),
+.theme-inverse .table-2-column p:nth-child(4n-1) .zebra > li:nth-child(even),
+.table-2-column .theme-inverse p:nth-child(4n-1) .zebra > li:nth-child(even), .theme-inverse .highlight .table-2-column p:nth-child(4n), .table-2-column .theme-inverse .highlight p:nth-child(4n), .theme-inverse .zebra .zebra__item:nth-child(even) .table-2-column p:nth-child(4n), .table-2-column .theme-inverse .zebra .zebra__item:nth-child(even) p:nth-child(4n), .zebra .theme-inverse .zebra__item:nth-child(even) .table-2-column p:nth-child(4n), .table-2-column .zebra .theme-inverse .zebra__item:nth-child(even) p:nth-child(4n),
+.theme-inverse .zebra > li:nth-child(even) .table-2-column p:nth-child(4n),
+.table-2-column .theme-inverse .zebra > li:nth-child(even) p:nth-child(4n), .theme-inverse .table-2-column p:nth-child(4n) p:nth-child(4n), .table-2-column .theme-inverse p:nth-child(4n) p:nth-child(4n),
+.theme-inverse .table-2-column p:nth-child(4n-1) p:nth-child(4n),
+.table-2-column .theme-inverse p:nth-child(4n-1) p:nth-child(4n),
+.theme-inverse .highlight .table-2-column p:nth-child(4n-1),
+.table-2-column .theme-inverse .highlight p:nth-child(4n-1),
+.theme-inverse .zebra .zebra__item:nth-child(even) .table-2-column p:nth-child(4n-1),
+.table-2-column .theme-inverse .zebra .zebra__item:nth-child(even) p:nth-child(4n-1),
+.zebra .theme-inverse .zebra__item:nth-child(even) .table-2-column p:nth-child(4n-1),
+.table-2-column .zebra .theme-inverse .zebra__item:nth-child(even) p:nth-child(4n-1),
+.theme-inverse .zebra > li:nth-child(even) .table-2-column p:nth-child(4n-1),
+.table-2-column .theme-inverse .zebra > li:nth-child(even) p:nth-child(4n-1),
+.theme-inverse .table-2-column p:nth-child(4n) p:nth-child(4n-1),
+.table-2-column .theme-inverse p:nth-child(4n) p:nth-child(4n-1),
+.theme-inverse .table-2-column p:nth-child(4n-1) p:nth-child(4n-1),
+.table-2-column .theme-inverse p:nth-child(4n-1) p:nth-child(4n-1) {
+  background: #322d34;
+}
+/* line 129, ../sass/modules/_color-themes.scss */
+.theme-inverse .shadow, .theme-inverse .navbar, .theme-inverse .zebra-shadow .zebra__item:nth-child(even), .zebra-shadow .theme-inverse .zebra__item:nth-child(even),
+.theme-inverse .zebra-shadow > li:nth-child(even) {
+  background: #312a33;
+}
+/* line 134, ../sass/modules/_color-themes.scss */
+.theme-inverse .dark figcaption, .theme-inverse .cover-dark figcaption, .theme-inverse .cover-img figcaption, .theme-inverse .page-footer figcaption, .theme-inverse .dark .figcaption, .theme-inverse .cover-dark .figcaption, .theme-inverse .cover-img .figcaption, .theme-inverse .page-footer .figcaption, .theme-inverse .dark .figure p, .figure .theme-inverse .dark p, .theme-inverse .cover-dark .figure p, .figure .theme-inverse .cover-dark p, .theme-inverse .cover-img .figure p, .figure .theme-inverse .cover-img p, .theme-inverse .page-footer .figure p, .figure .theme-inverse .page-footer p, .theme-inverse .dark .blocktext cite, .blocktext .theme-inverse .dark cite, .theme-inverse .cover-dark .blocktext cite, .blocktext .theme-inverse .cover-dark cite, .theme-inverse .cover-img .blocktext cite, .blocktext .theme-inverse .cover-img cite, .theme-inverse .page-footer .blocktext cite, .blocktext .theme-inverse .page-footer cite, .theme-inverse .dark blockquote cite, blockquote .theme-inverse .dark cite, .theme-inverse .cover-dark blockquote cite, blockquote .theme-inverse .cover-dark cite, .theme-inverse .cover-img blockquote cite, blockquote .theme-inverse .cover-img cite, .theme-inverse .page-footer blockquote cite, blockquote .theme-inverse .page-footer cite, .theme-inverse .dark .pullquote-left, .theme-inverse .cover-dark .pullquote-left, .theme-inverse .cover-img .pullquote-left, .theme-inverse .page-footer .pullquote-left, .theme-inverse .dark .pullquote-right, .theme-inverse .cover-dark .pullquote-right, .theme-inverse .cover-img .pullquote-right, .theme-inverse .page-footer .pullquote-right, .theme-inverse .dark .aphorism, .theme-inverse .cover-dark .aphorism, .theme-inverse .cover-img .aphorism, .theme-inverse .page-footer .aphorism {
   text-shadow: none;
-  color: #999999;
-  color: rgba(255, 255, 255, 0.6);
-}
-/* line 148, ../sass/modules/_color-themes.scss */
-.img-colors h1, .cover-img h1, .page-footer h1, .img-colors h2, .cover-img h2, .page-footer h2, .img-colors h3, .cover-img h3, .page-footer h3, .img-colors h4, .cover-img h4, .page-footer h4, .img-colors h5, .cover-img h5, .page-footer h5, .img-colors h6, .cover-img h6, .page-footer h6 {
-  text-shadow: none;
-  color: #cccccc;
-  color: rgba(255, 255, 255, 0.8);
-}
-/* line 153, ../sass/modules/_color-themes.scss */
-.img-colors .logo, .cover-img .logo, .page-footer .logo {
-  color: #d6d6d6;
+  color: #b4a0aa;
+  color: rgba(255, 243, 242, 0.66);
 }
 
-/**
- * Zebra. To slightly change background color like in  Zebra Striping Table, List and etc
- * Zebra is used to separate content by slight variance of background color
- *
- * <ul class="zebra">
- *  <li>content goes here</li>
- *  <li>content goes here</li>
- *  <li>content goes here</li>
- * </ul>
- *
- *
- * <div class="zebra">
- *  <div class="zebra__item">content goes here</div>
- *  <div class="zebra__item">content goes here</div >
- *  <div class="zebra__item">content goes here</div >
- * </div>
- *
- */
-/* line 180, ../sass/modules/_color-themes.scss */
-.zebra .zebra__item:nth-child(even),
-.zebra > li:nth-child(even) {
-  border-top: 2px solid;
-  border-bottom: 2px solid;
+/* line 142, ../sass/modules/_color-themes.scss */
+.text-red {
+  color: #d63e3b;
 }
 
-/* line 192, ../sass/modules/_color-themes.scss */
-.theme-base .highlight, .theme-base-intense .highlight, html .highlight {
-  background: #f8ebde;
-}
-/* line 197, ../sass/modules/_color-themes.scss */
-.theme-base .zebra .zebra__item:nth-child(even), .theme-base-intense .zebra .zebra__item:nth-child(even), html .zebra .zebra__item:nth-child(even),
-.theme-base .zebra > li:nth-child(even),
-.theme-base-intense .zebra > li:nth-child(even),
-html .zebra > li:nth-child(even) {
-  background: #f8ebde;
-  text: #a26b52;
+/* line 146, ../sass/modules/_color-themes.scss */
+.text-green {
+  color: green;
 }
 
-/* line 203, ../sass/modules/_color-themes.scss */
-.theme-base-intense {
-  background: #f8ebde;
-}
-/* line 207, ../sass/modules/_color-themes.scss */
-.theme-base-intense .highlight {
-  background: #fcf6ef;
-}
-/* line 212, ../sass/modules/_color-themes.scss */
-.theme-base-intense .zebra .zebra__item:nth-child(even),
-.theme-base-intense .zebra > li:nth-child(even) {
-  background: #fcf6ef;
-  text: #422d1c;
+/* line 150, ../sass/modules/_color-themes.scss */
+.text-blue {
+  color: deepskyblue;
 }
 
-/* line 224, ../sass/modules/_color-themes.scss */
-.theme-inverse h1, .theme-inverse-intense h1 {
-  color: #bec4c9;
-}
-/* line 228, ../sass/modules/_color-themes.scss */
-.theme-inverse .highlight, .theme-inverse-intense .highlight {
-  background: #1f252e;
-}
-/* line 233, ../sass/modules/_color-themes.scss */
-.theme-inverse .zebra .zebra__item:nth-child(even), .theme-inverse-intense .zebra .zebra__item:nth-child(even),
-.theme-inverse .zebra > li:nth-child(even),
-.theme-inverse-intense .zebra > li:nth-child(even) {
-  background: #1f252e;
-}
-
-/* line 238, ../sass/modules/_color-themes.scss */
-.theme-inverse-intense {
-  background: #1f252e;
-}
-/* line 242, ../sass/modules/_color-themes.scss */
-.theme-inverse-intense .highlight {
-  background: #282e3a;
-}
-/* line 247, ../sass/modules/_color-themes.scss */
-.theme-inverse-intense .zebra .zebra__item:nth-child(even),
-.theme-inverse-intense .zebra > li:nth-child(even) {
-  background: #282e3a;
+/* line 154, ../sass/modules/_color-themes.scss */
+.text-brown {
+  color: #ac8173;
 }
 
 /************************************************************************************
@@ -1341,18 +1310,18 @@ html {
   -ms-text-size-adjust: 100%;
   /* improves the text rendering in more recent browsers */
   text-rendering: optimizeLegibility;
-  font-size: 1.25em;
+  font-size: 1.26em;
 }
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 20, ../sass/modules/_!main.scss */
   html {
     font-size: 1.3em;
   }
 }
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 700px) {
   /* line 20, ../sass/modules/_!main.scss */
   html {
-    font-size: 1.125em;
+    font-size: 1.16em;
   }
 }
 
@@ -1374,18 +1343,18 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 /* line 57, ../sass/modules/_!main.scss */
 a {
-  color: #c27c82;
+  color: #f08b84;
   text-decoration: none;
 }
 /* line 61, ../sass/modules/_!main.scss */
 a:hover, a:focus, a:active {
-  color: #d63e3b;
+  color: #ee3e3b;
   text-decoration: underline;
 }
 
-/* line 73, ../sass/modules/_!main.scss */
+/* line 67, ../sass/modules/_!main.scss */
 ::-moz-selection, ::selection {
-  background: #3f1f1f;
+  background: #784746;
   color: white;
 }
 
@@ -1396,29 +1365,40 @@ a:hover, a:focus, a:active {
  *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
  *  and not upon the properties (margin-bottom) of the previous object
  */
-/* line 86, ../sass/modules/_!main.scss */
+/* line 80, ../sass/modules/_!main.scss */
 p {
   margin-top: 1em;
   margin-bottom: 1.5em;
 }
 
-/* line 91, ../sass/modules/_!main.scss */
+/* line 85, ../sass/modules/_!main.scss */
 i, em, q {
   font-style: italic;
 }
 
-/* line 95, ../sass/modules/_!main.scss */
+/* line 90, ../sass/modules/_!main.scss */
 hr {
+  width: 5em;
+  text-align: center;
+  margin: 2em auto;
   border: none;
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
-  margin-top: 1em;
-  height: 0;
+  height: 5px;
+  background-color: #968e86;
+  color: #968e86;
 }
 
-/* line 103, ../sass/modules/_!main.scss */
-cite, figcaption, .figcaption, .figure p, blockquote cite, .aphorism, .aphorism-big {
+/* line 106, ../sass/modules/_!main.scss */
+cite {
   font-size: 14.4px;
   font-size: 0.9rem;
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+  font-style: italic;
+}
+/* line 113, ../sass/modules/_!main.scss */
+cite:before {
+  content: "\2014 \2009";
 }
 
 /************************************************************************************
@@ -1433,60 +1413,83 @@ cite, figcaption, .figcaption, .figure p, blockquote cite, .aphorism, .aphorism-
  */
 /* line 13, ../sass/modules/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-weight: bold;
   line-height: 1.33;
   margin-top: 2em;
   text-align: center;
 }
 
-/* line 20, ../sass/modules/_headings.scss */
+/* line 21, ../sass/modules/_headings.scss */
 h1 {
-  font-family: Arial, sans-serif;
-  font-size: 30.4px;
-  font-size: 1.9rem;
+  font-weight: normal;
+  font-size: 33.6px;
+  font-size: 2.1rem;
+  margin-top: 1.5em;
 }
 
-/* line 26, ../sass/modules/_headings.scss */
+/* line 28, ../sass/modules/_headings.scss */
 h2 {
   font-family: Arial, sans-serif;
+  font-weight: normal;
   font-size: 27.2px;
   font-size: 1.7rem;
-  text-transform: uppercase;
+  margin-top: 1.5em;
 }
 
-/* line 34, ../sass/modules/_headings.scss */
+/* line 36, ../sass/modules/_headings.scss */
 h3 {
-  font-family: Arial, sans-serif;
-  font-size: 27.2px;
-  font-size: 1.7rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-align: left;
 }
 
-/* line 40, ../sass/modules/_headings.scss */
+/* line 41, ../sass/modules/_headings.scss */
 h4 {
-  font-size: 22.4px;
-  font-size: 1.4rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  text-align: left;
 }
 
-/* line 45, ../sass/modules/_headings.scss */
+/* line 47, ../sass/modules/_headings.scss */
 h5 {
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+/* line 52, ../sass/modules/_headings.scss */
+h6 {
   font-size: 16px;
   font-size: 1rem;
-  font-weight: bold;
+}
+
+/* line 63, ../sass/modules/_headings.scss */
+.title {
+  margin-top: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* line 71, ../sass/modules/_headings.scss */
+.subtitle {
+  color: #f08b84;
+  text-align: center;
 }
 
 /**
- * This class is used to make the introductory text (usually a paragraph)
- * of a document larger.
- */
-/* line 56, ../sass/modules/_headings.scss */
+  * This class is used to make the introductory text (usually a paragraph)
+  * of a document larger.
+  */
+/* line 81, ../sass/modules/_headings.scss */
 .lead {
-  font-size: 20.16px;
-  font-size: 1.26rem;
-  max-width: 50em;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
 }
 
-/* line 68, ../sass/modules/_headings.scss */
+/* line 87, ../sass/modules/_headings.scss */
 .header {
   margin-top: 0;
   margin-bottom: 0;
@@ -1494,49 +1497,134 @@ h5 {
   padding-bottom: 0.5em;
 }
 
-/*------------------------------------*\
-    $CODE
-\*------------------------------------*/
+/************************************************************************************
+ BUTTONS
+*************************************************************************************/
 /**
- * Use an explicit font stack to ensure browsers render correct `line-height`.
+ * helper mixin to set Buttons colors
  */
-/* line 7, ../sass/modules/_code.scss */
-pre {
-  overflow: auto;
+/* line 34, ../sass/modules/_buttons.scss */
+.button, #toTop, #menu, .button-theme {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.33;
+  text-decoration: none;
 }
 
-/* line 10, ../sass/modules/_code.scss */
-pre mark {
-  background: none;
-  border-bottom: 1px solid;
-  color: inherit;
+/* line 45, ../sass/modules/_buttons.scss */
+.button, #toTop, #menu {
+  margin: 1em 0.5em;
+  padding: 0.5em 1.5em;
+  color: #f08b84;
+  border: 2px solid #f08b84;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  border-radius: 24px;
+}
+/* line 18, ../sass/modules/_buttons.scss */
+.button:hover, #toTop:hover, #menu:hover, .button:focus, #toTop:focus, #menu:focus, .button:active, #toTop:active, #menu:active {
+  text-decoration: none;
+  color: white;
+  background: #784746;
+  border-color: #784746;
 }
 
-/**
- * Add comments to your code examples, e.g.:
- *
-   <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
- *
- */
-/* line 23, ../sass/modules/_code.scss */
-.code-comment {
-  /**
-   * Override this setting in your theme stylesheet
-   */
-  opacity: 0.75;
-  filter: alpha(opacity=75);
+/* line 56, ../sass/modules/_buttons.scss */
+.button--filled, #toTop, #menu {
+  background: #e0918b;
+  color: #5f4b32;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
-/* line 32, ../sass/modules/_code.scss */
-pre, code {
-  font-family: "Bitstream Vera Sans Mono", "Droid Sans Mono", "Lucidia Console", "Menlo", "Courier New", Courier, monospace;
-  font-size: 90%;
-  max-width: 100%;
-  overflow: auto;
-  padding: 0.2em 0.4em;
-  white-space: pre;
-  word-wrap: break-word;
-  text-align: left;
+/* line 65, ../sass/modules/_buttons.scss */
+.button--disabled {
+  border-color: #c8c0ad;
+  border-color: rgba(0, 0, 0, 0.2);
+  background: #c8c0ad;
+  background: rgba(0, 0, 0, 0.2);
+  color: #979389;
+  color: rgba(85, 85, 85, 0.6);
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+}
+/* line 72, ../sass/modules/_buttons.scss */
+.button--disabled:hover, .button--disabled:focus, .button--disabled:active {
+  background: #c8c0ad;
+  background: rgba(0, 0, 0, 0.2);
+  color: #979389;
+  color: rgba(85, 85, 85, 0.6);
+}
+
+/************************************************************************************
+Theme Button
+*************************************************************************************/
+/* line 84, ../sass/modules/_buttons.scss */
+.button-theme {
+  vertical-align: text-bottom;
+  *vertical-align: auto;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  padding: 0 1em;
+}
+
+/************************************************************************************
+ToTop Button
+*************************************************************************************/
+/* line 100, ../sass/modules/_buttons.scss */
+#toTop {
+  margin: 0;
+  padding: 0.7em 1.2em;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  position: fixed;
+  bottom: 0;
+  right: 2%;
+  z-index: 20;
+  display: none;
+}
+/* line 113, ../sass/modules/_buttons.scss */
+#toTop:after {
+  content: "\5E";
+}
+
+/************************************************************************************
+Menu Button
+*************************************************************************************/
+/* line 123, ../sass/modules/_buttons.scss */
+#menu {
+  float: right;
+  margin: 1em 0.5em;
+  margin-bottom: 0;
+  padding: 0.5em 1.5em;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  display: none;
+}
+/* line 134, ../sass/modules/_buttons.scss */
+#menu:after {
+  content: "\2630";
+}
+@media only screen and (max-width: 700px) {
+  /* line 123, ../sass/modules/_buttons.scss */
+  #menu {
+    display: block;
+  }
 }
 
 /* ==========================================================================
@@ -1547,7 +1635,8 @@ pre, code {
  */
 /* line 8, ../sass/modules/_images.scss */
 img {
-  margin-top: 1.5em;
+  margin-top: 3em;
+  margin-bottom: 2em;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
@@ -1556,7 +1645,7 @@ img {
 /**
  * Basic image modifiers. Extends `img`
  */
-/* line 19, ../sass/modules/_images.scss */
+/* line 20, ../sass/modules/_images.scss */
 .img--rounded {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -1565,7 +1654,7 @@ img {
   border-radius: 6px;
 }
 
-/* line 23, ../sass/modules/_images.scss */
+/* line 24, ../sass/modules/_images.scss */
 .img--circle {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1574,7 +1663,7 @@ img {
   border-radius: 50%;
 }
 
-/* line 27, ../sass/modules/_images.scss */
+/* line 28, ../sass/modules/_images.scss */
 .img--lead {
   margin-top: 0;
 }
@@ -1586,36 +1675,24 @@ img {
  *   <figcaption>Optional figcaption</figcaption>
  * </figure>
  */
-/* line 40, ../sass/modules/_images.scss */
+/* line 41, ../sass/modules/_images.scss */
 figcaption, .figcaption, .figure p {
   clear: both;
-  font-style: italic;
   line-height: 1.33;
   text-align: center;
   max-width: 90%;
-  margin-top: 0.25em;
+  margin-top: 1em;
 }
 
-/* line 52, ../sass/modules/_images.scss */
+/* line 53, ../sass/modules/_images.scss */
 .figure {
-  margin-top: 1.5em;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
-/* line 54, ../sass/modules/_images.scss */
+/* line 56, ../sass/modules/_images.scss */
 .figure img {
   margin-top: 0;
-}
-
-/************************************************************************************
-Icons
-*************************************************************************************/
-/* line 5, ../sass/modules/_icons.scss */
-.icon-phone {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url(../img/phone.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  margin-bottom: 0;
 }
 
 /************************************************************************************
@@ -1636,9 +1713,18 @@ BLOCKTEXT
   margin-bottom: 0;
 }
 /* line 20, ../sass/modules/_blocktext.scss */
+.blocktext cite {
+  text-align: left;
+}
+/* line 25, ../sass/modules/_blocktext.scss */
+.blocktext cite:before {
+  content: "";
+}
+/* line 30, ../sass/modules/_blocktext.scss */
 .blocktext .blocktext__title {
   font-size: 20.8px;
   font-size: 1.3rem;
+  font-weight: normal;
   font-family: inherit;
   margin-top: 0;
   border: none;
@@ -1648,34 +1734,63 @@ BLOCKTEXT
 /************************************************************************************
    LISTS
 *************************************************************************************/
-/* line 5, ../sass/modules/_lists.scss */
+/* line 6, ../sass/modules/_lists.scss */
+ul,
+ol {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+/* line 11, ../sass/modules/_lists.scss */
+ul li,
+ol li {
+  margin-top: 1em;
+  margin-left: 2em;
+  /**
+   * Remove vertical spacing from nested lists.
+   */
+}
+/* line 17, ../sass/modules/_lists.scss */
+ul li > ul, ul li > ol,
+ol li > ul,
+ol li > ol {
+  margin: 0;
+  margin-left: 1em;
+}
+
+/* line 25, ../sass/modules/_lists.scss */
 .list-dashed {
   list-style: none;
 }
-/* line 8, ../sass/modules/_lists.scss */
+/* line 28, ../sass/modules/_lists.scss */
 .list-dashed li:before {
   content: "\2014 ";
 }
 
-/* line 11, ../sass/modules/_lists.scss */
+/* line 33, ../sass/modules/_lists.scss */
 .list-unstyled {
   list-style: none;
 }
 
-/* line 17, ../sass/modules/_lists.scss */
+/* line 38, ../sass/modules/_lists.scss */
+.list-compact li {
+  margin-top: 0;
+}
+
+/* line 45, ../sass/modules/_lists.scss */
 .blocklist {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 22, ../sass/modules/_lists.scss */
+/* line 50, ../sass/modules/_lists.scss */
 .blocklist li {
   margin: 0;
   padding: 0.5em 0;
   border-bottom: 1px solid;
   text-align: center;
 }
-/* line 31, ../sass/modules/_lists.scss */
+/* line 59, ../sass/modules/_lists.scss */
 .blocklist li:last-child {
   border-bottom: none;
 }
@@ -1685,38 +1800,41 @@ BLOCKTEXT
 *************************************************************************************/
 /* line 6, ../sass/modules/_blockquote.scss */
 blockquote {
-  font-size: 19.2px;
-  font-size: 1.2rem;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: left;
+  border-left: 3px solid #f08b84;
+  font-style: italic;
 }
-/* line 12, ../sass/modules/_blockquote.scss */
+/* line 13, ../sass/modules/_blockquote.scss */
 blockquote:first-child {
   margin-top: 0;
 }
-
-/* line 19, ../sass/modules/_blockquote.scss */
-blockquote cite, blockquote figcaption, blockquote .figcaption, blockquote .figure p, .figure blockquote p, blockquote cite, blockquote .aphorism, blockquote .aphorism-big {
-  line-height: 1.33;
-  display: block;
-  margin-top: 0.25em;
+/* line 17, ../sass/modules/_blockquote.scss */
+blockquote:last-child {
+  margin-bottom: 0;
+}
+/* line 21, ../sass/modules/_blockquote.scss */
+blockquote cite {
   text-align: left;
 }
-/* line 26, ../sass/modules/_blockquote.scss */
-blockquote cite:before, blockquote figcaption:before, blockquote .figcaption:before, blockquote .figure p:before, .figure blockquote p:before, blockquote .aphorism:before, blockquote .aphorism-big:before {
-  content: "\2014 \2009";
+
+/*blockquote:before, blockquote:after {
+    display: block;
+    width: $blockquote-border-length;
+    height: $blockquote-border-width;
+    @extend %pull-center;
+    background-color: $link-color;
+    content: "\200B";
 }
 
-/* line 32, ../sass/modules/_blockquote.scss */
-blockquote:before, blockquote:after {
-  display: block;
-  width: 10em;
-  height: 5px;
-  background-color: #cccccc;
-  content: "\200B";
+blockquote:before {
+    margin-bottom: $gap-small;
 }
 
+blockquote:after {
+    margin-top: $gap-small;
+}*/
 /************************************************************************************
     PullQuotes
 *************************************************************************************/
@@ -1725,66 +1843,73 @@ blockquote:before, blockquote:after {
 .pullquote {
   font-size: 19.2px;
   font-size: 1.2rem;
-  margin: 1em auto;
-  padding: 1em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
   text-align: center;
-  max-width: 40em;
-}
-/* line 14, ../sass/modules/_pullquotes.scss */
-.pullquote:first-child {
-  margin-top: 0;
 }
 
-/* line 19, ../sass/modules/_pullquotes.scss */
+/* line 18, ../sass/modules/_pullquotes.scss */
 .pullquote:before, .pullquote:after {
   display: block;
   width: 10em;
-  height: 5px;
-  background-color: #c27c82;
+  height: 4px;
+  background-color: #f08b84;
   content: "\200B";
 }
 
+/* line 27, ../sass/modules/_pullquotes.scss */
+.pullquote:before {
+  margin-bottom: 0.5em;
+}
+
+/* line 31, ../sass/modules/_pullquotes.scss */
+.pullquote:after {
+  margin-top: 0.5em;
+}
+
 /*-----------------------Style with text-align: right and left accordingly-------------------------*/
-/* line 30, ../sass/modules/_pullquotes.scss */
+/* line 38, ../sass/modules/_pullquotes.scss */
 .pullquote-left, .pullquote-right {
-  margin-top: 1em;
-  font-size: 19.2px;
-  font-size: 1.2rem;
-  max-width: 10em;
-}
-/* line 35, ../sass/modules/_pullquotes.scss */
-.pullquote-left:first-child, .pullquote-right:first-child {
-  margin-top: 0;
-}
-
-/* line 40, ../sass/modules/_pullquotes.scss */
-.pullquote-right {
-  float: right;
-  margin-right: 0;
-  margin-left: 0.5em;
-  margin-bottom: 0.5em;
-  border-left: 5px solid #c27c82;
-  padding-left: 1em;
-  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  max-width: 38em;
+  margin: 1.5em;
+  margin-bottom: 0;
+  padding: 1em;
+  border-top: 4px solid #f08b84;
+  border-bottom: 4px solid #f08b84;
+  text-align: center;
 }
 
-/* line 47, ../sass/modules/_pullquotes.scss */
-.pullquote-left {
-  float: left;
-  margin-left: 0;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
-  border-right: 5px solid #c27c82;
-  padding-rigth: 1em;
-  text-align: left;
-}
-
-@media only screen and (max-width: 44em) {
-  /* line 54, ../sass/modules/_pullquotes.scss */
-  .pullquote-left, .pullquote-right {
+@media only screen and (min-width: 1000px) {
+  /* line 50, ../sass/modules/_pullquotes.scss */
+  .pullquote-right {
+    max-width: 15em;
+    float: right;
     border: none;
-    float: none;
-    max-width: 100%;
+    border-left: 4px solid #f08b84;
+    padding: 0;
+    padding-left: 0.25em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* line 63, ../sass/modules/_pullquotes.scss */
+  .pullquote-left {
+    max-width: 15em;
+    float: left;
+    border: none;
+    border-right: 4px solid #f08b84;
+    padding: 0;
+    padding-right: 0.25em;
+    margin-bottom: 1em;
+    margin-right: 1em;
   }
 }
 
@@ -1811,41 +1936,67 @@ blockquote:before, blockquote:after {
   font-size: 0.7rem;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0 1em;
   text-transform: uppercase;
+  text-align: center;
 }
-/* line 28, ../sass/modules/_navs.scss */
+/* line 29, ../sass/modules/_navs.scss */
 .nav > li {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 33, ../sass/modules/_navs.scss */
+/* line 34, ../sass/modules/_navs.scss */
 .nav > li > a {
   display: block;
-  padding: 1em;
+  margin: 0 0.25em;
+  padding: 0.5em;
+  padding-top: 1.5em;
   text-decoration: none;
-  color: #c27c82;
+  border: 2px solid transparent;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
-/* line 40, ../sass/modules/_navs.scss */
+/* line 44, ../sass/modules/_navs.scss */
 .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
-  text-shadow: none;
-  color: white;
-  background: #c27c82;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  color: #5f4b32;
+  background: #e0918b;
 }
-/* line 48, ../sass/modules/_navs.scss */
+/* line 53, ../sass/modules/_navs.scss */
+.nav > .current > a {
+  border-color: #f08b84;
+}
+/* line 57, ../sass/modules/_navs.scss */
 .nav > .active > a {
-  text-shadow: none;
-  background: #c27c82;
-  color: white;
+  border-color: #f08b84;
 }
-/* line 54, ../sass/modules/_navs.scss */
+/* line 60, ../sass/modules/_navs.scss */
+.nav > .active > a:after {
+  content: " \5E";
+}
+/* line 68, ../sass/modules/_navs.scss */
 .nav > .reverse {
   float: right;
 }
+@media only screen and (max-width: 700px) {
+  /* line 20, ../sass/modules/_navs.scss */
+  .nav {
+    font-size: 12.8px;
+    font-size: 0.8rem;
+  }
+}
 
-/* line 59, ../sass/modules/_navs.scss */
+/* line 77, ../sass/modules/_navs.scss */
+.nav--shift {
+  margin-left: 8em;
+}
+
+/* line 81, ../sass/modules/_navs.scss */
 .nav--central {
   display: inline-block;
   vertical-align: top;
@@ -1854,7 +2005,7 @@ blockquote:before, blockquote:after {
   *display: inline;
   *vertical-align: auto;
 }
-/* line 61, ../sass/modules/_navs.scss */
+/* line 83, ../sass/modules/_navs.scss */
 .nav--central > li {
   display: inline-block;
   vertical-align: top;
@@ -1862,27 +2013,106 @@ blockquote:before, blockquote:after {
   zoom: 1;
   *display: inline;
   *vertical-align: auto;
+  margin: 0 1em;
+}
+/* line 87, ../sass/modules/_navs.scss */
+.nav--central > li > a {
+  padding: 1em;
 }
 
-/* line 66, ../sass/modules/_navs.scss */
+/* line 93, ../sass/modules/_navs.scss */
 .nav--decorated {
-  margin-bottom: 1em;
+  padding: 0 0.5em;
+  margin-bottom: 1.5em;
 }
-/* line 68, ../sass/modules/_navs.scss */
-.nav--decorated > li {
-  margin: 1em 0.5em;
-  margin-top: 0;
-}
-/* line 71, ../sass/modules/_navs.scss */
+/* line 98, ../sass/modules/_navs.scss */
 .nav--decorated > li > a {
-  border-bottom: 1px solid #c27c82;
+  margin: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: 2px solid transparent;
+  border-bottom: 1px solid #e0918b;
+}
+/* line 107, ../sass/modules/_navs.scss */
+.nav--decorated > .current > a {
+  border-bottom-width: 2px;
+  border-top-width: 1px;
+}
+/* line 112, ../sass/modules/_navs.scss */
+.nav--decorated > .active > a {
+  border-bottom-width: 2px;
+  border-top-width: 1px;
 }
 
-@media only screen and (max-width: 44em) {
-  /* line 79, ../sass/modules/_navs.scss */
-  .nav--adapt > li {
+/* line 118, ../sass/modules/_navs.scss */
+.nav--stacked {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+/* line 120, ../sass/modules/_navs.scss */
+.nav--stacked > li {
+  float: none;
+  display: block;
+}
+/* line 123, ../sass/modules/_navs.scss */
+.nav--stacked > li > a {
+  margin: 0;
+  padding: 1em 2em;
+}
+
+@media only screen and (max-width: 700px) {
+  /* line 130, ../sass/modules/_navs.scss */
+  .nav--adaptive {
+    display: none;
+    background: #240020;
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    position: absolute;
+    top: 4.3em;
+    right: 0;
+    z-index: 20;
+  }
+  /* line 142, ../sass/modules/_navs.scss */
+  .nav--adaptive > li {
     float: none;
-    width: 95%;
+    display: block;
+    margin: 0 0.5em;
+  }
+  /* line 147, ../sass/modules/_navs.scss */
+  .nav--adaptive > li > a {
+    margin: 0;
+    padding: 1em;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border: 2px solid transparent;
+    border-bottom: 1px solid #e0918b;
+  }
+  /* line 157, ../sass/modules/_navs.scss */
+  .nav--adaptive > .current > a {
+    border-bottom-width: 2px;
+    border-top-width: 1px;
+  }
+  /* line 162, ../sass/modules/_navs.scss */
+  .nav--adaptive > .active > a {
+    border-bottom-width: 2px;
+    border-top-width: 1px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  /* line 170, ../sass/modules/_navs.scss */
+  .nav--adaptive.open {
+    display: block;
   }
 }
 
@@ -1892,15 +2122,30 @@ blockquote:before, blockquote:after {
 /**
  * NAVBAR is a container for navigation [ .nav ]
  */
-/* line 9, ../sass/modules/_navbars.scss */
-.navbar {
-  border-bottom: 2px solid;
-}
-
 /************************************************************************************
  LOGO, BRAND
 *************************************************************************************/
-/* line 5, ../sass/modules/_logo.scss */
+/* line 6, ../sass/modules/_logo.scss */
+.ball, .logo {
+  background-color: #f08b84;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
+}
+
+/* line 16, ../sass/modules/_logo.scss */
+.ball1 {
+  background-color: #f08b84;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.3);
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
+}
+
+/* line 30, ../sass/modules/_logo.scss */
 .logo {
   display: inline-block;
   vertical-align: top;
@@ -1909,27 +2154,39 @@ blockquote:before, blockquote:after {
   *display: inline;
   *vertical-align: auto;
   font-family: "Cardo", serif;
-  -moz-border-radius: 24px;
-  -webkit-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
-  border-radius: 24px;
-  text-align: center;
-  padding: 0 0.5em;
-  margin-left: 1em;
-  margin-top: 0.5em;
-  border: 1px solid #c27c82;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  text-align: left;
+  padding: 2.25em 0.5em;
+  line-height: 1;
+  color: #440000;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
-/* line 16, ../sass/modules/_logo.scss */
+/* line 42, ../sass/modules/_logo.scss */
 .logo:hover, .logo:focus, .logo:active {
-  color: white;
+  color: #440000;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  box-shadow: none;
   text-decoration: none;
-  background: #c27c82;
 }
-@media only screen and (max-width: 44em) {
-  /* line 5, ../sass/modules/_logo.scss */
-  .logo {
-    margin-top: 1em;
+
+/* line 52, ../sass/modules/_logo.scss */
+.logo--top {
+  padding: 1em 0.5em;
+  margin-top: 0.25em;
+  margin-left: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+@media only screen and (max-width: 700px) {
+  /* line 52, ../sass/modules/_logo.scss */
+  .logo--top {
+    margin-top: 0.5em;
   }
 }
 
@@ -1938,7 +2195,7 @@ Containers:  ROW, COLUMN and FLUID
 *************************************************************************************/
 /* line 6, ../sass/modules/_containers.scss */
 .row {
-  max-width: 80em;
+  max-width: 76em;
   text-align: center;
 }
 
@@ -1958,7 +2215,7 @@ Containers:  ROW, COLUMN and FLUID
 
 /* line 28, ../sass/modules/_containers.scss */
 .central-text {
-  max-width: 40em;
+  max-width: 38em;
 }
 
 /*
@@ -1975,9 +2232,9 @@ Containers:  ROW, COLUMN and FLUID
 }*/
 /* line 49, ../sass/modules/_containers.scss */
 .column-half {
-  max-width: 40em;
+  max-width: 38em;
 }
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 49, ../sass/modules/_containers.scss */
   .column-half {
     display: inline-block;
@@ -1992,9 +2249,9 @@ Containers:  ROW, COLUMN and FLUID
 
 /* line 59, ../sass/modules/_containers.scss */
 .column-third {
-  max-width: 40em;
+  max-width: 38em;
 }
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 59, ../sass/modules/_containers.scss */
   .column-third {
     width: 33.33%;
@@ -2007,14 +2264,14 @@ Containers:  ROW, COLUMN and FLUID
   width: 50%;
   float: left;
 }
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 69, ../sass/modules/_containers.scss */
   .column-fourth {
     width: 25%;
     float: left;
   }
 }
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 700px) {
   /* line 69, ../sass/modules/_containers.scss */
   .column-fourth {
     width: 100%;
@@ -2029,7 +2286,7 @@ Containers:  ROW, COLUMN and FLUID
 .column-content, .column-sidebar {
   float: left;
 }
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 700px) {
   /* line 92, ../sass/modules/_containers.scss */
   .column-content, .column-sidebar {
     width: 100%;
@@ -2040,7 +2297,7 @@ Containers:  ROW, COLUMN and FLUID
 .column-content {
   width: 66%;
 }
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 100, ../sass/modules/_containers.scss */
   .column-content {
     width: 60%;
@@ -2051,7 +2308,7 @@ Containers:  ROW, COLUMN and FLUID
 .column-sidebar {
   width: 34%;
 }
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 107, ../sass/modules/_containers.scss */
   .column-sidebar {
     width: 40%;
@@ -2071,24 +2328,24 @@ Containers:  ROW, COLUMN and FLUID
   zoom: 1;
   *display: inline;
   *vertical-align: auto;
-  max-width: 40em;
+  max-width: 38em;
 }
 
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 127, ../sass/modules/_containers.scss */
   .box-base {
     max-width: 36em;
   }
 }
 
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 133, ../sass/modules/_containers.scss */
   .box-small {
     max-width: 26em;
   }
 }
 
-@media only screen and (min-width: 74em) {
+@media only screen and (min-width: 1000px) {
   /* line 139, ../sass/modules/_containers.scss */
   .box-mini {
     max-width: 18em;
@@ -2104,140 +2361,10 @@ Section
   padding-top: 0.25em;
 }
 
-/************************************************************************************
- BUTTONS
-*************************************************************************************/
-/**
- * helper mixin to set Buttons colors
- */
-/* line 39, ../sass/modules/_buttons.scss */
-.button, .button-theme, #toTop {
-  display: inline-block;
-  vertical-align: top;
-  /* IE hacks */
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
-  cursor: pointer;
-  text-align: center;
-  line-height: 1.33;
-  text-decoration: none;
-}
-
-/* line 50, ../sass/modules/_buttons.scss */
-.button {
-  margin: 1em 0.5em;
-  padding: 0.5em 1em;
-  color: #c27c82;
-  border: 2px solid #c27c82;
-  font-weight: bold;
-  -moz-border-radius: 24px;
-  -webkit-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
-  border-radius: 24px;
-}
-/* line 19, ../sass/modules/_buttons.scss */
-.button:hover, .button:focus, .button:active {
-  text-decoration: none;
-  color: white;
-  background: #c27c82;
-}
-
-/* line 61, ../sass/modules/_buttons.scss */
-.button--filled {
-  background: #c27c82;
-  color: white;
-}
-/* line 32, ../sass/modules/_buttons.scss */
-.button--filled:hover, .button--filled:focus, .button--filled:active {
-  background: #3f1f1f;
-  border-color: #3f1f1f;
-}
-
-/* line 70, ../sass/modules/_buttons.scss */
-.button--disabled {
-  border-color: #c9c4bf;
-  border-color: rgba(0, 0, 0, 0.2);
-  background: #c9c4bf;
-  background: rgba(0, 0, 0, 0.2);
-  color: #979592;
-  color: rgba(85, 85, 85, 0.6);
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
-}
-/* line 77, ../sass/modules/_buttons.scss */
-.button--disabled:hover, .button--disabled:focus, .button--disabled:active {
-  background: #c9c4bf;
-  background: rgba(0, 0, 0, 0.2);
-  color: #979592;
-  color: rgba(85, 85, 85, 0.6);
-}
-
-/* line 86, ../sass/modules/_buttons.scss */
-.button--long {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 40em;
-  text-transform: uppercase;
-}
-@media only screen and (min-width: 74em) {
-  /* line 86, ../sass/modules/_buttons.scss */
-  .button--long {
-    display: inline-block;
-    vertical-align: top;
-    /* IE hacks */
-    zoom: 1;
-    *display: inline;
-    *vertical-align: auto;
-    width: 47%;
-  }
-}
-
-/************************************************************************************
-Theme Button
-*************************************************************************************/
-/* line 105, ../sass/modules/_buttons.scss */
-.button-theme {
-  vertical-align: text-bottom;
-  *vertical-align: auto;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  padding: 0 1em;
-}
-
-/************************************************************************************
-ToTop Button
-*************************************************************************************/
-/* line 119, ../sass/modules/_buttons.scss */
-#toTop {
-  margin: 0;
-  padding: 1em 1.5em;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  background: #555;
-  color: white;
-  position: fixed;
-  bottom: 3%;
-  right: 3%;
-  display: none;
-}
-/* line 131, ../sass/modules/_buttons.scss */
-#toTop:hover {
-  background: #d63e3b;
-  color: white;
-}
-@media only screen and (min-width: 74em) {
-  /* line 119, ../sass/modules/_buttons.scss */
-  #toTop {
-    bottom: 0;
-  }
+/* line 11, ../sass/modules/_section.scss */
+.section-isle {
+  padding-bottom: 3em;
+  padding-top: 3em;
 }
 
 /************************************************************************************
@@ -2247,21 +2374,35 @@ COVER.
  *  Cover is a kind of intro block (normally page title, may be some background or lead img, author info and so on)
  */
 /* line 9, ../sass/modules/_cover.scss */
-.cover, .cover-img {
+.cover, .cover-dark, .cover-img {
   padding-top: 0.25em;
-  padding-bottom: 1em;
 }
-/* line 15, ../sass/modules/_cover.scss */
-.cover h1, .cover-img h1 {
-  text-align: center;
-  margin-top: 1em;
+/* line 13, ../sass/modules/_cover.scss */
+.cover > cite, .cover-dark > cite, .cover-img > cite {
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* line 25, ../sass/modules/_cover.scss */
-.cover-img {
-  background-color: #191e25;
-  padding-top: 1.5em;
+.cover-dark, .cover-img {
+  padding-top: 0.5em;
   padding-bottom: 3em;
+}
+/* line 31, ../sass/modules/_cover.scss */
+.cover-dark .aphorism, .cover-img .aphorism {
+  font-size: 21.6px;
+  font-size: 1.35rem;
+}
+
+/* line 37, ../sass/modules/_cover.scss */
+.cover-img {
+  padding-top: 2em;
+}
+@media only screen and (max-width: 700px) {
+  /* line 37, ../sass/modules/_cover.scss */
+  .cover-img {
+    padding-top: 0.25em;
+  }
 }
 
 /************************************************************************************
@@ -2301,7 +2442,7 @@ MEDIA
 .media > .media__body > .blocktext {
   float: left;
 }
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 700px) {
   /* line 44, ../sass/modules/_media.scss */
   .media > .media__object {
     float: none;
@@ -2348,67 +2489,17 @@ Post, Articles
 /* line 7, ../sass/modules/_post.scss */
 .post {
   padding-top: 0.25em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
-/* line 13, ../sass/modules/_post.scss */
-.post h3, .post h4 {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
+/* line 12, ../sass/modules/_post.scss */
+.post blockquote p, .post .pullquote p {
+  padding-left: 0;
+  padding-right: 0;
 }
-/* line 21, ../sass/modules/_post.scss */
-.post h4 {
-  text-align: left;
-}
-/* line 25, ../sass/modules/_post.scss */
+/* line 17, ../sass/modules/_post.scss */
 .post .lead {
-  max-width: 800px;
-  max-width: 50rem;
-  text-align: center;
-  font-style: italic;
-}
-/* line 32, ../sass/modules/_post.scss */
-.post ul,
-.post ol {
-  padding-left: 3em;
-  margin-top: 1.5em;
-}
-/* line 36, ../sass/modules/_post.scss */
-.post ul li,
-.post ol li {
-  margin-top: 1em;
-  /**
-   * Remove vertical spacing from nested lists.
-   */
-}
-/* line 41, ../sass/modules/_post.scss */
-.post ul li > ul, .post ul li > ol,
-.post ol li > ul,
-.post ol li > ol {
-  margin-top: 0;
-}
-/* line 45, ../sass/modules/_post.scss */
-.post ul li > p,
-.post ol li > p {
-  margin-left: 0;
-  margin-right: 0;
-}
-/* line 52, ../sass/modules/_post.scss */
-.post hr {
-  border: none;
-  margin-top: 1.5em;
-  margin-bottom: 3em;
-  height: 0;
-}
-/* line 58, ../sass/modules/_post.scss */
-.post hr:after {
-  max-width: 5em;
-  content: "************";
-}
-/* line 66, ../sass/modules/_post.scss */
-.post .table-of-contents li {
-  margin-top: 0;
+  max-width: 736px;
+  max-width: 46rem;
 }
 
 /************************************************************************************
@@ -2450,35 +2541,33 @@ Post, Articles
 /* line 39, ../sass/modules/_thumbnails.scss */
 .thumbnail {
   display: block;
-  border: 1px solid;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 6px;
   padding: 0.25em;
-  margin: 1em 0.5em;
+  margin: 1.5em 1em;
 }
-/* line 46, ../sass/modules/_thumbnails.scss */
+/* line 49, ../sass/modules/_thumbnails.scss */
 .thumbnail img {
   margin: 0;
   border: none;
 }
 
-/* line 55, ../sass/modules/_thumbnails.scss */
-a.thumbnail,
+/* line 58, ../sass/modules/_thumbnails.scss */
 a.thumbnail {
   cursor: pointer;
   text-align: center;
   padding: 0.5em;
   margin: 0.5em;
   text-decoration: none;
-  background: #c27c82;
-  color: white;
-  font-family: "Open Sans", sans-serif;
+  background: #e0918b;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  color: #5f4b32;
 }
-/* line 65, ../sass/modules/_thumbnails.scss */
-a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active,
-a.thumbnail:hover,
-a.thumbnail:focus,
-a.thumbnail:active {
-  background: #3f1f1f;
+/* line 68, ../sass/modules/_thumbnails.scss */
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active {
+  background: #784746;
+  text-shadow: none;
   color: white;
   text-decoration: none;
 }
@@ -2486,215 +2575,21 @@ a.thumbnail:active {
 /************************************************************************************
     Page Header
 *************************************************************************************/
-/* line 5, ../sass/modules/_page-header.scss */
-.page-header {
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
-}
-
 /************************************************************************************
     Page Main
 *************************************************************************************/
 /* line 5, ../sass/modules/_page-main.scss */
 .page-main {
-  min-height: 80%;
+  min-height: 70%;
 }
 
 /************************************************************************************
     Page footer
 *************************************************************************************/
 /* line 5, ../sass/modules/_page-footer.scss */
-.page-footer-img {
-  padding-bottom: 1.5em;
-}
-
-/* line 10, ../sass/modules/_page-footer.scss */
 .page-footer {
-  padding-bottom: 1.5em;
-  min-height: 15em;
-  background: #191e25;
-}
-
-/************************************************************************************
-    Callouts. Notification Messages
-*************************************************************************************/
-/*
- * Not quite alerts, but custom and helpful notes to emphasize a short part of text with its header.
- */
-/* line 17, ../sass/modules/_callouts.scss */
-.callout-info, .callout-warning, .callout-attention {
-  margin: 1em;
-  padding: 1em;
-  border-left: 3px solid #eeeeee;
-}
-/* line 21, ../sass/modules/_callouts.scss */
-.callout-info h1, .callout-warning h1, .callout-attention h1, .callout-info h2, .callout-warning h2, .callout-attention h2, .callout-info h3, .callout-warning h3, .callout-attention h3, .callout-info h4, .callout-warning h4, .callout-attention h4, .callout-info h5, .callout-warning h5, .callout-attention h5, .callout-info h6, .callout-warning h6, .callout-attention h6 {
-  margin-top: 0;
-}
-
-/* line 26, ../sass/modules/_callouts.scss */
-.callout-info {
-  background: #f4f8fa;
-  border-color: #bce8f1;
-}
-/* line 12, ../sass/modules/_callouts.scss */
-.callout-info h1, .callout-info h2, .callout-info h3, .callout-info h4, .callout-info h5, .callout-info h6 {
-  color: #34789a;
-}
-
-/* line 31, ../sass/modules/_callouts.scss */
-.callout-warning {
-  background: #faf8f0;
-  border-color: #faebcc;
-}
-/* line 12, ../sass/modules/_callouts.scss */
-.callout-warning h1, .callout-warning h2, .callout-warning h3, .callout-warning h4, .callout-warning h5, .callout-warning h6 {
-  color: #8a6d3b;
-}
-
-/* line 36, ../sass/modules/_callouts.scss */
-.callout-attention {
-  background: #fdf7f7;
-  border-color: #eed3d7;
-}
-/* line 12, ../sass/modules/_callouts.scss */
-.callout-attention h1, .callout-attention h2, .callout-attention h3, .callout-attention h4, .callout-attention h5, .callout-attention h6 {
-  color: #b94a48;
-}
-
-/************************************************************************************
-    Alerts. Notification Messages
-*************************************************************************************/
-/* line 12, ../sass/modules/_alerts.scss */
-.alert-info, .alert-success, .alert-warning, .alert-error {
-  margin: 1.5em 0;
-  padding: 1em;
-  border: 1px solid;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-/* line 19, ../sass/modules/_alerts.scss */
-.alert-info {
-  background: #bde5f8;
-  color: #00529b;
-  border-color: #8fd3f3;
-}
-
-/* line 24, ../sass/modules/_alerts.scss */
-.alert-success {
-  background: #dff2bf;
-  color: #4f8a10;
-  border-color: #cae995;
-}
-
-/* line 29, ../sass/modules/_alerts.scss */
-.alert-warning {
-  background: #feefb3;
-  color: #9f6000;
-  border-color: #fde481;
-}
-
-/* line 34, ../sass/modules/_alerts.scss */
-.alert-error {
-  background: #ffbaba;
-  color: #d8000c;
-  border-color: #ff8787;
-}
-
-/************************************************************************************
-Hero
-*************************************************************************************/
-/* line 5, ../sass/modules/_hero.scss */
-.hero {
-  float: right;
-  margin: 1em;
-  margin-top: 55px;
-  margin-bottom: 50px;
-  padding: 0;
-  padding-bottom: 0.5em;
-  text-align: center;
-  font-size: 17.6px;
-  font-size: 1.1rem;
-}
-/* line 16, ../sass/modules/_hero.scss */
-.hero h1, .hero h2, .hero h3 {
-  margin: 0;
-  font-size: 22.4px;
-  font-size: 1.4rem;
-}
-@media only screen and (max-width: 44em) {
-  /* line 5, ../sass/modules/_hero.scss */
-  .hero {
-    margin-top: 1em;
-  }
-}
-/* line 25, ../sass/modules/_hero.scss */
-.hero .button {
-  margin: 0.5em 0;
-}
-
-/* line 1, ../sass/modules/_isle.scss */
-.isle {
-  padding: 1em;
-}
-
-/* line 5, ../sass/modules/_isle.scss */
-.isle_s {
-  padding: 14px;
-}
-
-/* line 9, ../sass/modules/_isle.scss */
-.isle_l {
-  padding: 56px;
-}
-
-/************************************************************************************
-ADAPTIVE IFRAME (VIDEO, MAPS...)
-*************************************************************************************/
-/* line 6, ../sass/modules/_iframe.scss */
-iframe, object, embed {
-  max-width: 100%;
-}
-
-/* line 15, ../sass/modules/_iframe.scss */
-.iframeContainer {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin-top: 1em;
-}
-
-/* line 26, ../sass/modules/_iframe.scss */
-.iframeContainer iframe,
-.iframeContainer object,
-.iframeContainer embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* line 38, ../sass/modules/_iframe.scss */
-.iframeContainer--gmap {
-  padding-bottom: 100%;
-}
-
-/************************************************************************************
-vCard
-*************************************************************************************/
-/* line 8, ../sass/modules/_vCard.scss */
-.vCard {
-  padding: 1em;
-  text-align: left;
-}
-/* line 13, ../sass/modules/_vCard.scss */
-.vCard .phone, .vCard .address {
-  color: #d63e3b;
+  padding-bottom: 4.5em;
+  padding-top: 0.25em;
 }
 
 /************************************************************************************
@@ -2702,49 +2597,99 @@ vCard
 *************************************************************************************/
 /* line 5, ../sass/modules/_aphorism.scss */
 .aphorism {
-  float: right;
-  font-family: "Open Sans", sans-serif;
-  margin: 0.5em 1em;
-  max-width: 30em;
+  margin-top: 2em;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
 }
-
 /* line 13, ../sass/modules/_aphorism.scss */
-.aphorism-big {
-  margin-top: 0.25em;
-  margin-bottom: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 22.4px;
-  font-size: 1.4rem;
-  text-align: center;
-}
-
-/************************************************************************************
-Table of Contents
-*************************************************************************************/
-/* line 6, ../sass/modules/_table-of-contents.scss */
-.table-of-contents li {
-  margin-top: 0;
-}
-
-/************************************************************************************
-Post, Articles
-*************************************************************************************/
-/* line 5, ../sass/modules/_post-preview.scss */
-.post-preview {
-  padding: 1em;
+.aphorism ul {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   text-align: left;
-  margin: 1em;
 }
-/* line 10, ../sass/modules/_post-preview.scss */
-.post-preview p {
-  margin-top: 1em;
-  margin-bottom: 0;
+/* line 19, ../sass/modules/_aphorism.scss */
+.aphorism ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
-/* line 15, ../sass/modules/_post-preview.scss */
-.post-preview h1, .post-preview h2, .post-preview h3, .post-preview h4 {
-  font-size: 22.4px;
-  font-size: 1.4rem;
-  margin-top: 0;
-  border: none;
+/* line 26, ../sass/modules/_aphorism.scss */
+.aphorism hr {
+  margin: 0.5em auto;
+  width: 6em;
+  height: 1px;
+  background-color: #af9696;
+}
+
+/**
+ * Zebra. To slightly change background color like in  Zebra Striping Table, List and etc
+ * Zebra is used to separate content by slight variance of background color
+ *
+ * <ul class="zebra">
+ *  <li>content goes here</li>
+ *  <li>content goes here</li>
+ *  <li>content goes here</li>
+ * </ul>
+ *
+ *
+ * <div class="zebra">
+ *  <div class="zebra__item">content goes here</div>
+ *  <div class="zebra__item">content goes here</div >
+ *  <div class="zebra__item">content goes here</div >
+ * </div>
+ *
+ */
+/* line 23, ../sass/modules/_zebra.scss */
+.zebra .zebra__item:nth-child(even),
+.zebra > li:nth-child(even) {
+  border-style: solid;
+  border-width: 2px;
+  border-left: none;
+  border-right: none;
+}
+
+/* line 35, ../sass/modules/_zebra.scss */
+.zebra-shadow .zebra__item:nth-child(even),
+.zebra-shadow > li:nth-child(even) {
+  border-style: solid;
+  border-width: 2px;
+  border-left: none;
+  border-right: none;
+}
+
+/************************************************************************************
+Tables
+*************************************************************************************/
+/* line 6, ../sass/modules/_tables.scss */
+.table-2-column {
   text-align: center;
+}
+/* line 8, ../sass/modules/_tables.scss */
+.table-2-column p {
+  display: inline-block;
+  vertical-align: top;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  width: 47%;
+  text-align: left;
+  padding: 1em;
+  margin: 0;
+}
+@media only screen and (max-width: 700px) {
+  /* line 8, ../sass/modules/_tables.scss */
+  .table-2-column p {
+    display: block;
+    width: auto;
+  }
 }

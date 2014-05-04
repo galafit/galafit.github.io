@@ -67,14 +67,12 @@ home_en:         /en
 navigation_ru:
   - name:         Сны
     folder:       dreams
-  - name:         Образование
+  - name:         Обучение
     folder:       education
   - name:         Теории
     folder:       theories
   - name:         Библиотека
     folder:       library
-  - name:         Сказки
-    folder:       tales
 
 # relative to folder en
 navigation_en:
@@ -95,5 +93,16 @@ dreams_ru:
   - name:         Наблюдения
     folder:       findings
 
+
+# [theoies]  subNavigation:
+# relative to folder ru/theories
+theories_ru:
+  - name:         &#34;Светлая&#34; шизофрения
+    folder:       schizophrenia
+  - name:         Внутренний мир. Душа
+    folder:       inworld
+    excerpt:      "Здесь пока только неоконченное, &#34;сырое&#34; или даже просто фрагменты.  Все же, при желании, даже из этих отрывков можно получить представление о нашем понимании внутреннего мира, души человека. Того понимания, которое начало у нас формироваться в процессе &#34;домашнего обучения&#34;, потом развивалось в исследованиях сна и сновидений, в результате наших размышлений и дискуссий"
+  - name:         Здоровье
+    folder:       health
 
 

@@ -86,6 +86,13 @@
     white-space: nowrap;
 }
 
+/*
+ * Borders
+ */
+
+.border-top {
+    border-top: 1px solid $link-soft;
+}
 
 /*
  * Adaptation
@@ -111,6 +118,8 @@
         width: 100%;
     }
 }
+
+
 
 /*
  * Clearfix: contain floats

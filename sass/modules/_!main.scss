@@ -24,10 +24,10 @@ html {
     -ms-text-size-adjust: 100%;
     /* improves the text rendering in more recent browsers */
     text-rendering: optimizeLegibility;
+    @extend .theme-base;
 
     font-size: $base-font-size*1em;
 
-    @extend .theme-base;
 
     @include breakpoint(big) {
         font-size: $base-font-size-screen-big*1em;
@@ -55,20 +55,14 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 }
 
 a {
-    color: $link-color;
-    text-decoration: none;
+     color: $link-color;
+     text-decoration: none;
 
-    &:hover, &:focus, &:active {
-        color: $link-hover-color;
-        text-decoration: underline;
-    }
-
-    &:visited {
-       // color: $link-visited-color;
-    }
-}
-
-
+     &:hover, &:focus, &:active {
+         color: $link-hover-color;
+         text-decoration: underline;
+     }
+ }
 
 ::-moz-selection, ::selection {
     background: $brand-color;
@@ -92,14 +86,31 @@ i, em,  q {
     font-style: italic;
 }
 
+
 hr {
-    border: none;
-    border-top: 2px solid $base-border-color;
-    margin-top: $gap-base;
-    //margin-bottom: $gap-small;
-    height: 0;
-}
+     width: 5em;
+     text-align:center;
+     margin: $gap-huge  auto;
+     border: none;
+     height: 5px;
+     background-color: mix($base-bg, $inverse-bg);
+     color: mix($base-bg, $inverse-bg);
+
+     &:before {
+         //content: "\2a\2a\2a\2a\2a\2a\2a\2a\2a";
+
+     }
+ }
+
 
 cite {
     @include font-size($cite-font-size);
+    display: block;
+    margin-top: $gap-small;
+    text-align: center;
+    font-style: italic;
+
+    &:before {
+         content: "\2014 \2009";
+     }
 }

@@ -11,10 +11,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin);
 
 
-
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
 /**
  * Improved Helvetica.
  * This allows to use Helvetica on Mac and Arial on PC
@@ -22,8 +22,8 @@ $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
  * Sourse: http://css-tricks.com/sans-serif/
  * Sourse: http://css-tricks.com/snippets/css/better-helvetica/
  */
-$font-family-sans-serif-light-400:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",  sans-serif;
-$font-family-sans-serif-light-300: 'Open Sans',  sans-serif;
+$font-family-sans-serif-light-400: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",  sans-serif;
+$font-family-sans-serif-light-300: 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",  sans-serif;
 
 $font-family-arial: Arial, sans-serif;
 
@@ -33,8 +33,8 @@ $font-family-arial: Arial, sans-serif;
 
 // Breakpoints for big and small screens used in media queries
 // -------------------------
-$screen-big: 74;
-$screen-small: 44;
+$screen-big: 1000px;
+$screen-small: 700px;
 
 
 
@@ -44,7 +44,7 @@ $screen-small: 44;
 /* Page sizes */
 $width-wide: 70;
 $width-page: 60;
-$width-text: 40; /* length of  text line that is most comfortable for reading */
+$width-text: 38; /* length of  text line that is most comfortable for reading */
 
 /* Box sizes */
 $width-media: 36;
@@ -81,6 +81,15 @@ $border-radius: 6px;
 $border-radius-large:   24px;
 
 
+$red: #d63e3b;
+$green: green;
+$blue: deepskyblue;
+
+$pink: #e0918b;
+$pink-dark: #804d4b;
+
+$gold: desaturate(#a98282, 5);
+$gold-red: saturate(#a68479, 5);
 
 
 
@@ -89,66 +98,62 @@ $border-radius-large:   24px;
 $brand-font-family: 'Cardo', serif;
 
 $brand-color: #3F1F1F;
-$accent-color: #d63e3b;
-
+$brand-color: #784746;
+$accent-color: #ee3e3b;
 
 // Links
-// -------------------------
-$link-color: #c27c82;
-$link-visited-color: #8c64b4;
+// ------------------------
+$link-soft: $pink;
+$link-color: saturate(#e9918b, 5);
+$link-color: saturate(#e9918b, 10);
 $link-hover-color: $accent-color;
-
-
-
-// Base color theme (beige)
-// ----------------------
-$base-font-family: $font-family-sans-serif-light-400;
-
-$base-bg: #f9efe2; //lighten(#f0d7b8, 10);
-$base-intense: #f5e4d1; //desaturate(lighten(#f5d7b8, 5), 10);
-$base-bg: lighten(#f9efe2, 3); //lighten(#f0d7b8, 10);
-$base-intense: lighten(#f5e4d1, 3); //desaturate(lighten(#f5d7b8, 5), 10);
-
-$base-text: #422d1c;
-$base-text-strong: saturate(#907264, 15); //#440000; //#3F3034;
-
-$base-title: darken($link-color, 25); //desaturate(lighten(#3F1F1F, 20), 5) ;
-
-$base-caption: rgba(#907264, .9); //rgba($base-text, .7);
-$base-border-color: rgba(black, 0.1);
-
-
-
-
-// Inverse color theme (gray)
-// ----------------------
-
-$inverse-font-family: $font-family-sans-serif-light-300;
-
-$inverse-intense: #1f252e; //darken(desaturate(#273040, 5), 5);
-$inverse-bg: #282e3a; //darken(desaturate(#273040, 5), 1);
-
-$inverse-text: #BEC4CC;
-$inverse-text: #BEC4C9;
-$inverse-text-strong: saturate(darken($inverse-text, 30), 10); // #60798e;
-$inverse-title: #baa3a3; // desaturate(lighten(#3F1F1F, 50), 20);
-
-$inverse-caption: rgba($inverse-text, .7);
-$inverse-border-color: rgba(white, 0.05);
+$link-visited-color: #8c64b4;
 
 
 // Dark  color
 // ----------------------
+$dark: #240020;
 
-$dark: darken($inverse-intense, 3);
+
+// Base color theme
+// ----------------------
+$base-font-family: $font-family-sans-serif-light-400;
+
+$base-text: #5F4B32;
+$base-bg:  #FBF0D9;
+$base-shadow: #f0e3c9;
+$base-highlight: lighten($base-bg, 4.5);
+
+$base-caption: saturate(darken($gold, 5), 2.5);
+$base-border-color: rgba($dark, 0.07);
+
+
+
+// Inverse color theme
+// ----------------------
+$inverse-font-family: $font-family-sans-serif-light-300;
+
+$inverse-bg: mix($dark, #332f35, 3);
+$inverse-highlight: lighten($inverse-bg, 5);
+$inverse-shadow: mix($dark, #332f35, 9);
+
+$inverse-text: lighten(desaturate($gold,5),30);
+
+$inverse-caption: saturate(lighten($gold,6),5);
+
+$inverse-border-color: rgba(white, 0.05);
+
 
 
 // Image background colors
 // ----------------------
 
-$img-text: rgba(white, .6);
-$img-title: rgba(white, .8);
-$img-logo: #d6d6d6;
+$img-text: rgba(#fff, .6);
+$img-title: rgba(#fff, .8);
+$img-text: rgba(#fff3f2, .66);
+$img-title: rgba(#fff3f2, .85);
+
+$img-min-height: 20;
 
 
 
@@ -156,9 +161,9 @@ $img-logo: #d6d6d6;
 // -------------------------
 
 $base-line-height: 1.667;
-$base-font-size: 1.25;
+$base-font-size: 1.26;
 $base-font-size-screen-big: 1.3;  // for big screens
-$base-font-size-screen-small: 1.125; // for small screens
+$base-font-size-screen-small: 1.16; // for small screens
 
 
 $line-height-large: 1.8;
@@ -168,19 +173,21 @@ $line-height-small: 1.33;
 // Headings
 // -------------------------
 $headings-line-height:  $line-height-small;
+$headings-font-family: $font-family-sans-serif-light-400;
 
-$font-size-h1: 1.9;
+$font-size-h1: 2.1;
 $font-size-h2: 1.7;
-$font-size-h3: 1.7;
-$font-size-h4: 1.4;
-$font-size-h5: 1;
+$font-size-h3: 1.5;
+$font-size-h4: 1.2;
+$font-size-h5: 1.1;
+$font-size-h6: 1;
 
 
 
 // Lead text
 // -------------------------
-$lead-font-size: 1.26;
-$lead-width: $width-text + 10;
+$lead-font-size: 1.2;
+$lead-width: $width-text + 8;
 
 
 
@@ -188,25 +195,20 @@ $lead-width: $width-text + 10;
 // -------------------------
 $nav-font-family: $font-family-sans-serif-light-400;
 $nav-font-size: .7;
+$nav-font-size-screen-small: .8;
 
-
-
-// Hero unit
-// -------------------------
-$hero-font-size: 1.1;
-$hero-h1: 1.4;
-$hero-border-color: $accent-color;
 
 
 // Cite
 // -------------------------
 $cite-font-size: .9;
+$cover-cite-font-size: 1;
 
 
 // Aphorism
 // -------------------------
-$aphorism-font-big: 1.4;
-$aphorism-width: 30;
+$aphorism-font-size: 1;
+$aphorism-font-size-large: 1.35;
 
 
 // Blocktext
@@ -217,10 +219,9 @@ $blocktext-title-size: 1.3;
 // Blockquotes
 // -------------------------
 
-$blockquote-font-size: 1.2;
 $blockquote-border-length: 10em;
 $blockquote-border-width: 5px;
-$blockquote-border-color: #ccc;
+//$blockquote-border-color: #ccc;
 
 
 
@@ -228,8 +229,8 @@ $blockquote-border-color: #ccc;
 // -------------------------
 
 $pullquote-font-size: 1.2;
-$pullquote-width: 10;
-$pullquote-border-width: 5px;
+$pullquote-width: 15;
+$pullquote-border-width: 4px;
 $pullquote-border-length: 10em;
 $pullquote-border-color: $link-color;
 

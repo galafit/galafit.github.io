@@ -14,25 +14,20 @@
 @mixin button-color($button-color) {
     color: $button-color;
     border: 2px solid $button-color;
-    font-weight: bold;
 
     &:hover, &:focus, &:active {
         text-decoration: none;
         color: white;
-        background: $button-color;
+        background: $brand-color;
+        border-color: $brand-color;
     }
 }
 
 @mixin button-filled-color($button-color) {
     background: $button-color;
-    color: white;
-// border: 1px solid darken($button-color, 20%);
-//  @include button-shadow();
-
-    &:hover, &:focus, &:active {
-        background: $brand-color;
-        border-color: $brand-color;;
-    }
+    color: $base-text;
+    text-shadow: 0 1px 1px rgba(white, 0.6);
+  //  @include button-shadow();
 }
 
 
@@ -50,7 +45,7 @@
 .button {
     @extend  %button-base;
     margin: $gap-base $gap-small;
-    padding: $gap-small $gap-base;
+    padding: $gap-small $gap-large;
     @include button-color($link-color);
     @include border-radius($border-radius-large);
 }
@@ -59,7 +54,7 @@
 
 // painted, filled with the color buttons
 .button--filled {
-    @include button-filled-color($link-color);
+    @include button-filled-color($link-soft);
 
 }
 
@@ -81,22 +76,6 @@
 }
 
 
-// Buttons sizes
-
-.button--long {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @include max-width ($width-text);
-    text-transform: uppercase;
-
-
-    @include breakpoint(big) {
-        @include inline-block;
-        width: 47%;
-    }
-}
-
 
 /************************************************************************************
 Theme Button
@@ -104,11 +83,12 @@ Theme Button
 
 .button-theme {
     @extend %button-base;
+    @extend %inverse-bg;
     vertical-align: text-bottom;
     *vertical-align: auto;
     @include border-radius($border-radius);
     padding: 0 $gap-base;
-    border: 2px solid;
+    //border: 1px solid;
 }
 
 
@@ -118,24 +98,46 @@ ToTop Button
 *************************************************************************************/
 
 #toTop {
-    @extend %button-base;
+    @extend .button;
+    @extend .button--filled;
     margin: 0;
-    padding: $gap-base $gap-large;
+    padding: 0.7*$gap-base 1.2*$gap-base;
     @include border-radius($border-radius);
-    background: #555;
-    color: white;
     position: fixed;
-    bottom: 3%;
-    right: 3%;
+    bottom: 0;
+    right: 2%;
+    z-index: 20;
+
     display: none;
 
-    &:hover {
-        background: $accent-color;
-        color: white;
+    &:after {
+        content: "\5E";
+
+    }
+}
+
+/************************************************************************************
+Menu Button
+*************************************************************************************/
+
+#menu {
+    @extend .button;
+    @extend .button--filled;
+    float: right;
+    margin: $gap-base $gap-small;
+    margin-bottom: 0;
+    padding: $gap-small $gap-large;
+    @include border-radius($border-radius);
+
+    display: none;
+
+    &:after {
+        content: "\2630";
+
     }
 
-    @include breakpoint(big) {
-        bottom: 0;
-     }
+    @include breakpoint(small) {
+         display: block;
+    }
 }
 

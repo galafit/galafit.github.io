@@ -3,18 +3,32 @@
 *************************************************************************************/
 
 .aphorism {
-    @extend cite;
-    float: right;
+    @extend %caption-color;
+    margin-top: $gap-huge;
     font-family: $inverse-font-family;
-    margin: $gap-small $gap-base;
-    @include max-width ($aphorism-width);
+    text-align: center;
+    //font-style: italic;
+    @include font-size($aphorism-font-size);
+
+    ul {
+        @include inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+         li {
+            display: block;
+             margin: 0;
+             padding: 0;
+        }
+    }
+
+    hr {
+        margin: $gap-small auto;
+        width: 6em;
+        height: 1px;
+        background-color: lighten($gold, 5);
+    }
+
 }
 
-.aphorism-big {
-    @extend cite;
-    margin-top: $gap-mini;
-    margin-bottom: 0;
-    font-family: $inverse-font-family;
-    @include font-size($aphorism-font-big);
-    text-align: center;
-}

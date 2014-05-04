@@ -6,13 +6,12 @@
 
 .pullquote {
     @include font-size($pullquote-font-size);
-    margin: $gap-base auto;
-    padding: $gap-base 0;
+    margin-top: $gap-huge;
+    margin-bottom: $gap-huge;
     text-align: center;
-    @include max-width ($width-text);
 
     &:first-child  {
-        margin-top: 0
+       // margin-top: 0
     }
 }
 
@@ -25,37 +24,53 @@
     content: "\200B"
 }
 
+.pullquote:before {
+    margin-bottom: $gap-small;
+}
+
+.pullquote:after {
+    margin-top: $gap-small;
+}
+
+
 /*-----------------------Style with text-align: right and left accordingly-------------------------*/
 
 .pullquote-left, .pullquote-right {
-    margin-top: $gap-base;
-    @include font-size($pullquote-font-size);
-    @include max-width ($pullquote-width);
-
-    &:first-child  {
-        margin-top: 0
-    }
+    @include inline-block;
+    @include max-width ($width-text);
+    @extend %caption-color;
+    margin: $gap-large;
+    margin-bottom: 0;
+    padding: $gap-base;
+    border-top: $pullquote-border-width solid $pullquote-border-color;
+    border-bottom: $pullquote-border-width solid $pullquote-border-color;
+    text-align: center;
 }
 
 .pullquote-right {
-    @include pull-right();
-    border-left: $pullquote-border-width solid $pullquote-border-color;
-    padding-left: $gap-base;
-    text-align: right;
+    @include breakpoint(big) {
+        @include max-width ($pullquote-width);
+        float: right;
+        border: none;
+        border-left: $pullquote-border-width solid $pullquote-border-color;
+        padding: 0;
+        padding-left: $gap-mini;
+        margin-bottom: $gap-base;
+        margin-left: $gap-base;
+    }
 }
 
 .pullquote-left {
-    @include pull-left();
-    border-right: $pullquote-border-width solid $pullquote-border-color;
-    padding-rigth: $gap-base;
-    text-align: left;
-}
-
-.pullquote-left, .pullquote-right {
-    @include breakpoint(small) {
-        @extend pullquote;
+    @include breakpoint(big) {
+        @include max-width ($pullquote-width);
+        float: left;
         border: none;
-        float: none;
-        max-width: 100%;
+        border-right: $pullquote-border-width solid $pullquote-border-color;
+        padding: 0;
+        padding-right: $gap-mini;
+        margin-bottom: $gap-base;
+        margin-right: $gap-base;
+
     }
 }
+

@@ -2,16 +2,10 @@
     Page footer
 *************************************************************************************/
 
-.page-footer-img {
-  padding-bottom: $gap-large;
-}
-
-
 .page-footer {
-    padding-bottom: $gap-large;
-    min-height: 15em;
-    background: $dark;
-    @extend .img-colors;
+    @extend .dark;
+    padding-bottom: $gap-large*3;
+    padding-top: $gap-mini;
 }
 
 

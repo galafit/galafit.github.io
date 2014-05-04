@@ -42,13 +42,13 @@
  */
 @mixin breakpoint($point) {
     @if $point == big {
-        @media only screen and (min-width: $screen-big + em) {
+        @media only screen and (min-width: $screen-big) {
             @content;
         }
     }
 
     @if $point == small {
-        @media only screen and (max-width: $screen-small + em) {
+        @media only screen and (max-width: $screen-small) {
             @content;
         }
     }
@@ -135,21 +135,31 @@ p {
 }
 
 
-
 /* all text elements are centered and limited to the line-wide comfortable for reading  */
 %text-normalize {
     text-align: left;
     p, .p,
     h1, h2, h3, h4, h5, h6,
+    cite,
     blockquote,
     .pullquote,
-    cite,
+    .aphorism,
     ul,
     ol {
         @extend %pull-center;
         @include rem-fallback(max-width,$width-text);
-        @include rem-fallback(margin-right,$gap-base-rem);
-        @include rem-fallback(margin-left,$gap-base-rem);
+        @include rem-fallback(padding-right,$gap-base-rem);
+        @include rem-fallback(padding-left,$gap-base-rem);
+    }
+
+    ul,
+    ol {
+        li {
+            > p {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
 }
 
@@ -186,22 +196,6 @@ p {
     #{$attribute}: $solid-color;
     #{$attribute}: $color;
 }
-
-
-/**
- *   Background Img
- */
-%image-bg {
-    background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-
-    background-image: url(../header-bg.jpg);
-}
-
 
 
 /**
@@ -260,6 +254,33 @@ p {
 }
 
 
+
+/**
+ *   Background Img
+ */
+%image-bg {
+    background-color: $dark;
+    background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+    @include min-height($img-min-height);
+
+    //background-image: url(../bg/sky.jpg);
+}
+
+
+
+@mixin border-top-radius ($radius: $border-radius){
+    -webkit-border-top-left-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topleft: $radius;
+    -moz-border-radius-topright: $radius;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
 
 
 @mixin border-radius($radius: $border-radius) {

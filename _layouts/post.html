@@ -6,24 +6,17 @@ layout: default
 
 {% include setup %}
 
-<div class="row">
-    <div class="aphorism">
-        {{ page.aphorism }}
-    </div>
-</div>
-<div class="row">
-    <div class="post">
 
-        {{ content }}
-
-    </div>
+<div class="post">
+    {{ content }}
 </div>
+
 
 <div class="row thumbnail-container">
     {% if page.next %}
     <div class="column-half">
         <a class="thumbnail" href="{{page.next.url}}" title="{{ page.next.title }}">
-            <-- {{ page.next.title }}
+            &#8592; {{ page.next.title }}
         </a>
     </div>
     {% endif %}
@@ -31,17 +24,22 @@ layout: default
     {% if page.previous %}
     <div class="column-half">
         <a class="thumbnail" href="{{ page.previous.url }}" title="{{ page.previous.title }}">
-            {{ page.previous.title }} -->
+            {{ page.previous.title }} &#8594;
         </a>
     </div>
     {% endif %}
-
-
 </div>
 
 <div class="row">
-    <a class="button button--long" href="{{ SITE_URL }}/{{ LANGUAGE }}/{{ CATEGORY }}">&#94; {{ CATEGORY_NAME }}</a>
+    <a class="button button--filled" href="{{ CATEGORY_URL }}">{{ CATEGORY_NAME }} &#94;</a>
 </div>
+
+<div class="row">
+    <a id="toTop" href="#"></a>
+</div>
+<p></p>
+
+
 
 
 

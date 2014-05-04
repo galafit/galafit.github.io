@@ -9,24 +9,38 @@ COVER.
 %cover-base {
     @extend %text-normalize;
     padding-top: $gap-mini;
-    padding-bottom: $gap-base;
-    // border-bottom: 2px solid;
 
-    h1 {
-        text-align: center;
-        margin-top: $gap-base;
+    > cite {
+        @include font-size($cover-cite-font-size);
     }
 }
 
 .cover {
     @extend %cover-base;
+
 }
 
-.cover-img {
-    background-color: $dark;
-    @extend %cover-base;
-    @extend %image-bg;
-    @extend .img-colors;
-    padding-top: $gap-large;
-    padding-bottom: $gap-large * 2;
+
+
+.cover-dark {
+     @extend %cover-base;
+     @extend .dark;
+     padding-top: $gap-small;
+     padding-bottom: $gap-large*2;
+
+    .aphorism {
+          @include font-size($aphorism-font-size-large);
+     }
 }
+
+
+.cover-img {
+    @extend .cover-dark;
+    @extend %image-bg;
+    padding-top: $gap-huge;
+
+    @include breakpoint(small) {
+        padding-top: $gap-mini;
+    }
+}
+

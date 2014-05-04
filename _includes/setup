@@ -10,12 +10,32 @@
 
 
 {% assign LANGUAGE  = page.categories[0] %}
-{% assign CATEGORY  = page.categories[1] %}
+
+{% if page.categories[1]  %}
+  {% assign CATEGORY  = page.categories[1] %}
+  {% capture CATEGORY_URL %}{{ SITE_URL }}/{{ LANGUAGE }}/{{ CATEGORY }}{% endcapture %}
+{% else %}
+  {% assign CATEGORY  = LANGUAGE %}
+  {% capture CATEGORY_URL %}{{ SITE_URL }}/{{ LANGUAGE }}{% endcapture %}
+{% endif %}
+
+
+
 {% capture NAV %}navigation_{{ LANGUAGE }}{% endcapture %}
 {% capture HOME %}home_{{ LANGUAGE }}{% endcapture %}
+
+{% capture SUBNAV %}{{ CATEGORY }}_{{ LANGUAGE }}{% endcapture %}
+
 
 {% for link in site[NAV] %}
     {% if link.folder == CATEGORY %}
 {% assign CATEGORY_NAME = link.name %}
      {% endif %}
 {% endfor %}
+
+{% if page.title == "Index" or  page.title == null %}
+   {% assign TITLE = CATEGORY_NAME %}
+{% else %}
+   {% assign TITLE = page.title %}
+{% endif %}
+
