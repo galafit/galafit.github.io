@@ -37,7 +37,9 @@
 
 {% for link in site[NAV] %}
     {% if link.folder == CATEGORY %}
-{% assign CATEGORY_NAME = link.name %}
+       {% assign CATEGORY_NAME = link.name %}
+    {% else %}
+        {% assign CATEGORY_NAME = "Home" %}
      {% endif %}
 {% endfor %}
 

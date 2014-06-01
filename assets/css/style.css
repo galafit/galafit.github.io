@@ -1826,7 +1826,7 @@ blockquote {
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: left;
-  border-left: 3px solid #cc9598;
+  border-left: 2px solid #cc9598;
   font-style: italic;
 }
 /* line 13, ../sass/modules/_blockquote.scss */
