@@ -4,73 +4,105 @@
 
 /* use to  mark out some text as PullQuote but without pulling  */
 
-.pullquote {
-    @include font-size($pullquote-font-size);
-    margin-top: $gap-huge;
-    margin-bottom: $gap-huge;
-    text-align: center;
-
-    &:first-child  {
-       // margin-top: 0
-    }
-}
-
-.pullquote:before, .pullquote:after {
+.pullquote-open {
     @extend %pull-center;
-    display: block;
-    width: $pullquote-border-length;
-    height: $pullquote-border-width;
-    background-color: $pullquote-border-color;
-    content: "\200B"
-}
-
-.pullquote:before {
-    margin-bottom: $gap-small;
-}
-
-.pullquote:after {
-    margin-top: $gap-small;
-}
-
-
-/*-----------------------Style with text-align: right and left accordingly-------------------------*/
-
-.pullquote-left, .pullquote-right {
-    @include inline-block;
-    @include max-width ($width-text);
-    @extend %caption-color;
-    margin: $gap-large;
-    margin-bottom: 0;
-    padding: $gap-base;
-    border-top: $pullquote-border-width solid $pullquote-border-color;
-    border-bottom: $pullquote-border-width solid $pullquote-border-color;
+    @include max-width(0.85 * $width-text);
+    padding: $gap-large;
+    padding-bottom: 0;
+    margin-bottom: $gap-large;
+    //border-bottom: $pullquote-border-width solid $pullquote-border-color;
     text-align: center;
-}
 
-.pullquote-right {
-    @include breakpoint(big) {
-        @include max-width ($pullquote-width);
-        float: right;
-        border: none;
-        border-left: $pullquote-border-width solid $pullquote-border-color;
+    ul {
+        @include inline-block;
+        list-style: none;
+        margin: 0;
         padding: 0;
-        padding-left: $gap-mini;
-        margin-bottom: $gap-base;
-        margin-left: $gap-base;
+        text-align: left;
+        li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    hr {
+        margin: $gap-small auto;
+        width: $pullquote-border-length;
+        height: 1px;
+        background-color: rgba($link-soft, 0.4);
+        color: rgba($link-soft, 0.4);
+    }
+
+    @include breakpoint(small) {
+         max-width: 80%;
+     }
+
+    &:after {
+        @extend %pull-center;
+        display: block;
+        margin-top: $gap-base;
+        width: $pullquote-border-length;
+        height: $pullquote-border-width;
+        background-color: $pullquote-border-color;
+        content: "\200B";
     }
 }
 
-.pullquote-left {
-    @include breakpoint(big) {
-        @include max-width ($pullquote-width);
-        float: left;
-        border: none;
-        border-right: $pullquote-border-width solid $pullquote-border-color;
-        padding: 0;
-        padding-right: $gap-mini;
-        margin-bottom: $gap-base;
-        margin-right: $gap-base;
 
+
+.pullquote {
+    @extend %pull-center;
+    @include max-width(0.7*$width-text);
+    margin-top: $gap-large;
+    margin-bottom: $gap-large;
+    text-align: center;
+
+    @include breakpoint(small) {
+        max-width: 80%;
     }
+
+
+    &:before, &:after {
+        @extend %pull-center;
+        display: block;
+        width: $pullquote-border-length;
+        height: $pullquote-border-width;
+        background-color: $pullquote-border-color;
+        content: "\200B"
+    }
+
+    &:before {
+        margin-bottom: $gap-base;
+    }
+
+    &:after {
+        margin-top: $gap-base;
+    }
+
 }
+
+
+
+
+/*
+.pullquote {
+    @extend %pull-center;
+    @include max-width(0.6*$width-text);
+    padding: $gap-base;
+    margin-bottom: $gap-large;
+    margin-top: $gap-large;
+    border-bottom: $pullquote-border-width solid $pullquote-border-color;
+    border-top: $pullquote-border-width solid $pullquote-border-color;
+    text-align: center;
+
+    @include breakpoint(small) {
+        max-width: 80%;
+    }
+}*/
+
+
+
+
+
 

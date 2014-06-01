@@ -7,13 +7,17 @@
 // -------------------------
 
 /** google fonts */
-@import url(http://fonts.googleapis.com/css?family=Cardo);
+//@import url(http://fonts.googleapis.com/css?family=Cardo);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin);
+
+
 
 
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
 
 /**
  * Improved Helvetica.
@@ -81,6 +85,40 @@ $border-radius: 6px;
 $border-radius-large:   24px;
 
 
+$brown-alice: #c78361;
+$browm-apple: #b87f25;
+$brown1: #b36522;
+$oscuro: #995c4d;
+$oscuro: #82463b;
+$oscuro: #8a4f43;
+$brown: #634b3b;
+$brown: #574339;
+$brown: #634329;
+$brown: #6e4b30;
+
+
+
+$sepia-intense1: #debd95;
+$sepia-oscuro: #dbceb8;
+$sepia-intense: #f0e3c9;
+
+$milk: #f5f3ed;
+$milk1: #f0ede6;
+
+$violet: #5f2c78;
+$blue: #007bff;
+$blue1: #029cb8;
+$blue2: #356d9c;
+$blue3: #4979a3;
+$blue-dark: #35494f;
+
+$red: #750f0d;
+$red: #96332a;
+$red: #f25757;
+$red: #ff837d;
+$soft: #e69b8a;
+
+
 $red: #d63e3b;
 $green: green;
 $blue: deepskyblue;
@@ -93,26 +131,44 @@ $gold-red: saturate(#a68479, 5);
 
 
 
+
+
 // Brand staff
 // -------------------------
-$brand-font-family: 'Cardo', serif;
+$brand-font-size: .8;
+$brand-font-size-screen-small: .95;
 
-$brand-color: #3F1F1F;
-$brand-color: #784746;
-$accent-color: #ee3e3b;
+
 
 // Links
 // ------------------------
-$link-soft: $pink;
-$link-color: saturate(#e9918b, 5);
-$link-color: saturate(#e9918b, 10);
-$link-hover-color: $accent-color;
-$link-visited-color: #8c64b4;
+//$mix: mix(lighten($violet, 15), $soft, 50);
+//$link-soft: mix($soft, $mix,50);
+//$link-color: mix($soft, $mix,1);
+
+//$link-soft: mix(#A87A72, $soft);
+//$link-color: mix(saturate(#916a6a, 10), $soft);
+
+
+
+//$link-color: darken(mix(#A58EAE, $soft, 70), 10);
+//$link-color: darken(saturate(mix(#A58EAE, $soft, 75), 10),10);
+//$link-soft:mix(#A58EAE, $soft, 40);
+
+$link-color: mix(darken(saturate(mix(#A58EAE, $soft, 75), 10),10), mix(saturate(#916a6a, 10), $soft));
+$link-soft:mix(#A58EAE, $soft, 40);
+$link-hover-color: #ee3e3b;
+
+
+
 
 
 // Dark  color
 // ----------------------
+$dark1: #240020;
 $dark: #240020;
+$text-dark: #440000;
+
 
 
 // Base color theme
@@ -121,27 +177,21 @@ $base-font-family: $font-family-sans-serif-light-400;
 
 $base-text: #5F4B32;
 $base-bg:  #FBF0D9;
-$base-shadow: #f0e3c9;
-$base-highlight: lighten($base-bg, 4.5);
-
-$base-caption: saturate(darken($gold, 5), 2.5);
-$base-border-color: rgba($dark, 0.07);
-
+$base-highlight: lighten($base-bg, 3);
+$base-border-color: rgba($dark, 0.08);
 
 
 // Inverse color theme
 // ----------------------
+
 $inverse-font-family: $font-family-sans-serif-light-300;
 
-$inverse-bg: mix($dark, #332f35, 3);
-$inverse-highlight: lighten($inverse-bg, 5);
-$inverse-shadow: mix($dark, #332f35, 9);
+$inverse-bg: lighten(mix($dark1, #332f35, 5), 3);
+$inverse-highlight: lighten($inverse-bg, 4);
 
 $inverse-text: lighten(desaturate($gold,5),30);
 
-$inverse-caption: saturate(lighten($gold,6),5);
-
-$inverse-border-color: rgba(white, 0.05);
+$inverse-border-color: rgba(white, 0.06);
 
 
 
@@ -163,11 +213,12 @@ $img-min-height: 20;
 $base-line-height: 1.667;
 $base-font-size: 1.26;
 $base-font-size-screen-big: 1.3;  // for big screens
-$base-font-size-screen-small: 1.16; // for small screens
+$base-font-size-screen-small: 1.1; // for small screens
 
 
 $line-height-large: 1.8;
 $line-height-small: 1.33;
+
 
 
 // Headings
@@ -182,12 +233,25 @@ $font-size-h4: 1.2;
 $font-size-h5: 1.1;
 $font-size-h6: 1;
 
+$font-size-h1: 2.2;
+$font-size-h2: 1.7;
+$font-size-h3: 1.5;
+$font-size-h4: 1.3;
+$font-size-h5: 1.2;
+$font-size-h6: 1;
+
 
 
 // Lead text
 // -------------------------
 $lead-font-size: 1.2;
 $lead-width: $width-text + 8;
+
+
+// Page Cover
+// -------------------------
+$cover-cite-font-size: 1;
+$cover-subtitle-font-size: 1.4;
 
 
 
@@ -201,14 +265,8 @@ $nav-font-size-screen-small: .8;
 
 // Cite
 // -------------------------
-$cite-font-size: .9;
-$cover-cite-font-size: 1;
+$cite-font-size: .85;
 
-
-// Aphorism
-// -------------------------
-$aphorism-font-size: 1;
-$aphorism-font-size-large: 1.35;
 
 
 // Blocktext
@@ -220,19 +278,18 @@ $blocktext-title-size: 1.3;
 // -------------------------
 
 $blockquote-border-length: 10em;
-$blockquote-border-width: 5px;
-//$blockquote-border-color: #ccc;
+$blockquote-border-width: 3px;
+$blockquote-border-color: $link-soft;;
 
 
 
 // PullQuotes
 // -------------------------
 
-$pullquote-font-size: 1.2;
 $pullquote-width: 15;
-$pullquote-border-width: 4px;
+$pullquote-border-width: 3px;
 $pullquote-border-length: 10em;
-$pullquote-border-color: $link-color;
+$pullquote-border-color: $link-soft;
 
 
 

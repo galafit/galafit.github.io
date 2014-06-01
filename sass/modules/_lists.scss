@@ -2,28 +2,8 @@
    LISTS
 *************************************************************************************/
 
-ul,
-ol {
-    margin-top: $gap-base;
-    margin-bottom: $gap-large;
-    text-align: left;
-
-    li {
-        margin-top: $gap-base;
-        margin-left: $gap-huge;
-        /**
-         * Remove vertical spacing from nested lists.
-         */
-        > ul, > ol {
-            margin: 0;
-            margin-left: $gap-base;
-        }
-    }
-}
-
 
 .list-dashed {
-
     list-style: none;
     li:before {
         content: "\2014 ";

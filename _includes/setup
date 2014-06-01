@@ -10,6 +10,14 @@
 
 
 {% assign LANGUAGE  = page.categories[0] %}
+{% if LANGUAGE == "ru"  %}
+  {% assign LANGUAGE_CHANGE_URL  = site.home_en %}
+  {% assign LANGUAGE_CHANGE  = "eng" %}
+{% else %}
+  {% assign LANGUAGE_CHANGE_URL  = site.home_ru %}
+    {% assign LANGUAGE_CHANGE  = "rus" %}
+{% endif %}
+
 
 {% if page.categories[1]  %}
   {% assign CATEGORY  = page.categories[1] %}

@@ -8,6 +8,12 @@ layout: default
 
 
 <div class="post">
+    {% if page.aphorism %}
+     <div class="pullquote-open">{{ page.aphorism }}</div>
+    {% endif %}
+    {% if page.img %}
+    <img src="{{site.img}}/{{page.img}}" />
+    {% endif %}
     {{ content }}
 </div>
 
@@ -33,11 +39,13 @@ layout: default
 <div class="row">
     <a class="button button--filled" href="{{ CATEGORY_URL }}">{{ CATEGORY_NAME }} &#94;</a>
 </div>
-
-<div class="row">
-    <a id="toTop" href="#"></a>
-</div>
 <p></p>
+
+<div class="comments"><div id="disqus_thread"></div></div>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 
 
 

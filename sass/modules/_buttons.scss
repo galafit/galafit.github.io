@@ -17,17 +17,25 @@
 
     &:hover, &:focus, &:active {
         text-decoration: none;
-        color: white;
-        background: $brand-color;
-        border-color: $brand-color;
+        text-shadow: 0 1px 1px rgba(white, 0.4);
+        color: $text-dark;
+        background: $button-color;
+       // border-color: $brand-color;
     }
 }
 
 @mixin button-filled-color($button-color) {
     background: $button-color;
-    color: $base-text;
-    text-shadow: 0 1px 1px rgba(white, 0.6);
+    color: $text-dark;
+    text-shadow: 0 1px 1px rgba(white, 0.4);
+    border: 2px solid $button-color;
   //  @include button-shadow();
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        color: $button-color;
+        background: none;
+        text-shadow: none;
+    }
 }
 
 
@@ -99,18 +107,18 @@ ToTop Button
 
 #toTop {
     @extend .button;
-    @extend .button--filled;
     margin: 0;
     padding: 0.7*$gap-base 1.2*$gap-base;
     @include border-radius($border-radius);
     position: fixed;
-    bottom: 0;
-    right: 2%;
+    bottom: 25px;
+    right: 25px;
     z-index: 20;
 
     display: none;
 
     &:after {
+        font-weight: bold;
         content: "\5E";
 
     }
@@ -119,7 +127,7 @@ ToTop Button
 /************************************************************************************
 Menu Button
 *************************************************************************************/
-
+/*
 #menu {
     @extend .button;
     @extend .button--filled;
@@ -140,4 +148,5 @@ Menu Button
          display: block;
     }
 }
+*/
 

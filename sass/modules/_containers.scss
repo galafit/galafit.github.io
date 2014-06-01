@@ -4,9 +4,9 @@ Containers:  ROW, COLUMN and FLUID
 
 
 .row {
+    @include max-width ($width-max);
     @extend %clearfix;
     @extend %pull-center;
-    @include max-width ($width-max);
     text-align: center;
 }
 
@@ -23,6 +23,7 @@ Containers:  ROW, COLUMN and FLUID
 .central-page {
     @extend %pull-center;
     @include max-width ($width-page);
+    //@include rem-fallback(max-width, $width-page);
 }
 
 .central-text {

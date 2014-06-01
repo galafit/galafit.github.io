@@ -38,20 +38,24 @@
 
 .thumbnail {
 
- //   @extend %inline-block;
+    //   @extend %inline-block;
     @extend %border-color;
     display: block;
     border-width: 1px;
     border-style: solid;
     border-radius: $border-radius;
-    padding: $gap-mini;
+    padding: $gap-mini $gap-base;
     margin: $gap-large $gap-base;
     img {
         margin: 0;
         border: none;
     }
-}
 
+    @include breakpoint(small) {
+        margin: $gap-large $gap-small;
+        padding: $gap-mini
+    }
+}
 
 // Add a hover state for linked versions only
 
@@ -62,23 +66,24 @@ a.thumbnail {
     margin: $gap-small;
     text-decoration: none;
     background: $link-soft;
-    text-shadow: 0 1px 1px rgba(white, 0.6);
-    color: $base-text;
+    border: 2px solid $link-soft;
+    text-shadow: 0 1px 1px rgba(white, 0.4);
+    color: $text-dark;
 
     &:hover, &:focus, &:active {
-        background: $brand-color;
+        background: inherit;
         text-shadow: none;
-        color: white;
+        color: $link-color;
         text-decoration: none;
+        border: 2px solid $link-soft;
     }
 }
-
-
 
 // Helper class for js that makes all inside
 // .thumbnails of equal height
 // ------------------------------------------
-.thumbnail-container {}
+.thumbnail-container {
+}
 
 
 

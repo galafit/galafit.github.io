@@ -19,11 +19,13 @@
 
 .nav {
     // @include inline-block;
-    @include font-size($nav-font-size);
+    @extend %pull-center;
     font-family: $nav-font-family;
     list-style: none;
     padding: 0;
-    margin: 0 $gap-base;
+    @include rem-fallback(max-width, $width-text);
+    @include rem-fallback(padding-left, $gap-base-rem);
+    @include font-size($nav-font-size);
     text-transform: uppercase;
     text-align: center;
     > li {
@@ -37,13 +39,15 @@
             margin: 0 $gap-mini;
             padding: $gap-small;
             padding-top: $gap-large;
+            padding-bottom: 0;
             text-decoration: none;
             border: 2px solid transparent;
             @include border-radius($border-radius);
+            color: $link-color;
 
             &:hover, &:focus, &:active {
-                text-shadow: 0 1px 1px rgba(white, 0.6);
-                color: $base-text;
+                text-shadow: 0 1px 1px rgba(white, 0.4);
+                color: $text-dark;
                 background: $link-soft;
             }
 
@@ -52,10 +56,12 @@
 
     > .current > a {
         border-color: $link-color;
+
     }
 
     > .active > a {
         border-color: $link-color;
+
 
         &:after {
             //content: "\25BE";
@@ -65,7 +71,7 @@
         }
     }
 
-    > .reverse {
+    > .separate {
         float: right;
     }
 
@@ -74,20 +80,28 @@
     }
 }
 
-.nav--shift {
-    margin-left: 8em;
+
+.nav--right {
+    float: right;
+    margin-right: 7.5em;
 }
 
-.nav--central {
-    @include inline-block;
-    > li {
+.nav--stack {
         @include inline-block;
-        margin: 0 $gap-base;
+        margin-bottom: $gap-base;
+        > li {
+            float: none;
+            display: block;
+            > a {
+                padding: $gap-base $gap-large ;
+            }
 
-        > a {
-            padding: $gap-base;
         }
-    }
+
+        > .separate {
+            margin: $gap-base;
+            @include inline-block;
+        }
 }
 
 .nav--decorated {
@@ -98,20 +112,21 @@
         > a {
             margin: 0;
             @include border-radius(0);
-            border: 2px solid transparent;
-            border-bottom: 1px solid $link-soft;
-
+            padding: $gap-base $gap-large;
+            border: 1px solid transparent;
+            border-bottom: 1px solid $link-color;
+            border-bottom: 1px solid rgba($link-color, .15);
         }
     }
 
     > .current > a {
-         border-bottom-width: 2px;
-         border-top-width: 1px;
+         background: mix($dark, $link-color, 90);
+         border-color: transparent;
      }
 
      > .active > a {
-         border-bottom-width: 2px;
-         border-top-width: 1px;
+         background: mix($dark, $link-color, 90);
+         border-color: transparent;
      }
 }
 
@@ -125,44 +140,71 @@
             padding: $gap-base $gap-huge;
         }
     }
+    > .separate {
+        float: none;
+        @include inline-block;
+        margin: $gap-large $gap-base;
+    }
+}
+
+.nav--2column {
+    @include inline-block;
+    > li {
+        float: none;
+        @include inline-block;
+        min-width: 45%;
+        margin: 0 $gap-base;
+
+    }
+    > .separate {
+        float: none;
+        min-width: 0;
+        margin: $gap-large $gap-base;
+    }
+
 }
 
 .nav--adaptive {
     @include breakpoint(small) {
-        //display: block;
         display: none;
         background: $dark;
-        padding: $gap-small;
+        margin: 0;
+        margin-top: 50px;
+        padding-top: 50px;
         padding-bottom: $gap-large;
-        position: absolute;
-        top: 4.3em;
-        right: 0;
-        z-index: 20;
 
         > li {
             float: none;
             display: block;
-            margin: 0 $gap-small;
+            min-width: 40%;
+            margin: 0 $gap-base;
 
             > a {
                 margin: 0;
-                padding: $gap-base;
+                padding: $gap-base $gap-large;
                 @include border-radius(0);
-                border: 2px solid transparent;
-                border-bottom: 1px solid $link-soft;
+                border: 1px solid transparent;
+                border-bottom: 1px solid $link-color;
+                border-bottom: 1px solid rgba($link-color, .15);
 
             }
         }
 
-        > .current > a {
-            border-bottom-width: 2px;
-            border-top-width: 1px;
+        > .separate {
+            float: none;
+            margin: $gap-base;
+            @include inline-block;
         }
 
-        > .active > a {
-            border-bottom-width: 2px;
-            border-top-width: 1px;
-        }
+        > .current > a {
+              background: mix($dark, $link-color, 90);
+              border-color: transparent;
+          }
+
+          > .active > a {
+              background: mix($dark, $link-color, 90);
+              border-color: transparent;
+          }
 
     }
 }
@@ -171,7 +213,7 @@
     @include breakpoint(small) {
         display: block;
     }
- }
+}
 
 
 

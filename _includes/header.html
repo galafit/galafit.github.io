@@ -1,23 +1,19 @@
 {% include setup %}
 
-{% assign HEADER_BG  = "none" %}
-{% assign COVER  = "cover" %}
+{% assign COVER_IMG  = "none" %}
+{% assign COVER  = "page-cover" %}
 
 
-{% if page.header_img %}
-    {% if page.header_img == "dark" %}
-       {% assign COVER  = "cover-dark" %}
-    {% else %}
-       {% capture HEADER_BG %} url( {{ site.img }}/{{ page.header_img }} ){% endcapture %}
-       {% assign COVER  = "cover-img" %}
-    {% endif %}
+{% if page.cover_img %}
+{% capture COVER_IMG %} url( {{ site.img }}/{{ page.cover_img }} ){% endcapture %}
+{% assign COVER  = "page-cover-img" %}
 {% endif %}
 
 <div class="page-header" id="header">
-    <div class="row navbar">
-            <a href="{{ {{ SITE_URL }}{{ site[HOME] }}" class="logo logo--top">mix<br>Dreams</a>
-            <a id="menu"></a>
-            <ul class="nav nav--shift nav--adaptive">
+    <div class="navbar">
+            <a class="logo logo--top" id="menu">mix&nbsp; &nbsp;&#9776;<br>Dreams</a>
+            <a class="logo logo--top change-theme mobile-hide">mix<br>Dreams</a>
+            <ul class="nav nav--central nav--adaptive">
                 {% for link in site[NAV] %}
                 {% if link.folder == CATEGORY %}
                 {% if page.url contains "index.html" %}
@@ -29,27 +25,28 @@
                 {% assign STATE = "none" %}
                 {% endif %}
                 <li class="{{ STATE }}"><a href="{{ SITE_URL }}/{{ LANGUAGE }}/{{ link.folder }}">{{ link.name }}</a>
-                                </li>
+                </li>
                 {% endfor %}
 
-                <li class="reverse"><a class="change-theme"><span class="button-theme">&nbsp;</span></a>
+                <li class="mobile-only separate"><a class="change-theme"><span class="button-theme">&nbsp;</span></a>
                 </li>
-                {% if LANGUAGE == "ru" %}
-                <li class="reverse"><a href="{{ SITE_URL }}{{ site.home_en }}">ENG</a></li>
-                {% endif %}
-                {% if LANGUAGE == "en" %}
-                <li class="reverse"><a href="{{ SITE_URL }}{{ site.home_ru }}">RUS</a></li>
-                {% endif %}
+                <li class="mobile-only separate"><a href="{{ SITE_URL }}{{ LANGUAGE_CHANGE_URL }}">{{ LANGUAGE_CHANGE }} </a></li>
+            </ul>
+            <ul class="nav nav--right mobile-hide">
+                <li class="separate"><a href="{{ SITE_URL }}{{ LANGUAGE_CHANGE_URL }}">{{ LANGUAGE_CHANGE }}</a></li>
             </ul>
     </div>
-    <div class="row {{ COVER }}" style="background-image: {{ HEADER_BG }} ">
-        <H1>{{ TITLE }}</H1>
-        {% if page.author %}
-        <cite>{{ page.author }}</cite>
-        {% endif %}
-        {% if page.aphorism %}
-        <div class="aphorism">{{ page.aphorism }}</div>
-        {% endif %}
+
+    <div class="{{ COVER }}" style="background-image: {{ COVER_IMG }} ">
+        <div class="row">
+            <H1>{{ TITLE }}</H1>
+            {% if page.subtitle %}
+            <div class="subtitle">{{ page.subtitle }}</div>
+            {% endif %}
+            {% if page.author %}
+             <cite>{{ page.author }}</cite>
+            {% endif %}
+        </div>
     </div>
 </div>
 

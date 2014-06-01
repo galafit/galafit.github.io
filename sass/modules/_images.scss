@@ -7,7 +7,7 @@
  */
 img {
     @extend %pull-center;
-    margin-top: $gap-large*2;
+    margin-top: $gap-base;
     margin-bottom: $gap-huge;
     max-width: 100%;
     height: auto;
@@ -40,13 +40,13 @@ img {
 
 figcaption, .figcaption {
     @extend %pull-center;
-    @extend %caption-color;
     clear: both;
     //font-style: italic;
     line-height: $line-height-small;
     text-align: center;
     max-width: 90%;
-    margin-top: $gap-base;
+    margin-top: 0.75 * $gap-base;
+    margin-bottom: 0;
 }
 
 

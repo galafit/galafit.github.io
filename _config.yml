@@ -76,6 +76,7 @@ navigation_ru:
 
 # relative to folder en
 navigation_en:
+ - name:         Home
 
 
 
@@ -97,7 +98,7 @@ dreams_ru:
 # [theoies]  subNavigation:
 # relative to folder ru/theories
 theories_ru:
-  - name:         "&#34;Светлая&#34; шизофрения"
+  - name:         &#34;Светлая&#34; шизофрения
     folder:       schizophrenia
   - name:         Внутренний мир. Душа
     folder:       inworld

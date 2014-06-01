@@ -108,8 +108,11 @@
 .mobile-hide {
     @include breakpoint(small) {
         display: none;
+        top: -9999px !important;
+        left: -9999px !important;
     }
 }
+
 
 .mobile-full {
     @include breakpoint(small) {
@@ -117,6 +120,15 @@
         padding-left: 0;
         width: 100%;
     }
+}
+
+// from http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+.invisible {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 

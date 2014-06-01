@@ -14,9 +14,8 @@
 }
 
 .ball1 {
-  background-color: $link-color;
-  //border-radius: 50%;
-  box-shadow: inset -25px -25px 40px rgba(0,0,0,.3);
+  background-color: $link-soft;
+  box-shadow: inset -25px -25px 40px rgba(0,0,0,.2);
   background-image: -webkit-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
   background-image: -moz-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
   background-image: -o-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
@@ -24,41 +23,50 @@
 }
 
 
+.ball3 {
+
+}
+
 
 
 
 .logo {
-    @extend .ball;
+    @extend .ball1;
     @include inline-block;
-    font-family: $brand-font-family;
+    @include font-size($brand-font-size);
     @include border-radius(50%);
     text-align: left;
     padding: ($gap-huge+$gap-mini) $gap-small;
     line-height: 1;
 
-    color: #440000;
-    text-shadow: 0 1px 1px rgba(white, 0.6);
+    color: $text-dark;
+    text-shadow: 0 1px 1px rgba(white, 0.4);
 
     &:hover, &:focus, &:active {
-        color: #440000;
-        text-shadow: 0 1px 1px rgba(white, 0.6);
+        color: $text-dark;
+        text-shadow: 0 1px 1px rgba(white, 0.4);
         box-shadow: none;
         text-decoration: none;
 
+    }
+    @include breakpoint(small) {
+        @include font-size($brand-font-size-screen-small);
     }
 }
 
 
 .logo--top {
-    padding: $gap-base $gap-small;
-    margin-top: $gap-mini;
-    margin-left: $gap-small;
+    padding: 18px 10px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 10px;
+    right: 25px;
     z-index: 10;
 
     @include breakpoint(small) {
-        margin-top: $gap-small;
+        position: absolute;
+        right: 50%;
+        margin-right: -40px;
+        top: 10px;
     }
 }
+

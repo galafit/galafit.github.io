@@ -65,7 +65,7 @@ a {
  }
 
 ::-moz-selection, ::selection {
-    background: $brand-color;
+    background: $link-soft;
     color: white;
 }
 
@@ -92,9 +92,9 @@ hr {
      text-align:center;
      margin: $gap-huge  auto;
      border: none;
-     height: 5px;
-     background-color: mix($base-bg, $inverse-bg);
-     color: mix($base-bg, $inverse-bg);
+     height: $pullquote-border-width;
+     background-color: $link-soft;
+     color: $link-soft;
 
      &:before {
          //content: "\2a\2a\2a\2a\2a\2a\2a\2a\2a";
@@ -109,6 +109,7 @@ cite {
     margin-top: $gap-small;
     text-align: center;
     font-style: italic;
+  //  @extend %caption-color;
 
     &:before {
          content: "\2014 \2009";

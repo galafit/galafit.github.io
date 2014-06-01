@@ -12,7 +12,7 @@ aphorism:
 
 When the state of lucid dream with stable enough consciousness and bright picture is successfully achieved, it becomes possible to conduct some experiments. Here are some of the interesting reports, made by Gennady Troschenko:
 
-###Study of environment, personages and their behavior:
+##Study of environment, personages and their behavior:
 
 + **Asking all encountered personages some simple test questions**, like “what is your name?”, “how are you doing?”, or more complicated like “do you realize that you are a personage of my dream?”, or “do you know that we are presently in a very peculiar world of dreams, where we can, for example, fly in the air without any mechanical means?”. Most personages could easily tell their names (sometimes uncommon like Horace or Daphnia), but had difficulties with their family names. Complicated questions were usually just ignored, but some personages reacted rather surprisingly – one girl, after being told that she is a dream personage, answered: “OK, then. If we are in the dream, I shall go asleep” – and lied down to sleep right in the middle of a street.
 
@@ -22,7 +22,7 @@ When the state of lucid dream with stable enough consciousness and bright pictur
 
 Generally, dream personages made an impression of separate and independent enough individuals, similar to real people, though simplified, and having very short “life time”. Intriguing fact is that all of these “psyche organisms” are physically hosted by a single brain.
 
-###Study of hypnagogic phenomena:
+##Study of hypnagogic phenomena:
 
 + **Electronic sleeping tone with biofeedback:** the [system](equipment.html) was adjusted to emit different sounds dependently on the degree of relaxation – when oculogyration activity was high above a certain threshold, the system kept silence. 
 

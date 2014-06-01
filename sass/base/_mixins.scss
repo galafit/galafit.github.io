@@ -26,12 +26,11 @@
 @mixin inline-block {
     display: inline-block;
     vertical-align: top;
-    /* IE hacks */
+/* IE hacks */
     zoom: 1;
     *display: inline;
     *vertical-align: auto;
 }
-
 
 /**
  * Mixin handling breakpoints for media queries
@@ -53,7 +52,6 @@
         }
     }
 }
-
 
 /* --------------------------    Mixins providing a PX fallback for REM--------------------------------
 
@@ -106,10 +104,6 @@ p {
     #{$property}: $remValues;
 }
 
-
-
-
-
 /* Mixins to set sizes in rem */
 @mixin max-width-rem($val) {
     max-width: $val*16 * 1px;
@@ -134,33 +128,66 @@ p {
     margin-left: $val * 1rem;
 }
 
-
 /* all text elements are centered and limited to the line-wide comfortable for reading  */
 %text-normalize {
     text-align: left;
     p, .p,
     h1, h2, h3, h4, h5, h6,
+    .title,
+    .subtitle,
     cite,
     blockquote,
-    .pullquote,
-    .aphorism,
     ul,
     ol {
         @extend %pull-center;
-        @include rem-fallback(max-width,$width-text);
-        @include rem-fallback(padding-right,$gap-base-rem);
-        @include rem-fallback(padding-left,$gap-base-rem);
+        @include rem-fallback(max-width, $width-text);
+        @include rem-fallback(padding-right, $gap-base-rem);
+        @include rem-fallback(padding-left, $gap-base-rem);
     }
 
     ul,
     ol {
+        margin-top: $gap-base;
+        margin-bottom: $gap-large;
+        text-align: left;
+
         li {
-            > p {
-                padding-left: 0;
-                padding-right: 0;
+            margin-top: $gap-base;
+            margin-left: $gap-huge;
+            /**
+             * Remove vertical spacing from nested lists.
+             */
+            > ul,
+            > ol {
+                margin: 0;
+            }
+
+            @include breakpoint(small) {
+                margin-left: $gap-base;
             }
         }
     }
+
+    .list-compact {
+        li {
+            margin-top: 0;
+
+            @include breakpoint(small) {
+                margin-left: $gap-mini;
+            }
+        }
+    }
+
+    .blocktext,
+    ul li,
+    ol li {
+        p,
+        h1, h2, h3, h4, h5, h6 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
 }
 
 /** Box Sizing model  **/
@@ -176,7 +203,6 @@ p {
     -moz-box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
     box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
 }
-
 
 // from http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
 // Example:
@@ -197,7 +223,6 @@ p {
     #{$attribute}: $color;
 }
 
-
 /**
  *   Blocks Align
  */
@@ -206,7 +231,6 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 @mixin pull-left($margin: $gap-small) {
     float: left;
@@ -222,15 +246,11 @@ p {
     margin-bottom: $gap-small;;
 }
 
-
-
 // Font sizes in rem
 // -------------------------
 @mixin font-size($val) {
     @include rem-fallback(font-size, $val);
 }
-
-
 
 /**
  * Mixins to set elements sizes. At the moment in em. By itself they have not much sense but they will be useful if in the future
@@ -253,27 +273,23 @@ p {
     min-height: $val * 1em;
 }
 
-
-
 /**
  *   Background Img
  */
 %image-bg {
     background-color: $dark;
     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     @include min-height($img-min-height);
 
-    //background-image: url(../bg/sky.jpg);
+   // background-image: url(../img/bg/cats.jpg);
 }
 
-
-
-@mixin border-top-radius ($radius: $border-radius){
+@mixin border-top-radius($radius: $border-radius) {
     -webkit-border-top-left-radius: $radius;
     -webkit-border-top-right-radius: $radius;
     -moz-border-radius-topleft: $radius;
@@ -281,7 +297,6 @@ p {
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
 }
-
 
 @mixin border-radius($radius: $border-radius) {
     -moz-border-radius: $radius;

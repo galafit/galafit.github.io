@@ -7,5 +7,13 @@
  */
 
 .navbar {
-    @extend .shadow;
+    @extend .highlight;
+    min-height: 50px;
+    @extend %border-color;
+         border-style: solid;
+         border-width: 1px;
+         border-left: none;
+         border-right: none;
+         border-top: none;
 }
+

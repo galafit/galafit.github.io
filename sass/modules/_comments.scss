@@ -1,8 +1,13 @@
 /************************************************************************************
-    Page Main
+DISQUS COMMENTS STYLE
 *************************************************************************************/
 
-.page-main {
-    @extend %text-normalize;
+.comments {
+    @extend .highlight;
+}
 
+#disqus_thread {
+    @extend %pull-center;
+    @include max-width ($width-page);
+    padding: $gap-base;
 }
