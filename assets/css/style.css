@@ -2145,7 +2145,6 @@ blockquote:after {
     margin: 0;
     margin-top: 50px;
     padding-top: 50px;
-    padding-bottom: 1.5em;
   }
   /* line 176, ../sass/modules/_navs.scss */
   .nav--adaptive > li {
@@ -2163,14 +2162,13 @@ blockquote:after {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0;
-    border: 1px solid transparent;
-    border-bottom: 1px solid #c66579;
     border-bottom: 1px solid rgba(198, 101, 121, 0.15);
   }
-  /* line 193, ../sass/modules/_navs.scss */
+  /* line 191, ../sass/modules/_navs.scss */
   .nav--adaptive > .separate {
     float: none;
     margin: 1em;
+    margin-bottom: 0;
     display: inline-block;
     vertical-align: top;
     /* IE hacks */
@@ -2178,20 +2176,20 @@ blockquote:after {
     *display: inline;
     *vertical-align: auto;
   }
-  /* line 199, ../sass/modules/_navs.scss */
+  /* line 198, ../sass/modules/_navs.scss */
   .nav--adaptive > .current > a {
-    background: #23191b;
+    background: #352125;
     border-color: transparent;
   }
-  /* line 204, ../sass/modules/_navs.scss */
+  /* line 203, ../sass/modules/_navs.scss */
   .nav--adaptive > .active > a {
-    background: #23191b;
+    background: #352125;
     border-color: transparent;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  /* line 212, ../sass/modules/_navs.scss */
+  /* line 211, ../sass/modules/_navs.scss */
   .nav--adaptive.open {
     display: block;
   }
@@ -2206,7 +2204,7 @@ blockquote:after {
 /* line 9, ../sass/modules/_navbar.scss */
 .navbar {
   min-height: 50px;
-  border: 1px solid rgba(223, 125, 133, 0.25);
+  border-bottom: 1px solid rgba(223, 125, 133, 0.25);
 }
 
 /************************************************************************************
