@@ -6,9 +6,10 @@ COVER.
  *  Cover is a kind of intro block (normally page title, may be some background or lead img, author info and so on)
  */
 
-.page-cover {
+.cover {
     @extend %text-normalize;
-    padding-top: $gap-small;
+    padding-top: $gap-base;
+    padding-bottom: $gap-huge;
 
 
     .subtitle {
@@ -16,23 +17,6 @@ COVER.
         @include font-size($cover-subtitle-font-size);
     }
 
-    cite {
-        @include font-size($cover-cite-font-size);
-    }
 }
 
-
-
-.page-cover-img {
-    @extend .page-cover;
-    @extend .dark;
-    @extend %image-bg;
-    padding-top: $gap-huge;
-    padding-bottom: $gap-large*2;
-
-    @include breakpoint(small) {
-        padding-top: $gap-mini;
-    }
-
-}
 

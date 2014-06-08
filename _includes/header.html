@@ -1,15 +1,12 @@
 {% include setup %}
 
-{% assign COVER_IMG  = "none" %}
-{% assign COVER  = "page-cover" %}
-
-
 {% if page.cover_img %}
 {% capture COVER_IMG %} url( {{ site.img }}/{{ page.cover_img }} ){% endcapture %}
-{% assign COVER  = "page-cover-img" %}
+{% else %}
+{% capture COVER_IMG %} url( {{ site.img }}/cover/default.jpg  ){% endcapture %}
 {% endif %}
 
-<div class="page-header" id="header">
+<div class="page-header" id="header" style="background-image: {{ COVER_IMG }} ">
     <div class="navbar">
             <a class="logo logo--top" id="menu">mix&nbsp; &nbsp;&#9776;<br>Dreams</a>
             <a class="logo logo--top change-theme mobile-hide">mix<br>Dreams</a>
@@ -37,18 +34,6 @@
             </ul>
     </div>
 
-    <div class="{{ COVER }}" style="background-image: {{ COVER_IMG }} ">
-        <div class="row">
-            <H1>{{ TITLE }}</H1>
-            {% if page.subtitle %}
-            <div class="subtitle">{{ page.subtitle }}</div>
-            {% endif %}
-            {% if page.author %}
-             <cite>{{ page.author }}</cite>
-            {% endif %}
-        </div>
-    </div>
-</div>
 
 
 

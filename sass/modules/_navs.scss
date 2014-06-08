@@ -24,7 +24,7 @@
     list-style: none;
     padding: 0;
     @include rem-fallback(max-width, $width-text);
-    @include rem-fallback(padding-left, $gap-base-rem);
+   // @include rem-fallback(padding-left, $gap-base-rem);
     @include font-size($nav-font-size);
     text-transform: uppercase;
     text-align: center;
@@ -120,12 +120,12 @@
     }
 
     > .current > a {
-         background: mix($dark, $link-color, 90);
+         background: mix($dark, $link-color, 80);
          border-color: transparent;
      }
 
      > .active > a {
-         background: mix($dark, $link-color, 90);
+         background: mix($dark, $link-color, 80);
          border-color: transparent;
      }
 }

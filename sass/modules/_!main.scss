@@ -115,3 +115,7 @@ cite {
          content: "\2014 \2009";
      }
 }
+
+.cite--big {
+      @include font-size($cite-big-font-size);
+  }

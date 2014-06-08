@@ -1,9 +1,24 @@
 {% include head.html %}
-
 {% include header.html %}
 
-<div class="page-main">
-        {{ content }}
+<div class="cover">
+    <div class="row">
+        <H1>{{ TITLE }}</H1>
+        <div class="subtitle">
+            {% if page.subtitle %}
+            {{ page.subtitle }}
+            {% endif %}
+            {% if page.author %}
+            <cite class="cite--big">{{ page.author }}</cite>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</div>
+<!--  end page-header    -->
+
+<div class="post">
+    {{ content }}
 </div>
 
 {% include footer.html %}

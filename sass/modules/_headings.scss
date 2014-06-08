@@ -65,14 +65,16 @@ h3, h4, h5 {
     text-transform: uppercase;
     text-align: center;
     margin-top: $gap-large;
+    margin-bottom: $gap-large;
     color: inherit;
 
 }
 
 .subtitle {
     color: inherit;
-    margin-top: $gap-large;
+    margin-top: $gap-base;
     text-align: center;
+    @include font-size($subtitle-font-size);
 }
 
 /**

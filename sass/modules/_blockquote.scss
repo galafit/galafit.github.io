@@ -7,7 +7,7 @@ blockquote {
     margin-top: $gap-huge;
     margin-bottom: $gap-huge;
     text-align: left;
-    border-left: 3px solid $link-soft;
+    border-left: $blockquote-border-width solid $link-soft;
     font-style: italic;
 
     &:first-child  {

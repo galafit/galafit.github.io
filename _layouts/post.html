@@ -1,18 +1,24 @@
----
+{% include head.html %}
+{% include header.html %}
 
-layout: default
-
----
-
-{% include setup %}
-
+</div>
+<!--  end page-header    -->
 
 <div class="post">
+    <H1>{{ TITLE }}</H1>
+    {% if page.subtitle %}
+    <h2 class="subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+    {% if page.author %}
+    <cite class="cite--big">{{ page.author }}</cite>
+    {% endif %}
+
+
     {% if page.aphorism %}
-     <div class="pullquote-open">{{ page.aphorism }}</div>
+    <div class="pullquote-open">{{ page.aphorism }}</div>
     {% endif %}
     {% if page.img %}
-    <img src="{{site.img}}/{{page.img}}" />
+    <img src="{{site.img}}/{{page.img}}"/>
     {% endif %}
     {{ content }}
 </div>
@@ -41,10 +47,15 @@ layout: default
 </div>
 <p></p>
 
-<div class="comments"><div id="disqus_thread"></div></div>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+</div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
+{% include footer.html %}
+{% include foot.html %}
 
 
 

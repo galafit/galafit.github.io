@@ -7,13 +7,10 @@
  */
 
 .navbar {
-    @extend .highlight;
+    //@extend .highlight;
     min-height: 50px;
-    @extend %border-color;
-         border-style: solid;
-         border-width: 1px;
-         border-left: none;
-         border-right: none;
-         border-top: none;
+    border: 1px solid rgba($link-soft, .25);
+
+
 }
 

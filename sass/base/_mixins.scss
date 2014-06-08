@@ -284,9 +284,9 @@ p {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    @include min-height($img-min-height);
+   // @include min-height($img-min-height);
 
-   // background-image: url(../img/bg/cats.jpg);
+    background-image: url(../img/cover/default.jpg);
 }
 
 @mixin border-top-radius($radius: $border-radius) {

@@ -155,18 +155,23 @@ $brand-font-size-screen-small: .95;
 //$link-color: darken(saturate(mix(#A58EAE, $soft, 75), 10),10);
 //$link-soft:mix(#A58EAE, $soft, 40);
 
-$link-color: mix(darken(saturate(mix(#A58EAE, $soft, 75), 10),10), mix(saturate(#916a6a, 10), $soft));
-$link-soft:mix(#A58EAE, $soft, 40);
+//$link-color: mix(darken(saturate(mix(#A58EAE, $soft, 75), 10),10), mix(saturate(#916a6a, 10), $soft));
+//$link-soft:mix(#A58EAE, $soft, 40);
+
+//$link-color: darken(mix(#c40873, $soft, 25), 5);
+//$link-soft: mix(#c40873, $soft, 25);
+
+
+
+$link-color: mix(darken(mix(#c40873, $soft, 30), 5), mix(darken(saturate(mix(#A58EAE, $soft, 75), 10),10), mix(saturate(#916a6a, 10), $soft)));
+$link-soft: mix(#c40873, $soft, 20);
 $link-hover-color: #ee3e3b;
-
-
-
 
 
 // Dark  color
 // ----------------------
 $dark1: #240020;
-$dark: #240020;
+$dark: #111111;
 $text-dark: #440000;
 
 
@@ -217,7 +222,8 @@ $base-font-size-screen-small: 1.1; // for small screens
 
 
 $line-height-large: 1.8;
-$line-height-small: 1.33;
+//$line-height-small: 1.33;
+$line-height-small: 1.2;
 
 
 
@@ -226,14 +232,8 @@ $line-height-small: 1.33;
 $headings-line-height:  $line-height-small;
 $headings-font-family: $font-family-sans-serif-light-400;
 
-$font-size-h1: 2.1;
-$font-size-h2: 1.7;
-$font-size-h3: 1.5;
-$font-size-h4: 1.2;
-$font-size-h5: 1.1;
-$font-size-h6: 1;
 
-$font-size-h1: 2.2;
+$font-size-h1: 2.5;
 $font-size-h2: 1.7;
 $font-size-h3: 1.5;
 $font-size-h4: 1.3;
@@ -241,17 +241,18 @@ $font-size-h5: 1.2;
 $font-size-h6: 1;
 
 
+$subtitle-font-size: 1.7;
+
+// Cover
+// -------------------------
+$cover-subtitle-font-size: 1.4;
+
 
 // Lead text
 // -------------------------
 $lead-font-size: 1.2;
 $lead-width: $width-text + 8;
 
-
-// Page Cover
-// -------------------------
-$cover-cite-font-size: 1;
-$cover-subtitle-font-size: 1.4;
 
 
 
@@ -266,6 +267,7 @@ $nav-font-size-screen-small: .8;
 // Cite
 // -------------------------
 $cite-font-size: .85;
+$cite-big-font-size: 1;
 
 
 
@@ -278,7 +280,7 @@ $blocktext-title-size: 1.3;
 // -------------------------
 
 $blockquote-border-length: 10em;
-$blockquote-border-width: 3px;
+$blockquote-border-width: 2px;
 $blockquote-border-color: $link-soft;;
 
 

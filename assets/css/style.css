@@ -633,44 +633,37 @@ p {
 /* Mixins to set paddings in rem */
 /* all text elements are centered and limited to the line-wide comfortable for reading  */
 /* line 132, ../sass/base/_mixins.scss */
-.blocktext, .page-cover, .page-cover-img, .post, .page-main {
+.blocktext, .cover, .post, .page-main {
   text-align: left;
 }
 /* line 141, ../sass/base/_mixins.scss */
-.blocktext p, .page-cover p, .page-cover-img p, .post p, .page-main p, .blocktext .p, .page-cover .p, .page-cover-img .p, .post .p, .page-main .p,
+.blocktext p, .cover p, .post p, .page-main p, .blocktext .p, .cover .p, .post .p, .page-main .p,
 .blocktext h1,
-.page-cover h1,
-.page-cover-img h1,
+.cover h1,
 .post h1,
-.page-main h1, .blocktext h2, .page-cover h2, .page-cover-img h2, .post h2, .page-main h2, .blocktext h3, .page-cover h3, .page-cover-img h3, .post h3, .page-main h3, .blocktext h4, .page-cover h4, .page-cover-img h4, .post h4, .page-main h4, .blocktext h5, .page-cover h5, .page-cover-img h5, .post h5, .page-main h5, .blocktext h6, .page-cover h6, .page-cover-img h6, .post h6, .page-main h6,
+.page-main h1, .blocktext h2, .cover h2, .post h2, .page-main h2, .blocktext h3, .cover h3, .post h3, .page-main h3, .blocktext h4, .cover h4, .post h4, .page-main h4, .blocktext h5, .cover h5, .post h5, .page-main h5, .blocktext h6, .cover h6, .post h6, .page-main h6,
 .blocktext .title,
-.page-cover .title,
-.page-cover-img .title,
+.cover .title,
 .post .title,
 .page-main .title,
 .blocktext .subtitle,
-.page-cover .subtitle,
-.page-cover-img .subtitle,
+.cover .subtitle,
 .post .subtitle,
 .page-main .subtitle,
 .blocktext cite,
-.page-cover cite,
-.page-cover-img cite,
+.cover cite,
 .post cite,
 .page-main cite,
 .blocktext blockquote,
-.page-cover blockquote,
-.page-cover-img blockquote,
+.cover blockquote,
 .post blockquote,
 .page-main blockquote,
 .blocktext ul,
-.page-cover ul,
-.page-cover-img ul,
+.cover ul,
 .post ul,
 .page-main ul,
 .blocktext ol,
-.page-cover ol,
-.page-cover-img ol,
+.cover ol,
 .post ol,
 .page-main ol {
   max-width: 608px;
@@ -681,10 +674,9 @@ p {
   padding-left: 1rem;
 }
 /* line 149, ../sass/base/_mixins.scss */
-.blocktext ul, .page-cover ul, .page-cover-img ul, .post ul, .page-main ul,
+.blocktext ul, .cover ul, .post ul, .page-main ul,
 .blocktext ol,
-.page-cover ol,
-.page-cover-img ol,
+.cover ol,
 .post ol,
 .page-main ol {
   margin-top: 1em;
@@ -692,10 +684,9 @@ p {
   text-align: left;
 }
 /* line 154, ../sass/base/_mixins.scss */
-.blocktext ul li, .page-cover ul li, .page-cover-img ul li, .post ul li, .page-main ul li,
+.blocktext ul li, .cover ul li, .post ul li, .page-main ul li,
 .blocktext ol li,
-.page-cover ol li,
-.page-cover-img ol li,
+.cover ol li,
 .post ol li,
 .page-main ol li {
   margin-top: 1em;
@@ -705,120 +696,101 @@ p {
    */
 }
 /* line 161, ../sass/base/_mixins.scss */
-.blocktext ul li > ul, .page-cover ul li > ul, .page-cover-img ul li > ul, .post ul li > ul, .page-main ul li > ul,
+.blocktext ul li > ul, .cover ul li > ul, .post ul li > ul, .page-main ul li > ul,
 .blocktext ul li > ol,
-.page-cover ul li > ol,
-.page-cover-img ul li > ol,
+.cover ul li > ol,
 .post ul li > ol,
 .page-main ul li > ol,
 .blocktext ol li > ul,
-.page-cover ol li > ul,
-.page-cover-img ol li > ul,
+.cover ol li > ul,
 .post ol li > ul,
 .page-main ol li > ul,
 .blocktext ol li > ol,
-.page-cover ol li > ol,
-.page-cover-img ol li > ol,
+.cover ol li > ol,
 .post ol li > ol,
 .page-main ol li > ol {
   margin: 0;
 }
 @media only screen and (max-width: 700px) {
   /* line 154, ../sass/base/_mixins.scss */
-  .blocktext ul li, .page-cover ul li, .page-cover-img ul li, .post ul li, .page-main ul li,
+  .blocktext ul li, .cover ul li, .post ul li, .page-main ul li,
   .blocktext ol li,
-  .page-cover ol li,
-  .page-cover-img ol li,
+  .cover ol li,
   .post ol li,
   .page-main ol li {
     margin-left: 1em;
   }
 }
 /* line 172, ../sass/base/_mixins.scss */
-.blocktext .list-compact li, .page-cover .list-compact li, .page-cover-img .list-compact li, .post .list-compact li, .page-main .list-compact li {
+.blocktext .list-compact li, .cover .list-compact li, .post .list-compact li, .page-main .list-compact li {
   margin-top: 0;
 }
 @media only screen and (max-width: 700px) {
   /* line 172, ../sass/base/_mixins.scss */
-  .blocktext .list-compact li, .page-cover .list-compact li, .page-cover-img .list-compact li, .post .list-compact li, .page-main .list-compact li {
+  .blocktext .list-compact li, .cover .list-compact li, .post .list-compact li, .page-main .list-compact li {
     margin-left: 0.25em;
   }
 }
 /* line 185, ../sass/base/_mixins.scss */
-.blocktext .blocktext p, .page-cover .blocktext p, .page-cover-img .blocktext p, .post .blocktext p, .page-main .blocktext p,
+.blocktext .blocktext p, .cover .blocktext p, .post .blocktext p, .page-main .blocktext p,
 .blocktext .blocktext h1,
-.page-cover .blocktext h1,
-.page-cover-img .blocktext h1,
+.cover .blocktext h1,
 .post .blocktext h1,
-.page-main .blocktext h1, .blocktext .blocktext h2, .page-cover .blocktext h2, .page-cover-img .blocktext h2, .post .blocktext h2, .page-main .blocktext h2, .blocktext .blocktext h3, .page-cover .blocktext h3, .page-cover-img .blocktext h3, .post .blocktext h3, .page-main .blocktext h3, .blocktext .blocktext h4, .page-cover .blocktext h4, .page-cover-img .blocktext h4, .post .blocktext h4, .page-main .blocktext h4, .blocktext .blocktext h5, .page-cover .blocktext h5, .page-cover-img .blocktext h5, .post .blocktext h5, .page-main .blocktext h5, .blocktext .blocktext h6, .page-cover .blocktext h6, .page-cover-img .blocktext h6, .post .blocktext h6, .page-main .blocktext h6,
+.page-main .blocktext h1, .blocktext .blocktext h2, .cover .blocktext h2, .post .blocktext h2, .page-main .blocktext h2, .blocktext .blocktext h3, .cover .blocktext h3, .post .blocktext h3, .page-main .blocktext h3, .blocktext .blocktext h4, .cover .blocktext h4, .post .blocktext h4, .page-main .blocktext h4, .blocktext .blocktext h5, .cover .blocktext h5, .post .blocktext h5, .page-main .blocktext h5, .blocktext .blocktext h6, .cover .blocktext h6, .post .blocktext h6, .page-main .blocktext h6,
 .blocktext ul li p,
-.page-cover ul li p,
-.page-cover-img ul li p,
+.cover ul li p,
 .post ul li p,
 .page-main ul li p,
 .blocktext ul li h1,
-.page-cover ul li h1,
-.page-cover-img ul li h1,
+.cover ul li h1,
 .post ul li h1,
 .page-main ul li h1,
 .blocktext ul li h2,
-.page-cover ul li h2,
-.page-cover-img ul li h2,
+.cover ul li h2,
 .post ul li h2,
 .page-main ul li h2,
 .blocktext ul li h3,
-.page-cover ul li h3,
-.page-cover-img ul li h3,
+.cover ul li h3,
 .post ul li h3,
 .page-main ul li h3,
 .blocktext ul li h4,
-.page-cover ul li h4,
-.page-cover-img ul li h4,
+.cover ul li h4,
 .post ul li h4,
 .page-main ul li h4,
 .blocktext ul li h5,
-.page-cover ul li h5,
-.page-cover-img ul li h5,
+.cover ul li h5,
 .post ul li h5,
 .page-main ul li h5,
 .blocktext ul li h6,
-.page-cover ul li h6,
-.page-cover-img ul li h6,
+.cover ul li h6,
 .post ul li h6,
 .page-main ul li h6,
 .blocktext ol li p,
-.page-cover ol li p,
-.page-cover-img ol li p,
+.cover ol li p,
 .post ol li p,
 .page-main ol li p,
 .blocktext ol li h1,
-.page-cover ol li h1,
-.page-cover-img ol li h1,
+.cover ol li h1,
 .post ol li h1,
 .page-main ol li h1,
 .blocktext ol li h2,
-.page-cover ol li h2,
-.page-cover-img ol li h2,
+.cover ol li h2,
 .post ol li h2,
 .page-main ol li h2,
 .blocktext ol li h3,
-.page-cover ol li h3,
-.page-cover-img ol li h3,
+.cover ol li h3,
 .post ol li h3,
 .page-main ol li h3,
 .blocktext ol li h4,
-.page-cover ol li h4,
-.page-cover-img ol li h4,
+.cover ol li h4,
 .post ol li h4,
 .page-main ol li h4,
 .blocktext ol li h5,
-.page-cover ol li h5,
-.page-cover-img ol li h5,
+.cover ol li h5,
 .post ol li h5,
 .page-main ol li h5,
 .blocktext ol li h6,
-.page-cover ol li h6,
-.page-cover-img ol li h6,
+.cover ol li h6,
 .post ol li h6,
 .page-main ol li h6 {
   padding-left: 0;
@@ -840,40 +812,33 @@ p {
  *   Blocks Align
  */
 /* line 229, ../sass/base/_mixins.scss */
-.blocktext p, .page-cover p, .page-cover-img p, .post p, .page-main p, .blocktext .p, .page-cover .p, .page-cover-img .p, .post .p, .page-main .p,
+.blocktext p, .cover p, .post p, .page-main p, .blocktext .p, .cover .p, .post .p, .page-main .p,
 .blocktext h1,
-.page-cover h1,
-.page-cover-img h1,
+.cover h1,
 .post h1,
-.page-main h1, .blocktext h2, .page-cover h2, .page-cover-img h2, .post h2, .page-main h2, .blocktext h3, .page-cover h3, .page-cover-img h3, .post h3, .page-main h3, .blocktext h4, .page-cover h4, .page-cover-img h4, .post h4, .page-main h4, .blocktext h5, .page-cover h5, .page-cover-img h5, .post h5, .page-main h5, .blocktext h6, .page-cover h6, .page-cover-img h6, .post h6, .page-main h6,
+.page-main h1, .blocktext h2, .cover h2, .post h2, .page-main h2, .blocktext h3, .cover h3, .post h3, .page-main h3, .blocktext h4, .cover h4, .post h4, .page-main h4, .blocktext h5, .cover h5, .post h5, .page-main h5, .blocktext h6, .cover h6, .post h6, .page-main h6,
 .blocktext .title,
-.page-cover .title,
-.page-cover-img .title,
+.cover .title,
 .post .title,
 .page-main .title,
 .blocktext .subtitle,
-.page-cover .subtitle,
-.page-cover-img .subtitle,
+.cover .subtitle,
 .post .subtitle,
 .page-main .subtitle,
 .blocktext cite,
-.page-cover cite,
-.page-cover-img cite,
+.cover cite,
 .post cite,
 .page-main cite,
 .blocktext blockquote,
-.page-cover blockquote,
-.page-cover-img blockquote,
+.cover blockquote,
 .post blockquote,
 .page-main blockquote,
 .blocktext ul,
-.page-cover ul,
-.page-cover-img ul,
+.cover ul,
 .post ul,
 .page-main ul,
 .blocktext ol,
-.page-cover ol,
-.page-cover-img ol,
+.cover ol,
 .post ol,
 .page-main ol, img, figcaption, .figcaption, .figure p, .pullquote-open, .pullquote-open:after, .pullquote, .pullquote:before, .pullquote:after, .nav, .row, .central-wide, .central-page, .central-text, .column-half, .column-third, #disqus_thread {
   display: block;
@@ -889,15 +854,15 @@ p {
  *   Background Img
  */
 /* line 279, ../sass/base/_mixins.scss */
-.page-cover-img {
-  background-color: #240020;
+.page-header {
+  background-color: #111111;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  min-height: 20em;
+  background-image: url(../img/cover/default.jpg);
 }
 
 /*   linear gradient from top to bottom    */
@@ -1081,7 +1046,7 @@ p {
  */
 /* line 93, ../sass/modules/_utilities.scss */
 .border-top {
-  border-top: 1px solid #cc9598;
+  border-top: 1px solid #df7d85;
 }
 
 /*
@@ -1207,26 +1172,26 @@ p {
 COLORS Themes
 *************************************************************************************/
 /* line 5, ../sass/modules/_color-themes.scss */
-.dark, .page-cover-img, .page-footer {
-  background-color: #240020;
+.dark, .page-header, .page-footer {
+  background-color: #111111;
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   text-shadow: none;
-  color: #b4a0aa;
+  color: #aea6a5;
   color: rgba(255, 243, 242, 0.66);
 }
 /* line 11, ../sass/modules/_color-themes.scss */
-.dark .subtitle, .page-cover-img .subtitle, .page-footer .subtitle {
+.dark .subtitle, .page-header .subtitle, .page-footer .subtitle {
   text-shadow: none;
 }
 /* line 15, ../sass/modules/_color-themes.scss */
-.dark .title, .page-cover-img .title, .page-footer .title, .dark h1, .page-cover-img h1, .page-footer h1, .dark h2, .page-cover-img h2, .page-footer h2, .dark h3, .page-cover-img h3, .page-footer h3, .dark h4, .page-cover-img h4, .page-footer h4, .dark h5, .page-cover-img h5, .page-footer h5, .dark h6, .page-cover-img h6, .page-footer h6 {
+.dark .title, .page-header .title, .page-footer .title, .dark h1, .page-header h1, .page-footer h1, .dark h2, .page-header h2, .page-footer h2, .dark h3, .page-header h3, .page-footer h3, .dark h4, .page-header h4, .page-footer h4, .dark h5, .page-header h5, .page-footer h5, .dark h6, .page-header h6, .page-footer h6 {
   text-shadow: none;
-  color: #deced2;
+  color: #dbd1d0;
   color: rgba(255, 243, 242, 0.85);
 }
 
 /* line 21, ../sass/modules/_color-themes.scss */
-.highlight, .navbar, .zebra .zebra__item:nth-child(even),
+.highlight, .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even), .table-2-column p:nth-child(4n),
 .table-2-column p:nth-child(4n-1), .comments {
   background: #fcf5e7;
@@ -1239,10 +1204,10 @@ h2, h3, h4, h5, h6 {
 }
 
 /* line 38, ../sass/modules/_color-themes.scss */
-.navbar, .thumbnail, .zebra .zebra__item:nth-child(even),
+.zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even) {
-  border-color: #e9dcca;
-  border-color: rgba(36, 0, 32, 0.08);
+  border-color: #e8dec9;
+  border-color: rgba(17, 17, 17, 0.08);
 }
 
 /* line 42, ../sass/modules/_color-themes.scss */
@@ -1269,7 +1234,7 @@ h2, h3, h4, h5, h6 {
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 /* line 70, ../sass/modules/_color-themes.scss */
-.theme-inverse .navbar, .theme-inverse .thumbnail, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
+.theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
 .theme-inverse .zebra > li:nth-child(even) {
   border-color: #453f46;
   border-color: rgba(255, 255, 255, 0.06);
@@ -1288,16 +1253,16 @@ h2, h3, h4, h5, h6 {
   color: #fcfbfb;
 }
 /* line 87, ../sass/modules/_color-themes.scss */
-.theme-inverse .highlight, .theme-inverse .navbar, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
+.theme-inverse .highlight, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
 .theme-inverse .zebra > li:nth-child(even), .theme-inverse .table-2-column p:nth-child(4n), .table-2-column .theme-inverse p:nth-child(4n),
 .theme-inverse .table-2-column p:nth-child(4n-1),
 .table-2-column .theme-inverse p:nth-child(4n-1), .theme-inverse .comments {
   background: #453d46;
 }
 /* line 92, ../sass/modules/_color-themes.scss */
-.theme-inverse .dark .blocktext cite, .blocktext .theme-inverse .dark cite, .theme-inverse .page-cover-img .blocktext cite, .blocktext .theme-inverse .page-cover-img cite, .theme-inverse .page-footer .blocktext cite, .blocktext .theme-inverse .page-footer cite, .theme-inverse .dark blockquote cite, blockquote .theme-inverse .dark cite, .theme-inverse .page-cover-img blockquote cite, blockquote .theme-inverse .page-cover-img cite, .theme-inverse .page-footer blockquote cite, blockquote .theme-inverse .page-footer cite {
+.theme-inverse .dark .blocktext cite, .blocktext .theme-inverse .dark cite, .theme-inverse .page-header .blocktext cite, .blocktext .theme-inverse .page-header cite, .theme-inverse .page-footer .blocktext cite, .blocktext .theme-inverse .page-footer cite, .theme-inverse .dark blockquote cite, blockquote .theme-inverse .dark cite, .theme-inverse .page-header blockquote cite, blockquote .theme-inverse .page-header cite, .theme-inverse .page-footer blockquote cite, blockquote .theme-inverse .page-footer cite {
   text-shadow: none;
-  color: #b4a0aa;
+  color: #aea6a5;
   color: rgba(255, 243, 242, 0.66);
 }
 
@@ -1376,7 +1341,7 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 
 /* line 57, ../sass/modules/_!main.scss */
 a {
-  color: #b77180;
+  color: #c66579;
   text-decoration: none;
 }
 /* line 61, ../sass/modules/_!main.scss */
@@ -1387,7 +1352,7 @@ a:hover, a:focus, a:active {
 
 /* line 67, ../sass/modules/_!main.scss */
 ::-moz-selection, ::selection {
-  background: #cc9598;
+  background: #df7d85;
   color: white;
 }
 
@@ -1416,8 +1381,8 @@ hr {
   margin: 2em auto;
   border: none;
   height: 3px;
-  background-color: #cc9598;
-  color: #cc9598;
+  background-color: #df7d85;
+  color: #df7d85;
 }
 
 /* line 106, ../sass/modules/_!main.scss */
@@ -1434,6 +1399,12 @@ cite:before {
   content: "\2014 \2009";
 }
 
+/* line 119, ../sass/modules/_!main.scss */
+.cite--big {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
 /************************************************************************************
     HEADINGS
 *************************************************************************************/
@@ -1447,7 +1418,7 @@ cite:before {
 /* line 13, ../sass/modules/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  line-height: 1.33;
+  line-height: 1.2;
   margin-top: 2em;
   text-align: center;
 }
@@ -1455,8 +1426,8 @@ h1, h2, h3, h4, h5, h6 {
 /* line 21, ../sass/modules/_headings.scss */
 h1 {
   font-weight: normal;
-  font-size: 35.2px;
-  font-size: 2.2rem;
+  font-size: 40px;
+  font-size: 2.5rem;
   margin-top: 1.5em;
 }
 
@@ -1497,7 +1468,7 @@ h6 {
 
 /* line 57, ../sass/modules/_headings.scss */
 h3, h4, h5 {
-  color: #b77180;
+  color: #c66579;
   font-weight: normal;
 }
 
@@ -1506,21 +1477,24 @@ h3, h4, h5 {
   text-transform: uppercase;
   text-align: center;
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
   color: inherit;
 }
 
-/* line 72, ../sass/modules/_headings.scss */
+/* line 73, ../sass/modules/_headings.scss */
 .subtitle {
   color: inherit;
-  margin-top: 1.5em;
+  margin-top: 1em;
   text-align: center;
+  font-size: 27.2px;
+  font-size: 1.7rem;
 }
 
 /**
   * This class is used to make the introductory text (usually a paragraph)
   * of a document larger.
   */
-/* line 82, ../sass/modules/_headings.scss */
+/* line 84, ../sass/modules/_headings.scss */
 .lead {
   font-size: 19.2px;
   font-size: 1.2rem;
@@ -1528,7 +1502,7 @@ h3, h4, h5 {
   font-style: italic;
 }
 
-/* line 88, ../sass/modules/_headings.scss */
+/* line 90, ../sass/modules/_headings.scss */
 .header {
   margin-top: 0;
   margin-bottom: 0;
@@ -1552,7 +1526,7 @@ h3, h4, h5 {
   *vertical-align: auto;
   cursor: pointer;
   text-align: center;
-  line-height: 1.33;
+  line-height: 1.2;
   text-decoration: none;
 }
 
@@ -1560,8 +1534,8 @@ h3, h4, h5 {
 .button, #toTop {
   margin: 1em 0.5em;
   padding: 0.5em 1.5em;
-  color: #b77180;
-  border: 2px solid #b77180;
+  color: #c66579;
+  border: 2px solid #c66579;
   -moz-border-radius: 24px;
   -webkit-border-radius: 24px;
   -ms-border-radius: 24px;
@@ -1573,20 +1547,20 @@ h3, h4, h5 {
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
   color: #440000;
-  background: #b77180;
+  background: #c66579;
 }
 
 /* line 64, ../sass/modules/_buttons.scss */
 .button--filled {
-  background: #cc9598;
+  background: #df7d85;
   color: #440000;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
-  border: 2px solid #cc9598;
+  border: 2px solid #df7d85;
 }
 /* line 33, ../sass/modules/_buttons.scss */
 .button--filled:hover, .button--filled:focus, .button--filled:active {
   text-decoration: none;
-  color: #cc9598;
+  color: #df7d85;
   background: none;
   text-shadow: none;
 }
@@ -1724,7 +1698,7 @@ img {
 /* line 41, ../sass/modules/_images.scss */
 figcaption, .figcaption, .figure p {
   clear: both;
-  line-height: 1.33;
+  line-height: 1.2;
   text-align: center;
   max-width: 90%;
   margin-top: 0.75em;
@@ -1826,7 +1800,7 @@ blockquote {
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: left;
-  border-left: 2px solid #cc9598;
+  border-left: 2px solid #df7d85;
   font-style: italic;
 }
 /* line 13, ../sass/modules/_blockquote.scss */
@@ -1894,8 +1868,8 @@ blockquote:after {
   margin: 0.5em auto;
   width: 10em;
   height: 1px;
-  background-color: rgba(204, 149, 152, 0.4);
-  color: rgba(204, 149, 152, 0.4);
+  background-color: rgba(223, 125, 133, 0.4);
+  color: rgba(223, 125, 133, 0.4);
 }
 @media only screen and (max-width: 700px) {
   /* line 7, ../sass/modules/_pullquotes.scss */
@@ -1909,7 +1883,7 @@ blockquote:after {
   margin-top: 1em;
   width: 10em;
   height: 3px;
-  background-color: #cc9598;
+  background-color: #df7d85;
   content: "\200B";
 }
 
@@ -1931,7 +1905,7 @@ blockquote:after {
   display: block;
   width: 10em;
   height: 3px;
-  background-color: #cc9598;
+  background-color: #df7d85;
   content: "\200B";
 }
 /* line 75, ../sass/modules/_pullquotes.scss */
@@ -1982,8 +1956,6 @@ blockquote:after {
   padding: 0;
   max-width: 608px;
   max-width: 38rem;
-  padding-left: 16px;
-  padding-left: 1rem;
   font-size: 11.2px;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -2009,21 +1981,21 @@ blockquote:after {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
-  color: #b77180;
+  color: #c66579;
 }
 /* line 48, ../sass/modules/_navs.scss */
 .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
   color: #440000;
-  background: #cc9598;
+  background: #df7d85;
 }
 /* line 57, ../sass/modules/_navs.scss */
 .nav > .current > a {
-  border-color: #b77180;
+  border-color: #c66579;
 }
 /* line 62, ../sass/modules/_navs.scss */
 .nav > .active > a {
-  border-color: #b77180;
+  border-color: #c66579;
 }
 /* line 66, ../sass/modules/_navs.scss */
 .nav > .active > a:after {
@@ -2092,17 +2064,17 @@ blockquote:after {
   border-radius: 0;
   padding: 1em 1.5em;
   border: 1px solid transparent;
-  border-bottom: 1px solid #b77180;
-  border-bottom: 1px solid rgba(183, 113, 128, 0.15);
+  border-bottom: 1px solid #c66579;
+  border-bottom: 1px solid rgba(198, 101, 121, 0.15);
 }
 /* line 122, ../sass/modules/_navs.scss */
 .nav--decorated > .current > a {
-  background: #320b29;
+  background: #352125;
   border-color: transparent;
 }
 /* line 127, ../sass/modules/_navs.scss */
 .nav--decorated > .active > a {
-  background: #320b29;
+  background: #352125;
   border-color: transparent;
 }
 
@@ -2169,7 +2141,7 @@ blockquote:after {
   /* line 167, ../sass/modules/_navs.scss */
   .nav--adaptive {
     display: none;
-    background: #240020;
+    background: #111111;
     margin: 0;
     margin-top: 50px;
     padding-top: 50px;
@@ -2192,8 +2164,8 @@ blockquote:after {
     -o-border-radius: 0;
     border-radius: 0;
     border: 1px solid transparent;
-    border-bottom: 1px solid #b77180;
-    border-bottom: 1px solid rgba(183, 113, 128, 0.15);
+    border-bottom: 1px solid #c66579;
+    border-bottom: 1px solid rgba(198, 101, 121, 0.15);
   }
   /* line 193, ../sass/modules/_navs.scss */
   .nav--adaptive > .separate {
@@ -2208,12 +2180,12 @@ blockquote:after {
   }
   /* line 199, ../sass/modules/_navs.scss */
   .nav--adaptive > .current > a {
-    background: #320b29;
+    background: #23191b;
     border-color: transparent;
   }
   /* line 204, ../sass/modules/_navs.scss */
   .nav--adaptive > .active > a {
-    background: #320b29;
+    background: #23191b;
     border-color: transparent;
   }
 }
@@ -2234,11 +2206,7 @@ blockquote:after {
 /* line 9, ../sass/modules/_navbar.scss */
 .navbar {
   min-height: 50px;
-  border-style: solid;
-  border-width: 1px;
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  border: 1px solid rgba(223, 125, 133, 0.25);
 }
 
 /************************************************************************************
@@ -2246,7 +2214,7 @@ blockquote:after {
 *************************************************************************************/
 /* line 6, ../sass/modules/_logo.scss */
 .ball {
-  background-color: #b77180;
+  background-color: #c66579;
   box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
@@ -2256,7 +2224,7 @@ blockquote:after {
 
 /* line 16, ../sass/modules/_logo.scss */
 .ball1, .logo {
-  background-color: #cc9598;
+  background-color: #df7d85;
   box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.2);
   background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
   background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 220, 0.2) 0%, transparent 100%);
@@ -2501,32 +2469,16 @@ COVER.
 /**
  *  Cover is a kind of intro block (normally page title, may be some background or lead img, author info and so on)
  */
-/* line 9, ../sass/modules/_page-cover.scss */
-.page-cover, .page-cover-img {
-  padding-top: 0.5em;
+/* line 9, ../sass/modules/_cover.scss */
+.cover {
+  padding-top: 1em;
+  padding-bottom: 2em;
 }
-/* line 14, ../sass/modules/_page-cover.scss */
-.page-cover .subtitle, .page-cover-img .subtitle {
+/* line 15, ../sass/modules/_cover.scss */
+.cover .subtitle {
   margin-top: 1em;
   font-size: 22.4px;
   font-size: 1.4rem;
-}
-/* line 19, ../sass/modules/_page-cover.scss */
-.page-cover cite, .page-cover-img cite {
-  font-size: 16px;
-  font-size: 1rem;
-}
-
-/* line 26, ../sass/modules/_page-cover.scss */
-.page-cover-img {
-  padding-top: 2em;
-  padding-bottom: 3em;
-}
-@media only screen and (max-width: 700px) {
-  /* line 26, ../sass/modules/_page-cover.scss */
-  .page-cover-img {
-    padding-top: 0.25em;
-  }
 }
 
 /************************************************************************************
@@ -2665,13 +2617,14 @@ Post, Articles
 /* line 39, ../sass/modules/_thumbnails.scss */
 .thumbnail {
   display: block;
+  border-color: rgba(223, 125, 133, 0.2);
   border-width: 1px;
   border-style: solid;
   border-radius: 6px;
   padding: 0.25em 1em;
   margin: 1.5em 1em;
 }
-/* line 49, ../sass/modules/_thumbnails.scss */
+/* line 50, ../sass/modules/_thumbnails.scss */
 .thumbnail img {
   margin: 0;
   border: none;
@@ -2684,25 +2637,25 @@ Post, Articles
   }
 }
 
-/* line 62, ../sass/modules/_thumbnails.scss */
+/* line 63, ../sass/modules/_thumbnails.scss */
 a.thumbnail {
   cursor: pointer;
   text-align: center;
   padding: 0.5em;
   margin: 0.5em;
   text-decoration: none;
-  background: #cc9598;
-  border: 2px solid #cc9598;
+  background: #df7d85;
+  border: 2px solid #df7d85;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
   color: #440000;
 }
-/* line 73, ../sass/modules/_thumbnails.scss */
+/* line 74, ../sass/modules/_thumbnails.scss */
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active {
   background: inherit;
   text-shadow: none;
-  color: #b77180;
+  color: #c66579;
   text-decoration: none;
-  border: 2px solid #cc9598;
+  border: 2px solid #df7d85;
 }
 
 /************************************************************************************
