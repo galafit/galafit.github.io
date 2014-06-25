@@ -171,7 +171,7 @@
         margin: 0;
         margin-top: 50px;
         padding-top: 50px;
-        padding-bottom: $gap-large;
+
 
         > li {
             float: none;
@@ -183,8 +183,6 @@
                 margin: 0;
                 padding: $gap-base $gap-large;
                 @include border-radius(0);
-                border: 1px solid transparent;
-                border-bottom: 1px solid $link-color;
                 border-bottom: 1px solid rgba($link-color, .15);
 
             }
@@ -193,16 +191,17 @@
         > .separate {
             float: none;
             margin: $gap-base;
+            margin-bottom: 0;
             @include inline-block;
         }
 
         > .current > a {
-              background: mix($dark, $link-color, 90);
+              background: mix($dark, $link-color, 80);
               border-color: transparent;
           }
 
           > .active > a {
-              background: mix($dark, $link-color, 90);
+              background: mix($dark, $link-color, 80);
               border-color: transparent;
           }
 
