@@ -70,6 +70,8 @@ navigation_ru:
     folder:       theories
   - name:         Библиотека
     folder:       library
+  - name:         Контакт
+    folder:       contact
 
 # relative to folder en
 navigation_en:
