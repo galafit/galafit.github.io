@@ -32,7 +32,7 @@ localhost:  true
 # ---
 #
 # and it will be converted then to {{site.img}}/img-name
-img:      /stylesheets/images
+img:      /assets/images
 
 # Base folder to store css files.
 css:         /stylesheets
