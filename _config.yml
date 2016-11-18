@@ -35,7 +35,7 @@ localhost:  true
 img:      /stylesheets/images
 
 # Base folder to store css files.
-css:         /assets
+css:         /stylesheets
 
 # Base folder to store javascript files.
 js:  /assets/javascript
