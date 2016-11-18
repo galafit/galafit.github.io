@@ -3,49 +3,48 @@
 
 </div>
 <!--  end page-header    -->
+<div class="highlight">
+    <div class="post">
+        <H1>{{ TITLE }}</H1>
+        {% if page.subtitle %}
+        <h2 class="subtitle">{{ page.subtitle }}</h2>
+        {% endif %}
+        {% if page.author %}
+        <cite class="cite--big">{{ page.author }}</cite>
+        {% endif %}
 
-<div class="post highlight">
-    <H1>{{ TITLE }}</H1>
-    {% if page.subtitle %}
-    <h2 class="subtitle">{{ page.subtitle }}</h2>
-    {% endif %}
-    {% if page.author %}
-    <cite class="cite--big">{{ page.author }}</cite>
-    {% endif %}
-
-
-    {% if page.aphorism %}
-    <div class="pullquote-open">{{ page.aphorism }}</div>
-    {% endif %}
-    {% if page.img %}
-    <img src="{{site.img}}/{{page.img}}"/>
-    {% endif %}
-    {{ content }}
-</div>
-
-
-<div class="row thumbnail-container">
-    {% if page.next %}
-    <div class="column-half">
-        <a class="thumbnail" href="{{page.next.url}}" title="{{ page.next.title }}">
-            &#8592; {{ page.next.title }}
-        </a>
+        {% if page.aphorism %}
+        <div class="pullquote-open">{{ page.aphorism }}</div>
+        {% endif %}
+        {% if page.img %}
+        <img src="{{site.img}}/{{page.img}}"/>
+        {% endif %}
+        {{ content }}
     </div>
-    {% endif %}
 
-    {% if page.previous %}
-    <div class="column-half">
-        <a class="thumbnail" href="{{ page.previous.url }}" title="{{ page.previous.title }}">
-            {{ page.previous.title }} &#8594;
-        </a>
+    <div class="row thumbnail-container">
+        {% if page.next %}
+        <div class="column-half">
+            <a class="thumbnail" href="{{page.next.url}}" title="{{ page.next.title }}">
+                &#8592; {{ page.next.title }}
+            </a>
+        </div>
+        {% endif %}
+
+        {% if page.previous %}
+        <div class="column-half">
+            <a class="thumbnail" href="{{ page.previous.url }}" title="{{ page.previous.title }}">
+                {{ page.previous.title }} &#8594;
+            </a>
+        </div>
+        {% endif %}
     </div>
-    {% endif %}
-</div>
 
-<div class="row">
-    <a class="button button--filled" href="{{ CATEGORY_URL }}">{{ CATEGORY_NAME }} &#94;</a>
+    <div class="row">
+        <a class="button button--filled" href="{{ CATEGORY_URL }}">{{ CATEGORY_NAME }} &#94;</a>
+    </div>
+    <p></p>
 </div>
-<p></p>
 
 <div class="comments">
     <div id="disqus_thread"></div>
