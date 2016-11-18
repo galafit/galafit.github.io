@@ -2735,7 +2735,12 @@ Tables
 /************************************************************************************
 DISQUS COMMENTS STYLE
 *************************************************************************************/
-/* line 9, ../sass/modules/_comments.scss */
+/* line 5, ../sass/modules/_comments.scss */
+.comments {
+  padding-top: 1em;
+}
+
+/* line 10, ../sass/modules/_comments.scss */
 #disqus_thread {
   max-width: 60em;
   padding: 1em;
