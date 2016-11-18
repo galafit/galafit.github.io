@@ -2452,7 +2452,7 @@ Section
 *************************************************************************************/
 /* line 6, ../sass/modules/_section.scss */
 .section {
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
   padding-top: 0.25em;
 }
 
