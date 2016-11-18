@@ -3,8 +3,8 @@ DISQUS COMMENTS STYLE
 *************************************************************************************/
 
 .comments {
-   // @extend .highlight;
-   padding-top: $gap-base
+   @extend .highlight;
+   padding-top: 1px;
 }
 
 #disqus_thread {

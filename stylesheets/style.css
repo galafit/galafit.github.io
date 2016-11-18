@@ -1202,7 +1202,7 @@ COLORS Themes
 /* line 21, ../sass/modules/_color-themes.scss */
 .highlight, .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even), .table-2-column p:nth-child(4n),
-.table-2-column p:nth-child(4n-1) {
+.table-2-column p:nth-child(4n-1), .comments {
   background: #fdf9f0;
 }
 
@@ -1265,7 +1265,7 @@ h2, h3, h4, h5, h6 {
 .theme-inverse .highlight, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
 .theme-inverse .zebra > li:nth-child(even), .theme-inverse .table-2-column p:nth-child(4n), .table-2-column .theme-inverse p:nth-child(4n),
 .theme-inverse .table-2-column p:nth-child(4n-1),
-.table-2-column .theme-inverse p:nth-child(4n-1) {
+.table-2-column .theme-inverse p:nth-child(4n-1), .theme-inverse .comments {
   background: #453d46;
 }
 /* line 92, ../sass/modules/_color-themes.scss */
@@ -2737,7 +2737,7 @@ DISQUS COMMENTS STYLE
 *************************************************************************************/
 /* line 5, ../sass/modules/_comments.scss */
 .comments {
-  padding-top: 1em;
+  padding-top: 1px;
 }
 
 /* line 10, ../sass/modules/_comments.scss */
