@@ -37,9 +37,7 @@
             display: block;
             //margin: 2px;
             margin: 0 $gap-mini;
-            padding: $gap-small;
-            padding-top: $gap-large;
-            padding-bottom: 0;
+            padding: $gap-base $gap-small;
             text-decoration: none;
             border: 2px solid transparent;
             @include border-radius($border-radius);

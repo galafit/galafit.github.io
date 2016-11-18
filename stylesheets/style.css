@@ -1200,8 +1200,7 @@ COLORS Themes
 }
 
 /* line 21, ../sass/modules/_color-themes.scss */
-.highlight, .zebra .zebra__item:nth-child(even),
-.zebra > li:nth-child(even), .table-2-column p:nth-child(4n),
+.highlight, .table-2-column p:nth-child(4n),
 .table-2-column p:nth-child(4n-1), .comments {
   background: #fdf9f0;
 }
@@ -1225,7 +1224,8 @@ h2, h3, h4, h5, h6 {
 }
 
 /* line 47, ../sass/modules/_color-themes.scss */
-.theme-base, html {
+.theme-base, html, .zebra .zebra__item:nth-child(even),
+.zebra > li:nth-child(even) {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   background: #FBF0D9;
   color: #333;
@@ -1262,8 +1262,7 @@ h2, h3, h4, h5, h6 {
   color: #fcfbfb;
 }
 /* line 87, ../sass/modules/_color-themes.scss */
-.theme-inverse .highlight, .theme-inverse .zebra .zebra__item:nth-child(even), .zebra .theme-inverse .zebra__item:nth-child(even),
-.theme-inverse .zebra > li:nth-child(even), .theme-inverse .table-2-column p:nth-child(4n), .table-2-column .theme-inverse p:nth-child(4n),
+.theme-inverse .highlight, .theme-inverse .table-2-column p:nth-child(4n), .table-2-column .theme-inverse p:nth-child(4n),
 .theme-inverse .table-2-column p:nth-child(4n-1),
 .table-2-column .theme-inverse p:nth-child(4n-1), .theme-inverse .comments {
   background: #453d46;
@@ -1427,37 +1426,37 @@ h1, h2, h3, h4, h5, h6 {
 /* line 21, ../sass/modules/_headings.scss */
 h1 {
   font-weight: normal;
-  font-size: 40px;
-  font-size: 2.5rem;
-  margin-top: 1.5em;
+  font-size: 35.2px;
+  font-size: 2.2rem;
+  margin-top: 1em;
 }
 
 /* line 27, ../sass/modules/_headings.scss */
 h2 {
   font-family: Arial, sans-serif;
   font-weight: normal;
-  font-size: 27.2px;
-  font-size: 1.7rem;
+  font-size: 25.6px;
+  font-size: 1.6rem;
 }
 
 /* line 33, ../sass/modules/_headings.scss */
 h3 {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 22.4px;
+  font-size: 1.4rem;
   text-align: left;
 }
 
 /* line 38, ../sass/modules/_headings.scss */
 h4 {
-  font-size: 20.8px;
-  font-size: 1.3rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
   text-align: left;
 }
 
 /* line 43, ../sass/modules/_headings.scss */
 h5 {
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 16px;
+  font-size: 1rem;
   text-align: left;
 }
 
@@ -1972,9 +1971,7 @@ blockquote:after {
 .nav > li > a {
   display: block;
   margin: 0 0.25em;
-  padding: 0.5em;
-  padding-top: 1.5em;
-  padding-bottom: 0;
+  padding: 1em 0.5em;
   text-decoration: none;
   border: 2px solid transparent;
   -moz-border-radius: 6px;
@@ -1984,25 +1981,25 @@ blockquote:after {
   border-radius: 6px;
   color: #c66579;
 }
-/* line 48, ../sass/modules/_navs.scss */
+/* line 46, ../sass/modules/_navs.scss */
 .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
   color: #440000;
   background: #df7d85;
 }
-/* line 57, ../sass/modules/_navs.scss */
+/* line 55, ../sass/modules/_navs.scss */
 .nav > .current > a {
   border-color: #c66579;
 }
-/* line 62, ../sass/modules/_navs.scss */
+/* line 60, ../sass/modules/_navs.scss */
 .nav > .active > a {
   border-color: #c66579;
 }
-/* line 66, ../sass/modules/_navs.scss */
+/* line 64, ../sass/modules/_navs.scss */
 .nav > .active > a:after {
   content: " \5E";
 }
-/* line 74, ../sass/modules/_navs.scss */
+/* line 72, ../sass/modules/_navs.scss */
 .nav > .separate {
   float: right;
 }
@@ -2014,13 +2011,13 @@ blockquote:after {
   }
 }
 
-/* line 84, ../sass/modules/_navs.scss */
+/* line 82, ../sass/modules/_navs.scss */
 .nav--right {
   float: right;
   margin-right: 7.5em;
 }
 
-/* line 89, ../sass/modules/_navs.scss */
+/* line 87, ../sass/modules/_navs.scss */
 .nav--stack {
   display: inline-block;
   vertical-align: top;
@@ -2030,16 +2027,16 @@ blockquote:after {
   *vertical-align: auto;
   margin-bottom: 1em;
 }
-/* line 92, ../sass/modules/_navs.scss */
+/* line 90, ../sass/modules/_navs.scss */
 .nav--stack > li {
   float: none;
   display: block;
 }
-/* line 95, ../sass/modules/_navs.scss */
+/* line 93, ../sass/modules/_navs.scss */
 .nav--stack > li > a {
   padding: 1em 1.5em;
 }
-/* line 101, ../sass/modules/_navs.scss */
+/* line 99, ../sass/modules/_navs.scss */
 .nav--stack > .separate {
   margin: 1em;
   display: inline-block;
@@ -2050,12 +2047,12 @@ blockquote:after {
   *vertical-align: auto;
 }
 
-/* line 107, ../sass/modules/_navs.scss */
+/* line 105, ../sass/modules/_navs.scss */
 .nav--decorated {
   padding: 0 0.5em;
   margin-bottom: 1.5em;
 }
-/* line 112, ../sass/modules/_navs.scss */
+/* line 110, ../sass/modules/_navs.scss */
 .nav--decorated > li > a {
   margin: 0;
   -moz-border-radius: 0;
@@ -2068,18 +2065,18 @@ blockquote:after {
   border-bottom: 1px solid #c66579;
   border-bottom: 1px solid rgba(198, 101, 121, 0.15);
 }
-/* line 122, ../sass/modules/_navs.scss */
+/* line 120, ../sass/modules/_navs.scss */
 .nav--decorated > .current > a {
   background: #352125;
   border-color: transparent;
 }
-/* line 127, ../sass/modules/_navs.scss */
+/* line 125, ../sass/modules/_navs.scss */
 .nav--decorated > .active > a {
   background: #352125;
   border-color: transparent;
 }
 
-/* line 133, ../sass/modules/_navs.scss */
+/* line 131, ../sass/modules/_navs.scss */
 .nav--stacked {
   display: inline-block;
   vertical-align: top;
@@ -2088,17 +2085,17 @@ blockquote:after {
   *display: inline;
   *vertical-align: auto;
 }
-/* line 135, ../sass/modules/_navs.scss */
+/* line 133, ../sass/modules/_navs.scss */
 .nav--stacked > li {
   float: none;
   display: block;
 }
-/* line 138, ../sass/modules/_navs.scss */
+/* line 136, ../sass/modules/_navs.scss */
 .nav--stacked > li > a {
   margin: 0;
   padding: 1em 2em;
 }
-/* line 143, ../sass/modules/_navs.scss */
+/* line 141, ../sass/modules/_navs.scss */
 .nav--stacked > .separate {
   float: none;
   display: inline-block;
@@ -2110,7 +2107,7 @@ blockquote:after {
   margin: 1.5em 1em;
 }
 
-/* line 150, ../sass/modules/_navs.scss */
+/* line 148, ../sass/modules/_navs.scss */
 .nav--2column {
   display: inline-block;
   vertical-align: top;
@@ -2119,7 +2116,7 @@ blockquote:after {
   *display: inline;
   *vertical-align: auto;
 }
-/* line 152, ../sass/modules/_navs.scss */
+/* line 150, ../sass/modules/_navs.scss */
 .nav--2column > li {
   float: none;
   display: inline-block;
@@ -2131,7 +2128,7 @@ blockquote:after {
   min-width: 45%;
   margin: 0 1em;
 }
-/* line 159, ../sass/modules/_navs.scss */
+/* line 157, ../sass/modules/_navs.scss */
 .nav--2column > .separate {
   float: none;
   min-width: 0;
@@ -2139,7 +2136,7 @@ blockquote:after {
 }
 
 @media only screen and (max-width: 700px) {
-  /* line 167, ../sass/modules/_navs.scss */
+  /* line 165, ../sass/modules/_navs.scss */
   .nav--adaptive {
     display: none;
     background: #111111;
@@ -2147,14 +2144,14 @@ blockquote:after {
     margin-top: 50px;
     padding-top: 50px;
   }
-  /* line 176, ../sass/modules/_navs.scss */
+  /* line 174, ../sass/modules/_navs.scss */
   .nav--adaptive > li {
     float: none;
     display: block;
     min-width: 40%;
     margin: 0 1em;
   }
-  /* line 182, ../sass/modules/_navs.scss */
+  /* line 180, ../sass/modules/_navs.scss */
   .nav--adaptive > li > a {
     margin: 0;
     padding: 1em 1.5em;
@@ -2165,7 +2162,7 @@ blockquote:after {
     border-radius: 0;
     border-bottom: 1px solid rgba(198, 101, 121, 0.15);
   }
-  /* line 191, ../sass/modules/_navs.scss */
+  /* line 189, ../sass/modules/_navs.scss */
   .nav--adaptive > .separate {
     float: none;
     margin: 1em;
@@ -2177,12 +2174,12 @@ blockquote:after {
     *display: inline;
     *vertical-align: auto;
   }
-  /* line 198, ../sass/modules/_navs.scss */
+  /* line 196, ../sass/modules/_navs.scss */
   .nav--adaptive > .current > a {
     background: #352125;
     border-color: transparent;
   }
-  /* line 203, ../sass/modules/_navs.scss */
+  /* line 201, ../sass/modules/_navs.scss */
   .nav--adaptive > .active > a {
     background: #352125;
     border-color: transparent;
@@ -2190,7 +2187,7 @@ blockquote:after {
 }
 
 @media only screen and (max-width: 700px) {
-  /* line 211, ../sass/modules/_navs.scss */
+  /* line 209, ../sass/modules/_navs.scss */
   .nav--adaptive.open {
     display: block;
   }
@@ -2204,7 +2201,7 @@ blockquote:after {
  */
 /* line 9, ../sass/modules/_navbar.scss */
 .navbar {
-  min-height: 50px;
+  min-height: 58px;
   border-bottom: 1px solid rgba(223, 125, 133, 0.25);
 }
 
@@ -2271,7 +2268,7 @@ blockquote:after {
 .logo--top {
   padding: 18px 10px;
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: 25px;
   z-index: 10;
 }

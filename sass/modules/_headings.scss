@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-weight: normal;
     @include font-size($font-size-h1);
-    margin-top: $gap-large;
+    margin-top: $gap-base;
 }
 
 h2 {

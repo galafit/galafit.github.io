@@ -21,7 +21,7 @@
 .zebra {
     .zebra__item:nth-child(even),
     > li:nth-child(even) {
-        @extend .highlight;
+        @extend .theme-base;
         @extend %border-color;
         border-style: solid;
         border-width: 2px;
