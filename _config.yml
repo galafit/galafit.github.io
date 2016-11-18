@@ -32,10 +32,10 @@ localhost:  true
 # ---
 #
 # and it will be converted then to {{site.img}}/img-name
-img:      /assets/images
+img:      /stylesheets/images
 
 # Base folder to store css files.
-css:         /assets/css
+css:         /assets
 
 # Base folder to store javascript files.
 js:  /assets/javascript
