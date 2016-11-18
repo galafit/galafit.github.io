@@ -1366,7 +1366,7 @@ a:hover, a:focus, a:active {
 /* line 73, ../sass/modules/_!main.scss */
 p {
   margin-top: 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 /* line 78, ../sass/modules/_!main.scss */
@@ -2449,7 +2449,7 @@ Section
 *************************************************************************************/
 /* line 6, ../sass/modules/_section.scss */
 .section {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   padding-top: 0.25em;
 }
 
