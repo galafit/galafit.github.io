@@ -48,9 +48,7 @@ MEDIA
 
             > img {
                  float: none;
-                 display: block;
-                  margin-left: auto;
-                  margin-right: auto;
+                 @extend %pull-center;
                }
         }
 
@@ -60,9 +58,7 @@ MEDIA
 
             > .blocktext {
                  float: none;
-                  display: block;
-                  margin-left: auto;
-                  margin-right: auto;
+                 @extend %pull-center;
                }
          }
     }

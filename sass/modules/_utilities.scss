@@ -16,9 +16,7 @@
 
 .pull-left-adapt, .pull-right-adapt {
     @include breakpoint(small) {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        @extend %pull-center;
         float: none;
     }
 }
