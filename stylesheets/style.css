@@ -1,12 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin);
-/* normalize.css v1.1.1 | MIT License | git.io/normalize */
+@charset "UTF-8";
+/*! normalize.css v1.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 22, ../sass/base/_normalize.scss */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin);
+/* line 11, ../sass/base/_normalize.scss */
 article,
 aside,
 details,
@@ -25,7 +26,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 32, ../sass/base/_normalize.scss */
+/* line 30, ../sass/base/_normalize.scss */
 audio,
 canvas,
 video {
@@ -84,7 +85,7 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-/* line 89, ../sass/base/_normalize.scss */
+/* line 85, ../sass/base/_normalize.scss */
 html,
 button,
 input,
@@ -115,7 +116,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 118, ../sass/base/_normalize.scss */
+/* line 117, ../sass/base/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -176,7 +177,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-/* line 175, ../sass/base/_normalize.scss */
+/* line 174, ../sass/base/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -218,7 +219,7 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 216, ../sass/base/_normalize.scss */
+/* line 215, ../sass/base/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
@@ -227,13 +228,13 @@ pre {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-/* line 227, ../sass/base/_normalize.scss */
+/* line 224, ../sass/base/_normalize.scss */
 code,
 kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em;
 }
 
@@ -258,7 +259,7 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-/* line 256, ../sass/base/_normalize.scss */
+/* line 255, ../sass/base/_normalize.scss */
 q:before,
 q:after {
   content: '';
@@ -276,7 +277,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 274, ../sass/base/_normalize.scss */
+/* line 273, ../sass/base/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -301,7 +302,7 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 300, ../sass/base/_normalize.scss */
+/* line 297, ../sass/base/_normalize.scss */
 dl,
 menu,
 ol,
@@ -317,7 +318,7 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-/* line 314, ../sass/base/_normalize.scss */
+/* line 312, ../sass/base/_normalize.scss */
 menu,
 ol,
 ul {
@@ -327,7 +328,7 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-/* line 323, ../sass/base/_normalize.scss */
+/* line 322, ../sass/base/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -384,7 +385,7 @@ form {
  */
 /* line 378, ../sass/base/_normalize.scss */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -411,7 +412,7 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-/* line 407, ../sass/base/_normalize.scss */
+/* line 404, ../sass/base/_normalize.scss */
 button,
 input,
 select,
@@ -430,7 +431,7 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 420, ../sass/base/_normalize.scss */
+/* line 419, ../sass/base/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -442,7 +443,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 432, ../sass/base/_normalize.scss */
+/* line 431, ../sass/base/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -457,7 +458,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 449, ../sass/base/_normalize.scss */
+/* line 446, ../sass/base/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -473,7 +474,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 460, ../sass/base/_normalize.scss */
+/* line 459, ../sass/base/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -485,7 +486,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 472, ../sass/base/_normalize.scss */
+/* line 471, ../sass/base/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -517,7 +518,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 498, ../sass/base/_normalize.scss */
+/* line 497, ../sass/base/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -526,7 +527,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-/* line 507, ../sass/base/_normalize.scss */
+/* line 506, ../sass/base/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -560,7 +561,7 @@ table {
 /************************************************************************************
  RESET
 *************************************************************************************/
-/* line 10, ../sass/base/_reset.scss */
+/* line 6, ../sass/base/_reset.scss */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
 abbr, acronym, address, del, dfn, em, img, q, small, strike, strong, sub, sup, b, u, i,
 center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
@@ -597,7 +598,7 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
   *zoom: 1;
   overflow: hidden;
 }
-/* line 13, ../sass/base/_mixins.scss */
+/* line 12, ../sass/base/_mixins.scss */
 .clearfix:before, .row:before, .media:before, .clearfix:after, .row:after, .media:after {
   display: table;
   content: " ";
@@ -616,6 +617,12 @@ hgroup, menu, nav, section, summary, time, mark, audio, video {
  * Modifying idea of "Progressive enhancement" or "mobile firs" I create all stiles for "medium screens" and
  * then adapt them for small and big screens
  */
+/* --------------------------    Mixins providing a PX fallback for REM--------------------------------
+
+// Source: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+
+
+/* general - margin, padding... */
 /*
 p {
    @include rem-fallback(margin, 10, 20, 30, 40);
@@ -636,7 +643,7 @@ p {
 .blocktext, .cover, .post, .page-main {
   text-align: left;
 }
-/* line 141, ../sass/base/_mixins.scss */
+/* line 134, ../sass/base/_mixins.scss */
 .blocktext p, .cover p, .post p, .page-main p, .blocktext .p, .cover .p, .post .p, .page-main .p,
 .blocktext h1,
 .cover h1,
@@ -673,7 +680,7 @@ p {
   padding-left: 16px;
   padding-left: 1rem;
 }
-/* line 149, ../sass/base/_mixins.scss */
+/* line 148, ../sass/base/_mixins.scss */
 .blocktext ul, .cover ul, .post ul, .page-main ul,
 .blocktext ol,
 .cover ol,
@@ -695,7 +702,7 @@ p {
    * Remove vertical spacing from nested lists.
    */
 }
-/* line 161, ../sass/base/_mixins.scss */
+/* line 160, ../sass/base/_mixins.scss */
 .blocktext ul li > ul, .cover ul li > ul, .post ul li > ul, .page-main ul li > ul,
 .blocktext ul li > ol,
 .cover ul li > ol,
@@ -731,7 +738,7 @@ p {
     margin-left: 0.25em;
   }
 }
-/* line 185, ../sass/base/_mixins.scss */
+/* line 184, ../sass/base/_mixins.scss */
 .blocktext .blocktext p, .cover .blocktext p, .post .blocktext p, .page-main .blocktext p,
 .blocktext .blocktext h1,
 .cover .blocktext h1,
@@ -874,13 +881,13 @@ p {
   /* line 7, ../sass/base/_media-print.scss */
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
   }
 
-  /* line 15, ../sass/base/_media-print.scss */
+  /* line 14, ../sass/base/_media-print.scss */
   a,
   a:visited {
     text-decoration: underline;
@@ -899,17 +906,17 @@ p {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 33, ../sass/base/_media-print.scss */
+  /* line 31, ../sass/base/_media-print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 38, ../sass/base/_media-print.scss */
+  /* line 37, ../sass/base/_media-print.scss */
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -919,7 +926,7 @@ p {
     /* h5bp.com/t */
   }
 
-  /* line 48, ../sass/base/_media-print.scss */
+  /* line 47, ../sass/base/_media-print.scss */
   tr,
   img {
     page-break-inside: avoid;
@@ -932,9 +939,8 @@ p {
 
   @page {
     margin: 0.5cm;
-}
-
-  /* line 62, ../sass/base/_media-print.scss */
+  }
+  /* line 60, ../sass/base/_media-print.scss */
   p,
   h2,
   h3 {
@@ -942,7 +948,7 @@ p {
     widows: 3;
   }
 
-  /* line 68, ../sass/base/_media-print.scss */
+  /* line 67, ../sass/base/_media-print.scss */
   h2,
   h3 {
     page-break-after: avoid;
@@ -970,42 +976,45 @@ p {
 @media only screen and (max-width: 700px) {
   /* line 17, ../sass/modules/_utilities.scss */
   .pull-left-adapt, .pull-right-adapt {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     float: none;
   }
 }
 
-/* line 25, ../sass/modules/_utilities.scss */
+/* line 27, ../sass/modules/_utilities.scss */
 .float-left {
   float: left;
 }
 
-/* line 29, ../sass/modules/_utilities.scss */
+/* line 31, ../sass/modules/_utilities.scss */
 .float-right {
   float: right;
 }
 
-/* line 37, ../sass/modules/_utilities.scss */
+/* line 39, ../sass/modules/_utilities.scss */
 .icon {
   max-width: 15%;
 }
 
-/* line 42, ../sass/modules/_utilities.scss */
+/* line 44, ../sass/modules/_utilities.scss */
 .small {
   max-width: 35%;
 }
 
-/* line 46, ../sass/modules/_utilities.scss */
+/* line 48, ../sass/modules/_utilities.scss */
 .half {
   max-width: 50%;
 }
 @media only screen and (max-width: 700px) {
-  /* line 46, ../sass/modules/_utilities.scss */
+  /* line 48, ../sass/modules/_utilities.scss */
   .half {
     max-width: 100%;
   }
 }
 
-/* line 53, ../sass/modules/_utilities.scss */
+/* line 55, ../sass/modules/_utilities.scss */
 .big {
   max-width: 65%;
 }
@@ -1013,17 +1022,17 @@ p {
 /*
  * Text Align
  */
-/* line 63, ../sass/modules/_utilities.scss */
+/* line 65, ../sass/modules/_utilities.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 68, ../sass/modules/_utilities.scss */
+/* line 70, ../sass/modules/_utilities.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 72, ../sass/modules/_utilities.scss */
+/* line 74, ../sass/modules/_utilities.scss */
 .text-center {
   text-align: center;
 }
@@ -1031,12 +1040,12 @@ p {
 /*
  * Text Decoration
  */
-/* line 81, ../sass/modules/_utilities.scss */
+/* line 83, ../sass/modules/_utilities.scss */
 .text-crossed {
   text-decoration: line-through;
 }
 
-/* line 85, ../sass/modules/_utilities.scss */
+/* line 87, ../sass/modules/_utilities.scss */
 .text-nowrap {
   white-space: nowrap;
 }
@@ -1044,7 +1053,7 @@ p {
 /*
  * Borders
  */
-/* line 93, ../sass/modules/_utilities.scss */
+/* line 95, ../sass/modules/_utilities.scss */
 .border-top {
   border-top: 1px solid #df7d85;
 }
@@ -1052,19 +1061,19 @@ p {
 /*
  * Adaptation
  */
-/* line 101, ../sass/modules/_utilities.scss */
+/* line 103, ../sass/modules/_utilities.scss */
 .mobile-only {
   display: none;
 }
 @media only screen and (max-width: 700px) {
-  /* line 101, ../sass/modules/_utilities.scss */
+  /* line 103, ../sass/modules/_utilities.scss */
   .mobile-only {
     display: block;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  /* line 108, ../sass/modules/_utilities.scss */
+  /* line 110, ../sass/modules/_utilities.scss */
   .mobile-hide {
     display: none;
     top: -9999px !important;
@@ -1073,7 +1082,7 @@ p {
 }
 
 @media only screen and (max-width: 700px) {
-  /* line 117, ../sass/modules/_utilities.scss */
+  /* line 119, ../sass/modules/_utilities.scss */
   .mobile-full {
     padding-right: 0;
     padding-left: 0;
@@ -1081,7 +1090,7 @@ p {
   }
 }
 
-/* line 126, ../sass/modules/_utilities.scss */
+/* line 128, ../sass/modules/_utilities.scss */
 .invisible {
   position: absolute !important;
   height: 1px;
@@ -1098,7 +1107,7 @@ p {
 /*
  * Image replacement
  */
-/* line 148, ../sass/modules/_utilities.scss */
+/* line 150, ../sass/modules/_utilities.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1107,7 +1116,7 @@ p {
   *text-indent: -9999px;
 }
 
-/* line 156, ../sass/modules/_utilities.scss */
+/* line 158, ../sass/modules/_utilities.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1118,7 +1127,7 @@ p {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 167, ../sass/modules/_utilities.scss */
+/* line 169, ../sass/modules/_utilities.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -1127,7 +1136,7 @@ p {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 176, ../sass/modules/_utilities.scss */
+/* line 178, ../sass/modules/_utilities.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1143,7 +1152,7 @@ p {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 193, ../sass/modules/_utilities.scss */
+/* line 194, ../sass/modules/_utilities.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1157,12 +1166,12 @@ p {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 206, ../sass/modules/_utilities.scss */
+/* line 208, ../sass/modules/_utilities.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 210, ../sass/modules/_utilities.scss */
+/* line 212, ../sass/modules/_utilities.scss */
 .disabled {
   pointer-events: none;
   opacity: 0.5;
@@ -1194,7 +1203,7 @@ COLORS Themes
 .highlight, .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even), .table-2-column p:nth-child(4n),
 .table-2-column p:nth-child(4n-1), .comments {
-  background: #fcf5e7;
+  background: #fdf9f0;
 }
 
 /* line 31, ../sass/modules/_color-themes.scss */
@@ -1206,7 +1215,7 @@ h2, h3, h4, h5, h6 {
 /* line 38, ../sass/modules/_color-themes.scss */
 .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even) {
-  border-color: #e8dec9;
+  border-color: #e9e2d5;
   border-color: rgba(17, 17, 17, 0.08);
 }
 
@@ -1218,8 +1227,8 @@ h2, h3, h4, h5, h6 {
 /* line 47, ../sass/modules/_color-themes.scss */
 .theme-base, html {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  background: #fbf0d9;
-  color: #2d2318;
+  background: #fdf9f0;
+  color: #333;
 }
 
 /* line 58, ../sass/modules/_color-themes.scss */
@@ -1241,7 +1250,7 @@ h2, h3, h4, h5, h6 {
 }
 /* line 74, ../sass/modules/_color-themes.scss */
 .theme-inverse .button-theme {
-  background: #fbf0d9;
+  background: #fcf5e7;
 }
 /* line 78, ../sass/modules/_color-themes.scss */
 .theme-inverse h2 {
@@ -1567,19 +1576,19 @@ h3, h4, h5 {
 
 /* line 73, ../sass/modules/_buttons.scss */
 .button--disabled {
-  border-color: #c8c0ad;
+  border-color: #c9c4b8;
   border-color: rgba(0, 0, 0, 0.2);
-  background: #c8c0ad;
+  background: #c9c4b8;
   background: rgba(0, 0, 0, 0.2);
-  color: #979389;
+  color: #97958f;
   color: rgba(85, 85, 85, 0.6);
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
 }
 /* line 80, ../sass/modules/_buttons.scss */
 .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
-  background: #c8c0ad;
+  background: #c9c4b8;
   background: rgba(0, 0, 0, 0.2);
-  color: #979389;
+  color: #97958f;
   color: rgba(85, 85, 85, 0.6);
 }
 
@@ -1906,7 +1915,7 @@ blockquote:after {
   width: 10em;
   height: 3px;
   background-color: #df7d85;
-  content: "\200B";
+  content: "​";
 }
 /* line 75, ../sass/modules/_pullquotes.scss */
 .pullquote:before {
@@ -2526,31 +2535,37 @@ MEDIA
   /* line 49, ../sass/modules/_media.scss */
   .media > .media__object > img {
     float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* line 55, ../sass/modules/_media.scss */
+  /* line 57, ../sass/modules/_media.scss */
   .media > .media__body {
     float: none;
     width: auto;
   }
-  /* line 59, ../sass/modules/_media.scss */
+  /* line 61, ../sass/modules/_media.scss */
   .media > .media__body > .blocktext {
     float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-/* line 73, ../sass/modules/_media.scss */
+/* line 77, ../sass/modules/_media.scss */
 .media--reverse > .media__object {
   float: right;
 }
-/* line 76, ../sass/modules/_media.scss */
+/* line 80, ../sass/modules/_media.scss */
 .media--reverse > .media__object > img {
   float: left;
 }
-/* line 81, ../sass/modules/_media.scss */
+/* line 85, ../sass/modules/_media.scss */
 .media--reverse > .media__body {
   float: right;
 }
-/* line 84, ../sass/modules/_media.scss */
+/* line 88, ../sass/modules/_media.scss */
 .media--reverse > .media__body > .blocktext {
   float: right;
 }
@@ -2688,7 +2703,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail:active {
  * </div>
  *
  */
-/* line 23, ../sass/modules/_zebra.scss */
+/* line 22, ../sass/modules/_zebra.scss */
 .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even) {
   border-style: solid;
