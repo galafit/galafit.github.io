@@ -185,7 +185,7 @@ $base-color: #FBF0D9;
 $base-text: #5F4B32;
 $base-text: darken(#5F4B32, 15);
 $base-text: #333;
-$base-bg:  lighten($base-color, 3);
+$base-bg:  $base-color;
 $base-highlight: lighten($base-color, 5);
 $base-border-color: rgba($dark, 0.08);
 

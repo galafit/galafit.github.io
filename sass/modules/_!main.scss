@@ -8,16 +8,9 @@
 
 }
 
-html{
-  height: 100%;
-}
-
-body {
-  height: 100%;
-}
-
 
 html {
+    height: 100%;
     overflow-y: scroll;
     /* Stops Mobile Safari from auto-adjusting font-sizes */
     -webkit-text-size-adjust: 100%;
@@ -39,7 +32,7 @@ html {
 }
 
 body {
-
+    height: 100%;
     font-style: normal;
     font-variant: normal;
     line-height: $base-line-height;

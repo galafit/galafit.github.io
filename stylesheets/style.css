@@ -1215,7 +1215,7 @@ h2, h3, h4, h5, h6 {
 /* line 38, ../sass/modules/_color-themes.scss */
 .zebra .zebra__item:nth-child(even),
 .zebra > li:nth-child(even) {
-  border-color: #e9e2d5;
+  border-color: #e8dec9;
   border-color: rgba(17, 17, 17, 0.08);
 }
 
@@ -1227,7 +1227,7 @@ h2, h3, h4, h5, h6 {
 /* line 47, ../sass/modules/_color-themes.scss */
 .theme-base, html {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
-  background: #fcf5e7;
+  background: #FBF0D9;
   color: #333;
 }
 
@@ -1250,7 +1250,7 @@ h2, h3, h4, h5, h6 {
 }
 /* line 74, ../sass/modules/_color-themes.scss */
 .theme-inverse .button-theme {
-  background: #fcf5e7;
+  background: #FBF0D9;
 }
 /* line 78, ../sass/modules/_color-themes.scss */
 .theme-inverse h2 {
@@ -1299,18 +1299,9 @@ h2, h3, h4, h5, h6 {
  GENERAL STYLING. Standard Html tags
 *************************************************************************************/
 /** apply  Box Sizing model to all elements **/
-/* line 11, ../sass/modules/_!main.scss */
+/* line 12, ../sass/modules/_!main.scss */
 html {
   height: 100%;
-}
-
-/* line 15, ../sass/modules/_!main.scss */
-body {
-  height: 100%;
-}
-
-/* line 20, ../sass/modules/_!main.scss */
-html {
   overflow-y: scroll;
   /* Stops Mobile Safari from auto-adjusting font-sizes */
   -webkit-text-size-adjust: 100%;
@@ -1320,20 +1311,21 @@ html {
   font-size: 1.26em;
 }
 @media only screen and (min-width: 1000px) {
-  /* line 20, ../sass/modules/_!main.scss */
+  /* line 12, ../sass/modules/_!main.scss */
   html {
     font-size: 1.3em;
   }
 }
 @media only screen and (max-width: 700px) {
-  /* line 20, ../sass/modules/_!main.scss */
+  /* line 12, ../sass/modules/_!main.scss */
   html {
     font-size: 1.1em;
   }
 }
 
-/* line 41, ../sass/modules/_!main.scss */
+/* line 34, ../sass/modules/_!main.scss */
 body {
+  height: 100%;
   font-style: normal;
   font-variant: normal;
   line-height: 1.667;
@@ -1343,23 +1335,23 @@ body {
 *  Give Clickable Elements a Pointer Cursor
 *  Source: http://css-tricks.com/snippets/css/give-clickable-elements-a-pointer-cursor/
 **/
-/* line 53, ../sass/modules/_!main.scss */
+/* line 46, ../sass/modules/_!main.scss */
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
   cursor: pointer;
 }
 
-/* line 57, ../sass/modules/_!main.scss */
+/* line 50, ../sass/modules/_!main.scss */
 a {
   color: #c66579;
   text-decoration: none;
 }
-/* line 61, ../sass/modules/_!main.scss */
+/* line 54, ../sass/modules/_!main.scss */
 a:hover, a:focus, a:active {
   color: #ee3e3b;
   text-decoration: underline;
 }
 
-/* line 67, ../sass/modules/_!main.scss */
+/* line 60, ../sass/modules/_!main.scss */
 ::-moz-selection, ::selection {
   background: #df7d85;
   color: white;
@@ -1372,18 +1364,18 @@ a:hover, a:focus, a:active {
  *  It is more logical that the position of the object depends upon it´s own properties(margin-top)
  *  and not upon the properties (margin-bottom) of the previous object
  */
-/* line 80, ../sass/modules/_!main.scss */
+/* line 73, ../sass/modules/_!main.scss */
 p {
   margin-top: 1em;
   margin-bottom: 1.5em;
 }
 
-/* line 85, ../sass/modules/_!main.scss */
+/* line 78, ../sass/modules/_!main.scss */
 i, em, q {
   font-style: italic;
 }
 
-/* line 90, ../sass/modules/_!main.scss */
+/* line 83, ../sass/modules/_!main.scss */
 hr {
   width: 5em;
   text-align: center;
@@ -1394,7 +1386,7 @@ hr {
   color: #df7d85;
 }
 
-/* line 106, ../sass/modules/_!main.scss */
+/* line 99, ../sass/modules/_!main.scss */
 cite {
   font-size: 13.6px;
   font-size: 0.85rem;
@@ -1403,12 +1395,12 @@ cite {
   text-align: center;
   font-style: italic;
 }
-/* line 114, ../sass/modules/_!main.scss */
+/* line 107, ../sass/modules/_!main.scss */
 cite:before {
   content: "\2014 \2009";
 }
 
-/* line 119, ../sass/modules/_!main.scss */
+/* line 112, ../sass/modules/_!main.scss */
 .cite--big {
   font-size: 16px;
   font-size: 1rem;
@@ -1576,19 +1568,19 @@ h3, h4, h5 {
 
 /* line 73, ../sass/modules/_buttons.scss */
 .button--disabled {
-  border-color: #c9c4b8;
+  border-color: #c8c0ad;
   border-color: rgba(0, 0, 0, 0.2);
-  background: #c9c4b8;
+  background: #c8c0ad;
   background: rgba(0, 0, 0, 0.2);
-  color: #97958f;
+  color: #979389;
   color: rgba(85, 85, 85, 0.6);
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
 }
 /* line 80, ../sass/modules/_buttons.scss */
 .button--disabled:hover, .button--disabled:focus, .button--disabled:active {
-  background: #c9c4b8;
+  background: #c8c0ad;
   background: rgba(0, 0, 0, 0.2);
-  color: #97958f;
+  color: #979389;
   color: rgba(85, 85, 85, 0.6);
 }
 
